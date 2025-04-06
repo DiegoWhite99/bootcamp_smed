@@ -1,0 +1,194 @@
+.tercera_pantalla{
+    margin: 0 0 0px ;
+    min-height: 100vh;
+    font-family: 'Open Sans';
+    background: linear-gradient(to bottom, #052d7b 0%, #000000 100%)
+    
+
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 50px;
+    color: #ffffff
+
+}
+  
+a {
+    color: inherit;
+  }
+
+  .cards-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 4rem;
+    margin: 0 auto;
+    width: max-content;
+  }
+
+  .card-Diego,.card-Cristian, .card-Luis,.card-Santiago{
+    font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 20em;
+  width: 10em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 5em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.card-Diego {
+    background-image: url(../Team/Diego.png);
+}
+
+.card-Cristian {
+    background-image: url(../Team/Cristian.jpg);
+}
+
+
+.card-Santiago {
+  background-image: url(../Team/Santiago.png);
+}
+
+.card-Diego:hover, .card-Cristian:hover,.card-Santiago:hover {
+    transform: rotate(0);
+}
+
+.card-Diego h1, .card-Cristian h1, .card-Santiago h1 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+
+  .card-Diego p, .card-Cristian p,.card-Santiago p {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    margin-top: 0.5em;
+    line-height: 2em;
+  }
+
+  .card-Diego .tags {
+    display: flex;
+  }
+
+  .card-Cristian .tags {
+    display: flex;
+  }
+
+  .card-Santiago .tags {
+    display: flex;
+  }
+
+  .card-Diego .tags .tag, .card-Cristian .tags .tag, .card-Luis .tags .tag, .card-Santiago .tags .tag {
+    font-size: 0.75em;
+    background: rgba(0, 0, 0, 0.616);
+    border-radius: 0.3rem;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    transition: all, var(--transition-time);
+  }
+  
+  .card-Diego:hover .tags .tag,.card-Cristian:hover .tags .tag, .card-Santiago:hover .tags .tag {
+    background: gray;
+    color: white;
+  }
+
+  .card-Diego:before, .card:after, .card-Cristian:before, .card:after, .card-Santiago:before, .card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top:-50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+  }
+
+  .card-Diego:before , .card-Cristian:before, .card-Santiago:before {
+    background: linear-gradient(to bottom, rgba(2, 23, 41, 0.801), rgba(0, 0, 0, 0.5));
+    width: 250%;
+    height: 250%;
+  }
+
+  .card-Diego:after, .card-Cristian:after ,.card-Santiago:after {
+    background: white;
+    width: 200%;
+    height: 200%;
+  }
+
+  .card-Diego:hover, .card-Cristian:hover, .card-Santiago:hover {
+    color: white;
+  } 
+  
+  .card-Diego:hover:before, .card:hover:after, .card-Cristian:hover:before, .card:hover:after, .card-Santiago:hover:before, .card:hover:after {
+    transform: scale(1);
+  }
+/* aliados estrategicos */
+
+#aliados_estrategicos {
+  background-image: linear-gradient(to bottom, #edf3f0, #fdfeff);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  
+}
+
+.aliados  {
+  font-family: "Orbitron", sans-serif;
+  font-size: 50px;
+  color: rgba(6, 44, 114, 0.986);
+  margin: 0 0 20px 0;
+  
+}
+
+
+.elevecr {
+  display: flex; /* Coloca la imagen y el texto lado a lado */
+  flex-direction: row; /* Asegura que estén en la misma fila */
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
+  gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.elevecr img {
+  margin: 20px;
+  width: 220px;
+  height: auto;
+  border-radius: 25% 10%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.elevecr img:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(12, 70, 70, 0.925); /* Intensifica la sombra al pasar el mouse */
+}
+
+.aliados_descripcion {
+    font-size: 18px;
+    max-width: 500px; /* Limita el ancho del texto */
+    text-align: justify; /* Ajusta el texto para que quede más elegante */
+}
+
+#aliados_estrategicos p{
+  color: black;
+}
