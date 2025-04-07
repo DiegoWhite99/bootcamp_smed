@@ -1,4 +1,4 @@
-/* test */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 * {
@@ -9,7 +9,7 @@
 }
 
 body {
-    background: url(/images/S-M-E-D.webp);
+    background: url(../images/S-M-E-D.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
