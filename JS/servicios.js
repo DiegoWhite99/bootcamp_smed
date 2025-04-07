@@ -1,4 +1,5 @@
 /* --------------------------->inicio de apartado de mision y vision<----------------------- */
+// test
 document.getElementById('leftSide').addEventListener('click', function () {
     document.getElementById('leftSide').classList.add('hide-side-left');
     document.getElementById('rightSide').classList.add('hide-side-right');

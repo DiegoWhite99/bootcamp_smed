@@ -1,4 +1,5 @@
 /* ---------------------------> apartado de resposive <----------------------- */
+// test
 
 function MyMenuFuction(){
     var i = document.getElementById("navMenu");

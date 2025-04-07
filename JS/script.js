@@ -1,4 +1,5 @@
  // Array de IDs de los radio inputs
+ // test
  const sliders = ['Slider1', 'Slider2', 'Slider3'];
  const track = document.querySelector('.carousel-track');
  const slides = Array.from(track.children);
