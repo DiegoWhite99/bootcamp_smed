@@ -1,6 +1,14 @@
-.vscode/settings.json
-images/blog_smed.webp
+# VSCode settings
+.vscode/
+
+# Archivos grandes o innecesarios
+bfg.jar
 images/blog_smed.gif
-icons/eneno.svg
 images/blog_smed.webp
-/images
+icons/eneno.svg
+
+# Ignorar todo lo que esté dentro de la carpeta images
+/images/
+
+# Por si acaso, no subir carpetas internas de Git (aunque por defecto no se suben)
+/.git/
