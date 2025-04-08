@@ -1,160 +1,173 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Smed | Tienda </title>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" href="..../images/icon_principal.webp" type="image/png">
-        <link rel="stylesheet" href="/Css/tienda.css"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smed | Tienda </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../images/icon_principal.webp" type="image/png">
+    <link rel="stylesheet" href="../Css/tienda.css">
+    <link rel="stylesheet" href="../Css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
     <main>
-<!-------------------------opciones de nav de pagina ----------------> 
-<section>
-<nav class="nav">
-    <div class="nav-logo">
-        <p>Smed Technology</p>
-    </div>
-    <div class="nav-menu" id="navMenu">
-        <ul>
-            <li><a href="./nosotros.html" class="link">Inicio</a></li>
-            <li><a href="#" class="link">PCs y Laptops</a></li>
-            <li><a href="#" class="link">Accesorios</a></li>
-            <li><a href="#" class="link">Componentes</a></li>
-            <li><a href="#" class="link">Soporte tecnico </a></li>
-        </ul>
-    </div>
-    
-    <div class="nav-search">
-        <div class="search-container">
-            <input type="text" placeholder="Buscar productos" class="search-input">
-            <button class="search-button">
-                <i class="fas fa-search"></i> <!-- Icono de lupa -->
+        <!-------------------------opciones de nav de pagina ---------------->
+        <section>
+            <nav class="nav">
+                <div class="nav-logo">
+                    <p>Smed Technology</p>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="./nosotros.html" class="link">Inicio</a></li>
+                        <li><a href="#" class="link">PCs y Laptops</a></li>
+                        <li><a href="#" class="link">Accesorios</a></li>
+                        <li><a href="#" class="link">Componentes</a></li>
+                        <li><a href="#" class="link">Soporte tecnico </a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-search">
+                    <div class="search-container">
+                        <input type="text" placeholder="Buscar productos" class="search-input">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i> <!-- Icono de lupa -->
+                        </button>
+                    </div>
+                </div>
+        </section>
+        <!-- fin de nav -->
+
+        <!-- inicio de carrusel tienda -->
+
+        <section>
+            <div class="ContainerCenter">
+                <!-- Radio Seleccionar -->
+                <input type="radio" name="Carrusel" id="Slider1" checked>
+                <input type="radio" name="Carrusel" id="Slider2">
+                <input type="radio" name="Carrusel" id="Slider3">
+
+                <div class="Carrusels">
+                    <!-- Imagen contenido -->
+                    <div class="Carrusel" style="background-image: url(../images/Tienda/Banner1.webp);"></div>
+                    <div class="Carrusel"
+                        style="background-image: url(../images/Tienda/Blue\ and\ Purple\ Modern\ Futuristic\ Tech\ Event\ Banner.webp);">
+                    </div>
+                    <div class="Carrusel" style="background-image: url(../images/Tienda/tercerbnner.webp);"></div>
+
+                    <!-- Flechas a la izquierda por cada imagen -->
+                    <label for="Slider3" class="ArrowLeft Arrow1">❮</label>
+                    <label for="Slider1" class="ArrowLeft Arrow2">❮</label>
+                    <label for="Slider2" class="ArrowLeft Arrow3">❮</label>
+
+                    <!-- Flechas a la derecha por cada imagen -->
+                    <label for="Slider2" class="ArrowRight Arrow1">❯</label>
+                    <label for="Slider3" class="ArrowRight Arrow2">❯</label>
+                    <label for="Slider1" class="ArrowRight Arrow3">❯</label>
+                </div>
+
+                <!-- Selector circulos inferiores colgantes -->
+                <div class="Selectors">
+                    <label for="Slider1" class="Selector"></label>
+                    <label for="Slider2" class="Selector"></label>
+                    <label for="Slider3" class="Selector"></label>
+                </div>
+            </div>
+        </section>
+        <!-- productos -->
+
+        <div class="carousel-container">
+            <h2>Tendencias</h2>
+            <button class="prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="../images/productos/m2.webp" alt="Producto 1">
+                        <p>$306,00</p>
+                        <p>Disco Solido M.2 1 Tb Crucial <br> P3 Plus Pcie 4.0 2280</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/productos/ssd.webp" alt="Producto 2">
+                        <p>$264.812</p>
+                        <p>Unidad Solida Kingston <br> 2.5 A400 960gb</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/productos/mouse_redragon.webp" alt="Producto 3">
+                        <p>$169.900</p>
+                        <p>Mouse Gamer De Juego Redragon Impact M908 Negro</p>
+                    </div>
+
+
+                    <!-- Agrega más ítems aquí -->
+                </div>
+            </div>
+            <button class="next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
             </button>
         </div>
-    </div>
-</section> 
-<!-- fin de nav -->
 
-<!-- inicio de carrusel tienda -->
+        <!-- flooter -->
 
-<section>
-    <div class="ContainerCenter">
-        <!-- Radio Seleccionar -->
-        <input  type="radio" name="Carrusel" id="Slider1" checked>
-        <input type="radio" name="Carrusel" id="Slider2">
-        <input type="radio" name="Carrusel" id="Slider3">
-        
-        <div class="Carrusels">
-          <!-- Imagen contenido -->
-          <div class="Carrusel" style="background-image: url(../images/Tienda/Banner1.webp);"></div> 
-          <div class="Carrusel" style="background-image: url(../images/Tienda/Blue\ and\ Purple\ Modern\ Futuristic\ Tech\ Event\ Banner.webp);"></div>
-          <div class="Carrusel" style="background-image: url(../images/Tienda/tercerbnner.webp);"></div>
-          
-          <!-- Flechas a la izquierda por cada imagen -->
-          <label for="Slider3" class="ArrowLeft Arrow1">❮</label>
-          <label for="Slider1" class="ArrowLeft Arrow2">❮</label>
-          <label for="Slider2" class="ArrowLeft Arrow3">❮</label>
-          
-          <!-- Flechas a la derecha por cada imagen -->
-          <label for="Slider2" class="ArrowRight Arrow1">❯</label> 
-          <label for="Slider3" class="ArrowRight Arrow2">❯</label>
-          <label for="Slider1" class="ArrowRight Arrow3">❯</label>
-        </div>
-        
-        <!-- Selector circulos inferiores colgantes -->
-        <div class="Selectors">
-          <label for="Slider1" class="Selector"></label>
-          <label for="Slider2" class="Selector"></label>
-          <label for="Slider3" class="Selector"></label>
-        </div>
-      </div>
-    </section>
-<!-- productos -->
+        <footer>
+            <div class="footer-logo">
+                <h2>🚀 ¡Bienvenido a SMED! 🌐</h2>
+                <p>
 
-<div class="carousel-container">
-    <h2>Tendencias</h2>
-    <button class="prev">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </button>
-    <div class="carousel-track-container">
-        <div class="carousel-track">
-            <div class="carousel-item">
-                <img src="../images/productos/m2.webp" alt="Producto 1">
-                <p>$306,00</p>
-                <p>Disco Solido M.2 1 Tb Crucial <br> P3 Plus Pcie 4.0 2280</p>
+                    <br>
+                    En SMED, transformamos tus ideas digitales en realidad. Ofrecemos soluciones personalizadas en
+                    diseño web y soporte técnico para ayudarte a alcanzar tus objetivos. Desde el desarrollo web hasta
+                    la asistencia técnica, estamos aquí para impulsar tus proyectos al éxito. 💻✨
+                </p>
             </div>
-            <div class="carousel-item">
-                <img src="../images/productos/ssd.webp" alt="Producto 2">
-                <p>$264.812</p>
-                <p>Unidad Solida Kingston <br> 2.5 A400 960gb</p>
+            <br>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <h3>Contacto</h3>
+                    <p>Dirección: Cr 78 K #46 B 21 sur, Bogota, Colombia</p>
+                    <p>Teléfono: +57 302 4306848 </p>
+                    <p>Email: smed.techhub@gmail.com</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="./login.html">Inicio</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./tienda.html">Tienda</a></li>
+                        <li><a href="./experiencias.html">Experiencias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=61558691450269"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/Smed_Technology"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/smed_technology/"><i class="fab fa-instagram"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="../images/productos/mouse_redragon.webp" alt="Producto 3">
-                <p>$169.900</p>
-                <p>Mouse Gamer De Juego Redragon Impact M908 Negro</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SMED. Todos los derechos reservados.</p>
             </div>
+        </footer>
 
-           
-            <!-- Agrega más ítems aquí -->
-        </div>
-    </div>
-    <button class="next">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>    
-    </button>
-</div>
-
-    <!-- flooter -->
-
-<footer>
-    <div class="footer-logo">
-      <h2>🚀 ¡Bienvenido a SMED! 🌐</h2>  
-      <p>
-        
-        <br>
-        En SMED, transformamos tus ideas digitales en realidad. Ofrecemos soluciones personalizadas en diseño web y soporte técnico para ayudarte a alcanzar tus objetivos. Desde el desarrollo web hasta la asistencia técnica, estamos aquí para impulsar tus proyectos al éxito. 💻✨</p>
-    </div>
-    <br>
-    <div class="footer-container">
-        <div class="footer-info">
-            <h3>Contacto</h3>
-            <p>Dirección: Cr 78 K #46 B 21 sur, Bogota, Colombia</p>
-            <p>Teléfono: +57 302 4306848 </p>
-            <p>Email: smed.techhub@gmail.com</p>
-        </div>
-        <div class="footer-links">
-            <h3>Enlaces Útiles</h3>
-            <ul>
-                <li><a href="./login.html">Inicio</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./experiencias.html">Experiencias</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <h3>Síguenos</h3>
-            <ul>
-                <li><a href="https://www.facebook.com/profile.php?id=61558691450269"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://x.com/Smed_Technology"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/smed_technology/"><i class="fab fa-instagram"></i></a></li>
-               
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 SMED. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-</main>
-<script src="/JS/script.js"></script>
+    </main>
+    <script src="/JS/script.js"></script>
 </body>
+
 </html>

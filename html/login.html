@@ -1,117 +1,125 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smed | Login & Registration </title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../images/icon_principal.webp" type="image/png">
-    <link rel="stylesheet" href="/Css/login_style.css">
+    <link rel="stylesheet" href="../Css/login_style.css">
+    <link rel="stylesheet" href="../Css/nav.css">
 </head>
+
 <body>
-    <!-------------------------formato de caja----------------> 
+    <!-------------------------formato de caja---------------->
     <div class="wrapper">
-    <nav class="nav">
-        <div class="nav-logo">
-            <p> Smed Technology </p>
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <ul>
-                
-                <li><a href="nosotros.html" class="link">¿Quienes somos?</a></li>
-                <li><a href="servicios.html" class="link">Servicios</a></li>
-                <li><a href="tienda.html" class="link">Tienda</a></li>
-                <li><a href="experiencias.html" class="link">Experiencias</a></li>
-            </ul>
-        </div>
-        <div class="nav-button">
-            <button class="btn white-btn" id="loginbtn" onclick="login()">Ingresar </button>
-            <button class="btn" id="registerbtn" onclick="register()">Registrarse </button>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu" onclick="MyMenuFuction()"></i>
-        </div>
-    </nav>
-
- <!-------------------------formato de caja----------------> 
-    <div class="form-box">
-
-         <!-------------------------formulario de logeo ----------------> 
-
-         <div class="login-container" id="login">
-            <div class="top">
-                <header>Inicia Sesion</header>
-            </div>     
-            <div class="input-box">
-                <input type="email" class="input-field" placeholder="Usuario o correo">
-                <i class="bx bx-user"></i>
+        <nav class="nav">
+            <div class="nav-logo">
+                <p> Smed Technology </p>
             </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Contraseña">
-                <i class="bx bx-lock-alt"></i>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+
+                    <li><a href="nosotros.html" class="link">¿Quienes somos?</a></li>
+                    <li><a href="servicios.html" class="link">Servicios</a></li>
+                    <li><a href="tienda.html" class="link">Tienda</a></li>
+                    <li><a href="experiencias.html" class="link">Experiencias</a></li>
+                </ul>
             </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Ingresar" >
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginbtn" onclick="login()">Ingresar </button>
+                <button class="btn" id="registerbtn" onclick="register()">Registrarse </button>
             </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="login-check">
-                    <label for="login-check"> Recordar !</label>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="MyMenuFuction()"></i>
+            </div>
+        </nav>
+
+        <!-------------------------formato de caja---------------->
+        <div class="form-box">
+
+            <!-------------------------formulario de logeo ---------------->
+
+            <div class="login-container" id="login">
+                <div class="top">
+                    <header>Inicia Sesion</header>
                 </div>
-                <div class="two">
-                    <label><a href="#"> Olvide la Contraseña </a></label>
-                </div>
-            </div>
-        </div>
-
-        <!-------------------------formulario de registro ----------------> 
-        <div class="register-container" id="register">
-            <div class="top">
-                <header>Registrarse</header>
-            </div>
-            <div class="two-form">
                 <div class="input-box">
-                    <input type="text" id="nombre" class="input-field" name="Nombre" placeholder="Nombre" required>
+                    <input type="email" class="input-field" placeholder="Usuario o correo">
                     <i class="bx bx-user"></i>
                 </div>
-                 <div class="input-box">
-                    <input type="text" id="apellido" class="input-field" name="Apellido" placeholder="Apellido" required>
-                    <i class="bx bx-user"></i>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Contraseña">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Ingresar">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check"> Recordar !</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#"> Olvide la Contraseña </a></label>
+                    </div>
                 </div>
             </div>
-            <div class="input-box">
-                <input type="email" id="email" class="input-field" name="Email" placeholder="Email" required>
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" id="contraseña" class="input-field" name="Passsword" placeholder="Contraseña" required>
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" id="confirmContraseña" class="input-field" placeholder=" Confirmar Contraseña" required>
-                <i class="bx bx-lock-alt"></i>
-            </div> <!-- se agrega un segundo campo de verficacion de contraseña  en el area de registro-->
-          
 
-            <div class="input-box">
-                <input type="submit" class="submit" id="confirmation" value="Registrarse" onclick="validar()" disbled>
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <label for="register-check"> Recordar !</label>
+            <!-------------------------formulario de registro ---------------->
+            <div class="register-container" id="register">
+                <div class="top">
+                    <header>Registrarse</header>
                 </div>
-                <div class="two">
-                    <label><a href="#">Terminos & Condiciones </a></label>
+                <div class="two-form">
+                    <div class="input-box">
+                        <input type="text" id="nombre" class="input-field" name="Nombre" placeholder="Nombre" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="apellido" class="input-field" name="Apellido" placeholder="Apellido"
+                            required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="email" class="input-field" name="Email" placeholder="Email" required>
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="contraseña" class="input-field" name="Passsword" placeholder="Contraseña"
+                        required>
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="confirmContraseña" class="input-field"
+                        placeholder=" Confirmar Contraseña" required>
+                    <i class="bx bx-lock-alt"></i>
+                </div> <!-- se agrega un segundo campo de verficacion de contraseña  en el area de registro-->
+
+
+                <div class="input-box">
+                    <input type="submit" class="submit" id="confirmation" value="Registrarse" onclick="validar()"
+                        disbled>
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Recordar !</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Terminos & Condiciones </a></label>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div> 
 
-<script src="/JS/Functions.js"></script>
+    <script src="/JS/Functions.js"></script>
 </body>
+
 </html>
 
 <!-- esto es un comentario --->

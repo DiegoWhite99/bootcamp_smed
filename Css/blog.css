@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -18,86 +17,7 @@ body {
   background-image: url(../images/S-M-E-D.webp);
 }
 
-.nav {
-  padding: 0;
-  padding-left: 2%;
-  padding-right: 5%;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
-  background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
-  z-index: 100;
-  
-}
 
-
-.nav-logo p {
-  color: white;
-  font-size: 25px;
-  font-weight: 600;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.nav-menu ul {
-  display: flex;
-}
-
-.nav-menu li {
-  list-style-type: none;
-}
-
-.nav-menu ul li .link {
-  text-decoration: none;
-  font-weight: 500;
-  color: white;
-  position: relative;
-  padding-bottom: 2px;
-  margin: 0 30px;
-  transition: color 0.3s ease;
-  /* Añadir una transición suave */
-}
-
-.nav-menu ul li .link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 30%;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease-out;
-}
-
-.nav-menu ul li .link:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-.link:hover {
-  color: #ffff;
-  /* Modificado: Mantener el color del texto en hover */
-}
-
-.nav-button .btn {
-  width: 130px;
-  height: 40px;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: .3s ease;
-}
-
-.nav-button .btn:hover {
-  background: rgba(255, 255, 255, 0.7);
-}
 
 .titulo1 {
   color: aliceblue;
@@ -118,33 +38,7 @@ body {
   border-radius: 20px;
 }
 
-.nav_items a {
-  margin-left: 50px;
-  margin-right: 20px;
-  text-decoration: none;
-  color: aliceblue;
-  position: relative;
-  padding-bottom: 2px;
-  transition: color 1s ease-out;
-  /* Transición para el color del texto */
-}
 
-.nav_items a:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-.nav_items a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease-out;
-  /* Transición para la línea */
-}
 
 
 .link,
@@ -170,17 +64,21 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* cubre toda la sección sin deformarse */
-  object-position: center; /* centra la imagen */
+  object-fit: cover;
+  /* cubre toda la sección sin deformarse */
+  object-position: center;
+  /* centra la imagen */
   z-index: 0;
-  opacity: 0.7; /* opcional para que no opaque el texto */
+  opacity: 0.7;
+  /* opcional para que no opaque el texto */
 }
 
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(15, 18, 49, 0.26); /* oscurece el fondo para mejor legibilidad */
+  background: rgba(15, 18, 49, 0.26);
+  /* oscurece el fondo para mejor legibilidad */
   z-index: 1;
 }
 
@@ -195,7 +93,8 @@ body {
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: #00bfff; /* azul tecnológico */
+  color: #00bfff;
+  /* azul tecnológico */
 }
 
 .hero-content p {
@@ -217,11 +116,14 @@ body {
 .cta .btn:hover {
   background-color: #009acd;
 }
-/* nosotros */ 
+
+/* nosotros */
 
 .about {
-  background-color: #000; /* Fondo negro */
-  color: #fff; /* Texto blanco */
+  background-color: #000;
+  /* Fondo negro */
+  color: #fff;
+  /* Texto blanco */
 }
 
 .about-container {
@@ -234,15 +136,19 @@ body {
 
 .about-image {
   flex-shrink: 0;
-  margin-left: 0; /* Elimina cualquier margen izquierdo */
-  align-self: flex-start; /* Lo pega más a la izquierda */
+  margin-left: 0;
+  /* Elimina cualquier margen izquierdo */
+  align-self: flex-start;
+  /* Lo pega más a la izquierda */
 }
 
 .about-image img {
   width: 430%;
-  max-width: 800px; /* Controla el tamaño máximo */
+  max-width: 800px;
+  /* Controla el tamaño máximo */
   height: 400px;
-  border-radius: 20px; /* Aplica esquinas redondeadas */
+  border-radius: 20px;
+  /* Aplica esquinas redondeadas */
   display: block;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -251,41 +157,57 @@ body {
   font-size: 20PX;
   color: white;
   max-width: 700px;
-  margin-right: 50px; /* Espacio entre la imagen y el texto */
+  margin-right: 50px;
+  /* Espacio entre la imagen y el texto */
 }
 
 .about-text h2 {
-  margin-bottom: 70px; /* Espacio debajo del título principal */
+  margin-bottom: 70px;
+  /* Espacio debajo del título principal */
 
 }
 
-.about-text h3,p {
-  margin-top: 20px; /* Espacio antes de cada subtítulo */
+.about-text h3,
+p {
+  margin-top: 20px;
+  /* Espacio antes de cada subtítulo */
   margin-bottom: 10px;
-  padding: 5px 10px; /* Espaciado interno para que el fondo se vea bien */
-  border-radius: 10px; /* Esquinas redondeadas */
-  transition: background-color 0.3s ease-in-out; /* Suaviza el efecto */
+  padding: 5px 10px;
+  /* Espaciado interno para que el fondo se vea bien */
+  border-radius: 10px;
+  /* Esquinas redondeadas */
+  transition: background-color 0.3s ease-in-out;
+  /* Suaviza el efecto */
 }
 
 .about-text #title3-about:hover {
-  background-color: rgba(0, 0, 255, 0.836); /* Cambia el fondo a azul */
-  color: white; /* Asegura que el texto siga siendo legible */
-  border-radius: 10px; /* Mantiene los bordes redondeados */
-  cursor: pointer; /* Cambia el cursor a una mano para indicar interactividad */
+  background-color: rgba(0, 0, 255, 0.836);
+  /* Cambia el fondo a azul */
+  color: white;
+  /* Asegura que el texto siga siendo legible */
+  border-radius: 10px;
+  /* Mantiene los bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor a una mano para indicar interactividad */
 }
 
 
 
 .about-text p {
   color: #ffffffa4;
-  margin-bottom: 15px; /* Espacio entre párrafos */
+  margin-bottom: 15px;
+  /* Espacio entre párrafos */
 }
 
 .about-text p:hover {
-  background-color: rgba(240, 240, 240, 0.658); /* Cambia el fondo a azul */
-  color: black; /* Asegura que el texto siga siendo legible */
-  border-radius: 10px; /* Mantiene los bordes redondeados */
-  cursor: pointer; /* Cambia el cursor a una mano para indicar interactividad */
+  background-color: rgba(240, 240, 240, 0.658);
+  /* Cambia el fondo a azul */
+  color: black;
+  /* Asegura que el texto siga siendo legible */
+  border-radius: 10px;
+  /* Mantiene los bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor a una mano para indicar interactividad */
 }
 
 
@@ -298,7 +220,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 80px;
-  background-color: rgba(0, 0, 0, 0.884); /* Fondo oscuro */
+  background-color: rgba(0, 0, 0, 0.884);
+  /* Fondo oscuro */
   color: white;
   font-size: 20PX;
 }
@@ -334,7 +257,7 @@ body {
   transition: background-color 0.3s ease-in-out;
   padding: 5px 10px;
   border-radius: 10px;
-  color:#ffffff98
+  color: #ffffff98
 }
 
 /* Efecto hover */
@@ -345,20 +268,23 @@ body {
 }
 
 .service-item #txt-services:hover {
-  background-color: rgba(240, 240, 240, 0.658); /* Cambia el fondo a azul */
+  background-color: rgba(240, 240, 240, 0.658);
+  /* Cambia el fondo a azul */
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
 /* Estilos para la imagen */
 .services-image img {
-  max-width: 1000px; /* Controla el tamaño máximo */
+  max-width: 1000px;
+  /* Controla el tamaño máximo */
   height: 460px;
-  border-radius: 20px; /* Aplica esquinas redondeadas */
+  border-radius: 20px;
+  /* Aplica esquinas redondeadas */
   display: block;
   margin-right: 150px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-  
+
 }
 
 /* contacto*/
@@ -388,7 +314,8 @@ label {
   font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -513,7 +440,8 @@ footer {
   margin: 0;
   font-size: 14px;
 }
-/*carrusel */ 
+
+/*carrusel */
 .brand-carousel {
   width: 100%;
   background-color: #ffffffa4;
@@ -549,8 +477,13 @@ footer {
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Responsivo */
@@ -564,7 +497,9 @@ footer {
     margin: 20px 0;
   }
 
-};
+}
+
+;
 
 
 /* proyectos */
@@ -587,7 +522,7 @@ footer {
   gap: 20px;
 }
 
- .galeria a{
+.galeria a {
   text-decoration: none;
 }
 
@@ -633,7 +568,7 @@ footer {
   margin: auto;
 }
 
-#tittle_fundadores{
+#tittle_fundadores {
   color: #0969e7;
   font-size: 35px;
 }
@@ -747,103 +682,4 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: linear-gradient(45deg, #ff4500, #ff7f50);
   transform: scale(1.05);
-}
-
-
-
-
-
-/* ========== RESPONSIVE DESIGN ========== */
-
-/* Para pantallas menores a 1024px (Tablets y pequeñas laptops) */
-@media (max-width: 1024px) {
-  .nav {
-    height: 80px;
-    line-height: 80px;
-  }
-
-  .nav-logo p {
-    font-size: 22px;
-  }
-
-  .screen_1 {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 5%;
-  }
-
-  .screen_1 .content1 h1 {
-    font-size: 28px;
-  }
-
-  .logo_1 img {
-    width: 70%;
-    max-width: 300px;
-  }
-}
-
-/* Para pantallas menores a 768px (Móviles y tablets en vertical) */
-@media (max-width: 768px) {
-  .nav {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .nav-logo p {
-    font-size: 20px;
-    margin-left: 0;
-  }
-
-  .screen_1 {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .screen_1 h1 {
-    font-size: 24px;
-  }
-
-  .screen_1 p {
-    font-size: 14px;
-  }
-
-  .btn_scre {
-    font-size: 16px;
-    padding: 8px 20px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 90%;
-  }
-}
-
-/* Para pantallas menores a 480px (Teléfonos más pequeños) */
-@media (max-width: 480px) {
-  .nav {
-    height: 60px;
-    line-height: 60px;
-  }
-
-  .nav-logo p {
-    font-size: 18px;
-  }
-
-  .screen_1 h1 {
-    font-size: 20px;
-  }
-
-  .screen_1 p {
-    font-size: 13px;
-  }
-
-  .btn_scre {
-    font-size: 14px;
-    padding: 6px 16px;
-  }
 }

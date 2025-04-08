@@ -1,0 +1,255 @@
+.nav {
+    padding: 0;
+    padding-left: 2%;
+    padding-right: 5%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+    z-index: 100;
+
+}
+
+.nav-logo img {
+    width: 50px;
+    height: 30px;
+    border-radius: 70%;
+    margin-right: 50px;
+}
+
+.nav-logo p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu li {
+    list-style-type: none;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    padding-bottom: 2px;
+    margin: 0 30px;
+    transition: color 0.3s ease;
+    /* Añadir una transición suave */
+}
+
+.nav-menu ul li .link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-out;
+}
+
+.nav-menu ul li .link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.link:hover {
+    color: #ffff;
+    /* Modificado: Mantener el color del texto en hover */
+}
+
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.nav-button .btn:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.nav_items a {
+    margin-left: 50px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 1s ease-out;
+    /* Transición para el color del texto */
+}
+
+.nav_items a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav_items a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-out;
+    /* Transición para la línea */
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Para pantallas menores a 1024px (Tablets y pequeñas laptops) */
+@media (max-width: 1024px) {
+    .nav {
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .nav-logo p {
+        font-size: 22px;
+    }
+
+    .screen_1 {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .screen_1 .content1 h1 {
+        font-size: 28px;
+    }
+
+    .logo_1 img {
+        width: 70%;
+        max-width: 300px;
+    }
+}
+
+/* Para pantallas menores a 768px (Móviles y tablets en vertical) */
+@media (max-width: 768px) {
+    .nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-logo p {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .screen_1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .screen_1 h1 {
+        font-size: 24px;
+    }
+
+    .screen_1 p {
+        font-size: 14px;
+    }
+
+    .btn_scre {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 90%;
+    }
+}
+
+/* Para pantallas menores a 480px (Teléfonos más pequeños) */
+@media (max-width: 480px) {
+    .nav {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .nav-logo p {
+        font-size: 18px;
+    }
+
+    .screen_1 h1 {
+        font-size: 20px;
+    }
+
+    .screen_1 p {
+        font-size: 13px;
+    }
+
+    .btn_scre {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+}
+
+/* from login_style */
+@media only screen and (max-width: 786px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav-menu.reponsive {
+        top: 100px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .nav-menu-btn i {
+        font-size: 25px;
+        color: #ffff;
+        padding: 10px;
+    }
+
+    .nav-menu-btn i:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
