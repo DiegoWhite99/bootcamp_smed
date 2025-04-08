@@ -177,12 +177,33 @@
 
 <section id="contacto">
   <h2>Contáctanos</h2>
-  <p id="contac_p">Si tienes preguntas sobre nuestros servicios o deseas agendar una asesoría, contáctanos a través de nuestro formulario.</p>
+  <p>Si tienes alguna pregunta o quieres trabajar con nosotros, llena el formulario a continuación.</p>
   
   <div class="contacto-container">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIB372kTWOtIpVfYZE0VE9oIGTyjtRE35heNeYRz_vPrkQvg/viewform?usp=header" target="_blank">
-          <button class="contact-btn">📩 Completar Formulario</button>
-      </a>
+      <form action="#" method="get" target="_blank">
+          <label for="nombre">👤 Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+          <label for="email"> 📩 Correo Electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+          <label for="servicio">🛠️ Clase de servicios:</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>🔽 Selecciona una opción</option>
+              <option value="soporte_tecnico">💻 Soporte técnico</option>
+              <option value="asesorias">🎓 Asesorías</option>
+              <option value="consultas_proyectos">📊 Consultas de proyectos</option>
+              <option value="campañas_marketing">📣 Campañas de marketing</option>
+              <option value="desarrollo_web">🌐 Desarrollo web</option>
+              <option value="planes_empresariales">🏢 Planes empresariales</option>
+              <option value="armo_pc_gamer">🖥️ Armo mi PC Gamer</option>
+            </select>
+
+          <label for="mensaje"> 📣 Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+          <button type="submit">Enviar</button>
+      </form>
   </div>
 </section>
 

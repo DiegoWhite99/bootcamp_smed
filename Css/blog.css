@@ -361,6 +361,58 @@ body {
   
 }
 
+/* contacto*/
+
+#contacto {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.contacto-container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+
+
+
+
+
 /* footer */
 
 footer {
@@ -631,25 +683,55 @@ footer {
 
 /* contactanos */
 
+/* Estilo para la sección de contacto */
 #contacto {
-  background: rgba(0, 0, 0, 0.644); /* Oscurece un poco el fondo */
-  padding: 60px 20px;
-  text-align: center;
-  color: white;
-  position: relative;
+  background-color: #000000b2;
+  padding: 40px 20px;
+  color: #f3f3f3;
 }
 
+/* Contenedor centrado */
 .contacto-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgb(0, 0, 0);
+  text-align: left;
 }
 
-.contact-btn {
+/* Etiquetas */
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #0c0c0cc5;
+}
+
+/* Inputs y textarea */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+/* Área de texto */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Estilo para el botón de enviar */
+.contact-btn,
+button[type="submit"] {
+  margin-top: 30px;
   background: linear-gradient(45deg, #ff7f50, #ff4500);
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: bold;
   padding: 12px 24px;
@@ -657,21 +739,16 @@ footer {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: inline-block;
-  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(19, 16, 16, 0.993);
 }
 
-.contact-btn:hover {
+/* Hover */
+.contact-btn:hover,
+button[type="submit"]:hover {
   background: linear-gradient(45deg, #ff4500, #ff7f50);
   transform: scale(1.05);
 }
 
-#contac_p {
-  color: #f8f8f8;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
 
 
 
