@@ -10,19 +10,30 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html,
-body {
+/* ---- particles.js container ---- */
+#particles-js {
+  width: 100%;
   height: 100%;
+  background:#1f1f1f;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* html,
+body {
+  /* height: 100%;
   margin: 0;
   padding: 0;
-}
+} */
+
 /* section1 */
 .principal_section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #0f0f0f, #1f1f1f);
+  /* background: linear-gradient(to right, #0f0f0f, #1f1f1f); */
   color: white;
   text-align: center;
   padding: 20px;
@@ -79,7 +90,8 @@ body {
   width: 40px;
   height: 40px;
   margin-bottom: 10px;
-  filter: invert(1); /* Para que se vean blancos si los íconos son oscuros */
+  /* filter: invert(1); */
+  /* Para que se vean blancos si los íconos son oscuros */
 }
 
 .service_item p {
@@ -94,6 +106,7 @@ body {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -220,12 +233,15 @@ footer {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+
   /* resposive-nav*/
 }
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
