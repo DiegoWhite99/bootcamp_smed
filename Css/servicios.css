@@ -153,6 +153,103 @@ body {
   margin: 0;
 }
 
+/*sectiopn 2*/ 
+/* CSS */
+.slider-section {
+  padding: 2rem;
+  background: #111;
+  color: #fff;
+}
+
+.slider-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  min-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: #444;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.tag.orange {
+  background: orange;
+  color: #000;
+}
+
+.tag.blue {
+  background: #007bff;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-btn.left {
+  left: 0;
+}
+
+.slider-btn.right {
+  right: 0;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #fff;
+}
 
 
 
