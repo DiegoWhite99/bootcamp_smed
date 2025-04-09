@@ -100,6 +100,62 @@ body {
   color: white;
 }
 
+.hero_campaign {
+  position: relative;
+  margin-top: 60px;
+  max-width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.hero_campaign img {
+  width: 100%;
+  max-width: 950px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+/* Tarjeta de texto encima de la imagen */
+.hero_text_card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 16px 20px;
+  max-width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #111;
+  text-align: left;
+}
+
+.hero_text_card .badge {
+  display: inline-block;
+  background-color: #ff4f2b;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.hero_text_card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.hero_text_card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+
+
 /* Animación */
 @keyframes fadeInUp {
   from {
