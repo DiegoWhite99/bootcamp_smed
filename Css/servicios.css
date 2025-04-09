@@ -1,6 +1,7 @@
 /* test */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 * {
   margin: 0;
@@ -14,6 +15,89 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+/* section1 */
+.principal_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #0f0f0f, #1f1f1f);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.tittle_principal {
+  font-family: 'Orbitron', sans-serif;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.tittle_principal h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.tittle_principal h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #00ffcc;
+}
+
+/* Sección de íconos */
+.services_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.service_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff0a;
+  border-radius: 16px;
+  padding: 20px;
+  width: 110px;
+  backdrop-filter: blur(8px);
+  border: 1px solid #ffffff1a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+
+.service_item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  filter: invert(1); /* Para que se vean blancos si los íconos son oscuros */
+}
+
+.service_item p {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -121,7 +205,27 @@ footer {
   font-size: 14px;
 }
 
-/* Responsivo */
+/* Responsivo section1*/
+
+
+
+.tittle_principal {
+  font-family: 'Orbitron', sans-serif;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* resposive-nav*/
+}
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
