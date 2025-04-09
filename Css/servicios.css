@@ -153,11 +153,11 @@ body {
   margin: 0;
 }
 
-/*sectiopn 2*/ 
-/* CSS */
+/*section 2*/ 
+
 .slider-section {
   padding: 2rem;
-  background: #111;
+  background: #11111152;
   color: #fff;
 }
 
@@ -177,7 +177,18 @@ body {
 }
 
 .card {
-  background: #1f1f1f;
+  background: #f3f1f1;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  min-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+  color: #000;
+}
+
+.card_dark {
+  background: #30b396;
   border-radius: 10px;
   padding: 1rem;
   margin: 0 0.5rem;
