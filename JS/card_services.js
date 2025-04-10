@@ -5,10 +5,12 @@ function moveSlide(direction) {
   slider.scrollLeft += direction * cardWidth;
 }
 
-// Auto-scroll cada 5 segundos
+// Auto-scroll cada 3 segundos
 setInterval(() => {
-  moveSlide(1);
-  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - cardWidth) {
+    // Reinicia el scroll si está al final
     slider.scrollLeft = 0;
+  } else {
+    moveSlide(1);
   }
-}, 600000);
+}, 5000);
