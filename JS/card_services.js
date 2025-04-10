@@ -1,32 +1,14 @@
-const track = document.querySelector('.slider-track');
-const cards = document.querySelectorAll('.card');
-const dots = document.querySelectorAll('.dot');
-const btnLeft = document.querySelector('.slider-btn.left');
-const btnRight = document.querySelector('.slider-btn.right');
+const slider = document.getElementById('sliderTrack');
+const cardWidth = 320; // ancho estimado de una card con margen
 
-let index = 0;
-
-function updateSlider() {
-  const offset = cards[0].offsetWidth + 16; // ancho + margen
-  track.style.transform = `translateX(-${index * offset}px)`;
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
+function moveSlide(direction) {
+  slider.scrollLeft += direction * cardWidth;
 }
 
-btnLeft.addEventListener('click', () => {
-  index = Math.max(index - 1, 0);
-  updateSlider();
-});
-
-btnRight.addEventListener('click', () => {
-  index = Math.min(index + 1, cards.length - 1);
-  updateSlider();
-});
-
-dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => {
-    index = i;
-    updateSlider();
-  });
-});
+// Auto-scroll cada 5 segundos
+setInterval(() => {
+  moveSlide(1);
+  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+    slider.scrollLeft = 0;
+  }
+}, 600000);

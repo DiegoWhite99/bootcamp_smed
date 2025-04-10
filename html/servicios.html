@@ -90,43 +90,79 @@
         </section>
 
 <!--section2-->
-        <section class="slider-section">
-          <h2 class="slider-title">Servicios Destacados</h2>
-          <div class="slider-container">
-            <button class="slider-btn left">&#8249;</button>
-            <div class="slider-track">
-              <div class="card">
-                <span class="tag">Sitio Web</span>
-                <h3>Impresiona en Línea</h3>
-                <p>Crea tu presencia digital con estilo profesional y moderno.</p>
-                <img src="../icons/Smed.svg" alt="Impresiona en Línea">
-              </div>
-              <div class="card_dark">
-                <span class="tag orange">Dominio</span>
-                <h3>Destácate Online</h3>
-                <p>Obtén un dominio único que represente tu marca.</p>
-                <img src="../images/smed-dev2.webp" alt="Destácate Online">
-              </div>
-              <div class="card">
-                <span class="tag blue">Contratos</span>
-                <h3>Fundamento Legal</h3>
-                <p>Accede a documentos esenciales para tu negocio.</p>
-                <img src="../images/smed-dev3.webp" alt="Fundamento Legal">
-              </div>
-            </div>
-            <button class="slider-btn right">&#8250;</button>
-            <div class="slider-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
-      </section>
-        
-    
-        
+<section class="slider-section">
+  <h2 class="slider-title">Servicios Destacados</h2>
+  <div class="slider-container">
+    <button class="slider-btn left" onclick="moveSlide(-1)">&#10094;</button>
 
-      </main>
+    <div class="slider-track" id="sliderTrack">
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/campaña/smed (2).svg" alt="Sitio Web">
+        </div>
+        <div class="card-content">
+          <h3>Sitio Web</h3>
+          <p>Tu presencia digital con diseño moderno y optimizado</p>
+          <p id="condicion">Precio sujeto a los requerimientos del proyecto y la necesidad del cliente.</p>
+          <span class="price">solicitud 📩</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/campaña/smed_network.svg" alt="Redes & Cableado">
+        </div>
+        <div class="card-content">
+          <h3>Redes & Cableado</h3>
+          <p>Instalación y organización de tu red desde cero.</p>
+          <p id="condicion">Precio sujeto a los requerimientos de tipología y despliegue en redes.</p>
+          <span class="price">solicitud 📩</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/campaña/smed_support.svg" alt="Soporte Técnico">
+        </div>
+        <div class="card-content">
+          <h3>Soporte Técnico</h3>
+          <p>Revisión, diagnóstico y soluciones efectivas desde 60.000</p>
+          <p id="condicion">Precio sujeto a los requerimientos del cliente y <br> las fallas de los equipos</p>
+          <span class="price">$60.000 </span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/campaña/smed_gaming.gif" alt="Gaming">
+        </div>
+        <div class="card-content">
+          <h3>Arma tu PC!</h3>
+          <p>Te asesoramos con relacion presupuesto para que armes <br> el setup de tus sueños</p>
+          <p id="condicion">Precio sujeto a los requerimientos del cliente  </p>
+          <span class="price">solicitud 📩</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/campaña/smed_consultoria.gif" alt="Soporte Técnico">
+        </div>
+        <div class="card-content">
+          <h3>Asesorias para empresas</h3>
+          <p>Contactanos! para darte el mejor servicio empresarial</p>
+          <span class="price">solicitud 📩</span>
+        </div>
+      </div>
+
+      <!-- Más cards aquí si quieres -->
+    </div>
+
+    <button class="slider-btn right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+</main>
 
 
 
