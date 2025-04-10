@@ -17,8 +17,6 @@ body {
   background-image: url(../images/S-M-E-D.webp);
 }
 
-
-
 .titulo1 {
   color: aliceblue;
   display: flex;
@@ -28,18 +26,6 @@ body {
 .titulo1 h1 {
   margin-left: 5px;
 }
-
-#logo_smed {
-  width: 80px;
-  height: 80px;
-  margin-top: 10px;
-  margin-left: 20px;
-  display: flex;
-  border-radius: 20px;
-}
-
-
-
 
 .link,
 .link_active {
