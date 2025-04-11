@@ -79,6 +79,7 @@ body {
   backdrop-filter: blur(8px);
   border: 1px solid #ffffff1a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .service_item:hover {
