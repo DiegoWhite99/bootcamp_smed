@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="../Css/nav.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  
 </head>
 
 <body>
@@ -161,23 +162,89 @@
     <button class="slider-btn right" onclick="moveSlide(1)">&#10095;</button>
   </div>
 </section>
-
+<!--proyectos furutos -->
+<section class="futuros-proyectos-section">
+  <section class="futuros-proyectos-section">
+    <h2 class="slider-title">Futuros Proyectos</h2>
+    <div class="proyectos-grid">
+      <div class="proyecto-card">
+        <div class="proyecto-img">
+          <img src="../images/campaña/smed_academy.svg" alt="SMED Academy" />
+        </div>
+        <h3 class="proyecto-titulo">SMED Academy</h3>
+        <p class="proyecto-descripcion">
+          SMED Academy proyecta una alianza estratégica con Elvecr, startup experta en plataformas educativas Moodle. Juntas buscan integrar infraestructura robusta y soporte técnico especializado para ofrecer entornos de aprendizaje modernos y adaptados a la formación tecnológica actual.
+        </p>
+      </div>
+  
+      <div class="proyecto-card">
+        <div class="proyecto-img">
+          <img src="../images/campaña/smed_home.svg" alt="SMED Tools" />
+        </div>
+        <h3 class="proyecto-titulo">SMED Home</h3>
+        <p class="proyecto-descripcion">
+          SMED Home nace como una propuesta de automatización doméstica orientada a facilitar la vida diaria. Integra soluciones de control inteligente para iluminación, seguridad y dispositivos conectados, con énfasis en accesibilidad, eficiencia energética y soporte personalizado. Una experiencia tecnológica pensada para el hogar moderno.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!--Nuestras cualidades-->
+  <section class="section-cualidades">
+    <h2  class="our_cualitestittle"  style="text-align: left;">Nuestras Cualidades</h2>
+    <div class="card-container">
+  
+      <!-- Tarjeta 1 -->
+      <div class="card">
+        <div class="card-icon">
+          <img src="../icons/mesa-de-ayuda.svg" alt="Soporte" class="icon-img">
+        </div>
+        <div>
+          <div class="card-title green">Soporte Personalizado</div>
+          <div class="card-text">Asistencia técnica y guía según tus necesidades reales.</div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 2 -->
+      <div class="card">
+        <div class="card-icon">
+          <img src="../icons/smed_seguridad.svg" alt="Seguridad" class="icon-img">
+        </div>
+        <div>
+          <div class="card-title blue">Seguridad Garantizada</div>
+          <div class="card-text">Protocolos actualizados para proteger tu información.</div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 3 -->
+      <div class="card">
+        <div class="card-icon">
+          <img src="../icons/conocimineto.svg" alt="Conocimiento" class="icon-img">
+        </div>
+        <div>
+          <div class="card-title orange">Conocimiento Aplicado</div>
+          <div class="card-text">Formación y soluciones basadas en experiencia real.</div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+<!--section final-->
+    <section class="section-servicio-flujo">
+      <h2 class="title-servicio">📋 ¿Cómo funciona nuestro servicio?</h2>
+      <div class="step-container">
+        <div class="step">📝 Agenda tu cita</div>
+        <div class="step">🔍 Revisamos tu equipo</div>
+        <div class="step">🔧 Reparamos o damos mantenimiento</div>
+        <div class="step">✅ Entrega + soporte post-servicio</div>
+      </div>
+      <audio id="pop-sound" src="../mp3/pop-6.mp3" preload="auto"></audio>
+    </section>
+  
 </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!---<footer>
+  <footer>
     <div class="footer-logo">
       <a href="#"><img src="../images/smed-_1_oficial_1.webp" alt="logo" Style="height: 100px;"></a>
       <p>
@@ -219,14 +286,16 @@
     <div class="footer-bottom">
       <p>&copy; 2024 SMED. Todos los derechos reservados.</p>
     </div>
-  </footer> --->
+  </footer> 
 
 <!-- Contenedor para particles.js -->
 <div id="particles-js"></div>
 <script src="../JS/particles.js"></script>
 <script src="../JS/app.js"></script>
 <script src="../JS/card_services.js"></script>
+<script src="../JS/section_end.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
