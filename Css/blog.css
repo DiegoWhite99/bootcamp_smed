@@ -549,11 +549,6 @@ footer {
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: center;
 }
 
 .footer-container div {
@@ -638,11 +633,14 @@ footer {
 }
 
 /* ===== MEDIA QUERIES (RESPONSIVO) ===== */
-@media (max-width: 768px) {
+@media (max-width: 726px) {
     
     .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+    .footer-social ul {
+        justify-content: center;
     }
     
     .footer-container div {
