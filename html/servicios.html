@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios</title>
+    <link rel="stylesheet" href="../Css/Componentes/BarraNavegacion.css">
   <script src="../JS/app.js"></script>
   <script src="../JS/particles.js"></script>
   <style>
@@ -20,7 +21,8 @@
   </style>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" href="/icons/icon_principal.webp" type="image/png">
-  <link rel="stylesheet" href="../Css/nav.css">
+	<link rel="stylesheet" href="../Css/Componentes/BarraNavegacion.css">
+	<link rel="stylesheet" href="../Css/Componentes/PiePagina.css">
   <link rel="stylesheet" href="../Css/servicios.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,29 +31,8 @@
 </head>
 
 <body>
+  <nav-bar></nav-bar>
   <div class="wrapper">
-    <nav class="nav">
-      <div class="nav-logo">
-        <p> Smed Technology </p>
-      </div>
-      <div class="nav-menu" id="navMenu">
-        <ul>
-
-          <li><a href="blog.html" class="link">¿Quienes somos?</a></li>
-          <li><a href="servicios.html" class="link">Servicios</a></li>
-          <li><a href="tienda.html" class="link">Tienda</a></li>
-          <li><a href="experiencias.html" class="link">Experiencias</a></li>
-
-        </ul>
-      </div>
-      <div class="nav-button">
-        <button class="btn btn-outline-light" id="loginbtn"
-          onclick="location.href='../html/login.html';">Ingresar</button>
-      </div>
-      <div class="nav-menu-btn">
-        <i class="bx bx-menu" onclick="MyMenuFuction()"></i>
-      </div>
-    </nav>
     <main>
       <section class="principal_section">
         <div class="tittle_principal">
@@ -249,51 +230,8 @@
         </section>
 
     </main>
-
-    <footer>
-      <div class="footer-logo">
-        <a href="#"><img src="../images/smed-_1_oficial_1.webp" alt="logo" Style="height: 100px;"></a>
-        <p>
-
-          <br>
-          En SMED, transformamos tus ideas digitales en realidad. Ofrecemos soluciones personalizadas en diseño web y
-          soporte técnico para ayudarte a alcanzar tus objetivos. Desde el desarrollo web hasta la asistencia técnica,
-          estamos aquí para impulsar tus proyectos al éxito. 💻✨
-        </p>
-      </div>
-      <br>
-      <div class="footer-container">
-        <div class="footer-info">
-          <h3>Contacto</h3>
-          <p>Dirección: Cr 78 K #46 B 21 sur, Bogota, Colombia</p>
-          <p>Teléfono: +57 302 4306848 </p>
-          <p>Email: smed.techhub@gmail.com</p>
-        </div>
-        <div class="footer-links">
-          <h3>Enlaces Útiles</h3>
-          <ul>
-            <li><a href="./login.html">Inicio</a></li>
-            <li><a href="./servicios.html">Servicios</a></li>
-            <li><a href="./tienda.html">Tienda</a></li>
-            <li><a href="./experiencias.html">Experiencias</a></li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <h3>Síguenos</h3>
-          <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=61558691450269"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li><a href="https://x.com/Smed_Technology"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/smed_technology/"><i class="fab fa-instagram"></i></a></li>
-
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 SMED. Todos los derechos reservados.</p>
-      </div>
-    </footer>
   </div>
+  <footer-page></footer-page>
   <!-- Contenedor para particles.js -->
   <div id="particles-js"></div>
   <script src="../JS/particles.js"></script>
@@ -303,7 +241,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
-
+  <script type="module" src="../JS/Componentes/ComponentesBase.js" defer></script>
 </body>
 
 </html>
