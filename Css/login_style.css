@@ -22,10 +22,6 @@ body {
     min-height: 110vh;
 }
 
-/* #registerBTN {
-    margin-left: 15px;
-} */
-
 .btn.white-btn {
     background: rgba(255, 255, 255, 0.7);
 }
@@ -91,13 +87,6 @@ body {
 
 .top span a:hover {
     color: #23b1d4;
-}
-
-header {
-    color: #ffff;
-    font-size: 30px;
-    text-align: center;
-    padding: 10px 0 30px 0;
 }
 
 .two-form {

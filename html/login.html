@@ -9,39 +9,19 @@
 	<link rel="icon" href="../images/icon_principal.webp" type="image/png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-	<link rel="stylesheet" href="../Css/nav.css">
+	<link rel="stylesheet" href="../Css/Componentes/BarraNavegacion.css">
 	<link rel="stylesheet" href="../Css/login_style.css">
 </head>
 
 <body>
-	<!-------------------------formato de caja---------------->
-	<nav class="nav">
-		<div class="nav-logo">
-			<p> Smed Technology </p>
-		</div>
-		<div class="nav-menu" id="navMenu">
-			<ul>
-				<li><a href="blog.html" class="link">¿Quienes somos?</a></li>
-				<li><a href="servicios.html" class="link">Servicios</a></li>
-				<li><a href="tienda.html" class="link">Tienda</a></li>
-				<li><a href="experiencias.html" class="link">Experiencias</a></li>
-			</ul>
-		</div>
-		<div class="nav-button">
-			<button class="btn white-btn" id="loginbtn" onclick="login()">Ingresar </button>
-			<button class="btn" id="registerbtn" onclick="register()">Registrarse </button>
-		</div>
-		<div class="nav-menu-btn">
-			<i class="bx bx-menu" onclick="MyMenuFuction()"></i>
-		</div>
-	</nav>
+	<nav-bar login="true"></nav-bar>
 	<div class="wrapper">
 		<!-------------------------formato de caja---------------->
 		<div class="form-box">
 			<!-------------------------formulario de logeo ---------------->
 			<div class="login-container" id="login">
-				<div class="top">
-					<header>Inicia Sesion</header>
+				<div class="top" style="color: #ffff; font-size: 30px; text-align: center; padding: 10px 0 30px 0;">
+					Inicia Sesion
 				</div>
 				<form id="loginForm" method="post" action="http://localhost:4000/login">
 					<div class="input-box">
@@ -71,8 +51,8 @@
 
 			<!-------------------------formulario de registro ---------------->
 			<div class="register-container" id="register">
-				<div class="top">
-					<header>Registrarse</header>
+				<div class="top" style="color: #ffff; font-size: 30px; text-align: center; padding: 10px 0 30px 0;">
+					Registrarse
 				</div>
 				<!---inicio de etiqueta formulario para hacer el metodo post-->
 				<form id="registerForm" method="post" action="http://localhost:4000/register">
@@ -120,11 +100,11 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="../JS/Functions.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
 		crossorigin="anonymous"></script>
+	<script type="module" src="../JS/Componentes/ComponentesBase.js" defer></script>
 </body>
 
 </html>
