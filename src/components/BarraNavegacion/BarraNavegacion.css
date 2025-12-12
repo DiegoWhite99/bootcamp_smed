@@ -163,6 +163,23 @@
     color: #555;
 }
 
+/* Boton de menu desplegable */
+.botonHamburgesa {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  gap: 6px;
+  margin-top: 30px;
+}
+
+.botonHamburgesa span {
+  height: 3px;
+  background: white;
+  width: 100%;
+  border-radius: 4px;
+}
+
 /* ========== RESPONSIVE DESIGN ========== */
 
 /* Para pantallas menores a 1024px (Tablets y pequeñas laptops) */
@@ -190,6 +207,43 @@
         width: 70%;
         max-width: 300px;
     }
+}
+
+/* Para pantallas menores a 980px (Móviles y tablets en vertical) */
+@media (max-width: 980px) {
+
+  /* mostrar hamburguesa */
+  .botonHamburgesa {
+    display: flex;
+  }
+
+  /* ocultar menú por defecto */
+  .nav-menu {
+    display: none;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 66px; /* ajusta según tu navbar */
+    left: 0;
+    /* padding: 15px 0; */
+  }
+
+  /* menú abierto */
+  .nav-menu.show {
+    display: block;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .nav-menu ul li {
+    margin: 15px 0;
+  }
+
 }
 
 /* Para pantallas menores a 768px (Móviles y tablets en vertical) */
