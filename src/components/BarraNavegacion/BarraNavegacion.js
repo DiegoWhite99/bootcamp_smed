@@ -2,7 +2,9 @@
 export default class BarraNavegacion extends HTMLElement {
   async connectedCallback() {
     // Cargar el HTML
-    const resp = await fetch("../components/BarraNavegacion/BarraNavegacion.html");
+    const resp = await fetch(
+      "../components/BarraNavegacion/BarraNavegacion.html"
+    );
     const html = await resp.text();
     this.innerHTML = html;
 
@@ -48,12 +50,21 @@ export default class BarraNavegacion extends HTMLElement {
     const botonHamburgesa = document.getElementById("botonHamburgesa");
     const navMenu = document.getElementById("navMenu");
 
+    // Toggle del menú y animación del botón
     botonHamburgesa.addEventListener("click", () => {
       navMenu.classList.toggle("show");
+      botonHamburgesa.classList.toggle("active");
+    });
+
+    // Cerrar el menú al hacer clic en cualquier enlace
+    const links = navMenu.querySelectorAll(".link");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        botonHamburgesa.classList.remove("active");
+      });
     });
   }
 }
 
 customElements.define("nav-bar", BarraNavegacion);
-
-
