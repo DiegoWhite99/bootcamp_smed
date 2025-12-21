@@ -6,9 +6,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios</title>
-    <link rel="stylesheet" href="../Css/Componentes/BarraNavegacion.css">
-  <script src="../JS/app.js"></script>
-  <script src="../JS/particles.js"></script>
+
+  <!-- Load Bootstrap FIRST -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" -->
+  <!-- integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
+
+  <!-- Then fonts/icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="icon" href="../assets/icons/icon_principal.webp" type="image/png">
+
+  <!-- Finally custom CSS to override Bootstrap -->
+  <link rel="stylesheet" href="../styles/servicios.css">
+  <link rel="stylesheet" href="../components/BarraNavegacion/BarraNavegacion.css">
+  <link rel="stylesheet" href="../components/PiePagina/PiePagina.css">
+
   <style>
     #particles-js {
       position: fixed;
@@ -19,14 +31,6 @@
       z-index: -1;
     }
   </style>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="icon" href="/icons/icon_principal.webp" type="image/png">
-	<link rel="stylesheet" href="../Css/Componentes/BarraNavegacion.css">
-	<link rel="stylesheet" href="../Css/Componentes/PiePagina.css">
-  <link rel="stylesheet" href="../Css/servicios.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
 </head>
 
@@ -41,29 +45,30 @@
           <!-- Nueva sección de íconos -->
           <div class="services_section">
             <div class="service_item">
-              <img src="../icons/consultar.svg" alt="Formación">
+              <img src="../assets/icons/consultar.svg" alt="Formación">
               <p>Asesorias</p>
             </div>
             <div class="service_item">
-              <img src="../icons/apoyo-tecnico.svg" alt="Soporte" onclick="location.href='../html/support.html';">
+              <img src="../assets/icons/apoyo-tecnico.svg" alt="Soporte"
+                onclick="location.href='../pages/support.html';">
               <p>Soporte</p>
             </div>
             <div class="service_item">
-              <img src="../icons/red-global.svg" alt="Redes">
+              <img src="../assets/icons/red-global.svg" alt="Redes">
               <p>Redes</p>
             </div>
             <div class="service_item">
-              <img src="../icons/red-en-la-nube.svg" alt="Cloud">
+              <img src="../assets/icons/red-en-la-nube.svg" alt="Cloud">
               <p>Cloud</p>
             </div>
             <div class="service_item">
-              <img src="../icons/programacion.svg" alt="Desarrollo">
+              <img src="../assets/icons/programacion.svg" alt="Desarrollo">
               <p>Desarrollo</p>
             </div>
           </div>
         </div>
         <div class="hero_campaign">
-          <img src="../images/servicios_banner.gif" alt="Campaña SMED">
+          <img src="../assets/images/servicios_banner.gif" alt="Campaña SMED">
           <div class="hero_text_card">
             <span class="badge">SMED Technology</span>
             <h3>Impulsa tu visión</h3>
@@ -81,7 +86,7 @@
           <div class="slider-track" id="sliderTrack">
             <div class="card">
               <div class="card-image">
-                <img src="../images/campaña/smed (2).svg" alt="Sitio Web">
+                <img src="../assets/images/campaña/smed (2).svg" alt="Sitio Web">
               </div>
               <div class="card-content">
                 <h3>Sitio Web</h3>
@@ -93,7 +98,7 @@
 
             <div class="card">
               <div class="card-image">
-                <img src="../images/campaña/smed_network.svg" alt="Redes & Cableado">
+                <img src="../assets/images/campaña/smed_network.svg" alt="Redes & Cableado">
               </div>
               <div class="card-content">
                 <h3>Redes & Cableado</h3>
@@ -105,7 +110,7 @@
 
             <div class="card">
               <div class="card-image">
-                <img src="../images/campaña/smed_support.svg" alt="Soporte Técnico">
+                <img src="../assets/images/campaña/smed_support.svg" alt="Soporte Técnico">
               </div>
               <div class="card-content">
                 <h3>Soporte Técnico</h3>
@@ -117,7 +122,7 @@
 
             <div class="card">
               <div class="card-image">
-                <img src="../images/campaña/smed_gaming.gif" alt="Gaming">
+                <img src="../assets/images/campaña/smed_gaming.gif" alt="Gaming">
               </div>
               <div class="card-content">
                 <h3>Arma tu PC!</h3>
@@ -129,7 +134,7 @@
 
             <div class="card">
               <div class="card-image">
-                <img src="../images/campaña/smed_consultoria.gif" alt="Soporte Técnico">
+                <img src="../assets/images/campaña/smed_consultoria.gif" alt="Soporte Técnico">
               </div>
               <div class="card-content">
                 <h3>Asesorias para empresas</h3>
@@ -151,7 +156,7 @@
           <div class="proyectos-grid">
             <div class="proyecto-card">
               <div class="proyecto-img">
-                <img src="../images/campaña/smed_academy.svg" alt="SMED Academy" />
+                <img src="../assets/images/campaña/smed_academy.svg" alt="SMED Academy" />
               </div>
               <h3 class="proyecto-titulo">SMED Academy</h3>
               <p class="proyecto-descripcion">
@@ -163,7 +168,7 @@
 
             <div class="proyecto-card">
               <div class="proyecto-img">
-                <img src="../images/campaña/smed_home.svg" alt="SMED Tools" />
+                <img src="../assets/images/campaña/smed_home.svg" alt="SMED Tools" />
               </div>
               <h3 class="proyecto-titulo">SMED Home</h3>
               <p class="proyecto-descripcion">
@@ -184,7 +189,7 @@
             <!-- Tarjeta 1 -->
             <div class="card">
               <div class="card-icon">
-                <img src="../icons/mesa-de-ayuda.svg" alt="Soporte" class="icon-img">
+                <img src="../assets/icons/mesa-de-ayuda.svg" alt="Soporte" class="icon-img">
               </div>
               <div>
                 <div class="card-title green">Soporte Personalizado</div>
@@ -195,7 +200,7 @@
             <!-- Tarjeta 2 -->
             <div class="card">
               <div class="card-icon">
-                <img src="../icons/smed_seguridad.svg" alt="Seguridad" class="icon-img">
+                <img src="../assets/icons/smed_seguridad.svg" alt="Seguridad" class="icon-img">
               </div>
               <div>
                 <div class="card-title blue">Seguridad Garantizada</div>
@@ -206,7 +211,7 @@
             <!-- Tarjeta 3 -->
             <div class="card">
               <div class="card-icon">
-                <img src="../icons/conocimineto.svg" alt="Conocimiento" class="icon-img">
+                <img src="../assets/icons/conocimineto.svg" alt="Conocimiento" class="icon-img">
               </div>
               <div>
                 <div class="card-title orange">Conocimiento Aplicado</div>
@@ -226,7 +231,7 @@
             <div class="step">🔧 Reparamos o damos mantenimiento</div>
             <div class="step">✅ Entrega + soporte post-servicio</div>
           </div>
-          <audio id="pop-sound" src="../mp3/pop-6.mp3" preload="auto"></audio>
+          <audio id="pop-sound" src="../assets/audio/pop-6.mp3" preload="auto"></audio>
         </section>
 
     </main>
@@ -234,14 +239,14 @@
   <footer-page></footer-page>
   <!-- Contenedor para particles.js -->
   <div id="particles-js"></div>
-  <script src="../JS/particles.js"></script>
-  <script src="../JS/app.js"></script>
-  <script src="../JS/card_services.js"></script>
-  <script src="../JS/section_end.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+  <script src="../scripts/particles.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../utils/card_services.js"></script>
+  <script src="../utils/section_end.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script>
-  <script type="module" src="../JS/Componentes/ComponentesBase.js" defer></script>
+    crossorigin="anonymous"></script> -->
+  <script type="module" src="../components/ComponentesBase.js" defer></script>
 </body>
 
 </html>

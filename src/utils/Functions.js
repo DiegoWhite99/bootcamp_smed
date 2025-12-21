@@ -59,7 +59,7 @@ function validar() {
     } else {
         botonRegistro.disabled = false;
         alert("Registro Exitoso");
-        // window.location = "../html/support.html";
+        // window.location = "../pages/support.html";
         return true;
     }
     
@@ -77,7 +77,7 @@ function validar() {
 //     } else {
 //         botonLogin.disabled = false;
 //         alert("Bienvenido a SMED Technology");
-//         window.location = "../html/servicios.html"; 
+//         window.location = "../pages/servicios.html"; 
 //         return true;
 //     }
 // }

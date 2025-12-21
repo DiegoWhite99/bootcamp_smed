@@ -73,7 +73,7 @@ app.post(REGISTER, async (req, res) => {
         res
           .status(200)
           .send(
-            `<script>alert("Te has registrado exitosamente"); window.location.href = "http://${HOST}:${PORT}/html/login.html"</script>`
+            `<script>alert("Te has registrado exitosamente"); window.location.href = "http://${HOST}:${PORT}/pages/login.html"</script>`
           );
       }
     );
@@ -108,14 +108,14 @@ app.post(LOGIN, (req, res) => {
       res
         .status(200)
         .send(
-          `<script> alert("Bienvenido ${nombre} a SMED Technology"); window.location.href = "http://${HOST}:${PORT}/html/support_admin.html?nombre=${nombre}"; </script>`
+          `<script> alert("Bienvenido ${nombre} a SMED Technology"); window.location.href = "http://${HOST}:${PORT}/pages/support_admin.html?nombre=${nombre}"; </script>`
         );
     } else {
       console.log("Incorrect Password!");
       res
         .status(401)
         .send(
-          `<script> alert("Credenciales incorrectas"); window.location.href = "http://${HOST}:${PORT}/html/login.html"; </script>`
+          `<script> alert("Credenciales incorrectas"); window.location.href = "http://${HOST}:${PORT}/pages/login.html"; </script>`
         );
     }
   });

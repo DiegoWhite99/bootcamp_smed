@@ -1,31 +1,24 @@
 /* test */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ---- particles.js container ---- */
 #particles-js {
   width: 100%;
   height: 100%;
-  background:#1f1f1f;
+  background: #1f1f1f;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-
-/* html,
-body {
-  /* height: 100%;
-  margin: 0;
-  padding: 0;
-} */
 
 /* section1 */
 .principal_section {
@@ -33,7 +26,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background: linear-gradient(to right, #0f0f0f, #1f1f1f); */
   color: white;
   text-align: center;
   padding: 20px;
@@ -42,7 +34,7 @@ body {
 
 .tittle_principal {
   padding-top: 70px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   animation: fadeInUp 1.5s ease-in-out;
 }
 
@@ -80,7 +72,6 @@ body {
   backdrop-filter: blur(8px);
   border: 1px solid #ffffff1a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
 }
 
 .service_item:hover {
@@ -116,7 +107,7 @@ body {
   width: 100%;
   max-width: 950px;
   border-radius: 24px;
-  object-fit:fill;
+  object-fit: fill;
 }
 
 /* Tarjeta de texto encima de la imagen */
@@ -155,7 +146,7 @@ body {
   margin: 0;
 }
 
-/*section 2*/ 
+/*section 2*/
 
 .slider-section {
   padding: 4rem 2rem;
@@ -246,10 +237,9 @@ body {
 }
 
 #condicion {
-  font-size:0.80rem;
+  font-size: 0.8rem;
   color: #0000008c;
   text-decoration: underlineS;
-
 }
 .price {
   position: absolute;
@@ -329,7 +319,6 @@ body {
   text-align: justify;
 }
 
-
 /*section 4*/
 
 .section-cualidades {
@@ -343,7 +332,9 @@ body {
 .card-container {
   display: flex;
   flex-direction: row;
-  gap: 148px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .card {
@@ -354,6 +345,25 @@ body {
   border-radius: 70px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.178);
   gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 .our_cualitestittle {
@@ -362,7 +372,6 @@ body {
   text-align: center;
   text-shadow: 0 0 8px #00ffaa, 0 0 15px #00ffaa;
 }
-
 
 .card-icon {
   padding: 20px;
@@ -396,10 +405,15 @@ body {
   color: #000000e3; /* Gris claro para contraste sobre fondo oscuro */
 }
 
-.card-title.green { color: #28a745; }
-.card-title.blue { color: #007bff; }
-.card-title.orange { color: #fd7e14; }
-
+.card-title.green {
+  color: #28a745;
+}
+.card-title.blue {
+  color: #007bff;
+}
+.card-title.orange {
+  color: #fd7e14;
+}
 
 /*SECTION FINAL*/
 
@@ -443,20 +457,16 @@ body {
   transform: translateY(0);
 }
 
-
-
 /* Animación flotante tipo motion */
 @keyframes levitar {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-5px);
   }
 }
-
-
-
 
 /* Animación */
 @keyframes fadeInUp {
@@ -471,20 +481,15 @@ body {
   }
 }
 
-
-
-
-
 /* footer */
 
 footer {
   background-color: #000102d5;
-  color: #FFF;
+  color: #fff;
   padding: 40px 20px;
 }
 
 .footer-container {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -517,7 +522,6 @@ footer {
   margin: 0;
   font-size: 16px;
   text-align: justify;
-
 }
 
 .footer-info h3,
@@ -540,13 +544,13 @@ footer {
 }
 
 .footer-links ul li a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-links ul li a:hover {
-  color: #1ABC9C;
+  color: #1abc9c;
 }
 
 .footer-social ul {
@@ -555,19 +559,19 @@ footer {
 }
 
 .footer-social ul li a {
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   transition: color 0.3s;
 }
 
 .footer-social ul li a:hover {
-  color: #1ABC9C;
+  color: #1abc9c;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
-  border-top: 1px solid #34495E;
+  border-top: 1px solid #34495e;
   padding-top: 20px;
 }
 
@@ -578,10 +582,8 @@ footer {
 
 /* Responsivo section1*/
 
-
-
 .tittle_principal {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   animation: fadeInUp 1.5s ease-in-out;
 }
 
