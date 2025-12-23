@@ -1,3 +1,7 @@
 backend/node_modules
 backend/.env
 backend/package-lock.json
+# herramientas en proceso de aprovacion! 
+src/pages/progreso.html
+src/pages/support-admin.html
+src/pages/support-user.html
