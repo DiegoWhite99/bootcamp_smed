@@ -1,278 +1,431 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smed | Nosotros</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="../assets/icons/icon_principal.webp"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../styles/nosotros.css" />
+    <link
+      rel="stylesheet"
+      href="../components/BarraNavegacion/BarraNavegacion.css"
+    />
+    <link rel="stylesheet" href="../components/PiePagina/PiePagina.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
+  <body>
+    <nav-bar></nav-bar>
+    <!-- segunda section-->
+    <main>
+      <section class="hero">
+        <div class="overlay"></div>
+        <img
+          src="../assets/images/smedy_ciberpunk.webp"
+          alt="fondo tecnológico"
+          class="hero-bg"
+        />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smed | Nosotros</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="icon" href="../assets/icons/icon_principal.webp" type="image/png">
-  <link rel="stylesheet" href="../styles/nosotros.css">
-  <link rel="stylesheet" href="../components/BarraNavegacion/BarraNavegacion.css">
-  <link rel="stylesheet" href="../components/PiePagina/PiePagina.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
+        <div class="hero-content">
+          <h1>Soluciones tecnológicas para Empresas y Profesionales</h1>
+          <p>
+            En <strong>Smed Technology</strong> ofrecemos
+            <strong
+              >soporte técnico, desarrollo de software y gestión de
+              redes</strong
+            >
+            para empresas y personas.
+            <br />
+            Potenciamos tus proyectos con
+            <strong>servicios tecnológicos eficientes</strong>, asegurando
+            calidad, seguridad y confianza.
+          </p>
 
-<body>
-  <nav-bar></nav-bar>
-  <!-- segunda section-->
-  <main>
-    <section class="hero">
-      <div class="overlay"></div>
-      <img src="../assets/images/smedy_ciberpunk.webp" alt="fondo tecnológico" class="hero-bg">
-
-      <div class="hero-content">
-        <h1>Soluciones tecnológicas para Empresas y Profesionales</h1>
-        <p>
-          En <strong>Smed Technology</strong> ofrecemos <strong>soporte técnico, desarrollo de software y gestión de
-            redes</strong> para empresas y personas.
-          <br>
-          Potenciamos tus proyectos con <strong>servicios tecnológicos eficientes</strong>, asegurando calidad,
-          seguridad y confianza.
-        </p>
-
-        <div class="cta">
-          <a href="servicios.html" class="btn">Conoce nuestros servicios</a>
-        </div>
-
-      </div>
-    </section>
-    <!--about our-->
-    <section class="about">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="../assets/images/somos.webp" alt="somos">
-        </div>
-        <div class="about-text">
-          <h2>¿Quienes somos?<i class='bx  bx-group' style='color:#ffffff'></i> </h2>
-          <h3 id="title3-about"><i class='bx bx-rocket'></i> Innovación y Tecnología</h3>
-          <p id="txt-about">Brindamos soluciones tecnológicas avanzadas para individuos y empresas.</p>
-          <h3 id="title3-about"><i class='bx bx-plus'></i> Experiencia y Calidad</h3>
-          <p>Contamos con un equipo experto en desarrollo web, mantenimiento de hardware y gestión de redes.</p>
-        </div>
-      </div>
-    </section>
-
-    <!--Section servicios-->
-
-    <section class="services">
-      <div class="services-content">
-        <h2>Nuestros Servicios</h2>
-        <div class="service-item">
-          <h3 id="title3-services"><i class='bx bx-code-alt'></i> Creación de Sitios Web</h3>
-          <p id="txt-services">Desde proyectos simples hasta desarrollos robustos con tecnologías como HTML, JS, React,
-            PHP, Python y más.</p>
-        </div>
-        <div class="service-item">
-          <h3 id="title3-services"><i class='bx bx-wrench'></i>Mantenimiento de Hardware</h3>
-          <p id="txt-services">Reparación y mantenimiento de computadoras, celulares y tablets.</p>
-        </div>
-        <div class="service-item">
-          <h3 id="title3-services"><i class='bx bx-support'></i> Asesorías Tecnológicas</h3>
-          <p id="txt-services">Ayuda personalizada para armar tu PC o mejorar la infraestructura tecnológica de tu
-            empresa.</p>
-        </div>
-        <div class="service-item">
-          <h3 id="title3-services"><i class='bx bx-data'></i> Manejo de Información</h3>
-          <p id="txt-services">Recuperación de datos, mantenimiento de software y soporte remoto o presencial.</p>
-        </div>
-      </div>
-      <div class="services-image">
-        <img src="../assets/images/servicios.webp" alt="reparacion">
-      </div>
-    </section>
-
-    <!---Carrusel marcas-->
-    <section class="brand-carousel">
-      <div class="brand-carousel-container">
-        <div class="brand-track">
-          <div class="brand-slide"><img src="../assets/icons/Amazon_Web_Services-ONryKwT7C_brandlogos.net.svg"
-              alt="AWS"></div>
-          <div class="brand-slide"><img src="../assets/icons/microsoft-logo-brandlogos.net_5i6qb39x4.svg"
-              alt="Microsoft"></div>
-          <div class="brand-slide"><img src="../assets/icons/Cisco_Systems-Olb30StWU_brandlogos.net.svg" alt="Cisco">
+          <div class="cta">
+            <a href="servicios.html" class="btn">Conoce nuestros servicios</a>
           </div>
-          <div class="brand-slide"><img src="../assets/icons/asus-logo-brandlogos.net_kqtsdg8jb.svg" alt="Asus"></div>
-          <div class="brand-slide"><img src="../assets/icons/Acer-OCXrEAsRt_brandlogos.net.svg" alt="Acer"></div>
-          <div class="brand-slide"><img src="../assets/icons/NVIDIA-OCWj7jCEG_brandlogos.net.svg" alt="NVIDIA"></div>
-          <div class="brand-slide"><img src="../assets/icons/Google-OfwXGx0Sl_brandlogos.net.svg" alt="Google"></div>
-          <div class="brand-slide"><img src="../assets/images/smed-_1_oficial_1.webp" alt="SMED"></div>
-          <div class="brand-slide"><img src="../assets/images/elevecr.webp" alt="Elevecr"></div>
         </div>
-
-      </div>
-    </section>
-
-
-    <!---proyectos----->
-    <section class="proyectos">
-      <h2 class="tittle_proyectos">Nuestros Proyectos</h2>
-      <div class="galeria">
-        <div class="proyecto">
-          <a href="https://github.com/DiegoWhite99/Kenko-Wellness" target="_blank">
-            <img src="../assets/images/Kenko.webp" alt="Kenko-wellness">
-            <h3>Kenko| Wellness</h3>
-          </a>
+      </section>
+      <!--about our-->
+      <section class="about">
+        <div class="about-container">
+          <div class="about-image">
+            <img src="../assets/images/somos.webp" alt="somos" />
+          </div>
+          <div class="about-text">
+            <h2>
+              ¿Quienes somos?<i class="bx bx-group" style="color: #ffffff"></i>
+            </h2>
+            <h3 id="title3-about">
+              <i class="bx bx-rocket"></i> Innovación y Tecnología
+            </h3>
+            <p id="txt-about">
+              Brindamos soluciones tecnológicas avanzadas para individuos y
+              empresas.
+            </p>
+            <h3 id="title3-about">
+              <i class="bx bx-plus"></i> Experiencia y Calidad
+            </h3>
+            <p>
+              Contamos con un equipo experto en desarrollo web, mantenimiento de
+              hardware y gestión de redes.
+            </p>
+          </div>
         </div>
-        <div class="proyecto">
-          <a href="https://github.com/DiegoWhite99/ChatBoot-Smed" target="_blank">
-            <img src="../assets/images/Chat-boot.webp" alt="Chat-boot">
-            <h3>Chatboot| smed</h3>
-          </a>
+      </section>
+
+      <!--Section servicios-->
+
+      <section class="services">
+        <div class="services-content">
+          <h2>Nuestros Servicios</h2>
+          <div class="service-item">
+            <h3 id="title3-services">
+              <i class="bx bx-code-alt"></i> Creación de Sitios Web
+            </h3>
+            <p id="txt-services">
+              Desde proyectos simples hasta desarrollos robustos con tecnologías
+              como HTML, JS, React, PHP, Python y más.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3 id="title3-services">
+              <i class="bx bx-wrench"></i>Mantenimiento de Hardware
+            </h3>
+            <p id="txt-services">
+              Reparación y mantenimiento de computadoras, celulares y tablets.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3 id="title3-services">
+              <i class="bx bx-support"></i> Asesorías Tecnológicas
+            </h3>
+            <p id="txt-services">
+              Ayuda personalizada para armar tu PC o mejorar la infraestructura
+              tecnológica de tu empresa.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3 id="title3-services">
+              <i class="bx bx-data"></i> Manejo de Información
+            </h3>
+            <p id="txt-services">
+              Recuperación de datos, mantenimiento de software y soporte remoto
+              o presencial.
+            </p>
+          </div>
         </div>
-        <div class="proyecto">
-          <a href="https://github.com/DiegoWhite99/Banco-C-T" target="_blank">
-            <img src="../assets/images/Banco-CT.webp" alt="Chat-boot">
-            <h3>Banco CT</h3>
-          </a>
+        <div class="services-image">
+          <img src="../assets/images/servicios.webp" alt="reparacion" />
         </div>
-        <!-- Agrega más proyectos aquí -->
-      </div>
-    </section>
+      </section>
 
-    <!--Fundadores-->
-    <section id="fundadores">
-      <h2 id="tittle_fundadores">Nuestros Fundadores</h2>
-      <div class="fundadores-container">
-        <div class="fundador">
-          <img src="../assets/images/Team/Cristian.webp" alt="Cristian">
-          <h3>Cristian Roncancio</h3>
-          <p>CTO y desarrollador apasionado por la tecnología y la innovación.</p>
-          <a href="https://www.linkedin.com/in/cristian-stiven-roncancio-villamil-46553a30a/?trk=people-guest_people_search-card&originalSubdomain=co"
-            target="_blank">LinkedIn</a>
+      <!---Carrusel marcas-->
+      <section class="brand-carousel">
+        <div class="brand-carousel-container">
+          <div class="brand-track">
+            <div class="brand-slide">
+              <img
+                src="../assets/icons/Amazon_Web_Services-ONryKwT7C_brandlogos.net.svg"
+                alt="AWS"
+              />
+            </div>
+            <div class="brand-slide">
+              <img
+                src="../assets/icons/microsoft-logo-brandlogos.net_5i6qb39x4.svg"
+                alt="Microsoft"
+              />
+            </div>
+            <div class="brand-slide">
+              <img
+                src="../assets/icons/Cisco_Systems-Olb30StWU_brandlogos.net.svg"
+                alt="Cisco"
+              />
+            </div>
+            <div class="brand-slide">
+              <img
+                src="../assets/icons/asus-logo-brandlogos.net_kqtsdg8jb.svg"
+                alt="Asus"
+              />
+            </div>
+            <div class="brand-slide">
+              <img
+                src="../assets/icons/Acer-OCXrEAsRt_brandlogos.net.svg"
+                alt="Acer"
+              />
+            </div>
+            <div class="brand-slide">
+              <img
+                src="../assets/icons/NVIDIA-OCWj7jCEG_brandlogos.net.svg"
+                alt="NVIDIA"
+              />
+            </div>
+            <div class="brand-slide">
+              <img
+                src="../assets/icons/Google-OfwXGx0Sl_brandlogos.net.svg"
+                alt="Google"
+              />
+            </div>
+            <div class="brand-slide">
+              <img src="../assets/images/smed-_1_oficial_1.webp" alt="SMED" />
+            </div>
+            <div class="brand-slide">
+              <img src="../assets/images/elevecr.webp" alt="Elevecr" />
+            </div>
+          </div>
         </div>
-        <div class="fundador">
-          <img src="../assets/images/Team/Sebastian.webp" alt="Sebastián">
-          <h3>Sebastián Ospina</h3>
-          <p>Especialista en infraestructura y optimización de sistemas en la nube.</p>
-          <a href="https://www.linkedin.com/in/jospina0409/" target="_blank">LinkedIn</a>
+      </section>
+
+      <!---proyectos-->
+
+      <section class="proyectos">
+        <h2 class="tittle_proyectos">Nuestros Proyectos</h2>
+        <div class="galeria">
+          <div class="proyecto">
+            <a
+              href="https://github.com/DiegoWhite99/Kenko-Wellness"
+              target="_blank"
+            >
+              <img src="../assets/images/Kenko.webp" alt="Kenko-wellness" />
+              <h3>Kenko| Wellness</h3>
+            </a>
+          </div>
+          <div class="proyecto">
+            <a
+              href="https://github.com/DiegoWhite99/ChatBoot-Smed"
+              target="_blank"
+            >
+              <img src="../assets/images/Chat-boot.webp" alt="Chat-boot" />
+              <h3>Chatboot| smed</h3>
+            </a>
+          </div>
+          <div class="proyecto">
+            <a href="https://github.com/DiegoWhite99/Banco-C-T" target="_blank">
+              <img src="../assets/images/Banco-CT.webp" alt="Chat-boot" />
+              <h3>Banco CT</h3>
+            </a>
+          </div>
+          <!-- Agrega más proyectos aquí -->
         </div>
-        <div class="fundador">
-          <img src="../assets/images/Team/Diego.webp" alt="Diego">
-          <h3>Diego Castelblanco </h3>
-          <p>CEO y visionario, liderando proyectos con pasión y estrategia.</p>
-          <a href="https://www.linkedin.com/in/diego-fernando-castelblanco-jimenez-43ba63218/"
-            target="_blank">LinkedIn</a>
+      </section>
+
+      <!--Fundadores-->
+      <section id="fundadores">
+        <h2 id="tittle_fundadores">Nuestros Fundadores</h2>
+        <div class="fundadores-container">
+          <div class="fundador">
+            <img src="../assets/images/Team/Cristian.webp" alt="Cristian" />
+            <h3>Cristian Roncancio</h3>
+            <p>
+              CTO y desarrollador apasionado por la tecnología y la innovación.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/cristian-stiven-roncancio-villamil-46553a30a/?trk=people-guest_people_search-card&originalSubdomain=co"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+          <div class="fundador">
+            <img src="../assets/images/Team/Sebastian.webp" alt="Sebastián" />
+            <h3>Sebastián Ospina</h3>
+            <p>
+              Especialista en infraestructura y optimización de sistemas en la
+              nube.
+            </p>
+            <a href="https://www.linkedin.com/in/jospina0409/" target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+          <div class="fundador">
+            <img src="../assets/images/Team/Diego.webp" alt="Diego" />
+            <h3>Diego Castelblanco</h3>
+            <p>
+              CEO y visionario, liderando proyectos con pasión y estrategia.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/diego-fernando-castelblanco-jimenez-43ba63218/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!--Mision y vision-->
+      <!--Mision y vision-->
 
-    <section id="vison_mison">
-      <div class="mision">
-        <h2 class="mision_tittle">
-          Mision</h2>
-        <p class="body_mision">En SMED forjamos soluciones tecnológicas honestas, humanas y efectivas. Acompañamos a
-          cada cliente con calidad y excelencia, sin importar su tamaño, para resolver cualquier reto técnico con
-          confianza y eficacia.</p>
-      </div>
-      <div class="vision">
-        <h2 class="vision_tittle">
-          Vision
-        </h2>
-        <p class="body_vision">Ser una de las empresas tecnológicas referentes de Latinoamérica para 2032, reconocida
-          por su excelencia en servicio B2B y por un entorno laboral donde las personas quieren trabajar. Aspiramos a
-          impactar el mercado con soluciones de alta calidad, impulsadas por un equipo valorado, respetado y motivado.
-        </p>
-      </div>
-    </section>
+      <section id="vison_mison">
+        <div class="mision">
+          <h2 class="mision_tittle">Mision</h2>
+          <p class="body_mision">
+            En SMED forjamos soluciones tecnológicas honestas, humanas y
+            efectivas. Acompañamos a cada cliente con calidad y excelencia, sin
+            importar su tamaño, para resolver cualquier reto técnico con
+            confianza y eficacia.
+          </p>
+        </div>
+        <div class="vision">
+          <h2 class="vision_tittle">Vision</h2>
+          <p class="body_vision">
+            Ser una de las empresas tecnológicas referentes de Latinoamérica
+            para 2032, reconocida por su excelencia en servicio B2B y por un
+            entorno laboral donde las personas quieren trabajar. Aspiramos a
+            impactar el mercado con soluciones de alta calidad, impulsadas por
+            un equipo valorado, respetado y motivado.
+          </p>
+        </div>
+      </section>
 
-    <!--contacatanos-->
+      <!--contacatanos-->
 
-    <section id="contacto">
-      <h2>Contáctanos</h2>
-      <p>Si tienes alguna pregunta o quieres trabajar con nosotros, llena el formulario a continuación.</p>
-
-      <div class="contacto-container">
-        <form action="#" method="get" target="_blank">
-          <label for="nombre">👤 Nombre:</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-
-          <label for="email"> 📩 Correo Electrónico:</label>
-          <input type="email" id="email" name="email" placeholder="Tu correo" required>
-
-          <label for="telefono">📞 Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required>
-
-          <label for="servicio">🛠️ Clase de servicios:</label>
-          <select id="servicio" name="servicio" required>
-            <option value="" disabled selected>🔽 Selecciona una opción</option>
-            <option value="soporte_tecnico">💻 Soporte técnico</option>
-            <option value="asesorias">🎓 Asesorías</option>
-            <option value="consultas_proyectos">📊 Consultas de proyectos</option>
-            <option value="campañas_marketing">📣 Campañas de marketing</option>
-            <option value="desarrollo_web">🌐 Desarrollo web</option>
-            <option value="planes_empresariales">🏢 Planes empresariales</option>
-            <option value="armo_pc_gamer">🖥️ Armo mi PC Gamer</option>
-          </select>
-
-          <label for="mensaje"> 📣 Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </section>
-
-
-
-    <!-------------------------fin de nav de pagina ---------------->
-
-
-    <footer id="footer">
-
-      <div class="footer-logo">
-        <h2>🚀 ¡Bienvenido a SMED! 🌎</h2>
+      <section id="contacto">
+        <h2>Contáctanos</h2>
         <p>
-          <br>
-          En SMED, somo tus aliandos y transformamos tus ideas digitales en realidad. Ofrecemos soluciones
-          personalizadas en diseño web y soporte técnico para ayudarte a alcanzar tus objetivos. Desde el desarrollo web
-          hasta la asistencia técnica, estamos aquí para impulsar tus proyectos al éxito. 💻✨
+          Si tienes alguna pregunta o quieres trabajar con nosotros, llena el
+          formulario a continuación.
         </p>
-      </div>
-      <br>
-      <div class="footer-container">
-        <div class="footer-info">
-          <h3>Contacto</h3>
-          <p>Dirección: Cr 78 K #46 B 21 sur, Bogota, Colombia</p>
-          <p>Teléfono: +57 302 4306848 </p>
-          <p>Email: smed.techhub@gmail.com</p>
-        </div>
-        <div class="footer-links">
-          <h3>Enlaces De Servicios</h3>
-          <ul>
-            <li><a href="./login.html">Inicio</a></li>
-            <li><a href="./servicios.html">Servicios</a></li>
-            <li><a href="./tienda.html">Tienda</a></li>
-            <li><a href="./experiencias.html">Experiencias</a></li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <h3>Síguenos</h3>
-          <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=61558691450269"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li><a href="https://x.com/Smed_Technology"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/smed_technology/"><i class="fab fa-instagram"></i></a></li>
 
-          </ul>
+        <div class="contacto-container">
+          <form action="#" method="get" target="_blank">
+            <label for="nombre">👤 Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+
+            <label for="email"> 📩 Correo Electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Tu correo"
+              required
+            />
+
+            <label for="telefono">📞 Teléfono:</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Tu teléfono"
+              required
+            />
+
+            <label for="servicio">🛠️ Clase de servicios:</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>
+                🔽 Selecciona una opción
+              </option>
+              <option value="soporte_tecnico">💻 Soporte técnico</option>
+              <option value="asesorias">🎓 Asesorías</option>
+              <option value="consultas_proyectos">
+                📊 Consultas de proyectos
+              </option>
+              <option value="campañas_marketing">
+                📣 Campañas de marketing
+              </option>
+              <option value="desarrollo_web">🌐 Desarrollo web</option>
+              <option value="planes_empresariales">
+                🏢 Planes empresariales
+              </option>
+              <option value="armo_pc_gamer">🖥️ Armo mi PC Gamer</option>
+            </select>
+
+            <label for="mensaje"> 📣 Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Escribe tu mensaje aquí..."
+              required
+            ></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 SMED. Todos los derechos reservados.</p>
-      </div>
-    </footer>
+      </section>
 
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script>
-  <script type="module" src="../components/ComponentesBase.js" defer></script>
-</body>
+      <!-------------------------fin de nav de pagina ---------------->
 
+      <footer id="footer">
+        <div class="footer-logo">
+          <h2>🚀 ¡Bienvenido a SMED! 🌎</h2>
+          <p>
+            <br />
+            En SMED, somo tus aliandos y transformamos tus ideas digitales en
+            realidad. Ofrecemos soluciones personalizadas en diseño web y
+            soporte técnico para ayudarte a alcanzar tus objetivos. Desde el
+            desarrollo web hasta la asistencia técnica, estamos aquí para
+            impulsar tus proyectos al éxito. 💻✨
+          </p>
+        </div>
+        <br />
+        <div class="footer-container">
+          <div class="footer-info">
+            <h3>Contacto</h3>
+            <p>Dirección: Cr 78 K #46 B 21 sur, Bogota, Colombia</p>
+            <p>Teléfono: +57 302 4306848</p>
+            <p>Email: smed.techhub@gmail.com</p>
+          </div>
+          <div class="footer-links">
+            <h3>Enlaces De Servicios</h3>
+            <ul>
+              <li><a href="./login.html">Inicio</a></li>
+              <li><a href="./servicios.html">Servicios</a></li>
+              <li><a href="./tienda.html">Tienda</a></li>
+              <li><a href="./experiencias.html">Experiencias</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Síguenos</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61558691450269"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/Smed_Technology"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/smed_technology/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 SMED. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../components/ComponentesBase.js" defer></script>
+  </body>
 </html>
