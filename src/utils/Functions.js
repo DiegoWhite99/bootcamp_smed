@@ -1,4 +1,4 @@
-/* ---------------------------> apartado de resposive <----------------------- */
+﻿/* ---------------------------> apartado de resposive <----------------------- */
 
 
 function MyMenuFuction(){
