@@ -1,0 +1,374 @@
+﻿/* test */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+
+:root {
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
+  --color: #0dcaf0;
+  --fondo: #0dcaf0;
+  --transition-time: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+
+}
+
+.titulo1 {
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+}
+
+.titulo1 h1 {
+  margin-left: 5px;
+}
+
+.link,
+.link_active {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/* carrusel */
+
+/* Contenedor para centrar */
+.ContainerCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Input */
+.ContainerCenter input {
+  display: none;
+}
+
+/* Slider */
+.Carrusels {
+  margin-top: 50px;
+  height: 500px;
+  width: 1050px;
+  position: relative;
+  overflow-x: hidden;
+  border-radius: 20px;
+}
+
+.Carrusel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  overflow-y: hidden;
+  transition: all .5s ease;
+}
+
+/* Estado 1 */
+#Slider1:checked~.Carrusels .Carrusel:nth-of-type(1) {
+  transform: translate(0%, 0);
+}
+
+#Slider1:checked~.Carrusels .Carrusel:nth-of-type(2) {
+  transform: translate(100%, 0);
+}
+
+#Slider1:checked~.Carrusels .Carrusel:nth-of-type(3) {
+  transform: translate(200%, 0);
+}
+
+/* Estado 2 */
+#Slider2:checked~.Carrusels .Carrusel:nth-of-type(1) {
+  transform: translate(-100%, 0);
+}
+
+#Slider2:checked~.Carrusels .Carrusel:nth-of-type(2) {
+  transform: translate(0%, 0);
+}
+
+#Slider2:checked~.Carrusels .Carrusel:nth-of-type(3) {
+  transform: translate(100%, 0);
+}
+
+/* Estado 3 */
+#Slider3:checked~.Carrusels .Carrusel:nth-of-type(1) {
+  transform: translate(-200%, 0);
+}
+
+#Slider3:checked~.Carrusels .Carrusel:nth-of-type(2) {
+  transform: translate(-100%, 0);
+}
+
+#Slider3:checked~.Carrusels .Carrusel:nth-of-type(3) {
+  transform: translate(0%, 0);
+}
+
+
+/* Flechas */
+.Carrusels .ArrowLeft,
+.Carrusels .ArrowRight {
+  position: absolute;
+  height: 100%;
+  width: 2em;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  user-select: none;
+}
+
+.Carrusels .ArrowLeft {
+  left: 0px;
+}
+
+.Carrusels .ArrowRight {
+  right: 0px;
+}
+
+/* Configuracion de flechas individuales */
+#Slider1:checked~.Carrusels .Arrow1 {
+  display: flex;
+}
+
+#Slider2:checked~.Carrusels .Arrow2 {
+  display: flex;
+}
+
+#Slider3:checked~.Carrusels .Arrow3 {
+  display: flex;
+}
+
+
+/* Selectores */
+.Selectors {
+  width: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Selectors .Selector {
+  background-color: #FFF;
+  height: 10px;
+  width: 10px;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Condicionales para botón inferior */
+#Slider1:checked~.Selectors .Selector:nth-of-type(1) {
+  background-color: #999999;
+}
+
+#Slider2:checked~.Selectors .Selector:nth-of-type(2) {
+  background-color: #999999;
+}
+
+#Slider3:checked~.Selectors .Selector:nth-of-type(3) {
+  background-color: #999999;
+}
+
+/*  contnedor de productos */
+
+
+.carousel-container {
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 200px;
+  /* Ajusta el tamaño de los ítems según tus necesidades */
+  margin: 30px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 10px;
+
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.862);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev svg,
+.next svg {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  width: 24px;
+  height: 24px;
+}
+
+
+
+/* footer */
+
+footer {
+  background-color: #000102d5;
+  color: #FFF;
+  padding: 40px 20px;
+}
+
+.footer-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: center;
+}
+
+.footer-container div {
+  flex: 1;
+  margin: 10px 20px;
+  min-width: 100px;
+}
+
+.footer-logo {
+  margin: center;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  /* Incluye padding en el ancho total */
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  margin: 0;
+  font-size: 16px;
+  text-align: justify;
+
+}
+
+.footer-info h3,
+.footer-links h3,
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-info p,
+.footer-links ul,
+.footer-social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #FFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #1ABC9C;
+}
+
+.footer-social ul {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social ul li a {
+  color: #FFF;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-social ul li a:hover {
+  color: #1ABC9C;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #34495E;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container div {
+    margin: 20px 0;
+  }
+}
