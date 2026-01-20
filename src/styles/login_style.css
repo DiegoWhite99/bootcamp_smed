@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(../assets/images/S-M-E-D.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+}
+
+.btn.white-btn {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.white-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ----------------------------- second section----------------------- */
+
+.form-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 550px;
+    overflow: hidden;
+    z-index: 2;
+    background: transparent;
+    border: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 50px 0 #000000;
+}
+
+.login-container {
+    position: absolute;
+    /* left: 25px; */
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    margin-left: 2%;
+}
+
+.register-container {
+    margin-bottom: 25px;
+    position: absolute;
+    right: 820px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    /* margin-right: 10%; */
+    margin: 20px 40px 0 0;
+}
+
+.top span {
+    color: #ffff;
+    font-size: small;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.top span a {
+    font-weight: 500;
+    color: #ffff;
+    margin-left: 5px;
+}
+
+.top span a:hover {
+    color: #23b1d4;
+}
+
+.two-form {
+    display: flex;
+    gap: 10px;
+}
+
+.input-field {
+    font-size: 15px;
+    background: transparent;
+    color: #ffff;
+    height: 40px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-bottom: 2px solid #ffff;
+    outline: none;
+    transition: .2s ease;
+
+}
+
+/* .input-field:hover, .input-field:focus {
+    background: rgba(255, 255, 255, 0.25);
+} */
+
+::-webkit-input-placeholder {
+    color: #ffff;
+}
+
+.input-box i {
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #ffff;
+}
+
+.submit {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    color: #ffff;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.two-col .one {
+    display: flex;
+    gap: 5px;
+}
+
+.two label a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.two label a:hover {
+    text-decoration: underline;
+    color: #23b1d4;
+}

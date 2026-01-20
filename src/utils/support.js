@@ -1,4 +1,4 @@
-﻿// supportAdmin.js
+// supportAdmin.js
 
 // Estados posibles
 const estados = ["Recepción", "Reparación", "Entregado"];
