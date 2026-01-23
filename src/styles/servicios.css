@@ -25,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
   color: white;
   text-align: center;
   padding: 20px;
@@ -47,7 +47,7 @@
 
 .tittle_principal h2 {
   font-size: 1.8rem;
-  margin-top: 10px;
+  margin-top: 20px;
   color: #0dcaf0;
 }
 
@@ -57,7 +57,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
@@ -92,166 +92,56 @@
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
-
-.hero_campaign {
-  position: relative;
-  margin-top: 10px;
-  max-width: 100%;
-  border-radius: 24px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-.hero_campaign img {
-  width: 100%;
-  max-width: 950px;
-  border-radius: 24px;
-  object-fit: fill;
-}
-
-/* Tarjeta de texto encima de la imagen */
-.hero_text_card {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 16px 20px;
-  max-width: 300px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  color: #111;
-  text-align: left;
-}
-
-.hero_text_card .badge {
-  display: inline-block;
-  background-color: #ff4f2b;
-  color: white;
-  font-weight: bold;
-  font-size: 0.75rem;
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-bottom: 6px;
-}
-
-.hero_text_card h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin: 4px 0;
-}
-
-.hero_text_card p {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
 /*section 2*/
 
-.slider-section {
-  padding: 4rem 2rem;
+
+#hero-carousel2 {
+  background: #050505;
+  padding: 60px 20px;
   overflow: hidden;
-  position: relative;
+  font-family: 'Hammersmith One', sans-serif;
 }
 
-.slider-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  text-align: start;
-  color: white;
+.carousel-title {
+  color: #F5F5F5;
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.slider-container {
-  position: relative;
+.carousel-track {
   display: flex;
-  align-items: center;
+  gap: 30px;
+  transition: transform;
 }
 
-.slider-btn {
-  background: transparent;
-  border: none;
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.445);
-  cursor: pointer;
-  z-index: 2;
-  padding: 1rem;
-  transition: transform 0.2s ease;
+.carousel-item {
+  min-width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 30px rgba(7, 61, 82, 0.801);
 }
 
-.slider-btn:hover {
-  transform: scale(1.2);
+.carousel-item img {
+  width: 60px;
+  margin-bottom: 20px;
 }
 
-.slider-track {
-  display: flex;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  width: 100%;
+.carousel-item h3 {
+  color: #081B3B;
+  margin-bottom: 10px;
 }
 
-.card {
-  background: #1c1c1c;
-  border-radius: 1.5rem;
-  margin: 0 1rem;
-  min-width: 300px;
-  flex-shrink: 0;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 255, 200, 0.2);
-}
-
-.card-image {
-  overflow: hidden;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
-
-.card-image img {
-  width: 50%;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.card:hover img {
-  transform: scale(3.07);
-}
-
-.card-content {
-  padding: 1.2rem;
-}
-
-.card-content h3 {
-  font-size: 1.3rem;
-  margin: 0 0 0.5rem;
-}
-
-.card-content p {
+.carousel-item p {
+  font-family: system-ui, sans-serif;
   font-size: 0.95rem;
-  color: #000000a9;
+  opacity: .85;
 }
 
-#condicion {
-  font-size: 0.8rem;
-  color: #0000008c;
-  text-decoration: underlineS;
-}
-.price {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #c907af;
-  color: #000;
-  padding: 0.3rem 0.7rem;
-  font-weight: bold;
-  font-size: 0.85rem;
-  border-radius: 999px;
-}
+
+/*Section 3*/
 
 /*proyectos futuros*/
 .futuros-proyectos-section {
@@ -412,7 +302,7 @@
   color: #007bff;
 }
 .card-title.orange {
-  color: #fd7e14;
+  color: #d1d1d1;
 }
 
 /*SECTION FINAL*/
