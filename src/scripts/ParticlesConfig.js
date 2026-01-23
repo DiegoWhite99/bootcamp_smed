@@ -12,7 +12,6 @@ particlesJS.load('particles-js', 'particles.json', function() {
 /* Otherwise just put the config content (json): */
 
 particlesJS('particles-js',
-  
   {
     "particles": {
       "number": {
@@ -132,22 +131,22 @@ particlesJS('particles-js',
 
 );
 
-  document.getElementById('ver-mas').addEventListener('click', function() {
-    var contenidoAdicional = document.getElementById('contenido-adicional');
-    
-    // Mostrar el contenido adicional
-    contenidoAdicional.style.display = 'block';
+// document.getElementById('ver-mas').addEventListener('click', function () {
+//   var contenidoAdicional = document.getElementById('contenido-adicional');
 
-    // Agregar una clase para la animación de retraso
-    contenidoAdicional.classList.add('animacion-retraso');
+//   // Mostrar el contenido adicional
+//   contenidoAdicional.style.display = 'block';
 
-    // Desplazar la página hacia el contenido adicional después de un retraso
-    setTimeout(function() {
-        contenidoAdicional.scrollIntoView({ behavior: 'smooth' });
-        
-        // Eliminar la clase después de un breve retraso para permitir que la animación ocurra
-        setTimeout(function() {
-            contenidoAdicional.classList.remove('animacion-retraso');
-        }, 1000); // Ajusta el tiempo según la duración de la animación
-    }, 500);
-});
+//   // Agregar una clase para la animación de retraso
+//   contenidoAdicional.classList.add('animacion-retraso');
+
+//   // Desplazar la página hacia el contenido adicional después de un retraso
+//   setTimeout(function () {
+//     contenidoAdicional.scrollIntoView({ behavior: 'smooth' });
+
+//     // Eliminar la clase después de un breve retraso para permitir que la animación ocurra
+//     setTimeout(function () {
+//       contenidoAdicional.classList.remove('animacion-retraso');
+//     }, 1000); // Ajusta el tiempo según la duración de la animación
+//   }, 500);
+// });

@@ -92,8 +92,8 @@
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
-/*section 2*/
 
+/*section 2*/
 
 #hero-carousel2 {
   background: #050505;
@@ -139,7 +139,6 @@
   font-size: 0.95rem;
   opacity: .85;
 }
-
 
 /*Section 3*/
 
@@ -231,7 +230,8 @@
   display: flex;
   align-items: start;
   padding: 20px;
-  background: rgba(17, 17, 17, 0.486); /* Negro translúcido */
+  background: rgba(17, 17, 17, 0.486);
+  /* Negro translúcido */
   border-radius: 70px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.178);
   gap: 20px;
@@ -274,13 +274,15 @@
   justify-content: center;
   width: 64px;
   height: 64px;
-  overflow: hidden; /* Asegura que la imagen no se salga */
+  overflow: hidden;
+  /* Asegura que la imagen no se salga */
 }
 
 .icon-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Mantiene proporciones */
+  object-fit: contain;
+  /* Mantiene proporciones */
 }
 
 .card-title {
@@ -292,15 +294,18 @@
 
 .card-text {
   font-size: 0.95rem;
-  color: #000000e3; /* Gris claro para contraste sobre fondo oscuro */
+  color: #000000e3;
+  /* Gris claro para contraste sobre fondo oscuro */
 }
 
 .card-title.green {
   color: #28a745;
 }
+
 .card-title.blue {
   color: #007bff;
 }
+
 .card-title.orange {
   color: #d1d1d1;
 }
@@ -349,10 +354,12 @@
 
 /* Animación flotante tipo motion */
 @keyframes levitar {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }

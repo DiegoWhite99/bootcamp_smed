@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="UTF-8">
 
@@ -7,12 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios</title>
 
+  <!-- Load Bootstrap FIRST -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" -->
+  <!-- integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
+
   <!-- Then fonts/icons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="icon" href="../assets/icons/MainIcon.webp" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
 
   <!-- Finally custom CSS to override Bootstrap -->
   <link rel="stylesheet" href="../styles/Services.css">
@@ -47,7 +49,7 @@
               <p>Asesorias</p>
             </div>
             <div class="service_item">
-              <img src="../assets/icons/TechSupport.svg" alt="Soporte" onclick="location.href='../pages/support.html';">
+              <img src="../assets/icons/TechSupport.svg" alt="Soporte" onclick="location.href='../pages/Support.html';">
               <p>Soporte</p>
             </div>
             <div class="service_item">
@@ -64,89 +66,43 @@
             </div>
           </div>
         </div>
-        <div class="hero_campaign">
-          <img src="../assets/images/servicios_banner.gif" alt="Campaña SMED">
-          <div class="hero_text_card">
-            <span class="badge">SMED Technology</span>
-            <h3>Impulsa tu visión</h3>
-            <p>Convierte tus ideas en soluciones tecnológicas reales.</p>
+      </section>
+
+      <!--section2 Carrusel-->
+      <section id="hero-carousel2">
+        <h2 class="carousel-title">Ecosistema SMED</h2>
+
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="../assets/images/it.png" alt="SMED SUPPORT">
+            <h3>SMED SUPPORT</h3>
+            <p>Soporte, continuidad y acompañamiento tecnológico,con enfoque profesional<br>preventivo y humano.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="../assets/images/web.png" alt="SMED DEV">
+            <h3>SMED DEV</h3>
+            <p>Desarrollo de software y soluciones tecnológicas a medida, orientadas a eficiencia,<br>escalabilidad y
+              crecimiento empresarial.</p>
+          </div>
+
+          <div class="carousel-item">
+            <img src="../assets/images/conexion-de-red.png" alt="SMED NET & CLOUD">
+            <h3>SMED NET</h3>
+            <p>Redes, infraestructura, diseño e implementación de soluciones tecnológicas.<br>Conectividad segura,
+              escalable y confiable para empresas modernas.</p>
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/images/vigilancia.png" alt="SMED GUARD">
+            <h3>SMED GUARD</h3>
+            <p>Diseño e implementación de sistemas de videovigilancia y circuitos cerrados,<br>orientados a la
+              protección, el control y la seguridad tecnológica.</p>
           </div>
         </div>
       </section>
 
-      <!--section2-->
-      <section class="slider-section">
-        <h2 class="slider-title">Servicios Destacados</h2>
-        <div class="slider-container">
-          <button class="slider-btn left" onclick="moveSlide(-1)">&#10094;</button>
 
-          <div class="slider-track" id="sliderTrack">
-            <div class="card">
-              <div class="card-image">
-                <img src="../assets/images/campaña/smed (2).svg" alt="Sitio Web">
-              </div>
-              <div class="card-content">
-                <h3>Sitio Web</h3>
-                <p>Tu presencia digital con diseño moderno y optimizado</p>
-                <p id="condicion">Precio sujeto a los requerimientos del proyecto y la necesidad del cliente.</p>
-                <span class="price">solicitud 📩</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <img src="../assets/images/campaña/smed_network.svg" alt="Redes & Cableado">
-              </div>
-              <div class="card-content">
-                <h3>Redes & Cableado</h3>
-                <p>Instalación y organización de tu red desde cero.</p>
-                <p id="condicion">Precio sujeto a los requerimientos de tipología y despliegue en redes.</p>
-                <span class="price">solicitud 📩</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <img src="../assets/images/campaña/smed_support.svg" alt="Soporte Técnico">
-              </div>
-              <div class="card-content">
-                <h3>Soporte Técnico</h3>
-                <p>Revisión, diagnóstico y soluciones efectivas desde 60.000</p>
-                <p id="condicion">Precio sujeto a los requerimientos del cliente y <br> las fallas de los equipos</p>
-                <span class="price">$60.000 </span>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <img src="../assets/images/campaña/smed_gaming.gif" alt="Gaming">
-              </div>
-              <div class="card-content">
-                <h3>Arma tu PC!</h3>
-                <p>Te asesoramos con relacion presupuesto para que armes <br> el setup de tus sueños</p>
-                <p id="condicion">Precio sujeto a los requerimientos del cliente </p>
-                <span class="price">solicitud 📩</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <img src="../assets/images/campaña/smed_consultoria.gif" alt="Soporte Técnico">
-              </div>
-              <div class="card-content">
-                <h3>Asesorias para empresas</h3>
-                <p>Contactanos! para darte el mejor servicio empresarial</p>
-                <span class="price">solicitud 📩</span>
-              </div>
-            </div>
-
-            <!-- Más cards aquí si quieres -->
-          </div>
-
-          <button class="slider-btn right" onclick="moveSlide(1)">&#10095;</button>
-        </div>
-      </section>
-      <!--proyectos furutos -->
+      <!--proyectos futuros -->
       <section class="futuros-proyectos-section">
         <section class="futuros-proyectos-section">
           <h2 class="slider-title">Futuros Proyectos</h2>
@@ -236,13 +192,13 @@
   <footer-page></footer-page>
   <!-- Contenedor para particles.js -->
   <div id="particles-js"></div>
-  <script src="../scripts/particulas.js"></script>
-  <script src="../scripts/configuracion-particulas.js"></script>
-  <script src="../utils/cards-servicios.js"></script>
-  <script src="../utils/seccion-final.js"></script>
+  <script src="../scripts/Particles.js"></script>
+  <script src="../scripts/ParticlesConfig.js"></script>
+  <script src="../scripts/servicioscorusel.js"></script>
+  <script src="../utils/FinalSection.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script> -->
+integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+crossorigin="anonymous"></script> -->
   <script type="module" src="../components/BaseComponents.js" defer></script>
 </body>
 
