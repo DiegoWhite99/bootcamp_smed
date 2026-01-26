@@ -15,9 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5%; /* Aumentado padding horizontal porcentual para no pegar a los bordes */
+  padding: 0 25px;
   max-width: 100%;
-  box-sizing: border-box; /* Asegurar que el padding no aumente el ancho total */
+  box-sizing: border-box;
 }
 
 .nav-logo {
@@ -40,6 +40,7 @@
   margin: auto;
   display: flex;
 }
+
 .nav-menu ul {
   display: flex;
   padding: 0;
@@ -234,6 +235,7 @@
 
 /* Para pantallas menores a 980px (Móviles y tablets) */
 @media (max-width: 980px) {
+
   /* Mostrar botón hamburguesa */
   .botonHamburgesa {
     display: flex;
