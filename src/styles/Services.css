@@ -171,14 +171,14 @@
   color: #fff;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 255, 153, 0.4);
+  box-shadow: 0 0 15px rgb(245, 248, 247);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
 }
 
 .proyecto-card:hover {
   transform: scale(1.03) rotateX(3deg);
-  box-shadow: 0 0 25px rgba(0, 255, 153, 0.8);
+  box-shadow: 0 0 25px #ffffff;
 }
 
 .proyecto-img img {
@@ -211,7 +211,7 @@
 /*section 4*/
 
 .section-cualidades {
-  background: rgba(17, 17, 17, 0.486);
+  background:  rgb(255, 255, 255);
   padding: 60px 30px;
   border-radius: 30px;
   box-shadow: 0 8px 30px rgba(240, 236, 236, 0.3);
@@ -230,10 +230,10 @@
   display: flex;
   align-items: start;
   padding: 20px;
-  background: rgba(17, 17, 17, 0.486);
+  background: #081B3B;
   /* Negro translúcido */
-  border-radius: 70px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.178);
+  border-radius: 70px ;
+  box-shadow: 0 4px 12px #0f2957;
   gap: 20px;
   transition: transform 0.3s ease;
 }
@@ -247,7 +247,7 @@
 @media (max-width: 768px) {
   .card-container {
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
   }
 
   .card {
@@ -257,16 +257,17 @@
 }
 
 .our_cualitestittle {
+  font-size: 2rem;
   margin: 0 0 30px 0;
-  color: rgba(255, 255, 255, 0.685);
+  color: rgb(9, 9, 9);
   text-align: center;
-  text-shadow: 0 0 8px #00ffaa, 0 0 15px #00ffaa;
+ /* text-shadow: 0 0 8px #071410, 0 0 15px #000000;*/
 }
 
 .card-icon {
   padding: 20px;
   border-radius: 50%;
-  border: 2px solid #e0e0e0;
+  border: 2.5px solid #081952;
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -293,7 +294,7 @@
 
 .card-text {
   font-size: 0.95rem;
-  color: #000000e3;
+  color: #ffffff;
   /* Gris claro para contraste sobre fondo oscuro */
 }
 
