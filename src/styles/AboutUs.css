@@ -85,10 +85,11 @@ body {
 
 .cta .btn {
   display: inline-block;
+  font-size: 1.2rem;
   margin-top: 2rem;
   padding: 0.75rem 2rem;
-  background-color: #00bfff;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
