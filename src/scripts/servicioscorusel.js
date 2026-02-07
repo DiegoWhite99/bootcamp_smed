@@ -10,7 +10,7 @@ const trackWidth = track.scrollWidth / 2;
 function animate() {
   position += speed;
 
-  // cuando llega a la mitad, invierte la dirección
+  // bucle de de la infromacion del carrusel
   if (position <= -trackWidth) {
     position = 0;
   } else if (position > 0) {
