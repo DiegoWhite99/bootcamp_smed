@@ -1,5 +1,5 @@
 ﻿const slider = document.getElementById('sliderTrack');
-const cardWidth = 320; // ancho estimado de una card con margen
+const cardWidth = 3200; // ancho estimado de una card con margen
 
 function moveSlide(direction) {
   slider.scrollLeft += direction * cardWidth;
