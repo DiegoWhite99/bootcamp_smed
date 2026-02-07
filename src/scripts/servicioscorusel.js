@@ -1,5 +1,5 @@
 const track = document.querySelector("#hero-carousel2 .carousel-track");
-let speed = -0.4; // 👈 controla la elegancia (0.2 muy lento, 0.6 normal), negativo para izquierda
+let speed = -1.4; // 👈 controla la elegancia (0.2 muy lento, 0.6 normal), negativo para izquierda
 let position = 0;
 
 // Duplicamos el contenido para loop infinito
@@ -10,11 +10,11 @@ const trackWidth = track.scrollWidth / 2;
 function animate() {
   position += speed;
 
-  // cuando llega a la mitad, invierte la dirección
+  // bucle de de la infromacion del carrusel
   if (position <= -trackWidth) {
-    speed = -speed;
-  } else if (position >= trackWidth) {
-    speed = -speed;
+    position = 0;
+  } else if (position > 0) {
+    position = -trackWidth;
   }
 
   track.style.transform = `translateX(${position}px)`;
