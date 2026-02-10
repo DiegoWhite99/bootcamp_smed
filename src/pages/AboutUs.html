@@ -244,7 +244,7 @@
       </p>
 
       <div class="contacto-container">
-        <form action="#" method="get" target="_blank">
+        <form action="/backend/form/FormContact.php" method="POST">
           <label for="nombre">👤 Nombre:</label>
           <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
 
@@ -261,17 +261,12 @@
             </option>
             <option value="soporte_tecnico">💻 Soporte técnico</option>
             <option value="asesorias">🎓 Asesorías</option>
-            <option value="consultas_proyectos">
-              📊 Consultas de proyectos
-            </option>
-            <option value="campañas_marketing">
-              📣 Campañas de marketing
-            </option>
+            <option value="consultas_proyectos">📊 Consultas de proyectos</option>
+            <option value="campañas_marketing">📣 Campañas de marketing</option>
             <option value="desarrollo_web">🌐 Desarrollo web</option>
-            <option value="planes_empresariales">
-              🏢 Planes empresariales
-            </option>
+            <option value="planes_empresariales">🏢 Planes empresariales</option>
             <option value="armo_pc_gamer">🖥️ Armo mi PC Gamer</option>
+            <option value="otros">Otros servicios</option>
           </select>
 
           <label for="mensaje"> 📣 Mensaje:</label>
@@ -290,7 +285,6 @@
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
   <script type="module" src="../components/BaseComponents.js" defer></script>
-  <script type="module" src="../scripts/formHandler.js"></script>
 </body>
 
 </html>
