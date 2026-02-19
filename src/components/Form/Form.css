@@ -1,0 +1,81 @@
+/* ===== SECCIÓN CONTACTO ===== */
+#contacto {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000000b2;
+    color: #f3f3f3;
+}
+
+.contacto-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #0c0c0cc5;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-btn,
+button[type="submit"] {
+    margin-top: 30px;
+    background: linear-gradient(45deg, #ff7f50, #ff4500);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(19, 16, 16, 0.993);
+}
+
+.contact-btn:hover,
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #ff4500, #ff7f50);
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
