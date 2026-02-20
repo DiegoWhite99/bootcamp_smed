@@ -1,4 +1,4 @@
-﻿import './NavigationBar/NavigationBar.js';
-import './Footer/Footer.js';
-import './Form/Form.js';
-import '/backend/form/formHandler.js';
+﻿import '../components/NavigationBar/NavigationBar.js';
+import '../components/Footer/Footer.js';
+import '../components/Form/Form.js';
+
