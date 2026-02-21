@@ -625,8 +625,8 @@ p {
   .whatsapp-float {
     right: 16px;
     bottom: 16px;
-    width: 500px;
-    height: 500px;
+    width: 80px;
+    height: 80px;
     font-size: 1.8rem;
   }
 }
