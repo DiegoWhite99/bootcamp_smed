@@ -39,6 +39,7 @@
 .nav-menu {
   margin: auto;
   display: flex;
+  margin-right: 15px;
 }
 
 .nav-menu ul {
