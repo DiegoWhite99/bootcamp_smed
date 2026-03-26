@@ -7,6 +7,7 @@ SMED Technology es una empresa especializada en soluciones tecnológicas integra
 - Soporte técnico
 - Redes
 - Gestión en la nube
+- Infraestructura de CTV
 
 Este proyecto tiene como objetivo construir una plataforma web que conecte los servicios ofrecidos por la empresa con sus clientes de manera eficiente.
 
