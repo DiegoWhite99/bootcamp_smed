@@ -6,3 +6,4 @@ backend/logs
 backend/form/FormContact.php
 backend/form/FormHandler.js
 PROJECT_STATUS.md
+index.php
