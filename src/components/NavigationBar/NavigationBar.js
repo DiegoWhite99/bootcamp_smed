@@ -64,6 +64,31 @@ export default class NavigationBar extends HTMLElement {
         botonHamburgesa.classList.remove("active");
       });
     });
+
+    const submenuToggle = navMenu.querySelector(".submenu-toggle");
+    const submenuParent = navMenu.querySelector(".has-submenu");
+    const sublinks = navMenu.querySelectorAll(".sublink");
+
+    if (submenuToggle && submenuParent) {
+      submenuToggle.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        submenuParent.classList.toggle("submenu-open");
+        const isExpanded = submenuParent.classList.contains("submenu-open");
+        submenuToggle.setAttribute("aria-expanded", String(isExpanded));
+      });
+    }
+
+    sublinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        botonHamburgesa.classList.remove("active");
+        if (submenuParent && submenuToggle) {
+          submenuParent.classList.remove("submenu-open");
+          submenuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
   }
 }
 

@@ -1,12 +1,33 @@
 <header>
   <nav class="navbar-smed">
     <div class="nav-logo">
-      <p>Smed Technology</p>
+      <a href="/src/pages/AboutUs.html" class="nav-brand">
+        <img src="/src/assets/images/SmedOfficial.webp" alt="Logo SMED Technology" id="logo_smed" />
+        <div class="nav-brand-text">
+          <span>SMED</span>
+          <p>Technology</p>
+        </div>
+      </a>
     </div>
     <div class="nav-menu" id="navMenu">
       <ul>
         <li><a href="/src/pages/AboutUs.html" class="link">Nosotros</a></li>
-        <li><a href="/src/pages/Services.html" class="link">Servicios</a></li>
+        <li class="has-submenu">
+          <div class="nav-link-group">
+            <a href="/src/pages/Services.html" class="link">Servicios</a>
+            <button class="submenu-toggle" type="button" aria-label="Mostrar subservicios" aria-expanded="false">
+              <i class='bx bx-chevron-down'></i>
+            </button>
+          </div>
+          <ul class="submenu">
+            <li><a href="/src/pages/Desarrollo.html" class="sublink">Desarrollo</a></li>
+            <li><a href="/src/pages/Redes.html" class="sublink">Redes</a></li>
+            <li><a href="/src/pages/Redes.html" class="sublink">Infraestructura</a></li>
+            <li><a href="/src/pages/Cloud.html" class="sublink">Cloud</a></li>
+            <li><a href="/src/pages/Soporte.html" class="sublink">Soporte</a></li>
+            <li><a href="/src/pages/Asesorias.html" class="sublink">Asesorias</a></li>
+          </ul>
+        </li>
         <li><a href="/src/pages/Blog.html" class="link">Blog</a></li>
         <!-- <li><a href="/src/pages/Store.html" class="link">Tienda</a></li>
         <li>
