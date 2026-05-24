@@ -58,15 +58,23 @@ main {
   align-items: center;
   gap: 8px;
   width: fit-content;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(245, 245, 245, 0.04);
   color: #ffffff !important;
-  font-size: 0.78rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  animation: slideUpIn 0.7s ease both 0.2s;
+  transition: all 0.3s ease;
+}
+
+.section-kicker:hover {
+  background: rgba(245, 245, 245, 0.08);
+  border-color: rgba(245, 245, 245, 0.24);
+  transform: scale(1.05);
 }
 
 .hero,
@@ -77,7 +85,7 @@ main {
 #fundadores,
 #vision_mision {
   position: relative;
-  padding: 0 1.5rem;
+  padding: 0 1.2rem;
 }
 
 .about,
@@ -91,7 +99,8 @@ main {
 
 .hero {
   min-height: 100vh;
-  padding-top: 8.75rem;
+  padding-top: 7.5rem;
+  padding-bottom: 2rem;
   display: flex;
   align-items: center;
 }
@@ -123,7 +132,7 @@ main {
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
-  gap: 2.6rem;
+  gap: 3.2rem;
   align-items: center;
 }
 
@@ -140,21 +149,32 @@ main {
 
 .hero-copy {
   display: grid;
-  gap: 1.3rem;
+  gap: 2.2rem;
+  text-align: left;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  padding: 0.55rem 1rem;
+  padding: 1rem 1.8rem;
   border-radius: 999px;
-  background: rgba(245, 245, 245, 0.06);
-  border: 1px solid rgba(245, 245, 245, 0.14);
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.15) 0%, rgba(8, 155, 219, 0.05) 100%);
+  border: 2px solid rgba(8, 155, 219, 0.5);
   color: var(--brand-white);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 24px rgba(8, 155, 219, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.hero-badge:hover {
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.25) 0%, rgba(8, 155, 219, 0.12) 100%);
+  border-color: rgba(8, 155, 219, 0.8);
+  box-shadow: 0 12px 32px rgba(8, 155, 219, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
 }
 
 .hero-content h1,
@@ -168,11 +188,17 @@ main {
 }
 
 .hero-content h1 {
-  max-width: 760px;
-  font-size: clamp(2.1rem, 3.7vw, 3.15rem);
-  line-height: 1.06;
-  letter-spacing: 0.01em;
-  text-wrap: balance;
+  max-width: 850px;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  animation: fadeUp 0.8s ease both;
+  padding: 0.5rem 0 1.8rem;
+  border-bottom: 2.5px solid rgba(8, 155, 219, 0.5);
 }
 
 .hero-subtitle {
@@ -202,7 +228,8 @@ main {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  gap: 1.3rem;
+  justify-content: flex-start;
 }
 
 .cta .btn {
@@ -234,37 +261,56 @@ main {
 
 .hero-visual {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   padding: 1.8rem;
   border-radius: 32px;
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(180deg, rgba(8, 27, 59, 0.72), rgba(6, 17, 33, 0.84));
-  box-shadow: var(--shadow);
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero-brand-card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.65rem;
+  gap: 1rem;
   align-items: center;
-  padding: 1.3rem;
-  border-radius: 26px;
-  background:
-    linear-gradient(180deg, rgba(245, 245, 245, 0.08), rgba(245, 245, 245, 0.03));
-  border: 1px solid var(--line-soft);
+  padding: 2rem 2.3rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.7) 0%, rgba(8, 27, 59, 0.35) 100%);
+  border: 2px solid rgba(8, 155, 219, 0.5);
+  box-shadow: 0 8px 32px rgba(8, 155, 219, 0.08);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: brandGlow 0.7s ease both;
+}
+
+.hero-brand-card:hover {
+  border-color: rgba(8, 155, 219, 0.85);
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.85) 0%, rgba(8, 27, 59, 0.55) 100%);
+  box-shadow: 0 16px 48px rgba(8, 155, 219, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-6px);
+}
+
+.hero-brand-card:hover .brand-copy-block span {
+  color: rgba(8, 155, 219, 1);
+  transform: scale(1.05);
+}
+
+.hero-brand-card:hover .brand-copy-block strong {
+  transform: scale(1.03);
+  color: #ffffff;
 }
 
 .brand-copy-block span,
 .about-signature-card span,
 .service-label {
   display: inline-block;
-  margin-bottom: 0.4rem;
-  color: #c7d3de;
+  margin-bottom: 0.8rem;
+  color: rgba(8, 155, 219, 0.9);
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .about-mini-card span,
@@ -283,51 +329,583 @@ main {
 
 .brand-copy-block strong {
   display: block;
-  color: var(--brand-white);
-  font-size: 1.16rem;
-  line-height: 1.55;
-  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  gap: 1rem;
 }
 
 .stat-card {
-  padding: 1.05rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 20px;
-  background: rgba(245, 245, 245, 0.05);
-  border: 1px solid var(--line-soft);
-  transition: transform 0.3s ease, background 0.3s ease;
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.65) 0%, rgba(8, 27, 59, 0.3) 100%);
+  border: 1.5px solid rgba(8, 155, 219, 0.35);
+  box-shadow: 0 8px 24px rgba(8, 155, 219, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: slideUpIn 0.6s ease both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
 .stat-card:hover {
-  transform: translateY(-3px);
-  background: rgba(245, 245, 245, 0.08);
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.75) 0%, rgba(8, 27, 59, 0.38) 100%);
+  border-color: rgba(8, 155, 219, 0.6);
+  box-shadow: 0 12px 28px rgba(8, 155, 219, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.1) rotateZ(3deg);
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.25) 0%, rgba(8, 155, 219, 0.1) 100%);
+  border: 1.5px solid rgba(8, 155, 219, 0.5);
+  font-size: 1.6rem;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(8, 155, 219, 0.12);
+  position: relative;
+  z-index: 1;
+}
+
+.stat-icon i {
+  font-weight: 700;
 }
 
 .stat-card strong {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
   color: #ffffff;
-  font-size: 1.06rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
 }
 
 .stat-card span {
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.55;
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-note {
-  padding: 1rem 1.1rem;
-  border-radius: 18px;
-  background: rgba(245, 245, 245, 0.05);
-  border: 1px solid var(--line-soft);
+  padding: 1.3rem 1.6rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.6) 0%, rgba(8, 27, 59, 0.28) 100%);
+  border: 1.5px solid rgba(8, 155, 219, 0.4);
+  box-shadow: 0 4px 16px rgba(8, 155, 219, 0.06);
   color: var(--brand-white);
-  line-height: 1.65;
+  transition: all 0.35s ease;
+  animation: slideUp 0.6s ease both 0.4s;
+}
+
+.hero-note:hover {
+  border-color: rgba(8, 155, 219, 0.7);
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.7) 0%, rgba(8, 27, 59, 0.35) 100%);
+  box-shadow: 0 12px 32px rgba(8, 155, 219, 0.12);
+  transform: translateY(-4px);
+}
+
+.pillars-title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #089dd9 0%, #10b981 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+}
+
+/* Challenges Section */
+.challenges-section {
+  position: relative;
+  padding: 5rem 1.2rem;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.5) 0%, rgba(8, 27, 59, 0.3) 100%);
+  border-top: 1px solid rgba(8, 155, 219, 0.2);
+}
+
+.challenges-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.challenges-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeUp 0.8s ease both;
+}
+
+.challenges-header h2 {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.challenges-header p {
+  color: rgba(245, 245, 245, 0.85);
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.challenge-card {
+  padding: 2.2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.6) 0%, rgba(8, 27, 59, 0.25) 100%);
+  border: 1.5px solid rgba(220, 38, 38, 0.3);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: slideUpIn 0.6s ease both;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.challenge-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.challenge-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.challenge-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.challenge-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.challenge-card:hover {
+  border-color: rgba(220, 38, 38, 0.6);
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.75) 0%, rgba(8, 27, 59, 0.4) 100%);
+  box-shadow: 0 16px 40px rgba(220, 38, 38, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateY(-8px);
+}
+
+.challenge-card:hover::before {
+  opacity: 1;
+}
+
+.challenge-card:hover .challenge-icon {
+  transform: scale(1.2) rotateZ(-10deg);
+  box-shadow: 0 12px 28px rgba(220, 38, 38, 0.25);
+}
+
+.challenge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(220, 38, 38, 0.08) 100%);
+  border: 2px solid rgba(220, 38, 38, 0.5);
+  font-size: 2rem;
+  color: #ef4444;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12);
+  position: relative;
+  z-index: 1;
+}
+
+.challenge-icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.challenge-card p {
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarjeta 1: Soporte Lento (Rojo) */
+.challenge-slow {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, rgba(127, 29, 29, 0.3) 0%, rgba(8, 27, 59, 0.25) 100%);
+}
+
+.challenge-slow:hover {
+  border-color: rgba(239, 68, 68, 0.7);
+  background: linear-gradient(135deg, rgba(127, 29, 29, 0.5) 0%, rgba(8, 27, 59, 0.35) 100%);
+  box-shadow: 0 16px 40px rgba(239, 68, 68, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.challenge-icon-slow {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.25) 0%, rgba(239, 68, 68, 0.1) 100%);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #ef4444;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+}
+
+.challenge-slow:hover .challenge-icon-slow {
+  box-shadow: 0 12px 28px rgba(239, 68, 68, 0.3);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.35) 0%, rgba(239, 68, 68, 0.15) 100%);
+  border-color: rgba(239, 68, 68, 0.8);
+}
+
+/* Tarjeta 2: Soluciones Improvisadas (Naranja) */
+.challenge-improvised {
+  border-color: rgba(249, 115, 22, 0.4);
+  background: linear-gradient(135deg, rgba(124, 45, 18, 0.3) 0%, rgba(8, 27, 59, 0.25) 100%);
+}
+
+.challenge-improvised:hover {
+  border-color: rgba(249, 115, 22, 0.7);
+  background: linear-gradient(135deg, rgba(124, 45, 18, 0.5) 0%, rgba(8, 27, 59, 0.35) 100%);
+  box-shadow: 0 16px 40px rgba(249, 115, 22, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.challenge-icon-improvised {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.25) 0%, rgba(249, 115, 22, 0.1) 100%);
+  border-color: rgba(249, 115, 22, 0.6);
+  color: #f97316;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
+}
+
+.challenge-improvised:hover .challenge-icon-improvised {
+  box-shadow: 0 12px 28px rgba(249, 115, 22, 0.3);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.35) 0%, rgba(249, 115, 22, 0.15) 100%);
+  border-color: rgba(249, 115, 22, 0.8);
+}
+
+/* Tarjeta 3: Falta de Acompañamiento (Rosa) */
+.challenge-absent {
+  border-color: rgba(236, 72, 153, 0.4);
+  background: linear-gradient(135deg, rgba(131, 24, 67, 0.3) 0%, rgba(8, 27, 59, 0.25) 100%);
+}
+
+.challenge-absent:hover {
+  border-color: rgba(236, 72, 153, 0.7);
+  background: linear-gradient(135deg, rgba(131, 24, 67, 0.5) 0%, rgba(8, 27, 59, 0.35) 100%);
+  box-shadow: 0 16px 40px rgba(236, 72, 153, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.challenge-icon-absent {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.25) 0%, rgba(236, 72, 153, 0.1) 100%);
+  border-color: rgba(236, 72, 153, 0.6);
+  color: #ec4899;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
+}
+
+.challenge-absent:hover .challenge-icon-absent {
+  box-shadow: 0 12px 28px rgba(236, 72, 153, 0.3);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.35) 0%, rgba(236, 72, 153, 0.15) 100%);
+  border-color: rgba(236, 72, 153, 0.8);
+}
+
+/* Tarjeta 4: Infraestructura Inestable (Rojo oscuro) */
+.challenge-unstable {
+  border-color: rgba(220, 38, 38, 0.4);
+  background: linear-gradient(135deg, rgba(110, 19, 19, 0.3) 0%, rgba(8, 27, 59, 0.25) 100%);
+}
+
+.challenge-unstable:hover {
+  border-color: rgba(220, 38, 38, 0.7);
+  background: linear-gradient(135deg, rgba(110, 19, 19, 0.5) 0%, rgba(8, 27, 59, 0.35) 100%);
+  box-shadow: 0 16px 40px rgba(220, 38, 38, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.challenge-icon-unstable {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.25) 0%, rgba(220, 38, 38, 0.1) 100%);
+  border-color: rgba(220, 38, 38, 0.6);
+  color: #dc2626;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+  animation: iconShake 2s ease-in-out infinite;
+}
+
+.challenge-unstable:hover .challenge-icon-unstable {
+  box-shadow: 0 12px 28px rgba(220, 38, 38, 0.35);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.4) 0%, rgba(220, 38, 38, 0.15) 100%);
+  border-color: rgba(220, 38, 38, 0.9);
+  animation: none;
+}
+
+@keyframes iconShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pillar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.3rem 1rem;
+  text-align: center;
+  border-radius: 16px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  background: rgba(245, 245, 245, 0.02);
+  animation: fadeIn 0.6s ease both;
+}
+
+.pillar-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.pillar-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.pillar-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.pillar-item:hover {
+  transform: translateY(-5px);
+  background: rgba(245, 245, 245, 0.05);
+}
+
+.pillar-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2.5px solid;
+  position: relative;
+}
+
+.pillar-circle::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+.pillar-software .pillar-circle {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.05) 100%);
+  border-color: #a855f7;
+  color: #c084fc;
+}
+
+.pillar-software .pillar-circle::before {
+  border: 2.5px solid rgba(168, 85, 247, 0.3);
+}
+
+.pillar-support .pillar-circle {
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.2) 0%, rgba(8, 155, 219, 0.05) 100%);
+  border-color: #089dd9;
+  color: #38bdf8;
+}
+
+.pillar-support .pillar-circle::before {
+  border: 2.5px solid rgba(8, 155, 219, 0.3);
+}
+
+.pillar-net .pillar-circle {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border-color: #10b981;
+  color: #6ee7b7;
+}
+
+.pillar-net .pillar-circle::before {
+  border: 2.5px solid rgba(16, 185, 129, 0.3);
+}
+
+.pillar-software:hover .pillar-circle {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.15) 100%);
+  box-shadow: 0 12px 32px rgba(168, 85, 247, 0.2), inset 0 0 20px rgba(168, 85, 247, 0.1);
+  border-color: #d8b4fe;
+  color: #f3e8ff;
+}
+
+.pillar-software:hover .pillar-circle::before {
+  opacity: 1;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.pillar-support:hover .pillar-circle {
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.3) 0%, rgba(8, 155, 219, 0.15) 100%);
+  box-shadow: 0 12px 32px rgba(8, 155, 219, 0.2), inset 0 0 20px rgba(8, 155, 219, 0.1);
+  border-color: #7dd3fc;
+  color: #cffafe;
+}
+
+.pillar-support:hover .pillar-circle::before {
+  opacity: 1;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.pillar-net:hover .pillar-circle {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3) 0%, rgba(16, 185, 129, 0.15) 100%);
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.2), inset 0 0 20px rgba(16, 185, 129, 0.1);
+  border-color: #a7f3d0;
+  color: #d1fae5;
+}
+
+.pillar-net:hover .pillar-circle::before {
+  opacity: 1;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.pillar-item h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.pillar-item p {
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 0.82rem;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.6;
+  }
 }
 
 .about-container,
@@ -341,7 +919,7 @@ main {
 .about-container {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
-  gap: 1.5rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -358,7 +936,7 @@ main {
 
 .about-text {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.8rem;
 }
 
 .about-text h2 {
@@ -367,15 +945,22 @@ main {
 }
 
 .about-story-card {
-  padding: 1.15rem 1.25rem;
-  border-left: 2px solid rgba(245, 245, 245, 0.26);
-  background: rgba(245, 245, 245, 0.04);
+  padding: 1.6rem 1.8rem;
+  border-radius: 16px;
+  border-left: 3px solid rgba(8, 155, 219, 0.6);
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.08) 0%, rgba(8, 27, 59, 0.12) 100%);
+  transition: all 0.4s ease;
+}
+
+.about-story-card:hover {
+  border-left-color: rgba(8, 155, 219, 0.8);
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.12) 0%, rgba(8, 27, 59, 0.18) 100%);
 }
 
 .about-points,
 .about-side-panel {
   display: grid;
-  gap: 1rem;
+  gap: 1.4rem;
 }
 
 .about-point,
@@ -414,14 +999,14 @@ main {
 
 .about-point {
   display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 1rem;
+  grid-template-columns: 64px 1fr;
+  gap: 1.4rem;
   align-items: start;
-  padding: 1.2rem;
-  border-radius: 22px;
-  background: rgba(245, 245, 245, 0.035);
-  border: 1px solid var(--line-soft);
-  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding: 1.8rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.08) 0%, rgba(8, 27, 59, 0.15) 100%);
+  border: 1.5px solid rgba(8, 155, 219, 0.25);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .about-point:hover,
@@ -436,21 +1021,31 @@ main {
 .about-point:hover,
 .about-signature-card:hover,
 .about-mini-card:hover {
-  border-color: rgba(245, 245, 245, 0.18);
-  background: rgba(245, 245, 245, 0.055);
+  border-color: rgba(8, 155, 219, 0.5);
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.15) 0%, rgba(8, 27, 59, 0.25) 100%);
 }
 
 .about-point i,
 .service-item i {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
-  background: rgba(245, 245, 245, 0.08);
-  color: #ffffff;
-  font-size: 1.45rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.25) 0%, rgba(8, 155, 219, 0.1) 100%);
+  border: 1.5px solid rgba(8, 155, 219, 0.3);
+  color: #38bdf8;
+  font-size: 1.8rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(8, 155, 219, 0.1);
+}
+
+.about-point:hover i {
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.35) 0%, rgba(8, 155, 219, 0.15) 100%);
+  border-color: rgba(8, 155, 219, 0.6);
+  box-shadow: 0 8px 20px rgba(8, 155, 219, 0.2);
+  transform: scale(1.1);
 }
 
 .about-point h3,
@@ -464,11 +1059,12 @@ main {
 
 .about-signature-card,
 .about-mini-card {
-  padding: 1.4rem;
-  border-radius: 24px;
-  background: rgba(245, 245, 245, 0.035);
-  border: 1px solid var(--line-soft);
-  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  padding: 1.8rem;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.1) 0%, rgba(8, 27, 59, 0.18) 100%);
+  border: 1.5px solid rgba(8, 155, 219, 0.3);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 16px rgba(8, 155, 219, 0.08);
 }
 
 .about-signature-card {
@@ -513,6 +1109,7 @@ main {
   line-height: 1.8;
 }
 
+/* About Challenges Card */
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -730,15 +1327,15 @@ main {
 .brand-track {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 3.0rem;
   width: max-content;
   will-change: transform;
-  animation: scroll 92s linear infinite;
+  animation: scroll 95s linear infinite;
 }
 
 .brand-slide {
   flex: 0 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
 }
 
 .brand-slide img {
@@ -850,6 +1447,44 @@ main {
   }
 }
 
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brandGlow {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(8, 155, 219, 0.4);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 8px 32px rgba(8, 155, 219, 0.08);
+  }
+}
+
 /* Eslogan section */
 .eslogan {
   position: relative;
@@ -900,7 +1535,10 @@ main {
   text-wrap: balance;
   position: relative;
   display: inline-block;
-  animation: titlePop 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgba(8, 155, 219, 0.8);
+  animation: typewriter 3s steps(24, end) both, blink 0.75s infinite;
 }
 
 .eslogan-title::after {
@@ -968,6 +1606,29 @@ main {
   }
 }
 
+@keyframes typewriter {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 49% {
+    border-right-color: rgba(8, 155, 219, 0.8);
+  }
+  50%, 100% {
+    border-right-color: transparent;
+  }
+}
+
 @keyframes textFadeIn {
   from {
     opacity: 0;
@@ -1000,6 +1661,7 @@ main {
   }
 }
 
+/* Tablets y pantallas medianas */
 @media (max-width: 1080px) {
   .hero-layout,
   .about-container,
@@ -1008,6 +1670,11 @@ main {
   .vision-shell,
   .eslogan-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .services-grid,
@@ -1017,15 +1684,54 @@ main {
 
   .hero-visual {
     margin-top: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .hero-copy {
+    gap: 1.5rem;
+  }
+
+  .about-container {
+    gap: 2rem;
+  }
+
+  .hero-badge {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    padding: 0.8rem 1.4rem;
+  }
+
+  .pillars-grid {
+    gap: 1.2rem;
+  }
+
+  .pillar-item {
+    padding: 0.8rem;
+    gap: 0.6rem;
+  }
+
+  .pillar-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .pillar-item h4 {
+    font-size: 0.85rem;
+  }
+
+  .pillar-item p {
+    font-size: 0.75rem;
   }
 }
 
+/* Móviles grandes y tablets pequeñas */
 @media (max-width: 768px) {
   .hero,
   .about,
   .trust-section,
   .services,
   .brand-carousel,
+  .challenges-section,
   #fundadores,
   #vision_mision {
     padding-left: 1rem;
@@ -1036,6 +1742,7 @@ main {
   .trust-section,
   .services,
   .brand-carousel,
+  .challenges-section,
   #fundadores,
   #vision_mision {
     margin-top: 2rem;
@@ -1043,15 +1750,17 @@ main {
 
   .hero {
     min-height: auto;
-    padding-top: 7.9rem;
+    padding-top: 6.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .eslogan {
-    padding-top: 6.5rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
   }
 
   .eslogan-container {
-    padding: 1.2rem;
+    padding: 1rem;
   }
 
   .eslogan-copy {
@@ -1059,10 +1768,17 @@ main {
     text-align: center;
   }
 
+  .eslogan-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    border-bottom: 2px solid rgba(8, 155, 219, 0.5);
+    padding-bottom: 1rem;
+  }
+
   .hero-stats,
   .services-grid,
   .fundadores-container,
-  .vision-shell {
+  .vision-shell,
+  .challenges-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1073,30 +1789,305 @@ main {
   .services-panel,
   .vision_mision,
   .fundador {
-    padding: 1.45rem;
+    padding: 1.5rem;
+  }
+
+  .hero-badge {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    line-height: 1.2;
+    padding: 0.3rem 0 1rem;
   }
 
   .hero-brand-card {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
+    gap: 0.8rem;
+    padding: 1.5rem;
+  }
+
+  .brand-copy-block span {
+    font-size: 0.75rem;
+  }
+
+  .brand-copy-block strong {
+    font-size: 1.1rem;
+  }
+
+  .stat-card {
+    padding: 1.2rem 1.6rem;
+    gap: 0.6rem;
+  }
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-card strong {
+    font-size: 0.95rem;
+  }
+
+  .stat-card span {
+    font-size: 0.75rem;
+  }
+
+  .hero-note {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .pillars-grid {
+    gap: 1rem;
+  }
+
+  .pillar-item {
+    padding: 0.8rem;
+  }
+
+  .pillar-circle {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+  }
+
+  .pillar-item h4 {
+    font-size: 0.85rem;
+  }
+
+  .pillar-item p {
+    font-size: 0.72rem;
+  }
+
+  .challenge-card {
+    padding: 1.6rem;
+    gap: 1rem;
+  }
+
+  .challenge-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.8rem;
+  }
+
+  .challenge-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .challenge-card p {
+    font-size: 0.9rem;
+  }
+
+  .about-point {
+    grid-template-columns: 56px 1fr;
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+
+  .about-point i {
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
   }
 
   .brand-slide {
     padding: 0 1rem;
   }
+
+  .challenges-header h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+  }
 }
 
-@media (max-width: 520px) {
+/* Móviles pequeños */
+@media (max-width: 640px) {
+  .hero,
+  .about,
+  .trust-section,
+  .services,
+  .challenges-section,
+  .brand-carousel,
+  #fundadores,
+  #vision_mision {
+    padding: 0 0.8rem;
+  }
+
   .hero-content h1 {
-    font-size: 1.95rem;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    letter-spacing: 0.02em;
+  }
+
+  .hero-badge {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9rem, 1.3vw, 1rem);
+  }
+
+  .hero-copy {
+    gap: 1.3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta .btn {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.9rem;
   }
 
   .about-point {
-    grid-template-columns: 1fr;
+    grid-template-columns: 50px 1fr;
+    gap: 1rem;
+    padding: 1.3rem;
+  }
+
+  .about-point i {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    border-radius: 12px;
+  }
+
+  .about-point h3 {
+    font-size: 1rem;
+  }
+
+  .about-point p {
+    font-size: 0.85rem;
   }
 
   .eslogan {
-    padding-top: 6rem;
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .eslogan-title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin-bottom: 1rem;
+  }
+
+  .eslogan-text {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    line-height: 1.6;
+  }
+
+  .hero-stats {
+    gap: 0.8rem;
+  }
+
+  .stat-card {
+    padding: 1rem 1.2rem;
+    gap: 0.5rem;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .stat-card strong {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-card span {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .hero-note {
+    padding: 1rem 1.2rem;
+    gap: 0.8rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .pillar-item {
+    padding: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .pillar-circle {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+
+  .pillar-item h4 {
+    font-size: 0.8rem;
+  }
+
+  .pillar-item p {
+    font-size: 0.7rem;
+  }
+
+  .challenges-grid {
+    gap: 1.2rem;
+  }
+
+  .challenge-card {
+    padding: 1.4rem;
+    gap: 0.9rem;
+  }
+
+  .challenge-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+  }
+
+  .challenge-card h3 {
+    font-size: 1rem;
+  }
+
+  .challenge-card p {
+    font-size: 0.85rem;
+  }
+
+  .challenges-header h2 {
+    font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  }
+
+  .challenges-header p {
+    font-size: 0.9rem;
+  }
+
+  .hero-brand-card {
+    padding: 1.3rem;
+  }
+
+  .about-text,
+  .about-side-panel {
+    padding: 1.3rem;
+  }
+
+  .section-kicker {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .about-points {
+    gap: 1.2rem;
+  }
+
+  .about-signature-card img {
+    max-width: 150px;
   }
 
 }
