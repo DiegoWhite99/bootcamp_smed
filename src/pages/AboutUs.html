@@ -37,9 +37,8 @@
           </p>
         </div>
       </div>
-      <button class="eslogan-audio-btn" id="esloganAudioBtn" aria-label="Escuchar texto">
+      <button class="eslogan-audio-btn" id="esloganAudioBtn" aria-label="Escuchar / Listen" title="Escuchar">
         <i class="bx bx-volume-full" id="esloganAudioIcon"></i>
-        <span id="esloganAudioLabel" data-i18n="eslogan.listen">Escúchanos</span>
       </button>
     </section>
 
@@ -478,50 +477,56 @@
   <script>
     // ── Audio: forjamos.mp3 ──
     (function () {
-      const btn    = document.getElementById('esloganAudioBtn');
-      const icon   = document.getElementById('esloganAudioIcon');
-      const label  = document.getElementById('esloganAudioLabel');
+      const btn     = document.getElementById('esloganAudioBtn');
+      const icon    = document.getElementById('esloganAudioIcon');
       const section = document.getElementById('esloganSection');
-
       if (!btn) return;
 
       const audio = new Audio('../assets/audio/forjamos.mp3');
       audio.preload = 'metadata';
-      let autoPlay = false;
+
+      // canAutoPlay: true while user wants audio to run (cleared on manual stop)
+      let canAutoPlay = false;
+      let sectionVisible = false;
 
       const setPlaying = (playing) => {
-        icon.className  = playing ? 'bx bx-stop-circle' : 'bx bx-volume-full';
-        const t = window.SMED_I18N?.translations[localStorage.getItem('smed-lang') || 'es'];
-        label.textContent = playing ? 'Pausar' : (t?.['eslogan.listen'] || 'Escúchanos');
+        icon.className = playing ? 'bx bx-stop-circle' : 'bx bx-volume-full';
         btn.classList.toggle('speaking', playing);
       };
 
       audio.addEventListener('play',  () => setPlaying(true));
       audio.addEventListener('pause', () => setPlaying(false));
-      audio.addEventListener('ended', () => { setPlaying(false); autoPlay = false; });
+      audio.addEventListener('ended', () => { setPlaying(false); canAutoPlay = false; });
 
       btn.addEventListener('click', () => {
         if (!audio.paused) {
           audio.pause();
-          autoPlay = false;
+          canAutoPlay = false;
         } else {
           audio.currentTime = 0;
-          audio.play();
-          autoPlay = true;
+          audio.play().catch(() => {});
+          canAutoPlay = true;
         }
       });
 
-      // IntersectionObserver: pausa al salir, retoma al volver
+      // After first user interaction anywhere → try auto-start if section in view
+      document.addEventListener('click', () => {
+        if (sectionVisible && audio.paused && !canAutoPlay) {
+          audio.play().then(() => { canAutoPlay = true; }).catch(() => {});
+        }
+      }, { once: true });
+
+      // Pause when section leaves view, resume when it returns
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (!autoPlay) return;
-          if (entry.isIntersecting) {
-            audio.play();
-          } else {
+          sectionVisible = entry.isIntersecting;
+          if (entry.isIntersecting && canAutoPlay && audio.paused) {
+            audio.play().catch(() => {});
+          } else if (!entry.isIntersecting && !audio.paused) {
             audio.pause();
           }
         });
-      }, { threshold: 0.4 });
+      }, { threshold: 0.3 });
 
       observer.observe(section);
     })();
