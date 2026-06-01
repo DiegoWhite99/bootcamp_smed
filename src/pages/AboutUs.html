@@ -476,49 +476,38 @@
   <script type="module" src="../components/BaseComponents.js" defer></script>
 
   <script>
-    // ── Audio: Web Speech API ──
+    // ── Audio: forjamos.mp3 ──
     (function () {
-      const btn = document.getElementById('esloganAudioBtn');
-      const icon = document.getElementById('esloganAudioIcon');
-      const label = document.getElementById('esloganAudioLabel');
+      const btn    = document.getElementById('esloganAudioBtn');
+      const icon   = document.getElementById('esloganAudioIcon');
+      const label  = document.getElementById('esloganAudioLabel');
       const section = document.getElementById('esloganSection');
-      const text = document.getElementById('esloganText').innerText.trim();
 
-      if (!btn || !('speechSynthesis' in window)) return;
+      if (!btn) return;
 
+      const audio = new Audio('../assets/audio/forjamos.mp3');
+      audio.preload = 'metadata';
       let autoPlay = false;
-      let speaking = false;
 
-      const buildUtterance = () => {
-        const currentText = document.getElementById('esloganText').innerText.trim();
-        const lang = localStorage.getItem('smed-lang') || 'es';
-        const u = new SpeechSynthesisUtterance(currentText);
-        u.lang = lang === 'en' ? 'en-US' : 'es-ES';
-        u.rate = 0.92;
-        u.pitch = 1.05;
-        u.onstart = () => {
-          speaking = true;
-          icon.className = 'bx bx-stop-circle';
-          label.textContent = 'Pausar';
-          btn.classList.add('speaking');
-        };
-        u.onend = u.onerror = () => {
-          speaking = false;
-          icon.className = 'bx bx-volume-full';
-          label.textContent = 'Escúchanos';
-          btn.classList.remove('speaking');
-        };
-        return u;
+      const setPlaying = (playing) => {
+        icon.className  = playing ? 'bx bx-stop-circle' : 'bx bx-volume-full';
+        const t = window.SMED_I18N?.translations[localStorage.getItem('smed-lang') || 'es'];
+        label.textContent = playing ? 'Pausar' : (t?.['eslogan.listen'] || 'Escúchanos');
+        btn.classList.toggle('speaking', playing);
       };
 
+      audio.addEventListener('play',  () => setPlaying(true));
+      audio.addEventListener('pause', () => setPlaying(false));
+      audio.addEventListener('ended', () => { setPlaying(false); autoPlay = false; });
+
       btn.addEventListener('click', () => {
-        if (speaking) {
-          speechSynthesis.cancel();
+        if (!audio.paused) {
+          audio.pause();
           autoPlay = false;
         } else {
+          audio.currentTime = 0;
+          audio.play();
           autoPlay = true;
-          speechSynthesis.cancel();
-          speechSynthesis.speak(buildUtterance());
         }
       });
 
@@ -527,12 +516,9 @@
         entries.forEach(entry => {
           if (!autoPlay) return;
           if (entry.isIntersecting) {
-            if (!speaking) {
-              speechSynthesis.cancel();
-              speechSynthesis.speak(buildUtterance());
-            }
+            audio.play();
           } else {
-            speechSynthesis.cancel();
+            audio.pause();
           }
         });
       }, { threshold: 0.4 });
