@@ -90,6 +90,53 @@ export default class NavigationBar extends HTMLElement {
       });
     });
 
+    // ── Language toggle ──
+    const langToggle = this.querySelector("#langToggle");
+    const langLabel = this.querySelector("#langLabel");
+
+    const navKeys = {
+      about:   this.querySelector('a[href="/src/pages/AboutUs.html"].link'),
+      services: this.querySelector('a[href="/src/pages/Services.html"].link'),
+      blog:    this.querySelector('a[href="/src/pages/Blog.html"].link'),
+      dev:     this.querySelector('a[href="/src/pages/Desarrollo.html"]'),
+      networks: this.querySelector('a[href="/src/pages/Redes.html"].sublink:first-of-type'),
+      cloud:   this.querySelector('a[href="/src/pages/Cloud.html"]'),
+      support: this.querySelector('a[href="/src/pages/Soporte.html"]'),
+      advisory: this.querySelector('a[href="/src/pages/Asesorias.html"]'),
+    };
+
+    const applyNavLang = (lang) => {
+      if (!window.SMED_I18N) return;
+      const t = window.SMED_I18N.translations[lang];
+      if (!t) return;
+      if (navKeys.about)    navKeys.about.textContent    = t['nav.about'];
+      if (navKeys.services) navKeys.services.textContent = t['nav.services'];
+      if (navKeys.blog)     navKeys.blog.textContent     = t['nav.blog'];
+      if (navKeys.dev)      navKeys.dev.textContent      = t['nav.sub.dev'];
+      if (navKeys.cloud)    navKeys.cloud.textContent    = t['nav.sub.cloud'];
+      if (navKeys.support)  navKeys.support.textContent  = t['nav.sub.support'];
+      if (navKeys.advisory) navKeys.advisory.textContent = t['nav.sub.advisory'];
+      // Redes / Infraestructura (mismo href, seleccionar por índice)
+      const redesLinks = this.querySelectorAll('a[href="/src/pages/Redes.html"].sublink');
+      if (redesLinks[0]) redesLinks[0].textContent = t['nav.sub.networks'];
+      if (redesLinks[1]) redesLinks[1].textContent = t['nav.sub.infra'];
+      if (langLabel) langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
+    };
+
+    const savedLang = localStorage.getItem('smed-lang') || 'es';
+    applyNavLang(savedLang);
+
+    if (langToggle) {
+      langToggle.addEventListener('click', () => {
+        const current = localStorage.getItem('smed-lang') || 'es';
+        const next = current === 'es' ? 'en' : 'es';
+        if (window.SMED_I18N) window.SMED_I18N.applyLang(next);
+        applyNavLang(next);
+      });
+    }
+
+    document.addEventListener('smed:langchange', (e) => applyNavLang(e.detail.lang));
+
     // ── Theme toggle ──
     const themeToggle = this.querySelector("#themeToggle");
     const themeIcon = this.querySelector("#themeIcon");

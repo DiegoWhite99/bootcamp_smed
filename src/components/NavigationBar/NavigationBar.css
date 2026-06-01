@@ -219,6 +219,43 @@
   display: none;
 }
 
+/* ── Language toggle button ── */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 38px;
+  padding: 0 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 245, 245, 0.18);
+  background: rgba(245, 245, 245, 0.07);
+  color: #f5f5f5;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.lang-toggle i {
+  font-size: 1rem;
+}
+
+.lang-toggle:hover {
+  background: rgba(8, 155, 219, 0.2);
+  border-color: rgba(8, 155, 219, 0.5);
+  color: #38bdf8;
+  box-shadow: 0 0 14px rgba(8, 155, 219, 0.2);
+}
+
+[data-theme="light"] .lang-toggle {
+  border-color: rgba(8, 155, 219, 0.25);
+  background: rgba(8, 155, 219, 0.07);
+  color: #0f52be;
+}
+
 /* ── Theme toggle button ── */
 .theme-toggle {
   display: flex;
