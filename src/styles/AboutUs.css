@@ -1352,58 +1352,135 @@ main {
 .fundadores-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.15rem;
+  gap: 1.5rem;
   width: 100%;
-  justify-items: center;
 }
 
 .fundador {
   width: 100%;
-  max-width: 360px;
-  padding: 1.8rem 1.35rem;
-  border-radius: 26px;
-  background: linear-gradient(180deg, rgba(10, 22, 42, 0.92), rgba(7, 18, 34, 0.96));
-  border: 1px solid var(--line-soft);
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(10, 22, 42, 0.95), rgba(5, 12, 25, 0.98));
+  border: 1px solid rgba(8, 155, 219, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(8, 155, 219, 0);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.4s ease;
   text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .fundador:hover {
-  border-color: rgba(245, 245, 245, 0.18);
+  transform: translateY(-8px);
+  border-color: rgba(8, 155, 219, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(8, 155, 219, 0.12);
 }
 
-.fundador img {
-  width: 110px;
-  height: 110px;
-  margin-bottom: 1rem;
-  border-radius: 50%;
+.fundador-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.fundador-photo img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 4px solid rgba(245, 245, 245, 0.08);
+  object-position: center top;
+  transition: transform 0.5s ease;
 }
 
-.fundador h3,
+.fundador:hover .fundador-photo img {
+  transform: scale(1.05);
+}
+
+.fundador-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(5, 12, 25, 0.6) 70%,
+    rgba(5, 12, 25, 0.95) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem 1.1rem;
+}
+
+.fundador-tag {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.9), rgba(15, 82, 190, 0.85));
+  border: 1px solid rgba(8, 155, 219, 0.6);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.fundador-body {
+  padding: 1.4rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.fundador h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.fundador-cargo {
+  display: inline-block;
+  color: #38bdf8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .fundador p {
-  color: var(--brand-white);
+  color: rgba(245, 245, 245, 0.72);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin: 0.3rem 0 0.5rem;
 }
 
 .fundador a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  padding: 0.78rem 1.12rem;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding: 0.6rem 1.2rem;
   border-radius: 999px;
-  background: rgba(245, 245, 245, 0.92);
-  color: var(--dark-text);
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.15), rgba(15, 82, 190, 0.1));
+  border: 1px solid rgba(8, 155, 219, 0.35);
+  color: #38bdf8;
   text-decoration: none;
+  font-size: 0.82rem;
   font-weight: 600;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.fundador a i {
+  font-size: 1rem;
 }
 
 .fundador a:hover {
+  background: linear-gradient(135deg, rgba(8, 155, 219, 0.35), rgba(15, 82, 190, 0.25));
+  border-color: rgba(8, 155, 219, 0.7);
+  color: #ffffff;
   transform: translateY(-2px);
-  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(8, 155, 219, 0.2);
 }
 
 .vision-shell {
@@ -1677,9 +1754,17 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .services-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .fundadores-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .fundador-photo {
+    aspect-ratio: 4 / 3;
   }
 
   .hero-visual {
@@ -1787,9 +1872,12 @@ main {
   .about-side-panel,
   .trust-shell,
   .services-panel,
-  .vision_mision,
-  .fundador {
+  .vision_mision {
     padding: 1.5rem;
+  }
+
+  .fundador-body {
+    padding: 1.1rem 1.2rem 1.4rem;
   }
 
   .hero-badge {
