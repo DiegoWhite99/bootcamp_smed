@@ -1370,9 +1370,17 @@ main {
 }
 
 .fundador:hover {
-  transform: translateY(-8px);
-  border-color: rgba(8, 155, 219, 0.5);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(8, 155, 219, 0.12);
+  transform: translateY(-10px);
+  border-color: rgba(8, 155, 219, 0.65);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(8, 155, 219, 0.25),
+    0 0 40px rgba(8, 155, 219, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.fundador:hover .fundador-body {
+  background: linear-gradient(180deg, rgba(8, 27, 59, 0.4), transparent);
 }
 
 .fundador-photo {
@@ -1387,11 +1395,13 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: transform 0.5s ease;
+  filter: grayscale(100%) brightness(0.85);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.6s ease;
 }
 
 .fundador:hover .fundador-photo img {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  filter: grayscale(0%) brightness(1.05);
 }
 
 .fundador-photo-overlay {
@@ -1430,6 +1440,7 @@ main {
   align-items: center;
   gap: 0.5rem;
   flex: 1;
+  transition: background 0.4s ease;
 }
 
 .fundador h3 {
@@ -1437,6 +1448,11 @@ main {
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.fundador:hover h3 {
+  color: #7dd3fc;
 }
 
 .fundador-cargo {
@@ -1446,6 +1462,11 @@ main {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  transition: letter-spacing 0.4s ease;
+}
+
+.fundador:hover .fundador-cargo {
+  letter-spacing: 0.1em;
 }
 
 .fundador p {
