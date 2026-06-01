@@ -2248,7 +2248,11 @@ main {
     width: 42%;
     flex-shrink: 0;
     aspect-ratio: unset;
-    min-height: 220px;
+    min-height: 240px;
+  }
+
+  .fundador-photo img {
+    object-position: center 18%;
   }
 
   .fundador-body {
@@ -2472,8 +2476,12 @@ main {
 
   .fundador-photo {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2;
     min-height: unset;
+  }
+
+  .fundador-photo img {
+    object-position: center 20%;
   }
 
   .fundador-body {
@@ -2593,6 +2601,10 @@ main {
 
   .fundadores-container {
     gap: 1rem;
+  }
+
+  .fundador-photo img {
+    object-position: center 22%;
   }
 
   .fundador-body {
