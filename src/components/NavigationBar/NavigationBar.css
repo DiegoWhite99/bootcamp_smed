@@ -219,6 +219,87 @@
   display: none;
 }
 
+/* ── Theme toggle button ── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 245, 245, 0.18);
+  background: rgba(245, 245, 245, 0.07);
+  color: #f5f5f5;
+  cursor: pointer;
+  margin-right: 14px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle i {
+  font-size: 1.1rem;
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(8, 155, 219, 0.2);
+  border-color: rgba(8, 155, 219, 0.5);
+  color: #38bdf8;
+  box-shadow: 0 0 14px rgba(8, 155, 219, 0.2);
+}
+
+.theme-toggle:hover i {
+  transform: rotate(20deg);
+}
+
+/* Light mode — navbar */
+[data-theme="light"] .navbar-smed {
+  background: linear-gradient(135deg, rgba(255,255,255,0.96) 0%, rgba(236,246,255,0.98) 100%);
+  border-bottom: 1px solid rgba(8, 155, 219, 0.15);
+  box-shadow: 0 4px 20px rgba(8, 155, 219, 0.08);
+}
+
+[data-theme="light"] .nav-menu ul li .link,
+[data-theme="light"] .nav-brand-text span {
+  color: #0f172a;
+}
+
+[data-theme="light"] .nav-brand-text p {
+  color: #334155;
+}
+
+[data-theme="light"] .submenu-toggle {
+  color: #334155;
+}
+
+[data-theme="light"] .theme-toggle {
+  border-color: rgba(8, 155, 219, 0.25);
+  background: rgba(8, 155, 219, 0.07);
+  color: #0f52be;
+}
+
+[data-theme="light"] .nav-menu ul li .link:hover {
+  color: #089bdb;
+}
+
+[data-theme="light"] .submenu {
+  background: rgba(255,255,255,0.98);
+  border-color: rgba(8, 155, 219, 0.15);
+}
+
+[data-theme="light"] .sublink {
+  color: #0f172a;
+}
+
+[data-theme="light"] .sublink:hover {
+  background: rgba(8, 155, 219, 0.08);
+  color: #089bdb;
+}
+
+[data-theme="light"] .botonHamburgesa span {
+  background: #0f172a;
+}
+
 .nav_items a {
   margin-left: 50px;
   margin-right: 20px;

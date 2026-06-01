@@ -28,15 +28,19 @@
   <nav-bar></nav-bar>
   <!-- segunda section-->
   <main>
-    <section class="eslogan">
+    <section class="eslogan" id="esloganSection">
       <div class="eslogan-container">
         <div class="eslogan-copy">
           <h2 class="eslogan-title">FORJAMOS EL FUTURO</h2>
-          <p class="eslogan-text">
+          <p class="eslogan-text" id="esloganText">
             En SMED Technology creemos que la tecnología cobra valor cuando se construye con propósito, confianza y enfoque humano. Diseñamos soluciones a la medida, entendiendo que cada cliente es único y requiere algo más que respuestas estándar. Nos involucramos en cada proceso para aportar claridad, cercanía y resultados reales. Trabajamos con transparencia, calidad y compromiso, creando no solo tecnología, sino relaciones sólidas que impulsan el crecimiento. Más que un proveedor, somos un aliado en la evolución de tu negocio.
           </p>
         </div>
       </div>
+      <button class="eslogan-audio-btn" id="esloganAudioBtn" aria-label="Escuchar texto">
+        <i class="bx bx-volume-full" id="esloganAudioIcon"></i>
+        <span id="esloganAudioLabel">Escúchanos</span>
+      </button>
     </section>
 
     <section class="hero">
@@ -247,7 +251,7 @@
         </div>
         <div class="services-highlight">
           <div class="services-image">
-            <img src="../assets/images/Services.webp" alt="reparacion" />
+            <img src="../assets/images/team_SMED.jpeg" alt="reparacion" />
           </div>
           <div class="services-panel">
             <h3>Trabajamos con una visión práctica</h3>
@@ -471,6 +475,70 @@
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
   <script type="module" src="../components/BaseComponents.js" defer></script>
+
+  <script>
+    // ── Audio: Web Speech API ──
+    (function () {
+      const btn = document.getElementById('esloganAudioBtn');
+      const icon = document.getElementById('esloganAudioIcon');
+      const label = document.getElementById('esloganAudioLabel');
+      const section = document.getElementById('esloganSection');
+      const text = document.getElementById('esloganText').innerText.trim();
+
+      if (!btn || !('speechSynthesis' in window)) return;
+
+      let autoPlay = false;
+      let speaking = false;
+
+      const buildUtterance = () => {
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'es-ES';
+        u.rate = 0.92;
+        u.pitch = 1.05;
+        u.onstart = () => {
+          speaking = true;
+          icon.className = 'bx bx-stop-circle';
+          label.textContent = 'Pausar';
+          btn.classList.add('speaking');
+        };
+        u.onend = u.onerror = () => {
+          speaking = false;
+          icon.className = 'bx bx-volume-full';
+          label.textContent = 'Escúchanos';
+          btn.classList.remove('speaking');
+        };
+        return u;
+      };
+
+      btn.addEventListener('click', () => {
+        if (speaking) {
+          speechSynthesis.cancel();
+          autoPlay = false;
+        } else {
+          autoPlay = true;
+          speechSynthesis.cancel();
+          speechSynthesis.speak(buildUtterance());
+        }
+      });
+
+      // IntersectionObserver: pausa al salir, retoma al volver
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!autoPlay) return;
+          if (entry.isIntersecting) {
+            if (!speaking) {
+              speechSynthesis.cancel();
+              speechSynthesis.speak(buildUtterance());
+            }
+          } else {
+            speechSynthesis.cancel();
+          }
+        });
+      }, { threshold: 0.4 });
+
+      observer.observe(section);
+    })();
+  </script>
 </body>
 
 </html>

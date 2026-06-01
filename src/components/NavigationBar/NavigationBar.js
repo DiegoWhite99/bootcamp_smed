@@ -89,6 +89,29 @@ export default class NavigationBar extends HTMLElement {
         }
       });
     });
+
+    // ── Theme toggle ──
+    const themeToggle = this.querySelector("#themeToggle");
+    const themeIcon = this.querySelector("#themeIcon");
+
+    const applyTheme = (theme) => {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("smed-theme", theme);
+      if (themeIcon) {
+        themeIcon.className = theme === "light" ? "bx bx-sun" : "bx bx-moon";
+      }
+    };
+
+    // Aplicar tema guardado
+    const savedTheme = localStorage.getItem("smed-theme") || "dark";
+    applyTheme(savedTheme);
+
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        applyTheme(current === "light" ? "dark" : "light");
+      });
+    }
   }
 }
 

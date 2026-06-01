@@ -1837,6 +1837,44 @@ main {
   max-width: 880px;
 }
 
+/* Audio button */
+.eslogan-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.8rem;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 245, 245, 0.2);
+  background: rgba(245, 245, 245, 0.07);
+  color: rgba(245, 245, 245, 0.85);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: textFadeIn 1s ease both 1s;
+}
+
+.eslogan-audio-btn i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.eslogan-audio-btn:hover {
+  background: rgba(8, 155, 219, 0.18);
+  border-color: rgba(8, 155, 219, 0.5);
+  color: #38bdf8;
+  box-shadow: 0 0 16px rgba(8, 155, 219, 0.2);
+}
+
+.eslogan-audio-btn.speaking {
+  background: rgba(8, 155, 219, 0.2);
+  border-color: rgba(8, 155, 219, 0.6);
+  color: #38bdf8;
+  animation: textFadeIn 1s ease both 1s, pulse 1.8s ease infinite;
+}
+
 @keyframes sloganFadeInUp {
   from {
     opacity: 0;
@@ -2372,5 +2410,182 @@ main {
   .about-signature-card img {
     max-width: 150px;
   }
+}
 
+/* ════════════════════════════════════════
+   LIGHT MODE  [data-theme="light"]
+════════════════════════════════════════ */
+[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(8, 155, 219, 0.07), transparent 22%),
+    radial-gradient(circle at 86% 10%, rgba(15, 82, 190, 0.07), transparent 24%),
+    linear-gradient(180deg, #f0f6ff, #e8f2fb);
+  color: #0f172a;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .eslogan {
+  background: linear-gradient(135deg, rgba(8,155,219,0.06), rgba(15,82,190,0.04));
+  border-bottom: 1px solid rgba(8, 155, 219, 0.12);
+}
+
+[data-theme="light"] .eslogan-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .eslogan-text {
+  color: #334155;
+}
+
+[data-theme="light"] .hero .overlay {
+  background: linear-gradient(135deg, rgba(240,248,255,0.5), rgba(224,242,255,0.35));
+}
+
+[data-theme="light"] .hero-badge {
+  background: rgba(8, 155, 219, 0.12);
+  border-color: rgba(8, 155, 219, 0.35);
+  color: #0f52be;
+}
+
+[data-theme="light"] .hero-copy h1,
+[data-theme="light"] .hero-copy p,
+[data-theme="light"] .hero-subtitle {
+  color: #0f172a;
+}
+
+[data-theme="light"] .hero-brand-card {
+  background: rgba(255,255,255,0.65);
+  border-color: rgba(8, 155, 219, 0.25);
+}
+
+[data-theme="light"] .brand-copy-block span,
+[data-theme="light"] .brand-copy-block strong {
+  color: #0f172a;
+}
+
+[data-theme="light"] .stat-card {
+  background: rgba(255,255,255,0.85);
+  border-color: rgba(8, 155, 219, 0.2);
+}
+
+[data-theme="light"] .stat-card strong {
+  color: #0f172a;
+}
+
+[data-theme="light"] .stat-card span {
+  color: #475569;
+}
+
+[data-theme="light"] .hero-note {
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(8, 155, 219, 0.25);
+}
+
+[data-theme="light"] .pillars-title,
+[data-theme="light"] .pillar-item h4 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .pillar-item p {
+  color: #475569;
+}
+
+[data-theme="light"] .about-text,
+[data-theme="light"] .about-side-panel {
+  background: rgba(255,255,255,0.88);
+  border-color: rgba(8, 155, 219, 0.15);
+}
+
+[data-theme="light"] .about-text h2,
+[data-theme="light"] .about-lead {
+  color: #0f172a;
+}
+
+[data-theme="light"] .about-story-card {
+  background: rgba(8, 155, 219, 0.05);
+  border-left-color: rgba(8, 155, 219, 0.5);
+}
+
+[data-theme="light"] .about-story-card p {
+  color: #334155;
+}
+
+[data-theme="light"] .about-point {
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(8, 155, 219, 0.18);
+}
+
+[data-theme="light"] .about-point h3,
+[data-theme="light"] .about-point p {
+  color: #0f172a;
+}
+
+[data-theme="light"] .about-signature-card,
+[data-theme="light"] .about-mini-card {
+  background: rgba(255,255,255,0.8);
+  border-color: rgba(8, 155, 219, 0.18);
+}
+
+[data-theme="light"] .about-signature-card span,
+[data-theme="light"] .about-mini-card span {
+  color: #0f52be;
+}
+
+[data-theme="light"] .about-signature-card p,
+[data-theme="light"] .about-mini-card p {
+  color: #334155;
+}
+
+[data-theme="light"] .section-kicker {
+  background: rgba(8, 155, 219, 0.1);
+  border-color: rgba(8, 155, 219, 0.3);
+  color: #0f52be !important;
+}
+
+[data-theme="light"] .fundador {
+  background: rgba(255,255,255,0.92);
+  border-color: rgba(8, 155, 219, 0.18);
+}
+
+[data-theme="light"] .fundador h3 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .fundador:hover h3 {
+  color: #0f52be;
+}
+
+[data-theme="light"] .fundador p {
+  color: #475569;
+}
+
+[data-theme="light"] .vision_mision {
+  background: rgba(255,255,255,0.9);
+  border-color: rgba(8, 155, 219, 0.15);
+}
+
+[data-theme="light"] .vision_mision_tittle {
+  color: #0f172a;
+}
+
+[data-theme="light"] .body_vision_mision {
+  color: #334155;
+}
+
+[data-theme="light"] .mv-heading h2,
+[data-theme="light"] #tittle_fundadores,
+[data-theme="light"] .founders-heading p {
+  color: #0f172a;
+}
+
+[data-theme="light"] .eslogan-audio-btn {
+  background: rgba(8, 155, 219, 0.1);
+  border-color: rgba(8, 155, 219, 0.3);
+  color: #0f52be;
 }
