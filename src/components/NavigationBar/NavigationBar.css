@@ -694,6 +694,7 @@
 
   .nav-menu {
     top: 60px;
+    width: 72%;
   }
 
   .botonHamburgesa {
@@ -704,6 +705,18 @@
 
   .nav-menu ul li .link {
     font-size: 16px;
+  }
+
+  .lang-toggle {
+    padding: 0 0.6rem;
+    font-size: 0.72rem;
+    margin-right: 6px;
+  }
+
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
   }
 
   .screen_1 h1 {
