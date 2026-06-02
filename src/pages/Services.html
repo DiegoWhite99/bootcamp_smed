@@ -1,14 +1,20 @@
 ﻿<!DOCTYPE html>
 
-<html lang="UTF-8">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios</title>
+  <meta name="description" content="SMED Technology ofrece soporte técnico, desarrollo web, redes, cloud computing y asesorías tecnológicas. Soluciones profesionales a tu medida." />
+  <meta name="keywords" content="SMED Technology, servicios tecnológicos, soporte técnico, desarrollo web, redes, cloud, asesorías, Colombia" />
+  <meta name="author" content="Diego White" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Servicios — SMED Technology" />
+  <meta property="og:description" content="Soporte, redes, desarrollo y cloud. Soluciones tecnológicas profesionales para empresas y profesionales." />
+  <meta property="og:type" content="website" />
+  <title>Servicios | SMED Technology</title>
 
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="icon" href="../assets/icons/MainIcon.webp" type="image/png">
 
@@ -17,17 +23,8 @@
   <link rel="stylesheet" href="../components/Footer/Footer.css">
   <link rel="stylesheet" href="../components/WhatsApp/WhatsApp.css">
   <link rel="stylesheet" href="../styles/Typography.css">
-
-  <style>
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
 
 </head>
 
@@ -37,37 +34,77 @@
     <main>
       <section class="principal_section">
         <div class="tittle_principal">
-          <h1 id="tittle1">LA TECNOLOGÍA EN TUS MANOS</h1>
-          <h2 id="tittle1-2">A TU ALCANCE</h2>
+          <h1 id="tittle1" data-i18n="svc.hero.h1">LA TECNOLOGÍA EN TUS MANOS</h1>
+          <h2 id="tittle1-2" data-i18n="svc.hero.h2">A TU ALCANCE</h2>
+          <p class="hero-desc" data-i18n="svc.hero.desc">Diseñamos soluciones tecnológicas a medida: soporte, redes, desarrollo y cloud. Acompañamiento real, resultados concretos.</p>
+          <div class="hero-ctas">
+            <a href="#hero-carousel2" class="btn-hero-primary" data-i18n="svc.hero.cta1">Explorar servicios</a>
+            <a href="../pages/AboutUs.html#fundadores" class="btn-hero-secondary" data-i18n="svc.hero.cta2">Conoce al equipo</a>
+          </div>
           <!-- Nueva sección de íconos -->
           <div class="services_section">
             <div class="service_item" onclick="location.href='../pages/Asesorias.html';">
+              <span class="corner-tl"></span>
+              <span class="corner-br"></span>
               <img src="../assets/icons/Query.svg" alt="Formacion">
-              <p>Asesorias</p>
+              <p data-i18n="svc.item.advisory">Asesorías</p>
             </div>
             <div class="service_item" onclick="location.href='../pages/Soporte.html';">
+              <span class="corner-tl"></span>
+              <span class="corner-br"></span>
               <img src="../assets/icons/TechSupport.svg" alt="Soporte">
-              <p>Soporte</p>
+              <p data-i18n="svc.item.support">Soporte</p>
             </div>
             <div class="service_item" onclick="location.href='../pages/Redes.html';">
+              <span class="corner-tl"></span>
+              <span class="corner-br"></span>
               <img src="../assets/icons/GlobalNetwork.svg" alt="Redes">
-              <p>Redes</p>
+              <p data-i18n="svc.item.networks">Redes</p>
             </div>
             <div class="service_item" onclick="location.href='../pages/Cloud.html';">
+              <span class="corner-tl"></span>
+              <span class="corner-br"></span>
               <img src="../assets/icons/CloudNetwork.svg" alt="Cloud">
-              <p>Cloud</p>
+              <p data-i18n="svc.item.cloud">Cloud</p>
             </div>
             <div class="service_item" onclick="location.href='../pages/Desarrollo.html';">
+              <span class="corner-tl"></span>
+              <span class="corner-br"></span>
               <img src="../assets/icons/Programming.svg" alt="Desarrollo">
-              <p>Desarrollo</p>
+              <p data-i18n="svc.item.dev">Desarrollo</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Stats bar -->
+      <section class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+          <p class="stat-label" data-i18n="svc.stat1">Clientes satisfechos</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="2">0</span>
+          <p class="stat-label" data-i18n="svc.stat2">Años de experiencia</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="5">0</span>
+          <p class="stat-label" data-i18n="svc.stat3">Servicios especializados</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+          <p class="stat-label" data-i18n="svc.stat4">Compromiso con el cliente</p>
+        </div>
+      </section>
+
       <!--section2 Carrusel-->
       <section id="hero-carousel2">
-        <h2 class="carousel-title">Ecosistema SMED</h2>
+        <p class="carousel-kicker" data-i18n="svc.carousel.kicker">LÍNEAS DE SERVICIO</p>
+        <h2 class="carousel-title" data-i18n="svc.carousel.title">Ecosistema SMED</h2>
+        <p class="carousel-subtitle" data-i18n="svc.carousel.subtitle">Cada división está especializada en un área clave de la tecnología, trabajando como un sistema integrado.</p>
         <div class="carousel-shell">
           <button class="carousel-nav carousel-nav-prev" type="button" aria-label="Anterior">
             <i class='bx bx-chevron-left'></i>
@@ -75,30 +112,32 @@
 
           <div class="carousel-viewport">
             <div class="carousel-track">
-              <div class="carousel-item">
+              <div class="smed-carousel-item">
+                <span class="card-badge" data-i18n="svc.badge.support">SOPORTE</span>
                 <img src="../assets/images/it.png" alt="SMED SUPPORT">
                 <h3>SMED SUPPORT</h3>
-                <p>Soporte, continuidad y acompañamiento tecnológico,con enfoque profesional<br>preventivo y humano.</p>
+                <p data-i18n="svc.smed.support.p">Soporte, continuidad y acompañamiento tecnológico, con enfoque profesional preventivo y humano.</p>
               </div>
 
-              <div class="carousel-item">
+              <div class="smed-carousel-item">
+                <span class="card-badge" data-i18n="svc.badge.dev">DESARROLLO</span>
                 <img src="../assets/images/web.png" alt="SMED DEV">
                 <h3>SMED DEV</h3>
-                <p>Desarrollo de software y soluciones tecnológicas a medida, orientadas a eficiencia,<br>escalabilidad y
-                  crecimiento empresarial.</p>
+                <p data-i18n="svc.smed.dev.p">Desarrollo de software y soluciones tecnológicas a medida, orientadas a eficiencia, escalabilidad y crecimiento empresarial.</p>
               </div>
 
-              <div class="carousel-item">
-                <img src="../assets/images/conexion-de-red.png" alt="SMED NET & CLOUD">
+              <div class="smed-carousel-item">
+                <span class="card-badge" data-i18n="svc.badge.networks">REDES</span>
+                <img src="../assets/images/conexion-de-red.png" alt="SMED NET">
                 <h3>SMED NET</h3>
-                <p>Redes, infraestructura, diseño e implementación de soluciones tecnológicas.<br>Conectividad segura,
-                  escalable y confiable para empresas modernas.</p>
+                <p data-i18n="svc.smed.net.p">Redes, infraestructura, diseño e implementación de soluciones tecnológicas. Conectividad segura, escalable y confiable.</p>
               </div>
-              <div class="carousel-item">
+
+              <div class="smed-carousel-item">
+                <span class="card-badge" data-i18n="svc.badge.security">SEGURIDAD</span>
                 <img src="../assets/images/vigilancia.png" alt="SMED GUARD">
                 <h3>SMED GUARD</h3>
-                <p>Diseño e implementación de sistemas de videovigilancia y circuitos cerrados,<br>orientados a la
-                  protección, el control y la seguridad tecnológica.</p>
+                <p data-i18n="svc.smed.guard.p">Diseño e implementación de sistemas de videovigilancia y circuitos cerrados orientados a la protección y el control.</p>
               </div>
             </div>
           </div>
@@ -107,91 +146,223 @@
             <i class='bx bx-chevron-right'></i>
           </button>
         </div>
+
+        <!-- Indicador de posición -->
+        <div class="carousel-dots" id="carouselDots">
+          <span class="cdot active"></span>
+          <span class="cdot"></span>
+          <span class="cdot"></span>
+          <span class="cdot"></span>
+        </div>
       </section>
 
 
       <!--proyectos futuros -->
       <section class="futuros-proyectos-section">
-        <section class="futuros-proyectos-section">
-          <h2 class="slider-title">Futuros Proyectos</h2>
+          <p class="futuros-kicker" data-i18n="svc.projects.kicker">PRÓXIMAMENTE</p>
+          <h2 class="slider-title" data-i18n="svc.projects.title">Futuros Proyectos</h2>
+          <p class="futuros-subtitle" data-i18n="svc.projects.subtitle">Iniciativas en desarrollo que amplían el ecosistema SMED hacia nuevos horizontes tecnológicos.</p>
+
           <div class="proyectos-grid">
+
             <div class="proyecto-card">
-              <div class="proyecto-img">
-                <img src="../assets/images/campaign/smed_academy.svg" alt="SMED Academy" />
+              <span class="proyecto-badge">PRÓXIMAMENTE</span>
+              <div class="proyecto-inner">
+                <div class="proyecto-img-wrap">
+                  <img src="../assets/images/campaign/smed_academy.svg" alt="SMED Academy" />
+                </div>
+                <div class="proyecto-content">
+                  <h3 class="proyecto-titulo">SMED ACADEMY</h3>
+                  <p class="proyecto-descripcion" data-i18n="svc.academy.p">Alianza estratégica con Elvecr para integrar infraestructura robusta en plataformas educativas Moodle. Entornos de aprendizaje modernos adaptados a la formación tecnológica actual.</p>
+                </div>
               </div>
-              <h3 class="proyecto-titulo">SMED Academy</h3>
-              <p class="proyecto-descripcion">
-                SMED Academy proyecta una alianza estratégica con Elvecr, startup experta en plataformas educativas
-                Moodle. Juntas buscan integrar infraestructura robusta y soporte técnico especializado para ofrecer
-                entornos de aprendizaje modernos y adaptados a la formación tecnológica actual.
-              </p>
             </div>
 
             <div class="proyecto-card">
-              <div class="proyecto-img">
-                <img src="../assets/images/campaign/smed_home.svg" alt="SMED Tools" />
+              <span class="proyecto-badge">PRÓXIMAMENTE</span>
+              <div class="proyecto-inner">
+                <div class="proyecto-img-wrap">
+                  <img src="../assets/images/campaign/smed_home.svg" alt="SMED Home" />
+                </div>
+                <div class="proyecto-content">
+                  <h3 class="proyecto-titulo">SMED HOME</h3>
+                  <p class="proyecto-descripcion" data-i18n="svc.home.p">Automatización doméstica inteligente para iluminación, seguridad y dispositivos conectados. Eficiencia energética y soporte personalizado para el hogar moderno.</p>
+                </div>
               </div>
-              <h3 class="proyecto-titulo">SMED Home</h3>
-              <p class="proyecto-descripcion">
-                SMED Home nace como una propuesta de automatización doméstica orientada a facilitar la vida diaria.
-                Integra soluciones de control inteligente para iluminación, seguridad y dispositivos conectados, con
-                énfasis en accesibilidad, eficiencia energética y soporte personalizado. Una experiencia tecnológica
-                pensada para el hogar moderno.
-              </p>
             </div>
+
+            <div class="proyecto-card proyecto-card--agro">
+              <span class="proyecto-badge proyecto-badge--new">NUEVO</span>
+              <div class="proyecto-inner">
+                <div class="proyecto-img-wrap agro-icon-wrap">
+                  <i class='bx bxs-leaf'></i>
+                </div>
+                <div class="proyecto-content">
+                  <h3 class="proyecto-titulo">SMED AGRO</h3>
+                  <p class="proyecto-descripcion" data-i18n="svc.agro.p">Automatización de cultivos y campo mediante IA. Sensores inteligentes, análisis predictivo y control de riego para optimizar la producción agrícola con tecnología de punta.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </section>
 
         <!--Nuestras cualidades-->
-        <section class="section-cualidades">
-          <h2 class="our_cualitestittle">Nuestras Cualidades</h2>
+        <section class="section-cualidades" id="secCualidades">
+          <p class="cualidades-kicker" data-i18n="svc.qual.kicker">¿POR QUÉ ELEGIRNOS?</p>
+          <h2 class="our_cualitestittle" data-i18n="svc.qual.title">Nuestras Cualidades</h2>
           <div class="card-container">
-            <!-- Tarjeta 1 -->
-            <div class="card">
-              <div class="card-icon1">
+
+            <div class="card card--green">
+              <span class="card-num">01</span>
+              <div class="card-icon-wrap card-icon-wrap--green">
                 <img src="../assets/icons/HelpDesk.svg" alt="Soporte" class="icon-img">
               </div>
-              <div>
-                <div class="card-title green">Soporte Personalizado</div>
-                <div class="card-text">Asistencia técnica y guía según tus necesidades reales.</div>
-              </div>
+              <div class="card-title green" data-i18n="svc.qual.card1.title">Soporte Personalizado</div>
+              <div class="card-text" data-i18n="svc.qual.card1.text">Asistencia técnica y acompañamiento adaptado a las necesidades reales de cada cliente.</div>
             </div>
 
-            <!-- Tarjeta 2 -->
-            <div class="card">
-              <div class="card-icon2">
+            <div class="card card--blue">
+              <span class="card-num">02</span>
+              <div class="card-icon-wrap card-icon-wrap--blue">
                 <img src="../assets/icons/SmedSecurity.svg" alt="Seguridad" class="icon-img">
               </div>
-              <div>
-                <div class="card-title blue">Seguridad Garantizada</div>
-                <div class="card-text">Protocolos actualizados para proteger tu información.</div>
-              </div>
+              <div class="card-title blue" data-i18n="svc.qual.card2.title">Seguridad Garantizada</div>
+              <div class="card-text" data-i18n="svc.qual.card2.text">Protocolos actualizados y buenas prácticas para proteger tu información y sistemas.</div>
             </div>
 
-            <!-- Tarjeta 3 -->
-            <div class="card">
-              <div class="card-icon3">
+            <div class="card card--orange">
+              <span class="card-num">03</span>
+              <div class="card-icon-wrap card-icon-wrap--orange">
                 <img src="../assets/icons/Knowledge.svg" alt="Conocimiento" class="icon-img">
               </div>
-              <div>
-                <div class="card-title orange">Conocimiento Aplicado</div>
-                <div class="card-text">Formación y soluciones basadas en experiencia real.</div>
-              </div>
+              <div class="card-title orange" data-i18n="svc.qual.card3.title">Conocimiento Aplicado</div>
+              <div class="card-text" data-i18n="svc.qual.card3.text">Soluciones construidas sobre experiencia real, no solo teoría.</div>
             </div>
 
           </div>
         </section>
 
-        <!--section final-->
+        <!-- Sección laboratorio -->
+        <section class="section-lab">
+          <div class="lab-img-wrap">
+            <img src="../assets/images/laboratorio.png" alt="Laboratorio SMED Technology" class="lab-img" />
+            <div class="lab-img-overlay"></div>
+          </div>
+          <div class="lab-content">
+            <p class="lab-kicker" data-i18n="svc.lab.kicker">NUESTRO ESPACIO</p>
+            <h2 class="lab-title" data-i18n="svc.lab.title">En SMED trabajamos para darte lo mejor</h2>
+            <p class="lab-desc" data-i18n="svc.lab.desc">Cada solución que entregamos nace de un equipo comprometido, herramientas actualizadas y un ambiente de trabajo pensado para la excelencia técnica. No improvisamos — preparamos, analizamos y ejecutamos con precisión.</p>
+            <div class="lab-tags">
+              <span class="lab-tag"><i class='bx bx-check-circle'></i><span data-i18n="svc.lab.tag1"> Equipos certificados</span></span>
+              <span class="lab-tag"><i class='bx bx-check-circle'></i><span data-i18n="svc.lab.tag2"> Ambiente profesional</span></span>
+              <span class="lab-tag"><i class='bx bx-check-circle'></i><span data-i18n="svc.lab.tag3"> Diagnóstico especializado</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!--section final: cómo funciona-->
         <section class="section-servicio-flujo">
-          <h2 class="title-servicio">📋 ¿Cómo funciona nuestro servicio?</h2>
+          <p class="proceso-kicker" data-i18n="svc.steps.kicker">PROTOCOLO SMED</p>
+          <h2 class="title-servicio" data-i18n="svc.steps.title">¿Cómo funciona nuestro servicio?</h2>
           <div class="step-container">
-            <div class="step">📝 Agenda tu cita</div>
-            <div class="step">🔍 Revisamos tu equipo</div>
-            <div class="step">🔧 Reparamos o damos mantenimiento</div>
-            <div class="step">✅ Entrega + soporte post-servicio</div>
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-icon-wrap">
+                <i class='bx bx-calendar-check'></i>
+              </div>
+              <h3 class="step-title" data-i18n="svc.step1.title">Agenda tu cita</h3>
+              <p class="step-desc" data-i18n="svc.step1.desc">Cuéntanos tu problema y coordinamos una visita o reunión virtual sin compromiso.</p>
+            </div>
+            <div class="step-connector"><span></span><i class='bx bx-chevron-right step-arrow'></i></div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-icon-wrap">
+                <i class='bx bx-search-alt'></i>
+              </div>
+              <h3 class="step-title" data-i18n="svc.step2.title">Diagnóstico técnico</h3>
+              <p class="step-desc" data-i18n="svc.step2.desc">Analizamos tu equipo o proyecto con precisión para identificar la raíz del problema.</p>
+            </div>
+            <div class="step-connector"><span></span><i class='bx bx-chevron-right step-arrow'></i></div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-icon-wrap">
+                <i class='bx bx-wrench'></i>
+              </div>
+              <h3 class="step-title" data-i18n="svc.step3.title">Solución y ejecución</h3>
+              <p class="step-desc" data-i18n="svc.step3.desc">Aplicamos la solución con rapidez, calidad y total transparencia contigo.</p>
+            </div>
+            <div class="step-connector"><span></span><i class='bx bx-chevron-right step-arrow'></i></div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div class="step-icon-wrap">
+                <i class='bx bx-shield-quarter'></i>
+              </div>
+              <h3 class="step-title" data-i18n="svc.step4.title">Entrega + soporte</h3>
+              <p class="step-desc" data-i18n="svc.step4.desc">Te entregamos el resultado y seguimos disponibles con soporte post-servicio.</p>
+            </div>
           </div>
           <audio id="pop-sound" src="../assets/audio/pop-6.mp3" preload="auto"></audio>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section class="section-contacto" id="contacto">
+          <div class="contacto-glow"></div>
+          <p class="contacto-kicker" data-i18n="svc.form.kicker">AGENDA TU CONSULTA</p>
+          <h2 class="contacto-title" data-i18n="svc.form.title">Hablemos de tu proyecto</h2>
+          <p class="contacto-subtitle" data-i18n="svc.form.subtitle">Cuéntanos qué necesitas y te respondemos en menos de 24 horas.</p>
+          <form class="form-tech" action="/backend/form/FormContact.php" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-nombre" data-i18n="svc.form.name">Nombre</label>
+                <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre completo" required />
+              </div>
+              <div class="form-group">
+                <label for="f-email" data-i18n="svc.form.email">Correo electrónico</label>
+                <input type="email" id="f-email" name="email" placeholder="tu@correo.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-telefono" data-i18n="svc.form.phone">Teléfono</label>
+                <input type="tel" id="f-telefono" name="telefono" placeholder="+57 xxx xxx xxxx" />
+              </div>
+              <div class="form-group">
+                <label for="f-servicio" data-i18n="svc.form.service">Servicio de interés</label>
+                <select id="f-servicio" name="servicio" required>
+                  <option value="" disabled selected data-i18n="svc.form.select">Selecciona un servicio</option>
+                  <option value="soporte_tecnico" data-i18n="svc.form.opt1">Soporte técnico</option>
+                  <option value="asesorias" data-i18n="svc.form.opt2">Asesorías</option>
+                  <option value="desarrollo_web" data-i18n="svc.form.opt3">Desarrollo web</option>
+                  <option value="redes" data-i18n="svc.form.opt4">Redes e infraestructura</option>
+                  <option value="cloud" data-i18n="svc.form.opt5">Cloud</option>
+                  <option value="otros" data-i18n="svc.form.opt6">Otros</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-mensaje" data-i18n="svc.form.message">Mensaje</label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente tu necesidad..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <i class='bx bx-send'></i><span data-i18n="svc.form.submit"> Enviar solicitud</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- CTA final -->
+        <section class="section-cta-final">
+          <div class="cta-glow"></div>
+          <p class="cta-kicker" data-i18n="svc.cta.kicker">DAR EL SIGUIENTE PASO</p>
+          <h2 class="cta-title" data-i18n-html="svc.cta.title">¿Listo para transformar<br>tu tecnología?</h2>
+          <p class="cta-desc" data-i18n="svc.cta.desc">Hablemos de tu proyecto. Sin compromisos, sin tecnicismos. Solo soluciones reales.</p>
+          <div class="cta-actions">
+            <a href="Asesorias.html" class="cta-btn-primary">
+              <i class='bx bx-headphone'></i><span data-i18n="svc.cta.btn1"> Solicitar asesoría</span>
+            </a>
+            <a href="Blog.html" class="cta-btn-secondary">
+              <i class='bx bx-news'></i><span data-i18n="svc.cta.btn2"> Leer el Blog</span>
+            </a>
+          </div>
         </section>
 
     </main>
@@ -205,6 +376,44 @@
 
   <!-- Contenedor para particles.js -->
   <div id="particles-js"></div>
+  <script>
+    // Animación de entrada para cards de cualidades
+    const cardObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.querySelectorAll('.card').forEach(c => c.classList.add('visible'));
+        cardObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.2 });
+    const secCual = document.getElementById('secCualidades');
+    if (secCual) cardObserver.observe(secCual);
+
+    // Contador animado de stats
+    const counters = document.querySelectorAll('.stat-num');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = +el.dataset.target;
+        const duration = 1600;
+        const step = target / (duration / 16);
+        let current = 0;
+        const tick = () => {
+          current = Math.min(current + step, target);
+          el.textContent = Math.floor(current);
+          if (current < target) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+  </script>
+  <script src="../scripts/loader.js"></script>
+  <script src="../scripts/i18n.js"></script>
+  <script>
+    if (window.SMED_I18N) window.SMED_I18N.initLang();
+  </script>
   <script src="../scripts/Particles.js"></script>
   <script src="../scripts/ParticlesConfig.js"></script>
   <script src="../scripts/servicioscorusel.js"></script>

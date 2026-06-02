@@ -1,85 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Landing de soporte tecnico de SMED Technology para continuidad operativa." />
-  <title>Smed | Soporte</title>
+  <meta name="description" content="Soporte técnico para personas y empresas — SMED Technology. Reparación de equipos, mantenimiento preventivo, soporte remoto y presencial." />
+  <meta name="robots" content="index, follow" />
+  <title>Soporte Técnico | SMED Technology</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="icon" href="../assets/icons/MainIcon.webp" type="image/png" />
   <link rel="stylesheet" href="../styles/ServiceLanding.css" />
+  <link rel="stylesheet" href="../styles/ServicePages.css" />
   <link rel="stylesheet" href="../components/NavigationBar/NavigationBar.css" />
   <link rel="stylesheet" href="../components/Footer/Footer.css" />
   <link rel="stylesheet" href="../components/WhatsApp/WhatsApp.css" />
   <link rel="stylesheet" href="../styles/Typography.css" />
 </head>
-
 <body>
   <nav-bar></nav-bar>
+  <div id="particles-js"></div>
   <main>
-    <section class="hero-service">
-      <div class="hero-wrap">
-        <div class="hero-content">
-          <span class="badge">Servicio Especializado</span>
-          <h1>Soporte tecnico proactivo para tu operacion diaria</h1>
-          <p>
-            Nuestro servicio de soporte prioriza continuidad, respuesta rapida y trazabilidad.
-            Atendemos incidencias de hardware, software y conectividad con enfoque preventivo.
-          </p>
+
+    <section class="sl-hero">
+      <div class="sl-hero-inner">
+        <div class="sl-hero-copy">
+          <span class="sl-badge">SOPORTE TÉCNICO · B2C & B2B</span>
+          <h1 class="sl-hero-h1">Tu equipo funciona.<br><span class="sp-accent sp-accent--green">Nosotros nos aseguramos.</span></h1>
+          <p class="sl-hero-p">Soporte técnico para personas y empresas. Reparamos, mantenemos y optimizamos computadoras, móviles y redes con rapidez, honestidad y acompañamiento real.</p>
+          <div class="sl-hero-ctas">
+            <a href="#sp-contacto" class="sl-btn-primary"><i class='bx bx-headphone'></i> Solicitar soporte</a>
+            <a href="Services.html" class="sl-btn-secondary"><i class='bx bx-arrow-back'></i> Ver todos los servicios</a>
+          </div>
         </div>
-        <div class="hero-media">
-          <img src="../assets/images/SmedSupport.webp" alt="Soporte tecnico profesional" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Que incluye este servicio</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Mesa de ayuda tecnica</h3>
-          <p>Atencion remota o presencial para resolver incidentes de usuarios y equipos en menor tiempo.</p>
-        </article>
-        <article class="card">
-          <h3>Mantenimiento preventivo</h3>
-          <p>Programamos revisiones tecnicas para reducir fallas y alargar la vida util de tus activos.</p>
-        </article>
-        <article class="card">
-          <h3>Actualizacion y seguridad</h3>
-          <p>Aplicamos parches, configuraciones seguras y buenas practicas para proteger informacion critica.</p>
-        </article>
-        <article class="card">
-          <h3>Reportes de servicio</h3>
-          <p>Entregamos visibilidad de incidencias, tiempos de atencion y acciones de mejora continua.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Proceso de trabajo</h2>
-      <div class="flow">
-        <div class="step">1. Registro del caso</div>
-        <div class="step">2. Priorizacion y diagnostico</div>
-        <div class="step">3. Solucion y validacion</div>
-        <div class="step">4. Cierre con seguimiento</div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="cta-box">
-        <h2>Mantiene tu operacion siempre activa</h2>
-        <p>Solicita una evaluacion y define un plan de soporte a tu medida.</p>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="Services.html">Volver a servicios</a>
-          <a class="btn btn-secondary" href="AboutUs.html">Conocer SMED</a>
+        <div class="sl-hero-visual">
+          <!-- HUD: Ticket de soporte -->
+          <div class="sp-hud">
+            <div class="sp-hud-bar">
+              <span class="sp-hud-dots"><span></span><span></span><span></span></span>
+              <span class="sp-hud-title">SMED · Help Desk</span>
+              <span class="sp-hud-status sp-status--ok"><span></span>DISPONIBLE</span>
+            </div>
+            <div class="sp-hud-body">
+              <div class="sp-ticket">
+                <div class="sp-ticket-header"><span class="sp-ticket-id">#4821</span><span class="sp-ticket-tag sp-tag--open">En proceso</span></div>
+                <span class="sp-ticket-title">PC no enciende · Diagnóstico</span>
+                <span class="sp-ticket-time"><i class='bx bx-time-five'></i> Tiempo resp: <strong>18 min</strong></span>
+              </div>
+              <div class="sp-ticket">
+                <div class="sp-ticket-header"><span class="sp-ticket-id">#4820</span><span class="sp-ticket-tag sp-tag--done">Resuelto</span></div>
+                <span class="sp-ticket-title">Formateo + instalación OS</span>
+                <span class="sp-ticket-time"><i class='bx bx-check-circle'></i> Entregado en <strong>2h</strong></span>
+              </div>
+              <div class="sp-ticket">
+                <div class="sp-ticket-header"><span class="sp-ticket-id">#4819</span><span class="sp-ticket-tag sp-tag--done">Resuelto</span></div>
+                <span class="sp-ticket-title">Limpieza y mantenimiento preventivo</span>
+                <span class="sp-ticket-time"><i class='bx bx-check-circle'></i> Cliente satisfecho</span>
+              </div>
+            </div>
+            <div class="sp-hud-footer">
+              <span><i class='bx bx-time-five'></i> Resp. promedio <strong>&lt;30 min</strong></span>
+              <span><i class='bx bx-happy'></i> 98% satisfacción</span>
+            </div>
+          </div>
+          <div class="sl-hero-pills">
+            <span class="sl-pill"><i class='bx bx-check-circle'></i> Remoto & presencial</span>
+            <span class="sl-pill"><i class='bx bx-check-circle'></i> &lt;30 min respuesta</span>
+            <span class="sl-pill"><i class='bx bx-check-circle'></i> B2C & B2B</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer-page></footer-page>
-    <whatsapp-container></whatsapp-container>
+    <section class="sp-stats-bar">
+      <div class="sp-stat"><strong>&lt;30 min</strong><span>Tiempo de respuesta</span></div>
+      <div class="sp-stat-div"></div>
+      <div class="sp-stat"><strong>98%</strong><span>Satisfacción del cliente</span></div>
+      <div class="sp-stat-div"></div>
+      <div class="sp-stat"><strong>Remoto</strong><span>y presencial</span></div>
+      <div class="sp-stat-div"></div>
+      <div class="sp-stat"><strong>B2C & B2B</strong><span>Personas y empresas</span></div>
+    </section>
+
+    <section class="sl-section">
+      <p class="sl-kicker">ALCANCE</p>
+      <h2 class="sl-title">¿Qué incluye este servicio?</h2>
+      <div class="sl-cards">
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-wrench'></i></div><h3 class="sl-card-title">Diagnóstico y reparación</h3><p class="sl-card-text">Identificamos y reparamos fallas de hardware y software en computadoras, laptops y móviles.</p></article>
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-shield-quarter'></i></div><h3 class="sl-card-title">Mantenimiento preventivo</h3><p class="sl-card-text">Limpieza interna, actualización de drivers, optimización del sistema y reemplazo de piezas desgastadas.</p></article>
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-desktop'></i></div><h3 class="sl-card-title">Instalación de software</h3><p class="sl-card-text">Formateo, instalación de sistemas operativos, programas y configuración desde cero.</p></article>
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-wifi'></i></div><h3 class="sl-card-title">Soporte de conectividad</h3><p class="sl-card-text">Diagnóstico y solución de problemas de red, WiFi, VPN e internet en hogares y oficinas.</p></article>
+      </div>
+    </section>
+
+    <!-- DISPOSITIVOS QUE ATENDEMOS -->
+    <section class="sl-section sp-types-section">
+      <p class="sl-kicker">COBERTURA</p>
+      <h2 class="sl-title">Dispositivos que atendemos</h2>
+      <div class="sp-types-grid">
+        <div class="sp-type-card" style="--tc:#0dcaf0"><i class='bx bx-laptop'></i><h4>Laptops & PCs</h4><p>Windows, macOS y Linux. Diagnóstico, reparación y mantenimiento completo.</p></div>
+        <div class="sp-type-card" style="--tc:#4285F4"><i class='bx bx-mobile-alt'></i><h4>Móviles & tablets</h4><p>Android e iOS. Pantallas, baterías, software y recuperación de datos.</p></div>
+        <div class="sp-type-card" style="--tc:#22c55e"><i class='bx bx-printer'></i><h4>Periféricos</h4><p>Impresoras, escáneres, teclados, monitores y otros periféricos de oficina.</p></div>
+        <div class="sp-type-card" style="--tc:#8b5cf6"><i class='bx bx-server'></i><h4>Servidores locales</h4><p>NAS, servidores de archivos y equipos de red de pequeñas y medianas empresas.</p></div>
+        <div class="sp-type-card" style="--tc:#f97316"><i class='bx bx-wifi'></i><h4>Equipos de red</h4><p>Routers, switches, APs y firewall para hogares y oficinas.</p></div>
+        <div class="sp-type-card" style="--tc:#FBBC04"><i class='bx bx-cctv'></i><h4>Cámaras & CCTV</h4><p>Instalación, configuración y soporte de sistemas de videovigilancia IP.</p></div>
+      </div>
+    </section>
+
+    <!-- B2C / B2B -->
+    <section class="sl-section sl-section--segments">
+      <p class="sl-kicker">NUESTROS CLIENTES</p>
+      <h2 class="sl-title">¿A quién atendemos?</h2>
+      <div class="sl-segments">
+        <div class="sl-segment sl-segment--b2c">
+          <div class="sl-segment-header">
+            <div class="sl-segment-icon"><i class='bx bx-user-circle'></i></div>
+            <div><span class="sl-segment-label">B2C</span><h3 class="sl-segment-title">Personas y hogares</h3></div>
+          </div>
+          <p class="sl-segment-desc">Soporte personalizado para usuarios particulares que necesitan que su equipo funcione sin complicaciones.</p>
+          <ul class="sl-segment-list">
+            <li><i class='bx bx-check'></i> Mi PC enciende lento o no enciende</li>
+            <li><i class='bx bx-check'></i> Necesito formatear y reinstalar todo</li>
+            <li><i class='bx bx-check'></i> Mi celular no carga o tiene la pantalla rota</li>
+            <li><i class='bx bx-check'></i> El WiFi de casa no funciona bien</li>
+          </ul>
+          <a href="#sp-contacto" class="sl-segment-cta sl-segment-cta--b2c">Solicitar soporte personal</a>
+        </div>
+        <div class="sl-segment sl-segment--b2b">
+          <div class="sl-segment-header">
+            <div class="sl-segment-icon"><i class='bx bx-buildings'></i></div>
+            <div><span class="sl-segment-label">B2B</span><h3 class="sl-segment-title">Empresas y equipos</h3></div>
+          </div>
+          <p class="sl-segment-desc">Soporte técnico proactivo para empresas que necesitan continuidad operativa y mantenimiento programado.</p>
+          <ul class="sl-segment-list">
+            <li><i class='bx bx-check'></i> Mantenimiento preventivo periódico</li>
+            <li><i class='bx bx-check'></i> Soporte para múltiples equipos y usuarios</li>
+            <li><i class='bx bx-check'></i> Gestión de parque informático</li>
+            <li><i class='bx bx-check'></i> Soporte remoto con tiempo de respuesta SLA</li>
+          </ul>
+          <a href="#sp-contacto" class="sl-segment-cta sl-segment-cta--b2b">Solicitar plan empresarial</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sl-section sl-section--process">
+      <p class="sl-kicker">CÓMO TRABAJAMOS</p>
+      <h2 class="sl-title">Proceso de atención</h2>
+      <div class="sl-steps">
+        <div class="sl-step"><div class="sl-step-num">01</div><div class="sl-step-icon"><i class='bx bx-conversation'></i></div><h3 class="sl-step-title">Contacto inicial</h3><p class="sl-step-desc">Nos describes el problema por WhatsApp, formulario o llamada. Respondemos en menos de 30 minutos.</p></div>
+        <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
+        <div class="sl-step"><div class="sl-step-num">02</div><div class="sl-step-icon"><i class='bx bx-search-alt'></i></div><h3 class="sl-step-title">Diagnóstico</h3><p class="sl-step-desc">Evaluamos el equipo de forma remota o presencial e identificamos la causa raíz del problema.</p></div>
+        <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
+        <div class="sl-step"><div class="sl-step-num">03</div><div class="sl-step-icon"><i class='bx bx-wrench'></i></div><h3 class="sl-step-title">Solución</h3><p class="sl-step-desc">Reparamos, instalamos o configuramos con total transparencia sobre el proceso y los costos.</p></div>
+        <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
+        <div class="sl-step"><div class="sl-step-num">04</div><div class="sl-step-icon"><i class='bx bx-check-shield'></i></div><h3 class="sl-step-title">Entrega y seguimiento</h3><p class="sl-step-desc">Verificamos contigo que todo funciona y quedamos disponibles para cualquier duda post-servicio.</p></div>
+      </div>
+    </section>
+
+    <section class="sl-section sl-section--form" id="sp-contacto">
+      <div class="sl-form-glow"></div>
+      <p class="sl-kicker">SOLICITAR SOPORTE</p>
+      <h2 class="sl-title">¿Tu equipo tiene un problema?</h2>
+      <p class="sl-subtitle">Cuéntanos qué pasa y te contactamos en menos de 30 minutos para ayudarte.</p>
+      <form class="sl-form" action="/backend/form/FormContact.php" method="POST">
+        <div class="sl-form-type">
+          <span class="sl-form-type-label">Soy:</span>
+          <label class="sl-type-option"><input type="radio" name="tipo_cliente" value="persona" checked /><span><i class='bx bx-user'></i> Persona / Hogar</span></label>
+          <label class="sl-type-option"><input type="radio" name="tipo_cliente" value="empresa" /><span><i class='bx bx-building'></i> Empresa</span></label>
+        </div>
+        <div class="sl-form-row">
+          <div class="sl-form-group"><label>Nombre completo</label><input type="text" name="nombre" placeholder="Tu nombre o razón social" required /></div>
+          <div class="sl-form-group"><label>Correo electrónico</label><input type="email" name="email" placeholder="tu@correo.com" required /></div>
+        </div>
+        <div class="sl-form-row">
+          <div class="sl-form-group"><label>Teléfono / WhatsApp</label><input type="tel" name="telefono" placeholder="+57 xxx xxx xxxx" /></div>
+          <div class="sl-form-group"><label>Tipo de dispositivo</label>
+            <select name="dispositivo" required><option value="" disabled selected>¿Qué equipo tienes?</option><option>Laptop / PC</option><option>Móvil / Tablet</option><option>Servidor</option><option>Impresora / Periférico</option><option>Red / WiFi / Router</option><option>Cámara / CCTV</option><option>Otro</option></select>
+          </div>
+        </div>
+        <div class="sl-form-group"><label>¿Qué está pasando?</label><textarea name="mensaje" rows="4" placeholder="Descríbenos el problema con tus propias palabras. No necesitas ser técnico." required></textarea></div>
+        <button type="submit" class="sl-form-submit"><i class='bx bx-send'></i> Solicitar soporte</button>
+      </form>
+    </section>
+
   </main>
+  <footer-page></footer-page>
+  <whatsapp-container></whatsapp-container>
+  <script src="../scripts/loader.js"></script>
+  <script src="../scripts/i18n.js"></script>
+  <script> if (window.SMED_I18N) window.SMED_I18N.initLang(); </script>
+  <script src="../scripts/Particles.js"></script>
+  <script src="../scripts/ParticlesConfig.js"></script>
   <script type="module" src="../components/BaseComponents.js" defer></script>
 </body>
-
 </html>

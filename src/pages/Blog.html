@@ -1,142 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Blog SMED Technology con noticias de tecnología, inteligencia artificial, ciberseguridad y tendencias digitales para empresas y profesionales." />
-  <meta name="keywords"
-    content="blog tecnologia, inteligencia artificial, noticias IA, ciberseguridad, software, cloud, SMED Technology" />
+  <meta name="description" content="Blog SMED Technology — Noticias de tecnología, inteligencia artificial, redes, cloud y ciberseguridad para empresas y profesionales." />
+  <meta name="keywords" content="blog tecnologia, inteligencia artificial, ciberseguridad, redes, cloud, SMED Technology" />
   <meta name="author" content="SMED Technology" />
   <meta name="robots" content="index, follow" />
-  <title>Smed | Blog</title>
+  <title>Blog | SMED Technology</title>
   <link rel="icon" href="../assets/icons/MainIcon.webp" type="image/png" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../styles/Blog.css" />
   <link rel="stylesheet" href="../components/NavigationBar/NavigationBar.css" />
   <link rel="stylesheet" href="../components/Footer/Footer.css" />
   <link rel="stylesheet" href="../components/WhatsApp/WhatsApp.css" />
-  <link rel="stylesheet" href="../styles/Typography.css" />
 </head>
 
-<body>
+<body class="blog-body">
   <nav-bar></nav-bar>
 
   <main>
+
+    <!-- ══ HERO ══ -->
     <section class="blog-hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <span class="badge">SMED Blog</span>
-        <h1>Noticias de tecnologia, IA y tendencias que mueven el futuro</h1>
-        <p>
-          Descubre novedades, guias practicas y analisis sobre inteligencia artificial,
-          desarrollo de software, redes, cloud y ciberseguridad.
-        </p>
+      <div class="blog-hero-inner">
+        <div class="blog-hero-label">SMED · BLOG</div>
+        <h1 class="blog-hero-title">
+          <span>Tecnología.</span>
+          <span>Innovación.</span>
+          <span>Futuro.</span>
+        </h1>
+        <p class="blog-hero-desc">Análisis, guías y tendencias sobre IA, software, redes, cloud y ciberseguridad para empresas que quieren operar más inteligente.</p>
+        <div class="blog-hero-line"></div>
       </div>
     </section>
 
-    <section class="featured-post">
-      <article class="featured-card">
-        <div class="featured-image">
-          <img src="../assets/images/SmedDev.webp" alt="Inteligencia artificial aplicada al desarrollo" />
+    <!-- ══ ARTÍCULO DESTACADO ══ -->
+    <section class="blog-featured">
+      <article class="blog-featured-card">
+        <div class="blog-featured-img">
+          <img src="../assets/images/SmedDev.webp" alt="IA aplicada al desarrollo" />
+          <div class="blog-featured-img-overlay"></div>
         </div>
-        <div class="featured-content">
-          <p class="category">Articulo destacado</p>
-          <h2>IA aplicada al desarrollo: como acelerar proyectos sin perder calidad</h2>
-          <p>
-            La inteligencia artificial ya no es solo una tendencia: hoy permite optimizar
-            tareas repetitivas, mejorar pruebas y reducir tiempos de entrega. En este
-            articulo exploramos practicas reales para usar IA de forma responsable y efectiva.
-          </p>
-          <a href="#" class="read-more">Leer articulo <i class='bx bx-right-arrow-alt'></i></a>
+        <div class="blog-featured-body">
+          <div class="blog-featured-meta">
+            <span class="blog-cat">IA & Desarrollo</span>
+            <span class="blog-date">15 ENE 2026</span>
+          </div>
+          <h2 class="blog-featured-title">IA aplicada al desarrollo: cómo acelerar proyectos sin perder calidad</h2>
+          <p class="blog-featured-excerpt">La inteligencia artificial ya no es solo tendencia. Hoy permite optimizar tareas repetitivas, mejorar pruebas y reducir tiempos de entrega. Exploramos prácticas reales para usarla de forma responsable.</p>
+          <a href="#" class="blog-featured-link">
+            Leer artículo <i class='bx bx-right-arrow-alt'></i>
+          </a>
         </div>
       </article>
     </section>
 
+    <!-- ══ FILTROS ══ -->
+    <section class="blog-filters-section">
+      <div class="blog-filters-inner">
+        <span class="blog-filters-label">FILTRAR POR</span>
+        <div class="blog-filters">
+          <button class="blog-filter active" data-filter="all">Todos</button>
+          <button class="blog-filter" data-filter="ia">IA</button>
+          <button class="blog-filter" data-filter="redes">Redes</button>
+          <button class="blog-filter" data-filter="cloud">Cloud</button>
+          <button class="blog-filter" data-filter="ciberseguridad">Ciberseguridad</button>
+          <button class="blog-filter" data-filter="desarrollo">Desarrollo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ GRID DE ARTÍCULOS ══ -->
     <section class="blog-grid-section">
-      <div class="section-title">
-        <h2>Ultimas noticias y publicaciones</h2>
-        <p>Contenido actualizado sobre tecnologia, innovacion y crecimiento digital.</p>
-      </div>
-
       <div class="blog-grid">
-        <article class="post-card">
-          <img src="../assets/images/conexion-de-red.png" alt="Tendencias de redes empresariales" />
-          <div class="post-body">
-            <span class="tag">Redes</span>
-            <h3>Redes empresariales en 2026: prioridad en rendimiento y seguridad</h3>
-            <p>Las organizaciones estan migrando a infraestructuras mas inteligentes para operar con mayor disponibilidad.</p>
-            <a href="#" class="post-link">Ver mas</a>
+
+        <article class="blog-card" data-cat="redes">
+          <div class="blog-card-img">
+            <img src="../assets/images/conexion-de-red.png" alt="Redes empresariales 2026" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-cat">Redes</span>
+              <span class="blog-date">10 ENE 2026</span>
+            </div>
+            <h3 class="blog-card-title">Redes empresariales en 2026: rendimiento y seguridad como prioridad</h3>
+            <p class="blog-card-excerpt">Las organizaciones migran a infraestructuras más inteligentes para operar con mayor disponibilidad y menor latencia.</p>
+            <a href="#" class="blog-card-link">Leer <i class='bx bx-right-arrow-alt'></i></a>
           </div>
         </article>
 
-        <article class="post-card">
-          <img src="../assets/images/ChatBot.webp" alt="Automatizacion con IA" />
-          <div class="post-body">
-            <span class="tag">IA</span>
-            <h3>Automatizacion con IA: 5 procesos de negocio que puedes optimizar hoy</h3>
-            <p>Desde soporte al cliente hasta analisis de datos, la IA genera valor cuando se implementa con estrategia.</p>
-            <a href="#" class="post-link">Ver mas</a>
+        <article class="blog-card" data-cat="cloud">
+          <div class="blog-card-img">
+            <img src="../assets/images/SmedNetworks.webp" alt="Cloud híbrido" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-cat">Cloud</span>
+              <span class="blog-date">05 ENE 2026</span>
+            </div>
+            <h3 class="blog-card-title">Cloud híbrido: la ruta para escalar sin comprometer operaciones</h3>
+            <p class="blog-card-excerpt">Una arquitectura cloud bien diseñada mejora la continuidad operativa y habilita crecimiento sostenido a bajo costo.</p>
+            <a href="#" class="blog-card-link">Leer <i class='bx bx-right-arrow-alt'></i></a>
           </div>
         </article>
 
-        <article class="post-card">
-          <img src="../assets/images/SmedNetworks.webp" alt="Cloud y escalabilidad" />
-          <div class="post-body">
-            <span class="tag">Cloud</span>
-            <h3>Cloud hibrido: la ruta para escalar sin comprometer tus operaciones</h3>
-            <p>Una arquitectura cloud bien disenada mejora la continuidad operativa y habilita crecimiento sostenido.</p>
-            <a href="#" class="post-link">Ver mas</a>
+        <article class="blog-card" data-cat="ciberseguridad">
+          <div class="blog-card-img">
+            <img src="../assets/images/it.png" alt="Ciberseguridad pymes" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-cat">Ciberseguridad</span>
+              <span class="blog-date">28 DIC 2025</span>
+            </div>
+            <h3 class="blog-card-title">Checklist esencial de ciberseguridad para pymes técnicas</h3>
+            <p class="blog-card-excerpt">MFA, backups y monitoreo proactivo. Pequeñas acciones que reducen riesgos críticos en poco tiempo y menor costo.</p>
+            <a href="#" class="blog-card-link">Leer <i class='bx bx-right-arrow-alt'></i></a>
           </div>
         </article>
 
-        <article class="post-card">
-          <img src="../assets/images/it.png" alt="Ciberseguridad para pymes" />
-          <div class="post-body">
-            <span class="tag">Ciberseguridad</span>
-            <h3>Checklist esencial de ciberseguridad para pymes tecnicas</h3>
-            <p>Pequenas acciones como MFA, backups y monitoreo proactivo reducen riesgos criticos en poco tiempo.</p>
-            <a href="#" class="post-link">Ver mas</a>
+        <article class="blog-card" data-cat="desarrollo">
+          <div class="blog-card-img">
+            <img src="../assets/images/web.png" alt="Desarrollo web moderno" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-cat">Desarrollo</span>
+              <span class="blog-date">20 DIC 2025</span>
+            </div>
+            <h3 class="blog-card-title">Desarrollo web moderno: rendimiento, experiencia y conversión</h3>
+            <p class="blog-card-excerpt">El enfoque actual combina velocidad, accesibilidad y UX clara para generar resultados de negocio reales desde el lanzamiento.</p>
+            <a href="#" class="blog-card-link">Leer <i class='bx bx-right-arrow-alt'></i></a>
           </div>
         </article>
 
-        <article class="post-card">
-          <img src="../assets/images/web.png" alt="Desarrollo web moderno" />
-          <div class="post-body">
-            <span class="tag">Desarrollo</span>
-            <h3>Desarrollo web moderno: rendimiento, experiencia y conversion</h3>
-            <p>El enfoque actual combina velocidad, accesibilidad y una UX clara para generar mejores resultados.</p>
-            <a href="#" class="post-link">Ver mas</a>
-          </div>
-        </article>
+      </div>
 
-        <article class="post-card">
-          <img src="../assets/images/SmedSupport.webp" alt="Soporte tecnologico" />
-          <div class="post-body">
-            <span class="tag">Soporte</span>
-            <h3>Soporte tecnologico proactivo: menos incidentes y mas continuidad</h3>
-            <p>Un soporte preventivo reduce costos y mejora la productividad de equipos en empresas en crecimiento.</p>
-            <a href="#" class="post-link">Ver mas</a>
-          </div>
-        </article>
+      <div class="blog-grid-footer">
+        <div class="blog-grid-line"></div>
+        <p class="blog-grid-count" id="blogCount">4 artículos</p>
       </div>
     </section>
 
-    <section class="newsletter">
-      <h2>Recibe novedades tecnologicas</h2>
-      <p>Suscribete para conocer tendencias de IA, software, redes y mejores practicas para tu negocio.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Tu correo corporativo" aria-label="Correo electronico" />
-        <button type="submit">Suscribirme</button>
-      </form>
+    <!-- ══ NEWSLETTER ══ -->
+    <section class="blog-newsletter">
+      <div class="blog-newsletter-inner">
+        <div class="blog-newsletter-copy">
+          <p class="blog-nl-label">SMED · NEWSLETTER</p>
+          <h2 class="blog-nl-title">Mantente al día en tecnología</h2>
+          <p class="blog-nl-desc">Tendencias de IA, software, redes y mejores prácticas directamente en tu correo. Sin spam.</p>
+        </div>
+        <form class="blog-nl-form" onsubmit="return false;">
+          <div class="blog-nl-input-wrap">
+            <input type="email" placeholder="tu@correo.com" aria-label="Correo electrónico" required />
+            <button type="submit">Suscribirme <i class='bx bx-right-arrow-alt'></i></button>
+          </div>
+          <p class="blog-nl-note">Sin spam. Cancela cuando quieras.</p>
+        </form>
+      </div>
     </section>
 
-    <footer-page></footer-page>
-    <whatsapp-container></whatsapp-container>
   </main>
 
+  <footer-page></footer-page>
+  <whatsapp-container></whatsapp-container>
+
+  <script src="../scripts/loader.js"></script>
+  <script>
+    // Filtros de categoría
+    const filters  = document.querySelectorAll('.blog-filter');
+    const cards    = document.querySelectorAll('.blog-card');
+    const countEl  = document.getElementById('blogCount');
+
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        let visible = 0;
+        cards.forEach(card => {
+          const show = f === 'all' || card.dataset.cat === f;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        countEl.textContent = `${visible} artículo${visible !== 1 ? 's' : ''}`;
+      });
+    });
+  </script>
   <script type="module" src="../components/BaseComponents.js" defer></script>
 </body>
-
 </html>

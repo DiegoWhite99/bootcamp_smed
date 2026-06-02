@@ -20,7 +20,7 @@ if (section && track && viewport && prevButton && nextButton) {
 
     const getGap = () => Number.parseFloat(getComputedStyle(track).gap) || 0;
     const getItemWidth = () => {
-      const firstItem = track.querySelector(".carousel-item");
+      const firstItem = track.querySelector(".smed-carousel-item");
       if (!firstItem) return 350;
       return firstItem.getBoundingClientRect().width;
     };
@@ -69,8 +69,20 @@ if (section && track && viewport && prevButton && nextButton) {
       return bestIndex;
     };
 
+    const originalCount = initialItems.length;
+    const dots = [...document.querySelectorAll('#carouselDots .cdot')];
+
+    const updateActiveCard = () => {
+      const idx = getClosestCardIndex() % originalCount;
+      [...track.children].forEach((card, i) => {
+        card.classList.toggle('active', i % originalCount === idx);
+      });
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+    };
+
     const render = () => {
       track.style.transform = `translateX(${position}px)`;
+      updateActiveCard();
     };
 
     const clearResumeTimer = () => {
@@ -140,6 +152,7 @@ if (section && track && viewport && prevButton && nextButton) {
 
     prevButton.addEventListener("click", () => moveByDirection(-1));
     nextButton.addEventListener("click", () => moveByDirection(1));
+    dots.forEach((dot, i) => dot.addEventListener("click", () => snapToCard(i, 360)));
 
     // En desktop no se pausa por hover; solo se pausa por interacción explícita.
 

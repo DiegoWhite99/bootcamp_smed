@@ -116,10 +116,8 @@ export default class NavigationBar extends HTMLElement {
       if (navKeys.cloud)    navKeys.cloud.textContent    = t['nav.sub.cloud'];
       if (navKeys.support)  navKeys.support.textContent  = t['nav.sub.support'];
       if (navKeys.advisory) navKeys.advisory.textContent = t['nav.sub.advisory'];
-      // Redes / Infraestructura (mismo href, seleccionar por índice)
-      const redesLinks = this.querySelectorAll('a[href="/src/pages/Redes.html"].sublink');
-      if (redesLinks[0]) redesLinks[0].textContent = t['nav.sub.networks'];
-      if (redesLinks[1]) redesLinks[1].textContent = t['nav.sub.infra'];
+      const redesLink = this.querySelector('a[href="/src/pages/Redes.html"].sublink');
+      if (redesLink) redesLink.textContent = t['nav.sub.networks'];
       if (langLabel) langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
     };
 
