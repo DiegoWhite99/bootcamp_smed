@@ -1,12 +1,35 @@
 <header>
   <nav class="navbar-smed">
     <div class="nav-logo">
-      <p>Smed Technology</p>
+      <a href="/src/pages/AboutUs.html" class="nav-brand">
+        <img src="/src/assets/images/SmedOfficial.webp" alt="Logo SMED Technology" id="logo_smed" />
+        <div class="nav-brand-text">
+          <span>SMED</span>
+          <p>Technology</p>
+        </div>
+      </a>
     </div>
     <div class="nav-menu" id="navMenu">
       <ul>
         <li><a href="/src/pages/AboutUs.html" class="link">Nosotros</a></li>
-        <li><a href="/src/pages/Services.html" class="link">Servicios</a></li>
+        <li class="has-submenu">
+          <div class="nav-link-group">
+            <a href="/src/pages/Services.html" class="link">Servicios</a>
+            <button class="submenu-toggle" type="button" aria-label="Mostrar subservicios" aria-expanded="false">
+              <i class='bx bx-chevron-down'></i>
+            </button>
+          </div>
+          <ul class="submenu">
+            <li><a href="/src/pages/Desarrollo.html" class="sublink" data-i18n="nav.sub.dev">Desarrollo</a></li>
+            <li><a href="/src/pages/Redes.html" class="sublink" data-i18n="nav.sub.networks">Redes & Infraestructura</a></li>
+            <li><a href="/src/pages/Cloud.html" class="sublink" data-i18n="nav.sub.cloud">Cloud</a></li>
+            <li><a href="/src/pages/Soporte.html" class="sublink" data-i18n="nav.sub.support">Soporte</a></li>
+            <li><a href="/src/pages/Asesorias.html" class="sublink" data-i18n="nav.sub.advisory">Asesorías</a></li>
+          </ul>
+        </li>
+        <!-- Blog temporalmente oculto
+        <li><a href="/src/pages/Blog.html" class="link">Blog</a></li>
+        -->
         <!-- <li><a href="/src/pages/Store.html" class="link">Tienda</a></li>
         <li>
           <a href="/src/pages/Experiences.html" class="link">Experiencias</a>
@@ -14,7 +37,7 @@
       </ul>
     </div>
       <!-- <div class="nav-button" id="ContenedorBotonInicio">
-        <button class="btn btn-outline-light" id="loginbtn" onclick="location.href='/src/pages/Login.html';">
+        <button class="btn btn-outline-light" id="loginbtn" onclick="location.href='/src/pages/login.html';">
           Inicio
         </button>
       </div> -->
@@ -22,6 +45,15 @@
     <div id="BotonesSesion"></div>
     <!-- Barra Buscar -->
     <div id="Buscar"></div>
+    <!-- Botón de cambio de idioma -->
+    <button class="lang-toggle" id="langToggle" aria-label="Change language">
+      <i class="bx bx-globe"></i>
+      <span id="langLabel">EN</span>
+    </button>
+    <!-- Botón de cambio de tema -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+      <i class="bx bx-moon" id="themeIcon"></i>
+    </button>
     <!-- Boton de menu desplegable para móviles -->
     <div class="botonHamburgesa" id="botonHamburgesa">
       <span></span>

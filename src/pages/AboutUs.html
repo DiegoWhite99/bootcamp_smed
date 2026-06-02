@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../components/Footer/Footer.css" />
   <link rel="stylesheet" href="../components/Form/Form.css" />
   <link rel="stylesheet" href="../components/WhatsApp/WhatsApp.css" />
+  <link rel="stylesheet" href="../styles/Typography.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
@@ -27,218 +28,386 @@
   <nav-bar></nav-bar>
   <!-- segunda section-->
   <main>
+    <section class="eslogan" id="esloganSection">
+      <div class="eslogan-container">
+        <div class="eslogan-copy">
+          <h2 class="eslogan-title" data-i18n="eslogan.title">FORJAMOS EL FUTURO</h2>
+          <p class="eslogan-text" id="esloganText" data-i18n="eslogan.text">
+            En SMED Technology creemos que la tecnología cobra valor cuando se construye con propósito, confianza y enfoque humano. Diseñamos soluciones a la medida, entendiendo que cada cliente es único y requiere algo más que respuestas estándar. Nos involucramos en cada proceso para aportar claridad, cercanía y resultados reales. Trabajamos con transparencia, calidad y compromiso, creando no solo tecnología, sino relaciones sólidas que impulsan el crecimiento. Más que un proveedor, somos un aliado en la evolución de tu negocio.
+          </p>
+        </div>
+      </div>
+      <button class="eslogan-audio-btn" id="esloganAudioBtn" aria-label="Escuchar / Listen" title="Escuchar">
+        <i class="bx bx-volume-full" id="esloganAudioIcon"></i>
+      </button>
+    </section>
+
     <section class="hero">
       <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Soluciones tecnológicas para Empresas y Profesionales</h1>
-        <p>
-          En <strong>Smed Technology</strong> ofrecemos
-          <strong>soporte técnico, desarrollo de software y gestión de
-            redes</strong>
-          para empresas y personas.
-          <br />
-          Potenciamos tus proyectos con
-          <strong>servicios tecnológicos eficientes</strong>, asegurando
-          calidad, seguridad y confianza.
-        </p>
-
-        <div class="cta">
-          <a href="Services.html" class="btn">Conoce nuestros servicios</a>
+      <div class="hero-content hero-layout">
+        <div class="hero-copy">
+          <span class="hero-badge">SMED Technology</span>
+          <h1 data-i18n="hero.h1">TRANSFORMAMOS LA TECNOLOGÍA EN ESTABILIDAD, CRECIMIENTO Y EVOLUCIÓN</h1>
+          <h2 class="hero-subtitle" data-i18n="hero.subtitle">Diseño técnico moderno, ejecución confiable y acompañamiento real</h2>
+          <p data-i18n-html="hero.p">
+            Ayudamos a empresas y profesionales a resolver retos tecnológicos con
+            <strong>desarrollo web, soporte técnico, redes</strong>,
+            combinando cercanía, agilidad y soluciones confiables.
+          </p>
+          <div class="cta hero-actions">
+            <a href="Services.html" class="btn" data-i18n="hero.cta1">Conoce nuestros servicios</a>
+            <a href="#fundadores" class="btn btn-secondary" data-i18n="hero.cta2">Conoce al equipo</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-brand-card">
+            <div class="brand-copy-block">
+              <span>SMED Technology</span>
+              <strong data-i18n="hero.brand.strong">Soluciones tecnológicas profesionales para empresas y equipos que necesitan estabilidad, diseño y crecimiento.</strong>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="bx bx-shield-quarter"></i>
+              </div>
+              <strong>360°</strong>
+              <span data-i18n="hero.stat1">Acompañamiento técnico integral</span>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="bx bx-building"></i>
+              </div>
+              <strong>B2B + B2C</strong>
+              <span data-i18n="hero.stat2">Soluciones para empresas y personas</span>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="bx bxs-brain"></i>
+              </div>
+              <strong>Ágil</strong>
+              <span data-i18n="hero.stat3">Implementación práctica y cercana</span>
+            </div>
+          </div>
+          <div class="hero-note">
+            <h3 class="pillars-title" data-i18n="hero.pillars.title">Ecosistema SMED Technology</h3>
+            <div class="pillars-grid">
+              <div class="pillar-item pillar-software">
+                <div class="pillar-circle"><i class="bx bxs-layer"></i></div>
+                <h4>SMED Software</h4>
+                <p data-i18n="hero.pillar1.p">Desarrollo y aplicaciones a medida</p>
+              </div>
+              <div class="pillar-item pillar-support">
+                <div class="pillar-circle"><i class="bx bxs-wrench"></i></div>
+                <h4>SMED Support</h4>
+                <p data-i18n="hero.pillar2.p">Soporte técnico integral</p>
+              </div>
+              <div class="pillar-item pillar-net">
+                <div class="pillar-circle"><i class="bx bxs-network-chart"></i></div>
+                <h4>SMED Net</h4>
+                <p data-i18n="hero.pillar3.p">Infraestructura y redes</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!--about our-->
+
     <section class="about">
       <div class="about-container">
-        <div class="about-image">
-          <img src="../assets/images/About.webp" alt="somos" />
-        </div>
         <div class="about-text">
-          <h2>
-            ¿Quienes somos?<i class="bx bx-group" style="color: #ffffff"></i>
-          </h2>
-          <h3 id="title3-about">
-            <i class="bx bx-rocket"></i> Innovación y Tecnología
-          </h3>
-          <p id="txt-about">
-            Brindamos soluciones tecnológicas avanzadas para individuos y
-            empresas.
+          <span class="section-kicker" data-i18n="about.kicker">Quiénes somos</span>
+          <h2 data-i18n="about.h2">Un equipo que convierte necesidades técnicas en soluciones claras</h2>
+          <p class="about-lead" data-i18n="about.lead">
+            En SMED unimos tecnología, servicio y estrategia para acompañar a
+            nuestros clientes desde la idea inicial hasta la operación diaria.
           </p>
-          <h3 id="title3-about">
-            <i class="bx bx-plus"></i> Experiencia y Calidad
-          </h3>
-          <p>
-            Contamos con un equipo experto en desarrollo web, mantenimiento de
-            hardware y gestión de redes.
-          </p>
+          <div class="about-story-card">
+            <p data-i18n="about.story">
+              Operamos con mentalidad startup: decisiones rápidas, ejecución ordenada
+              y foco en construir relaciones de largo plazo con cada cliente.
+            </p>
+          </div>
+          <div class="about-points">
+            <article class="about-point">
+              <i class="bx bx-rocket"></i>
+              <div>
+                <h3 data-i18n="about.point1.h3">Innovación útil</h3>
+                <p data-i18n="about.point1.p">Diseñamos soluciones modernas con foco en resultados reales y sostenibles.</p>
+              </div>
+            </article>
+            <article class="about-point">
+              <i class="bx bx-shield-quarter"></i>
+              <div>
+                <h3 data-i18n="about.point2.h3">Confianza operativa</h3>
+                <p data-i18n="about.point2.p">Priorizamos estabilidad, seguridad y continuidad para que la tecnología trabaje a tu favor.</p>
+              </div>
+            </article>
+            <article class="about-point">
+              <i class="bx bx-group"></i>
+              <div>
+                <h3 data-i18n="about.point3.h3">Talento multidisciplinario</h3>
+                <p data-i18n="about.point3.p">Integramos desarrollo, infraestructura y soporte para ofrecer una respuesta más completa.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="about-side-panel">
+          <div class="about-signature-card about-focus-card">
+            <img src="../assets/images/SmedOfficial.webp" alt="Logo oficial de SMED" />
+            <div>
+              <span data-i18n="about.sig.span">¿Qué nos diferencia?</span>
+              <p data-i18n="about.sig.p">Combinamos soporte, desarrollo e infraestructura bajo una misma visión para que el cliente reciba respuestas claras, organizadas y sostenibles.</p>
+            </div>
+          </div>
+          <div class="about-mini-card">
+            <span data-i18n="about.mini1.span">Claridad operativa</span>
+            <p data-i18n="about.mini1.p">Explicamos cada solución con lenguaje directo, orden técnico y enfoque en continuidad.</p>
+          </div>
+          <div class="about-mini-card">
+            <span data-i18n="about.mini2.span">Experiencia integral</span>
+            <p data-i18n="about.mini2.p">Unimos infraestructura, software y soporte para acompañar mejor cada etapa del proyecto.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!--Section servicios-->
+    <section class="trust-section">
+      <div class="trust-shell">
+        <div class="trust-copy">
+          <span class="section-kicker">Por que elegir SMED</span>
+          <h2>Una experiencia tecnologica mas clara, humana y confiable</h2>
+          <p>
+            Potenciamos cada proyecto con acompanamiento cercano, criterio tecnico
+            y una ejecucion pensada para que el cliente avance con seguridad.
+          </p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card">
+            <i class="bx bx-message-square-detail"></i>
+            <h3 data-i18n="trust.card1.h3">Comunicación directa</h3>
+            <p data-i18n="trust.card1.p">Traducimos lo técnico en decisiones claras para que cada paso tenga sentido y dirección.</p>
+          </article>
+          <article class="trust-card">
+            <i class="bx bx-layer"></i>
+            <h3 data-i18n="trust.card2.h3">Solución integral</h3>
+            <p data-i18n="trust.card2.p">Integramos desarrollo, soporte e infraestructura bajo una misma estrategia de servicio.</p>
+          </article>
+          <article class="trust-card">
+            <i class="bx bx-timer"></i>
+            <h3 data-i18n="trust.card3.h3">Respuesta con criterio</h3>
+            <p data-i18n="trust.card3.p">Actuamos con agilidad, pero sin improvisar, priorizando continuidad, orden y resultados reales.</p>
+          </article>
+        </div>
+        <div class="trust-cta">
+          <a href="Services.html" class="btn trust-btn" data-i18n="trust.cta">Explora cómo trabajamos</a>
+        </div>
+      </div>
+    </section>
 
     <section class="services">
-      <div class="services-content">
-        <h2>Nuestros Servicios</h2>
-        <div class="service-item">
-          <h3 id="title3-services">
-            <i class="bx bx-code-alt"></i> Creación de Sitios Web
-          </h3>
-          <p id="txt-services">
-            Desde proyectos simples hasta desarrollos robustos con tecnologías
-            como HTML, JS, React, PHP, Python y más.
+      <div class="services-shell">
+        <div class="services-heading">
+          <span class="section-kicker" data-i18n="services.kicker">Qué hacemos</span>
+          <h2 data-i18n="services.h2">Servicios pensados para impulsar y sostener tu operación</h2>
+          <p data-i18n="services.p">
+            Cubrimos el ciclo completo de tus necesidades tecnológicas, desde la
+            construcción de productos digitales hasta el soporte y la continuidad
+            de tus equipos.
           </p>
         </div>
-        <div class="service-item">
-          <h3 id="title3-services">
-            <i class="bx bx-wrench"></i>Mantenimiento de Hardware
-          </h3>
-          <p id="txt-services">
-            Reparación y mantenimiento de computadoras, celulares y tablets.
-          </p>
+        <div class="services-grid">
+          <article class="service-item">
+            <i class="bx bx-code-alt"></i>
+            <span class="service-label" data-i18n="services.s1.label">Producto</span>
+            <h3 data-i18n="services.s1.h3">Desarrollo web y software</h3>
+            <p data-i18n="services.s1.p">Construimos sitios, plataformas y soluciones a medida con tecnologías actuales y enfoque escalable.</p>
+          </article>
+          <article class="service-item">
+            <i class="bx bx-wrench"></i>
+            <span class="service-label" data-i18n="services.s2.label">Soporte</span>
+            <h3 data-i18n="services.s2.h3">Hardware y mantenimiento</h3>
+            <p data-i18n="services.s2.p">Realizamos diagnóstico, reparación y optimización de computadores, celulares y tablets.</p>
+          </article>
+          <article class="service-item">
+            <i class="bx bx-network-chart"></i>
+            <span class="service-label" data-i18n="services.s3.label">Infraestructura</span>
+            <h3 data-i18n="services.s3.h3">Redes e infraestructura</h3>
+            <p data-i18n="services.s3.p">Fortalecemos conectividad, organización y rendimiento para entornos de trabajo más confiables.</p>
+          </article>
+          <article class="service-item">
+            <i class="bx bx-support"></i>
+            <span class="service-label" data-i18n="services.s4.label">Acompañamiento</span>
+            <h3 data-i18n="services.s4.h3">Soporte y asesoría</h3>
+            <p data-i18n="services.s4.p">Acompañamos decisiones técnicas, recuperación de información y soporte remoto o presencial.</p>
+          </article>
         </div>
-        <div class="service-item">
-          <h3 id="title3-services">
-            <i class="bx bx-support"></i> Asesorías Tecnológicas
-          </h3>
-          <p id="txt-services">
-            Ayuda personalizada para armar tu PC o mejorar la infraestructura
-            tecnológica de tu empresa.
-          </p>
+        <div class="services-highlight">
+          <div class="services-image">
+            <img src="../assets/images/team_SMED.jpeg" alt="reparacion" />
+          </div>
+          <div class="services-panel">
+            <h3 data-i18n="services.panel.h3">Trabajamos con una visión práctica</h3>
+            <p data-i18n="services.panel.p">
+              No solo resolvemos incidencias: ayudamos a prevenirlas, optimizar
+              procesos y preparar tu operación para crecer con bases sólidas.
+            </p>
+            <ul class="services-list">
+              <li data-i18n="services.panel.li1">Diagnóstico técnico claro y accionable.</li>
+              <li data-i18n="services.panel.li2">Implementación con enfoque en continuidad y rendimiento.</li>
+              <li data-i18n="services.panel.li3">Comunicación cercana durante todo el proceso.</li>
+            </ul>
+          </div>
         </div>
-        <div class="service-item">
-          <h3 id="title3-services">
-            <i class="bx bx-data"></i> Manejo de Información
-          </h3>
-          <p id="txt-services">
-            Recuperación de datos, mantenimiento de software y soporte remoto
-            o presencial.
-          </p>
-        </div>
-      </div>
-      <div class="services-image">
-        <img src="../assets/images/Services.webp" alt="reparacion" />
       </div>
     </section>
 
-    <!---Carrusel marcas-->
     <section class="brand-carousel">
-      <div class="brand-carousel-container">
-        <div class="brand-track">
-          <div class="brand-slide">
-            <img src="../assets/icons/AwsLogo.svg" alt="AWS" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/icons/MicrosoftLogo.svg" alt="Microsoft" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/icons/CiscoLogo.svg" alt="Cisco" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/icons/AsusLogo.svg" alt="Asus" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/icons/AcerLogo.svg" alt="Acer" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/icons/NvidiaLogo.svg" alt="NVIDIA" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/icons/GoogleLogo.svg" alt="Google" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/images/SmedOfficial.webp" alt="SMED" />
-          </div>
-          <div class="brand-slide">
-            <img src="../assets/images/Elevecr.webp" alt="Elevecr" />
+      <div class="brand-shell">
+        <div class="brand-copy">
+          <span class="section-kicker" data-i18n="carousel.kicker">Tecnologías y aliados</span>
+          <h2 data-i18n="carousel.h2">Trabajamos con herramientas reconocidas del ecosistema digital</h2>
+          <p data-i18n="carousel.p">
+            Integramos plataformas y marcas reconocidas para asegurar soluciones
+            más confiables, escalables y alineadas con entornos empresariales modernos.
+          </p>
+        </div>
+        <div class="brand-carousel-container">
+          <div class="brand-track">
+            <!-- Copia 1 -->
+            <div class="brand-slide"><img src="../assets/icons/AwsLogo.svg" alt="AWS" /></div>
+            <div class="brand-slide"><img src="../assets/icons/MicrosoftLogo.svg" alt="Microsoft" /></div>
+            <div class="brand-slide"><img src="../assets/icons/CiscoLogo.svg" alt="Cisco" /></div>
+            <div class="brand-slide"><img src="../assets/icons/AsusLogo.svg" alt="Asus" /></div>
+            <div class="brand-slide"><img src="../assets/icons/AcerLogo.svg" alt="Acer" /></div>
+            <div class="brand-slide"><img src="../assets/icons/NvidiaLogo.svg" alt="NVIDIA" /></div>
+            <div class="brand-slide"><img src="../assets/icons/GoogleLogo.svg" alt="Google" /></div>
+            <div class="brand-slide"><img src="../assets/images/SmedOfficial.webp" alt="SMED" /></div>
+            <div class="brand-slide"><img src="../assets/icons/OpenAILogo.svg" alt="OpenAI" /></div>
+            <div class="brand-slide"><img src="../assets/icons/ClaudeLogo.svg" alt="Claude" /></div>
+            <!-- Copia 2 -->
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/AwsLogo.svg" alt="AWS" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/MicrosoftLogo.svg" alt="Microsoft" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/CiscoLogo.svg" alt="Cisco" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/AsusLogo.svg" alt="Asus" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/AcerLogo.svg" alt="Acer" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/NvidiaLogo.svg" alt="NVIDIA" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/GoogleLogo.svg" alt="Google" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/images/SmedOfficial.webp" alt="SMED" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/OpenAILogo.svg" alt="OpenAI" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/ClaudeLogo.svg" alt="Claude" /></div>
+            <!-- Copia 3 -->
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/AwsLogo.svg" alt="AWS" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/MicrosoftLogo.svg" alt="Microsoft" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/CiscoLogo.svg" alt="Cisco" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/AsusLogo.svg" alt="Asus" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/AcerLogo.svg" alt="Acer" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/NvidiaLogo.svg" alt="NVIDIA" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/GoogleLogo.svg" alt="Google" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/images/SmedOfficial.webp" alt="SMED" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/OpenAILogo.svg" alt="OpenAI" /></div>
+            <div class="brand-slide" aria-hidden="true"><img src="../assets/icons/ClaudeLogo.svg" alt="Claude" /></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!---proyectos-->
-
-    <section class="proyectos">
-      <h2 class="tittle_proyectos">Nuestros Proyectos</h2>
-      <div class="galeria">
-        <div class="proyecto">
-          <a href="https://github.com/DiegoWhite99/Kenko-Wellness" target="_blank">
-            <img src="../assets/images/Kenko.webp" alt="Kenko-wellness" />
-            <h3>Kenko| Wellness</h3>
-          </a>
-        </div>
-        <div class="proyecto">
-          <a href="https://github.com/DiegoWhite99/ChatBoot-Smed" target="_blank">
-            <img src="../assets/images/ChatBot.webp" alt="Chat-boot" />
-            <h3>Chatboot| smed</h3>
-          </a>
-        </div>
-        <div class="proyecto">
-          <a href="https://github.com/DiegoWhite99/Banco-C-T" target="_blank">
-            <img src="../assets/images/BancoCt.webp" alt="Chat-boot" />
-            <h3>Banco CT</h3>
-          </a>
-        </div>
-        <!-- Agrega más proyectos aquí -->
-      </div>
-    </section>
-
-    <!--Fundadores-->
     <section id="fundadores">
-      <h2 id="tittle_fundadores">Nuestros Fundadores</h2>
-      <div class="fundadores-container">
-        <div class="fundador">
-          <img src="../assets/images/Team/Cristian.webp" alt="Cristian" />
-          <h3>Cristian Roncancio</h3>
-          <p>
-            COO y Gerente de Operaciones, encargado de redes, infraestructura, operación del servicio y atención al cliente.
+      <div class="founders-shell">
+        <div class="founders-heading">
+          <span class="section-kicker" data-i18n="founders.kicker">Liderazgo</span>
+          <h2 id="tittle_fundadores" data-i18n="founders.h2">Nuestro Equipo Fundador</h2>
+          <p data-i18n="founders.p">
+            Tres perfiles complementarios que unen operación, desarrollo y
+            estrategia para impulsar el crecimiento de SMED Technology.
           </p>
-          <a href="https://www.linkedin.com/in/cristian-stiven-roncancio-villamil-46553a30a/?trk=people-guest_people_search-card&originalSubdomain=co"
-            target="_blank">LinkedIn</a>
         </div>
-        <div class="fundador">
-          <img src="../assets/images/Team/Diego.webp" alt="Diego" />
-          <h3>Diego Castelblanco</h3>
-          <p>
-            CEO y Gerente de Desarrollo, encargado del desarrollo de software, integración de servicios, dirección técnica y liderazgo estratégico del proyecto.
-          </p>
-          <a href="https://www.linkedin.com/in/diego-fernando-castelblanco-jimenez-43ba63218/"
-            target="_blank">LinkedIn</a>
-        </div>
-
-        <div class="fundador">
-          <img src="../assets/images/Team/silvio.svg" alt="Silvio" />
-          <h3>Silvio Andres Arevalo Barreto</h3>
-          <p>
-            CSO y Gerente de Estrategia Empresarial, encargado de la estructuración del negocio, posicionamiento de marca y planificación administrativa y financiera del proyecto.
-          </p>
-          <a href="https://www.linkedin.com/in/diego-fernando-castelblanco-jimenez-43ba63218/"
-            target="_blank">LinkedIn</a>
+        <div class="fundadores-container">
+          <div class="fundador">
+            <div class="fundador-photo">
+              <img src="../assets/images/Team/cristian.jpeg" alt="Cristian Roncancio" />
+              <div class="fundador-photo-overlay">
+                <span class="fundador-tag">COO</span>
+              </div>
+            </div>
+            <div class="fundador-body">
+              <h3>Cristian Roncancio</h3>
+              <span class="fundador-cargo" data-i18n="founders.cristian.cargo">Gerente de Operaciones</span>
+              <p data-i18n="founders.cristian.p">Redes, infraestructura, operación del servicio y atención al cliente.</p>
+              <a href="https://www.linkedin.com/in/cristian-stiven-roncancio-villamil-46553a30a/?trk=people-guest_people_search-card&originalSubdomain=co" target="_blank">
+                <i class="bx bxl-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="fundador">
+            <div class="fundador-photo">
+              <img src="../assets/images/Team/Diego.jpeg" alt="Diego Castelblanco" />
+              <div class="fundador-photo-overlay">
+                <span class="fundador-tag">CEO</span>
+              </div>
+            </div>
+            <div class="fundador-body">
+              <h3>Diego Castelblanco</h3>
+              <span class="fundador-cargo" data-i18n="founders.diego.cargo">Gerente de Desarrollo</span>
+              <p data-i18n="founders.diego.p">Desarrollo de software, integración de servicios y dirección técnica estratégica.</p>
+              <a href="https://www.linkedin.com/in/diegowhite99/" target="_blank">
+                <i class="bx bxl-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="fundador">
+            <div class="fundador-photo">
+              <img src="../assets/images/Team/Silvio.jpeg" alt="Silvio Arevalo" />
+              <div class="fundador-photo-overlay">
+                <span class="fundador-tag">CSO</span>
+              </div>
+            </div>
+            <div class="fundador-body">
+              <h3>Silvio Arévalo</h3>
+              <span class="fundador-cargo" data-i18n="founders.silvio.cargo">Gerente de Estrategia</span>
+              <p data-i18n="founders.silvio.p">Estructuración del negocio, posicionamiento de marca y planificación financiera.</p>
+              <a href="https://www.linkedin.com/in/silvio-andres-arevalo-barreto-8a0933307/" target="_blank">
+                <i class="bx bxl-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <!--Mision y vision-->
 
     <section id="vision_mision">
-      <div class="vision_mision">
-        <h2 class="vision_mision_tittle">Mision</h2>
-        <p class="body_vision_mision">
-          En SMED forjamos soluciones tecnológicas honestas, humanas y
-          efectivas. Acompañamos a cada cliente con calidad y excelencia, sin
-          importar su tamaño, para resolver cualquier reto técnico con
-          confianza y eficacia.
-        </p>
+      <div class="mv-heading">
+        <span class="section-kicker" data-i18n="mv.kicker">Identidad</span>
+        <h2 data-i18n="mv.h2">Lo que nos mueve y hacia dónde vamos</h2>
       </div>
-      <div class="vision_mision">
-        <h2 class="vision_mision_tittle">Vision</h2>
-        <p class="body_vision_mision">
-          Ser una de las empresas tecnológicas referentes de Latinoamérica
-          para 2032, reconocida por su excelencia en servicio B2B y por un
-          entorno laboral donde las personas quieren trabajar. Aspiramos a
-          impactar el mercado con soluciones de alta calidad, impulsadas por
-          un equipo valorado, respetado y motivado.
-        </p>
+      <div class="vision-shell">
+        <div class="vision_mision mision-card">
+          <div class="mv-accent"></div>
+          <div class="mv-icon"><i class="bx bx-target-lock"></i></div>
+          <span class="mv-label" data-i18n="mv.mission.label">Misión</span>
+          <h2 class="vision_mision_tittle" data-i18n="mv.mission.h2">Construimos tecnología con propósito</h2>
+          <p class="body_vision_mision" data-i18n="mv.mission.p">
+            En SMED forjamos soluciones tecnológicas honestas, humanas y
+            efectivas. Acompañamos a cada cliente con calidad y excelencia, sin
+            importar su tamaño, para resolver cualquier reto técnico con
+            confianza y eficacia.
+          </p>
+          <div class="mv-footer-line"></div>
+        </div>
+        <div class="vision_mision vision-card">
+          <div class="mv-accent"></div>
+          <div class="mv-icon"><i class="bx bx-trending-up"></i></div>
+          <span class="mv-label" data-i18n="mv.vision.label">Visión</span>
+          <h2 class="vision_mision_tittle" data-i18n="mv.vision.h2">Referentes tecnológicos en Latinoamérica</h2>
+          <p class="body_vision_mision" data-i18n="mv.vision.p">
+            Ser una de las empresas tecnológicas referentes de Latinoamérica
+            para 2032, reconocida por su excelencia en servicio B2B y por un
+            entorno laboral donde las personas quieren trabajar. Aspiramos a
+            impactar el mercado con soluciones de alta calidad, impulsadas por
+            un equipo valorado, respetado y motivado.
+          </p>
+          <div class="mv-footer-line"></div>
+        </div>
       </div>
     </section>
 
@@ -252,12 +421,78 @@
     <whatsapp-container></whatsapp-container>
   </main>
 
- 
+  <div id="particles-js"></div>
 
+  <script src="../scripts/loader.js"></script>
+  <script src="../scripts/i18n.js"></script>
+  <script>
+    // Aplicar idioma guardado antes de que carguen los componentes
+    if (window.SMED_I18N) window.SMED_I18N.initLang();
+  </script>
+  <script src="../scripts/Particles.js"></script>
+  <script src="../scripts/ParticlesConfig.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
   <script type="module" src="../components/BaseComponents.js" defer></script>
+
+  <script>
+    // ── Audio: forjamos.mp3 ──
+    (function () {
+      const btn     = document.getElementById('esloganAudioBtn');
+      const icon    = document.getElementById('esloganAudioIcon');
+      const section = document.getElementById('esloganSection');
+      if (!btn) return;
+
+      const audio = new Audio('../assets/audio/forjamos.mp3');
+      audio.preload = 'metadata';
+
+      // canAutoPlay: true while user wants audio to run (cleared on manual stop)
+      let canAutoPlay = false;
+      let sectionVisible = false;
+
+      const setPlaying = (playing) => {
+        icon.className = playing ? 'bx bx-stop-circle' : 'bx bx-volume-full';
+        btn.classList.toggle('speaking', playing);
+      };
+
+      audio.addEventListener('play',  () => setPlaying(true));
+      audio.addEventListener('pause', () => setPlaying(false));
+      audio.addEventListener('ended', () => { setPlaying(false); canAutoPlay = false; });
+
+      btn.addEventListener('click', () => {
+        if (!audio.paused) {
+          audio.pause();
+          canAutoPlay = false;
+        } else {
+          audio.currentTime = 0;
+          audio.play().catch(() => {});
+          canAutoPlay = true;
+        }
+      });
+
+      // After first user interaction anywhere → try auto-start if section in view
+      document.addEventListener('click', () => {
+        if (sectionVisible && audio.paused && !canAutoPlay) {
+          audio.play().then(() => { canAutoPlay = true; }).catch(() => {});
+        }
+      }, { once: true });
+
+      // Pause when section leaves view, resume when it returns
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          sectionVisible = entry.isIntersecting;
+          if (entry.isIntersecting && canAutoPlay && audio.paused) {
+            audio.play().catch(() => {});
+          } else if (!entry.isIntersecting && !audio.paused) {
+            audio.pause();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(section);
+    })();
+  </script>
 </body>
 
 </html>

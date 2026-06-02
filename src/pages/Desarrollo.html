@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SMED Dev — Desarrollo de software, automatizaciones, inteligencia artificial y agentes inteligentes para empresas y profesionales." />
+  <meta name="keywords" content="desarrollo web, software a medida, inteligencia artificial, automatización, agentes IA, SMED Technology" />
+  <meta name="author" content="Diego White" />
+  <meta name="robots" content="index, follow" />
+  <title>SMED Dev | Desarrollo, IA & Automatización</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="../assets/icons/MainIcon.webp" type="image/png" />
+  <link rel="stylesheet" href="../styles/ServiceLanding.css" />
+  <link rel="stylesheet" href="../styles/Dev.css" />
+  <link rel="stylesheet" href="../components/NavigationBar/NavigationBar.css" />
+  <link rel="stylesheet" href="../components/Footer/Footer.css" />
+  <link rel="stylesheet" href="../components/WhatsApp/WhatsApp.css" />
+  <link rel="stylesheet" href="../styles/Typography.css" />
+</head>
+
+<body>
+  <nav-bar></nav-bar>
+  <div id="particles-js"></div>
+
+  <main>
+
+    <!-- ══ HERO ══ -->
+    <section class="sl-hero dev-hero">
+      <div class="sl-hero-inner dev-hero-inner">
+        <div class="sl-hero-copy">
+          <span class="sl-badge">SMED DEV · SOFTWARE · IA · AUTOMATIZACIÓN</span>
+          <h1 class="sl-hero-h1 dev-hero-h1">
+            Software que<br>
+            <span class="dev-typed-wrap">
+              <span class="dev-typed" id="devTyped"></span><span class="dev-cursor">|</span>
+            </span>
+          </h1>
+          <p class="sl-hero-p">Desarrollamos aplicaciones web, sistemas de automatización e inteligencia artificial para empresas que quieren operar más inteligente y escalar sin límites.</p>
+          <div class="sl-hero-ctas">
+            <a href="#dev-contacto" class="sl-btn-primary"><i class='bx bx-rocket'></i> Iniciar proyecto</a>
+            <a href="#dev-caps" class="sl-btn-secondary"><i class='bx bx-code-block'></i> Ver capacidades</a>
+          </div>
+          <div class="dev-hero-tags">
+            <span><i class='bx bx-check-circle'></i> Web Apps</span>
+            <span><i class='bx bx-check-circle'></i> IA & ML</span>
+            <span><i class='bx bx-check-circle'></i> Agentes</span>
+            <span><i class='bx bx-check-circle'></i> Automatización</span>
+          </div>
+        </div>
+
+        <div class="dev-hero-right">
+          <!-- Terminal animada -->
+          <div class="dev-terminal">
+            <div class="dev-terminal-bar">
+              <span class="dev-t-dot dev-t-dot--r"></span>
+              <span class="dev-t-dot dev-t-dot--y"></span>
+              <span class="dev-t-dot dev-t-dot--g"></span>
+              <span class="dev-t-title">smed_dev ~ terminal</span>
+              <span class="dev-t-live"><span></span>LIVE</span>
+            </div>
+            <div class="dev-terminal-body">
+              <div class="dev-t-line" style="--d:0.2s"><span class="dev-t-prompt">❯</span> <span class="dev-t-cmd">smed init <span class="dev-t-hl">--template=ai-agent</span></span></div>
+              <div class="dev-t-line dev-t-out" style="--d:0.6s">  ✦ Cargando plantilla de agente IA...</div>
+              <div class="dev-t-line dev-t-out" style="--d:1.0s">  ✦ Configurando modelos LLM...</div>
+              <div class="dev-t-line dev-t-out" style="--d:1.4s">  ✦ Conectando APIs externas...</div>
+              <div class="dev-t-line dev-t-ok" style="--d:1.8s">  ✓ Agente desplegado en 2.4s 🚀</div>
+              <div class="dev-t-line" style="--d:2.2s"><span class="dev-t-prompt">❯</span> <span class="dev-t-cursor">█</span></div>
+            </div>
+          </div>
+
+          <!-- Pills de tech stack -->
+          <div class="dev-stack-pills">
+            <span class="dev-spill dev-spill--js"><i class='bx bxl-javascript'></i> JavaScript</span>
+            <span class="dev-spill dev-spill--py"><i class='bx bxl-python'></i> Python</span>
+            <span class="dev-spill dev-spill--re"><i class='bx bxl-react'></i> React</span>
+            <span class="dev-spill dev-spill--ai"><i class='bx bx-brain'></i> OpenAI</span>
+            <span class="dev-spill dev-spill--no"><i class='bx bxl-nodejs'></i> Node.js</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ¿QUÉ CONSTRUIMOS? ══ -->
+    <section class="sl-section dev-caps-section" id="dev-caps">
+      <p class="sl-kicker">CAPACIDADES</p>
+      <h2 class="sl-title">¿Qué construimos?</h2>
+      <p class="sl-subtitle">Desde una landing page hasta un sistema multiagente con IA. Construimos lo que tu negocio necesita para operar más inteligente.</p>
+
+      <div class="dev-caps-grid">
+
+        <div class="dev-cap-card" style="--cc:#0dcaf0">
+          <div class="dev-cap-icon"><i class='bx bx-window-alt'></i></div>
+          <h3 class="dev-cap-title">Web Apps & SaaS</h3>
+          <p class="dev-cap-text">Plataformas web modernas, paneles de control, sistemas internos y productos SaaS escalables con arquitectura limpia.</p>
+          <div class="dev-cap-tags">
+            <span>React</span><span>Next.js</span><span>Node</span>
+          </div>
+        </div>
+
+        <div class="dev-cap-card" style="--cc:#8b5cf6">
+          <div class="dev-cap-icon"><i class='bx bx-brain'></i></div>
+          <h3 class="dev-cap-title">Inteligencia Artificial</h3>
+          <p class="dev-cap-text">Integración de modelos LLM, visión computacional, procesamiento de lenguaje natural y análisis predictivo en tus sistemas.</p>
+          <div class="dev-cap-tags">
+            <span>OpenAI</span><span>LangChain</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="dev-cap-card" style="--cc:#f97316">
+          <div class="dev-cap-icon"><i class='bx bx-cog'></i></div>
+          <h3 class="dev-cap-title">Automatización</h3>
+          <p class="dev-cap-text">Automatizamos procesos repetitivos, flujos de trabajo y tareas de negocio con bots, scripts y pipelines inteligentes.</p>
+          <div class="dev-cap-tags">
+            <span>n8n</span><span>Python</span><span>Zapier API</span>
+          </div>
+        </div>
+
+        <div class="dev-cap-card" style="--cc:#22c55e">
+          <div class="dev-cap-icon"><i class='bx bx-bot'></i></div>
+          <h3 class="dev-cap-title">Agentes Inteligentes</h3>
+          <p class="dev-cap-text">Diseñamos agentes autónomos que razonan, planifican y actúan para resolver tareas complejas sin intervención humana.</p>
+          <div class="dev-cap-tags">
+            <span>LLM Agents</span><span>RAG</span><span>Tools</span>
+          </div>
+        </div>
+
+        <div class="dev-cap-card" style="--cc:#4285F4">
+          <div class="dev-cap-icon"><i class='bx bx-transfer-alt'></i></div>
+          <h3 class="dev-cap-title">APIs & Integraciones</h3>
+          <p class="dev-cap-text">Construimos y conectamos APIs REST/GraphQL para integrar plataformas, ERPs, CRMs y servicios externos.</p>
+          <div class="dev-cap-tags">
+            <span>REST</span><span>GraphQL</span><span>Webhooks</span>
+          </div>
+        </div>
+
+        <div class="dev-cap-card" style="--cc:#FBBC04">
+          <div class="dev-cap-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+          <h3 class="dev-cap-title">Dashboards & Analytics</h3>
+          <p class="dev-cap-text">Visualización de datos en tiempo real, métricas de negocio y reportes automáticos con paneles interactivos.</p>
+          <div class="dev-cap-tags">
+            <span>Charts.js</span><span>PowerBI</span><span>SQL</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ IA & AUTOMATIZACIÓN SPOTLIGHT ══ -->
+    <section class="sl-section dev-ai-section" id="dev-ai">
+      <div class="dev-ai-inner">
+
+        <div class="dev-ai-copy">
+          <p class="sl-kicker">INTELIGENCIA ARTIFICIAL</p>
+          <h2 class="dev-ai-title">Llevamos la IA<br>a tu operación real</h2>
+          <p class="dev-ai-desc">No solo integramos IA — diseñamos sistemas que aprenden, razonan y actúan. Desde chatbots inteligentes hasta agentes autónomos que gestionan tareas complejas sin supervisión humana.</p>
+
+          <div class="dev-ai-features">
+            <div class="dev-ai-feat">
+              <div class="dev-ai-feat-icon" style="--fc:#8b5cf6"><i class='bx bx-conversation'></i></div>
+              <div>
+                <strong>Chatbots & Asistentes</strong>
+                <p>Con contexto de tu negocio, conectados a tus datos.</p>
+              </div>
+            </div>
+            <div class="dev-ai-feat">
+              <div class="dev-ai-feat-icon" style="--fc:#0dcaf0"><i class='bx bx-search-alt'></i></div>
+              <div>
+                <strong>RAG & Búsqueda semántica</strong>
+                <p>Tus documentos y datos consultables en lenguaje natural.</p>
+              </div>
+            </div>
+            <div class="dev-ai-feat">
+              <div class="dev-ai-feat-icon" style="--fc:#22c55e"><i class='bx bx-bot'></i></div>
+              <div>
+                <strong>Agentes autónomos</strong>
+                <p>Sistemas que razonan, usan herramientas y ejecutan tareas.</p>
+              </div>
+            </div>
+            <div class="dev-ai-feat">
+              <div class="dev-ai-feat-icon" style="--fc:#f97316"><i class='bx bx-data'></i></div>
+              <div>
+                <strong>Pipelines de datos con IA</strong>
+                <p>Procesa, clasifica y enriquece datos automáticamente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Red neuronal animada -->
+        <div class="dev-neural-wrap">
+          <svg class="dev-neural" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- conexiones -->
+            <line x1="60" y1="80"  x2="170" y2="50"  class="nn-line" style="--dl:0s"/>
+            <line x1="60" y1="80"  x2="170" y2="130" class="nn-line" style="--dl:0.3s"/>
+            <line x1="60" y1="80"  x2="170" y2="210" class="nn-line" style="--dl:0.6s"/>
+            <line x1="60" y1="170" x2="170" y2="50"  class="nn-line" style="--dl:0.2s"/>
+            <line x1="60" y1="170" x2="170" y2="130" class="nn-line" style="--dl:0.5s"/>
+            <line x1="60" y1="170" x2="170" y2="290" class="nn-line" style="--dl:0.8s"/>
+            <line x1="60" y1="260" x2="170" y2="130" class="nn-line" style="--dl:0.4s"/>
+            <line x1="60" y1="260" x2="170" y2="210" class="nn-line" style="--dl:0.7s"/>
+            <line x1="60" y1="260" x2="170" y2="290" class="nn-line" style="--dl:1.0s"/>
+
+            <line x1="170" y1="50"  x2="280" y2="100" class="nn-line" style="--dl:0.3s"/>
+            <line x1="170" y1="50"  x2="280" y2="200" class="nn-line" style="--dl:0.6s"/>
+            <line x1="170" y1="130" x2="280" y2="100" class="nn-line" style="--dl:0.1s"/>
+            <line x1="170" y1="130" x2="280" y2="200" class="nn-line" style="--dl:0.4s"/>
+            <line x1="170" y1="210" x2="280" y2="100" class="nn-line" style="--dl:0.7s"/>
+            <line x1="170" y1="210" x2="280" y2="200" class="nn-line" style="--dl:0.2s"/>
+            <line x1="170" y1="290" x2="280" y2="200" class="nn-line" style="--dl:0.9s"/>
+
+            <!-- nodos capa 1 -->
+            <circle cx="60" cy="80"  r="10" class="nn-node nn-node--in" style="--dl:0s"/>
+            <circle cx="60" cy="170" r="10" class="nn-node nn-node--in" style="--dl:0.3s"/>
+            <circle cx="60" cy="260" r="10" class="nn-node nn-node--in" style="--dl:0.6s"/>
+
+            <!-- nodos capa 2 (oculta) -->
+            <circle cx="170" cy="50"  r="12" class="nn-node nn-node--hid" style="--dl:0.2s"/>
+            <circle cx="170" cy="130" r="12" class="nn-node nn-node--hid" style="--dl:0.5s"/>
+            <circle cx="170" cy="210" r="12" class="nn-node nn-node--hid" style="--dl:0.8s"/>
+            <circle cx="170" cy="290" r="12" class="nn-node nn-node--hid" style="--dl:1.1s"/>
+
+            <!-- nodo salida -->
+            <circle cx="280" cy="100" r="16" class="nn-node nn-node--out" style="--dl:0.6s"/>
+            <circle cx="280" cy="200" r="16" class="nn-node nn-node--out" style="--dl:1.0s"/>
+
+            <!-- pulso viajando por las líneas -->
+            <circle r="4" class="nn-pulse" style="--dl:0s">
+              <animateMotion dur="1.8s" repeatCount="indefinite" begin="0s">
+                <mpath href="#p1"/>
+              </animateMotion>
+            </circle>
+            <path id="p1" d="M60,170 L170,130 L280,200" class="nn-path-hidden"/>
+
+            <circle r="4" class="nn-pulse nn-pulse--2" style="--dl:0.6s">
+              <animateMotion dur="2.1s" repeatCount="indefinite" begin="0.6s">
+                <mpath href="#p2"/>
+              </animateMotion>
+            </circle>
+            <path id="p2" d="M60,80 L170,210 L280,100" class="nn-path-hidden"/>
+          </svg>
+
+          <!-- etiquetas flotantes sobre la red -->
+          <div class="dev-neural-label dev-nl--1">INPUT</div>
+          <div class="dev-neural-label dev-nl--2">HIDDEN</div>
+          <div class="dev-neural-label dev-nl--3">OUTPUT</div>
+
+          <!-- badge resultado -->
+          <div class="dev-neural-badge">
+            <i class='bx bx-check-circle'></i>
+            <span>Decisión en <strong>12ms</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ TECH STACK ══ -->
+    <section class="sl-section dev-stack-section" id="dev-stack">
+      <p class="sl-kicker">TECNOLOGÍAS</p>
+      <h2 class="sl-title">Nuestro stack tecnológico</h2>
+
+      <div class="dev-stack-categories">
+
+        <div class="dev-stack-cat">
+          <h4 class="dev-stack-cat-title"><i class='bx bx-desktop'></i> Frontend</h4>
+          <div class="dev-stack-items">
+            <div class="dev-stack-item"><i class='bx bxl-html5'></i><span>HTML5</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-css3'></i><span>CSS3</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-react'></i><span>React</span></div>
+          </div>
+        </div>
+
+        <div class="dev-stack-cat">
+          <h4 class="dev-stack-cat-title"><i class='bx bx-server'></i> Backend</h4>
+          <div class="dev-stack-items">
+            <div class="dev-stack-item"><i class='bx bxl-nodejs'></i><span>Node.js</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-python'></i><span>Python</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-php'></i><span>PHP</span></div>
+            <div class="dev-stack-item"><i class='bx bx-data'></i><span>REST API</span></div>
+          </div>
+        </div>
+
+        <div class="dev-stack-cat">
+          <h4 class="dev-stack-cat-title"><i class='bx bx-brain'></i> IA & Datos</h4>
+          <div class="dev-stack-items">
+            <div class="dev-stack-item"><i class='bx bx-bot'></i><span>OpenAI</span></div>
+            <div class="dev-stack-item"><i class='bx bx-link-alt'></i><span>LangChain</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-python'></i><span>TensorFlow</span></div>
+            <div class="dev-stack-item"><i class='bx bx-spreadsheet'></i><span>SQL / NoSQL</span></div>
+          </div>
+        </div>
+
+        <div class="dev-stack-cat">
+          <h4 class="dev-stack-cat-title"><i class='bx bx-wrench'></i> Herramientas</h4>
+          <div class="dev-stack-items">
+            <div class="dev-stack-item"><i class='bx bxl-git'></i><span>Git</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-docker'></i><span>Docker</span></div>
+            <div class="dev-stack-item"><i class='bx bxl-figma'></i><span>Figma</span></div>
+            <div class="dev-stack-item"><i class='bx bx-cloud-upload'></i><span>CI/CD</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ MÉTRICAS DEV STUDIO ══ -->
+    <section class="sl-section dev-metrics-section">
+      <p class="sl-kicker">DEV STUDIO</p>
+      <h2 class="sl-title">Cómo trabajamos</h2>
+      <div class="dev-metrics-grid">
+        <div class="dev-metric-card">
+          <div class="dev-metric-icon"><i class='bx bx-git-branch'></i></div>
+          <strong class="dev-metric-val">2–3 sem</strong>
+          <span class="dev-metric-label">por sprint de entrega</span>
+          <p class="dev-metric-desc">Iteraciones cortas con hitos claros. Valor de negocio desde el primer ciclo.</p>
+        </div>
+        <div class="dev-metric-card dev-metric-card--featured">
+          <div class="dev-metric-icon"><i class='bx bx-expand-alt'></i></div>
+          <strong class="dev-metric-val">Escalable</strong>
+          <span class="dev-metric-label">arquitectura diseñada para crecer</span>
+          <p class="dev-metric-desc">Frontend + Backend + API + IA. Construcción limpia, mantenible y preparada para el futuro.</p>
+        </div>
+        <div class="dev-metric-card">
+          <div class="dev-metric-icon"><i class='bx bx-shield-quarter'></i></div>
+          <strong class="dev-metric-val">100%</strong>
+          <span class="dev-metric-label">código propio y entregado</span>
+          <p class="dev-metric-desc">El código es tuyo desde el día uno. Sin dependencias ocultas ni licencias trampa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PROCESO ══ -->
+    <section class="sl-section sl-section--process" id="dev-proceso">
+      <p class="sl-kicker">METODOLOGÍA</p>
+      <h2 class="sl-title">Proceso de desarrollo</h2>
+      <div class="sl-steps">
+
+        <div class="sl-step">
+          <div class="sl-step-num">01</div>
+          <div class="sl-step-icon"><i class='bx bx-bulb'></i></div>
+          <h3 class="sl-step-title">Discovery</h3>
+          <p class="sl-step-desc">Entendemos el problema real, definimos alcance y diseñamos la arquitectura adecuada.</p>
+        </div>
+        <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
+
+        <div class="sl-step">
+          <div class="sl-step-num">02</div>
+          <div class="sl-step-icon"><i class='bx bxl-figma'></i></div>
+          <h3 class="sl-step-title">Diseño & Prototipo</h3>
+          <p class="sl-step-desc">Interfaces funcionales validadas contigo antes de escribir una sola línea de código.</p>
+        </div>
+        <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
+
+        <div class="sl-step">
+          <div class="sl-step-num">03</div>
+          <div class="sl-step-icon"><i class='bx bx-code-alt'></i></div>
+          <h3 class="sl-step-title">Desarrollo por sprints</h3>
+          <p class="sl-step-desc">Construimos en ciclos cortos con demos reales. Puedes ver el avance desde el sprint 1.</p>
+        </div>
+        <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
+
+        <div class="sl-step">
+          <div class="sl-step-num">04</div>
+          <div class="sl-step-icon"><i class='bx bx-rocket'></i></div>
+          <h3 class="sl-step-title">Deploy & Evolución</h3>
+          <p class="sl-step-desc">Desplegamos, monitoreamos y seguimos mejorando. El producto evoluciona con tu negocio.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ FORMULARIO ══ -->
+    <section class="sl-section sl-section--form" id="dev-contacto">
+      <div class="sl-form-glow"></div>
+      <p class="sl-kicker">INICIAR PROYECTO</p>
+      <h2 class="sl-title">Cuéntanos tu idea</h2>
+      <p class="sl-subtitle">Desde una automatización simple hasta un agente IA complejo. Evaluamos tu proyecto sin costo y te decimos cómo lo haríamos.</p>
+
+      <form class="sl-form" action="/backend/form/FormContact.php" method="POST">
+        <div class="sl-form-row">
+          <div class="sl-form-group">
+            <label for="dev-nombre">Nombre completo</label>
+            <input type="text" id="dev-nombre" name="nombre" placeholder="Tu nombre o empresa" required />
+          </div>
+          <div class="sl-form-group">
+            <label for="dev-email">Correo electrónico</label>
+            <input type="email" id="dev-email" name="email" placeholder="tu@correo.com" required />
+          </div>
+        </div>
+        <div class="sl-form-row">
+          <div class="sl-form-group">
+            <label for="dev-telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="dev-telefono" name="telefono" placeholder="+57 xxx xxx xxxx" />
+          </div>
+          <div class="sl-form-group">
+            <label for="dev-tipo">Tipo de proyecto</label>
+            <select id="dev-tipo" name="tipo" required>
+              <option value="" disabled selected>¿Qué quieres construir?</option>
+              <option value="webapp">Aplicación web / SaaS</option>
+              <option value="ia">Sistema con Inteligencia Artificial</option>
+              <option value="agente">Agente autónomo</option>
+              <option value="automatizacion">Automatización de procesos</option>
+              <option value="api">API / Integraciones</option>
+              <option value="dashboard">Dashboard / Analytics</option>
+              <option value="otro">Otro / No sé exactamente</option>
+            </select>
+          </div>
+        </div>
+        <div class="sl-form-group">
+          <label for="dev-idea">Cuéntanos tu idea</label>
+          <textarea id="dev-idea" name="mensaje" rows="4"
+            placeholder="¿Qué quieres automatizar, construir o mejorar? No necesitas ser técnico — descríbelo como tú lo ves." required></textarea>
+        </div>
+        <button type="submit" class="sl-form-submit">
+          <i class='bx bx-send'></i> Enviar proyecto
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer-page></footer-page>
+  <whatsapp-container></whatsapp-container>
+
+  <script src="../scripts/loader.js"></script>
+  <script src="../scripts/i18n.js"></script>
+  <script> if (window.SMED_I18N) window.SMED_I18N.initLang(); </script>
+  <script src="../scripts/Particles.js"></script>
+  <script src="../scripts/ParticlesConfig.js"></script>
+  <script>
+    // Typing effect hero
+    const phrases = [
+      'trabaja para ti',
+      'automatiza procesos',
+      'aprende y evoluciona',
+      'conecta con IA',
+      'escala tu negocio',
+    ];
+    let pi = 0, ci = 0, deleting = false;
+    const el = document.getElementById('devTyped');
+    if (el) {
+      const type = () => {
+        const phrase = phrases[pi];
+        el.textContent = deleting ? phrase.slice(0, ci--) : phrase.slice(0, ci++);
+        if (!deleting && ci > phrase.length)      { deleting = true; setTimeout(type, 1400); return; }
+        if (deleting && ci < 0)                    { deleting = false; pi = (pi + 1) % phrases.length; ci = 0; }
+        setTimeout(type, deleting ? 45 : 85);
+      };
+      setTimeout(type, 800);
+    }
+
+    // Animate terminal lines on scroll
+    const termLines = document.querySelectorAll('.dev-t-line');
+    termLines.forEach(l => l.style.opacity = '0');
+    const termObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        termLines.forEach((l, i) => {
+          setTimeout(() => { l.style.opacity = '1'; l.style.transition = 'opacity 0.4s ease'; }, i * 400);
+        });
+        termObs.disconnect();
+      });
+    }, { threshold: 0.4 });
+    const term = document.querySelector('.dev-terminal');
+    if (term) termObs.observe(term);
+  </script>
+  <script type="module" src="../components/BaseComponents.js" defer></script>
+</body>
+
+</html>
