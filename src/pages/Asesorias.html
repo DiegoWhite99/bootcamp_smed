@@ -11,12 +11,12 @@
   <title>Asesorías | SMED Technology</title>
 
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="icon" href="../assets/icons/MainIcon.webp" type="image/png" />
-  <link rel="stylesheet" href="../styles/ServiceLanding.css" />
-  <link rel="stylesheet" href="../components/NavigationBar/NavigationBar.css" />
-  <link rel="stylesheet" href="../components/Footer/Footer.css" />
-  <link rel="stylesheet" href="../components/WhatsApp/WhatsApp.css" />
-  <link rel="stylesheet" href="../styles/Typography.css" />
+  <link rel="icon" href="/src/assets/icons/MainIcon.webp" type="image/png" />
+  <link rel="stylesheet" href="/src/styles/ServiceLanding.css" />
+  <link rel="stylesheet" href="/src/components/NavigationBar/NavigationBar.css" />
+  <link rel="stylesheet" href="/src/components/Footer/Footer.css" />
+  <link rel="stylesheet" href="/src/components/WhatsApp/WhatsApp.css" />
+  <link rel="stylesheet" href="/src/styles/Typography.css" />
 </head>
 
 <body>
@@ -34,7 +34,7 @@
           <p class="sl-hero-p">Desde organizar tu setup personal hasta modernizar la infraestructura de tu empresa. SMED te guía con criterio, claridad y acompañamiento real — sin tecnicismos innecesarios.</p>
           <div class="sl-hero-ctas">
             <a href="#sl-contacto" class="sl-btn-primary"><i class='bx bx-calendar-check'></i> Agendar consulta</a>
-            <a href="Services.html" class="sl-btn-secondary"><i class='bx bx-grid-alt'></i> Ver todos los servicios</a>
+            <a href="/servicios" class="sl-btn-secondary"><i class='bx bx-grid-alt'></i> Ver todos los servicios</a>
           </div>
         </div>
         <div class="sl-hero-visual">
@@ -166,7 +166,7 @@
           </a>
         </div>
         <div class="lina-banner-visual">
-          <img src="../assets/images/lina.png" alt="SMED Technology" class="lina-character" />
+          <img src="/src/assets/images/lina.png" alt="SMED Technology" class="lina-character" />
         </div>
       </div>
     </section>
@@ -183,35 +183,35 @@
           <div class="sl-area-icon" style="--c: rgba(13,202,240,0.7)"><i class='bx bx-desktop'></i></div>
           <h3 class="sl-area-title">Soporte técnico</h3>
           <p class="sl-area-text">Diagnóstico, reparación y optimización de equipos, computadoras, móviles y periféricos.</p>
-          <a href="Soporte.html" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="/soporte" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
         <div class="sl-area-card">
           <div class="sl-area-icon" style="--c: rgba(66,133,244,0.7)"><i class='bx bx-network-chart'></i></div>
           <h3 class="sl-area-title">Redes e infraestructura</h3>
           <p class="sl-area-text">Diseño, implementación y optimización de redes LAN/WAN, Wi-Fi y conectividad empresarial.</p>
-          <a href="Redes.html" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="/redes" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
         <div class="sl-area-card">
           <div class="sl-area-icon" style="--c: rgba(52,168,83,0.7)"><i class='bx bx-code-alt'></i></div>
           <h3 class="sl-area-title">Desarrollo web y software</h3>
           <p class="sl-area-text">Orientación para digitalizar, desarrollar productos digitales o evaluar soluciones a medida.</p>
-          <a href="Desarrollo.html" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="/desarrollo" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
         <div class="sl-area-card">
           <div class="sl-area-icon" style="--c: rgba(139,92,246,0.7)"><i class='bx bx-cloud'></i></div>
           <h3 class="sl-area-title">Cloud y hosting</h3>
           <p class="sl-area-text">Elección de plataformas cloud, migración de servicios, servidores y gestión de hosting.</p>
-          <a href="Cloud.html" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="/cloud" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
         <div class="sl-area-card">
           <div class="sl-area-icon" style="--c: rgba(251,188,4,0.7)"><i class='bx bx-cctv'></i></div>
           <h3 class="sl-area-title">Videovigilancia</h3>
           <p class="sl-area-text">Diseño de sistemas CCTV, cámaras IP y circuitos cerrados para hogares y empresas.</p>
-          <a href="Services.html" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="/servicios" class="sl-area-link">Ver servicio <i class='bx bx-right-arrow-alt'></i></a>
         </div>
 
         <div class="sl-area-card">
@@ -368,13 +368,13 @@
   <footer-page></footer-page>
   <whatsapp-container></whatsapp-container>
 
-  <script src="../scripts/loader.js"></script>
-  <script src="../scripts/i18n.js"></script>
+  <script src="/src/scripts/loader.js"></script>
+  <script src="/src/scripts/i18n.js"></script>
   <script> if (window.SMED_I18N) window.SMED_I18N.initLang(); </script>
-  <script src="../scripts/Particles.js"></script>
-  <script src="../scripts/ParticlesConfig.js"></script>
-  <script src="../../backend/form/FormHandler.js"></script>
-  <script type="module" src="../components/BaseComponents.js" defer></script>
+  <script src="/src/scripts/Particles.js"></script>
+  <script src="/src/scripts/ParticlesConfig.js"></script>
+  <script src="/backend/form/FormHandler.js"></script>
+  <script type="module" src="/src/components/BaseComponents.js" defer></script>
 </body>
 
 </html>

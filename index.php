@@ -1,4 +1,4 @@
 <?php
-header("Location: src/pages/AboutUs.html");
+header("Location: /nosotros");
 exit();
 ?>
