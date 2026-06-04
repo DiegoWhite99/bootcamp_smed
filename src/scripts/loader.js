@@ -270,7 +270,7 @@
     <div class="sl-center">
       <div class="sl-logo-wrap">
         <div class="sl-orbit"></div>
-        <img src="../assets/icons/MainIcon.webp" class="sl-logo" alt="" />
+        <img src="/src/assets/icons/MainIcon.webp" class="sl-logo" alt="" />
       </div>
       <div class="sl-divider"></div>
       <p class="sl-brand">SMED</p>
