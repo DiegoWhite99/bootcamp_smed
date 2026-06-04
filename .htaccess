@@ -2,32 +2,36 @@
 #  SMED Technology — URLs limpias (LiteSpeed/Apache)
 # ════════════════════════════════════════════════
 RewriteEngine On
+RewriteBase /
 Options -MultiViews
 
-# ── 1) Redirigir (301) las URLs viejas a las limpias ──
-#    Solo actúa sobre la petición original del navegador (evita bucles)
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?AboutUs(\.html)?[\s?] [NC]
+# ── 1) Redirigir (301) las URLs viejas (.html) a las limpias ──
+#    Exige .html para NO disparar sobre las URLs limpias (evita bucles)
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?AboutUs\.html[\s?] [NC]
 RewriteRule ^ /nosotros [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Services(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Services\.html[\s?] [NC]
 RewriteRule ^ /servicios [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Soporte(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Soporte\.html[\s?] [NC]
 RewriteRule ^ /soporte [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Redes(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Redes\.html[\s?] [NC]
 RewriteRule ^ /redes [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Cloud(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Cloud\.html[\s?] [NC]
 RewriteRule ^ /cloud [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Desarrollo(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Desarrollo\.html[\s?] [NC]
 RewriteRule ^ /desarrollo [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Asesorias(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Asesorias\.html[\s?] [NC]
 RewriteRule ^ /asesorias [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Blog(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Blog\.html[\s?] [NC]
 RewriteRule ^ /blog [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Store(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Store\.html[\s?] [NC]
 RewriteRule ^ /tienda [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Experiences(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?Experiences\.html[\s?] [NC]
 RewriteRule ^ /experiencias [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(src/pages/)?login(\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/+(src/pages/)?login\.html[\s?] [NC]
 RewriteRule ^ /login [R=301,L]
+# Cualquier otra URL vieja /src/pages/loquesea.html → quitar prefijo y .html
+RewriteCond %{THE_REQUEST} \s/+src/pages/([^/.\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
 
 # ── 2) Servir archivos/carpetas reales tal cual (css, js, imágenes) ──
 RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -35,14 +39,14 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # ── 3) Mapear las URLs limpias a los archivos reales (interno) ──
-RewriteRule ^nosotros/?$    src/pages/AboutUs.html    [L]
-RewriteRule ^servicios/?$   src/pages/Services.html   [L]
-RewriteRule ^soporte/?$     src/pages/Soporte.html    [L]
-RewriteRule ^redes/?$       src/pages/Redes.html      [L]
-RewriteRule ^cloud/?$       src/pages/Cloud.html      [L]
-RewriteRule ^desarrollo/?$  src/pages/Desarrollo.html [L]
-RewriteRule ^asesorias/?$   src/pages/Asesorias.html  [L]
-RewriteRule ^blog/?$        src/pages/Blog.html       [L]
-RewriteRule ^tienda/?$      src/pages/Store.html      [L]
+RewriteRule ^nosotros/?$     src/pages/AboutUs.html     [L]
+RewriteRule ^servicios/?$    src/pages/Services.html    [L]
+RewriteRule ^soporte/?$      src/pages/Soporte.html     [L]
+RewriteRule ^redes/?$        src/pages/Redes.html       [L]
+RewriteRule ^cloud/?$        src/pages/Cloud.html       [L]
+RewriteRule ^desarrollo/?$   src/pages/Desarrollo.html  [L]
+RewriteRule ^asesorias/?$    src/pages/Asesorias.html   [L]
+RewriteRule ^blog/?$         src/pages/Blog.html        [L]
+RewriteRule ^tienda/?$       src/pages/Store.html       [L]
 RewriteRule ^experiencias/?$ src/pages/Experiences.html [L]
-RewriteRule ^login/?$       src/pages/login.html      [L]
+RewriteRule ^login/?$        src/pages/login.html       [L]
