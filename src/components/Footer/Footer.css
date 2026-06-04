@@ -190,6 +190,26 @@
   font-weight: 600;
 }
 
+.footer-version {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  font-family: 'Orbitron', monospace, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  color: rgba(13,202,240,0.85);
+  background: rgba(13,202,240,0.08);
+  border: 1px solid rgba(13,202,240,0.25);
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+[data-theme="light"] .footer-version {
+  color: #0077b6;
+  background: rgba(0,119,182,0.08);
+  border-color: rgba(0,119,182,0.25);
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; }
