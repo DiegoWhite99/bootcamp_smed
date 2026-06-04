@@ -3,7 +3,7 @@ export default class NavigationBar extends HTMLElement {
   async connectedCallback() {
     // Cargar el HTML
     const resp = await fetch(
-      "../components/NavigationBar/NavigationBar.html"
+      "/src/components/NavigationBar/NavigationBar.html"
     );
     const html = await resp.text();
     this.innerHTML = html;
