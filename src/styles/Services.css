@@ -1760,6 +1760,191 @@ body {
 }
 
 /* ══════════════════════════════
+   RESPONSIVE — mejoras generales
+══════════════════════════════ */
+
+/* Hero — tablet */
+@media (max-width: 768px) {
+  .principal_section {
+    padding: 100px 20px 60px;
+  }
+
+  .tittle_principal h2 {
+    margin: 0 0 36px;
+    letter-spacing: 4px;
+  }
+
+  .hero-ctas {
+    margin-bottom: 36px;
+  }
+}
+
+/* Hero — móvil */
+@media (max-width: 480px) {
+  .principal_section {
+    padding: 88px 16px 48px;
+  }
+
+  .tittle_principal h2 {
+    margin: 0 0 22px;
+    letter-spacing: 3px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 0.82rem;
+    justify-content: center;
+  }
+
+  .service_item {
+    width: 120px;
+    min-height: 140px;
+    padding: 26px 14px 18px;
+  }
+
+  .service_item img {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .services_section {
+    gap: 14px;
+  }
+}
+
+/* Hero — móvil XS */
+@media (max-width: 360px) {
+  .service_item {
+    width: 100px;
+    min-height: 120px;
+    padding: 20px 10px 14px;
+  }
+
+  .service_item img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+  }
+
+  .services_section {
+    gap: 10px;
+  }
+}
+
+/* Stats bar — 2 columnas en móvil */
+@media (max-width: 480px) {
+  .stats-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 0;
+    padding: 36px 16px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-item {
+    padding: 0 12px;
+  }
+}
+
+/* Carousel — pantallas muy pequeñas */
+@media (max-width: 380px) {
+  .carousel-nav {
+    display: none;
+  }
+
+  .carousel-viewport {
+    padding: 8px 12px 20px;
+  }
+
+  .smed-carousel-item {
+    min-width: 92vw;
+  }
+}
+
+/* Secciones inferiores — padding en móvil */
+@media (max-width: 640px) {
+  .section-cualidades {
+    padding: 60px 20px;
+  }
+
+  .our_cualitestittle {
+    margin-bottom: 36px;
+  }
+
+  .section-servicio-flujo {
+    padding: 70px 16px 60px;
+  }
+
+  .title-servicio {
+    margin-bottom: 44px;
+  }
+
+  .section-contacto {
+    padding: 70px 16px 60px;
+  }
+
+  .section-cta-final {
+    padding: 70px 20px 60px;
+  }
+
+  .cta-glow {
+    width: 320px;
+    height: 180px;
+  }
+}
+
+/* Pasos — ancho reducido en móvil */
+@media (max-width: 480px) {
+  .step {
+    width: min(300px, 90vw);
+    padding: 28px 18px 24px;
+  }
+}
+
+/* CTA botones — apilar en móvil */
+@media (max-width: 480px) {
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+/* Formulario — padding en móvil */
+@media (max-width: 480px) {
+  .form-tech {
+    padding: 24px 14px;
+    border-radius: 14px;
+  }
+
+  .form-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ══════════════════════════════
    LIGHT THEME
 ══════════════════════════════ */
 [data-theme="light"] body {
