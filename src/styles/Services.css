@@ -26,12 +26,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+img, svg, video {
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   color: var(--text);
   background:
     radial-gradient(circle at 12% 16%, rgba(245, 245, 245, 0.06), transparent 20%),
@@ -1618,6 +1625,7 @@ body {
   margin: 0 auto;
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 .section-contacto::before {
@@ -1783,6 +1791,11 @@ body {
 @media (max-width: 480px) {
   .principal_section {
     padding: 88px 16px 48px;
+  }
+
+  .tittle_principal h1 {
+    letter-spacing: 1px;
+    word-break: break-word;
   }
 
   .tittle_principal h2 {
