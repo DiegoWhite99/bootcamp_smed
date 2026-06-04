@@ -10,12 +10,17 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-// ── Recibir y sanitizar datos ─────────────────────────────
-$nombre   = trim(filter_input(INPUT_POST, 'nombre',   FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
-$email    = trim(filter_input(INPUT_POST, 'email',    FILTER_SANITIZE_EMAIL) ?? '');
-$telefono = trim(filter_input(INPUT_POST, 'telefono', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
-$servicio = trim(filter_input(INPUT_POST, 'servicio', FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
-$mensaje  = trim(filter_input(INPUT_POST, 'mensaje',  FILTER_SANITIZE_SPECIAL_CHARS) ?? '');
+// ── Helper de sanitización ────────────────────────────────
+$clean = fn($v) => trim(htmlspecialchars(strip_tags((string) $v), ENT_QUOTES, 'UTF-8'));
+
+// ── Recibir y sanitizar datos principales ─────────────────
+$nombre   = $clean($_POST['nombre']   ?? '');
+$email    = trim(filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL));
+$telefono = $clean($_POST['telefono'] ?? '');
+$mensaje  = $clean($_POST['mensaje']  ?? '');
+
+// El campo de "servicio" varía según el formulario (servicio / tipo / tipo_cliente)
+$servicio = $clean($_POST['servicio'] ?? $_POST['tipo'] ?? $_POST['tipo_cliente'] ?? '');
 
 // ── Validaciones ──────────────────────────────────────────
 if (!$nombre || !$email || !$mensaje) {
@@ -29,6 +34,14 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
+// ── Campos extra (area, dispositivo, etc.) — no perder nada ─
+$camposBase = ['nombre', 'email', 'telefono', 'mensaje', 'servicio', 'tipo', 'tipo_cliente'];
+$extrasTxt  = '';
+foreach ($_POST as $k => $v) {
+    if (in_array($k, $camposBase, true) || $v === '' || is_array($v)) continue;
+    $extrasTxt .= ucfirst($k) . ": " . $clean($v) . "\n";
+}
+
 // ── Cargar configuración SMTP ─────────────────────────────
 $configFile = __DIR__ . '/config.php';
 $cfg = is_file($configFile) ? require $configFile : null;
@@ -37,8 +50,12 @@ $asunto    = "Nuevo contacto web: " . ($servicio ?: "Consulta general");
 $contenido = "Nombre: $nombre\n"
            . "Email: $email\n"
            . "Teléfono: " . ($telefono ?: "-") . "\n"
-           . "Servicio: " . ($servicio ?: "-") . "\n\n"
-           . "Mensaje:\n$mensaje\n";
+           . "Servicio: " . ($servicio ?: "-") . "\n"
+           . ($extrasTxt ?: "")
+           . "\nMensaje:\n$mensaje\n";
+
+// Para el historial en BD, guardamos los extras junto al mensaje
+$mensajeBD = $extrasTxt ? ($mensaje . "\n\n---\n" . $extrasTxt) : $mensaje;
 
 // ── Guardar en base de datos (no bloquea el envío si falla) ─
 if ($cfg) {
@@ -55,7 +72,7 @@ if ($cfg) {
                 ':email'    => $email,
                 ':telefono' => $telefono ?: null,
                 ':servicio' => $servicio ?: null,
-                ':mensaje'  => $mensaje,
+                ':mensaje'  => $mensajeBD,
                 ':ip'       => $_SERVER['REMOTE_ADDR'] ?? null,
             ]);
         } catch (\Throwable $e) {
