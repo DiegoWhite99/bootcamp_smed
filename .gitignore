@@ -1,5 +1,7 @@
 backend/node_modules
 backend/.env
+blog-agents/config.py
+blog-agents/pipeline.log
 backend/package-lock.json
 backend/tsconfig.json
 backend/logs

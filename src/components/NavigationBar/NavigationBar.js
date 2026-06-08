@@ -97,7 +97,6 @@ export default class NavigationBar extends HTMLElement {
     const navKeys = {
       about:   this.querySelector('a[href="/src/pages/AboutUs.html"].link'),
       services: this.querySelector('a[href="/src/pages/Services.html"].link'),
-      blog:    this.querySelector('a[href="/src/pages/Blog.html"].link'),
       dev:     this.querySelector('a[href="/src/pages/Desarrollo.html"]'),
       networks: this.querySelector('a[href="/src/pages/Redes.html"].sublink:first-of-type'),
       cloud:   this.querySelector('a[href="/src/pages/Cloud.html"]'),
@@ -111,7 +110,6 @@ export default class NavigationBar extends HTMLElement {
       if (!t) return;
       if (navKeys.about)    navKeys.about.textContent    = t['nav.about'];
       if (navKeys.services) navKeys.services.textContent = t['nav.services'];
-      if (navKeys.blog)     navKeys.blog.textContent     = t['nav.blog'];
       if (navKeys.dev)      navKeys.dev.textContent      = t['nav.sub.dev'];
       if (navKeys.cloud)    navKeys.cloud.textContent    = t['nav.sub.cloud'];
       if (navKeys.support)  navKeys.support.textContent  = t['nav.sub.support'];

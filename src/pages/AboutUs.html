@@ -461,6 +461,12 @@
       audio.addEventListener('ended', () => { setPlaying(false); canAutoPlay = false; });
 
       btn.addEventListener('click', () => {
+        // En móvil el menú desplegable se solapa con este botón (ambos a la
+        // derecha): si el menú está abierto, ignorar el toque para que
+        // interactuar con el menú no dispare el audio.
+        const navMenu = document.getElementById('navMenu');
+        if (navMenu && navMenu.classList.contains('show')) return;
+
         if (!audio.paused) {
           audio.pause();
           canAutoPlay = false;
@@ -471,12 +477,8 @@
         }
       });
 
-      // After first user interaction anywhere → try auto-start if section in view
-      document.addEventListener('click', () => {
-        if (sectionVisible && audio.paused && !canAutoPlay) {
-          audio.play().then(() => { canAutoPlay = true; }).catch(() => {});
-        }
-      }, { once: true });
+      // El audio solo se activa cuando el usuario pulsa el botón de audio,
+      // no con cualquier clic en la página (menú, enlaces, etc.).
 
       // Pause when section leaves view, resume when it returns
       const observer = new IntersectionObserver((entries) => {
