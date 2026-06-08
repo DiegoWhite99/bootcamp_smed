@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+body,
+p,
+li,
+a,
+button,
+input,
+textarea,
+label,
+small,
+figcaption,
+blockquote,
+td,
+th,
+select {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-subtitle,
+.section-kicker,
+.service-label,
+.nav-brand-text span,
+.nav-brand-text p,
+.nav-logo p,
+.hero-badge,
+.carousel-title,
+.slider-title,
+.card-title,
+.vision_mision_tittle,
+.eslogan-title,
+.brand-copy-block span,
+.brand-copy-block strong,
+.trust-copy h2,
+.trust-card h3,
+.badge,
+.top {
+  font-family: Verdana, sans-serif !important;
+}

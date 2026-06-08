@@ -1,6 +1,16 @@
 # Estado actual del proyecto SMED Technology
 
-Fecha de revisión: 2026-02-20
+Fecha de revisión: 2026-06-08
+
+## Historial de versiones
+- **v1.3.0** (2026-06-08): Integración del blog público (`https://blog.smedtech.com.co/`) enlazado desde el navbar y el footer. Se retira la página interna `/blog` (Blog.html, Blog.css, ruta en `.htaccess`, botón en Services) en favor del subdominio. URLs limpias en español y correcciones de rutas relativas.
+- **v1.2.0**: Versión previa de la web estática con formulario de contacto PHP.
+
+## Arquitectura del blog (decisión)
+- El blog vive en el **subdominio `blog.smedtech.com.co`**, no en una subcarpeta `/blog` del sitio principal.
+- **Frontend del blog**: alojado en Hostinger. **Backend / generación de contenido**: pipeline propio on-premise (agentes que generan noticias técnicas a partir de ArXiv).
+- **Motivo**: separación de stacks y ciclos de despliegue ("juntos pero no revueltos") — la web corporativa (estática + PHP) y el blog (pipeline automatizado) evolucionan y se despliegan de forma independiente, sin acoplarse. El subdominio evita exponer/proxyear el backend on-premise.
+- **Compensación SEO** (el contenido busca generar tráfico → clientes): enlazado cruzado fuerte blog ↔ servicios, CTAs comerciales dentro de los artículos, branding consistente y ambas propiedades agrupadas en Google Search Console.
 
 ## Resumen ejecutivo
 - El proyecto tiene una **base frontend sólida** con múltiples páginas HTML, componentes reutilizables y activos multimedia organizados.

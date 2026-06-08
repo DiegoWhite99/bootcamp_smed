@@ -50,7 +50,7 @@ function registrarCaso(origen) {
     <p>✅ Registro exitoso (${origen === "asistente" ? "Laboratorio" : "Cliente"}).<br>
     Tu número de caso es: <strong>${caseId}</strong></p>
     <div style="margin-top:12px;">
-      <a href="progreso.html?case=${caseId}" class="ingresar-btn">Ver progreso</a>
+      <a href="/src/pages/progreso.html?case=${caseId}" class="ingresar-btn">Ver progreso</a>
     </div>
   `;
 }
