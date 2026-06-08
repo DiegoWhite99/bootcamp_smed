@@ -461,6 +461,12 @@
       audio.addEventListener('ended', () => { setPlaying(false); canAutoPlay = false; });
 
       btn.addEventListener('click', () => {
+        // En móvil el menú desplegable se solapa con este botón (ambos a la
+        // derecha): si el menú está abierto, ignorar el toque para que
+        // interactuar con el menú no dispare el audio.
+        const navMenu = document.getElementById('navMenu');
+        if (navMenu && navMenu.classList.contains('show')) return;
+
         if (!audio.paused) {
           audio.pause();
           canAutoPlay = false;

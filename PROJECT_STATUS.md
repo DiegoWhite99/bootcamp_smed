@@ -3,6 +3,7 @@
 Fecha de revisión: 2026-06-08
 
 ## Historial de versiones
+- **v1.3.1** (2026-06-08): Fix audio eslogan en móvil — el botón de audio se solapaba con el menú desplegable (ambos a la derecha); ahora se ignora el botón mientras el menú móvil está abierto, evitando que interactuar con el menú dispare el audio.
 - **v1.3.0** (2026-06-08): Integración del blog público (`https://blog.smedtech.com.co/`) enlazado desde el navbar y el footer. Se retira la página interna `/blog` (Blog.html, Blog.css, ruta en `.htaccess`, botón en Services) en favor del subdominio. URLs limpias en español y correcciones de rutas relativas.
 - **v1.2.0**: Versión previa de la web estática con formulario de contacto PHP.
 
