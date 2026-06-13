@@ -155,6 +155,96 @@ export default class NavigationBar extends HTMLElement {
         applyTheme(current === "light" ? "dark" : "light");
       });
     }
+
+    // ── Guirnalda de banderitas del mundo 🎏 ──
+    this.buildBunting();
+
+    // ── Balón pateable ⚽ ──
+    this.buildBall();
+
+    // ── Banner de campaña mundialista 📣 (solo donde se pida con el atributo "campaign") ──
+    if (this.hasAttribute("campaign")) this.buildCampaignBanner();
+  }
+
+  buildCampaignBanner() {
+    // Evitar duplicados si hubiera más de una nav-bar
+    if (document.querySelector(".nav-campaign")) return;
+
+    const banner = document.createElement("div");
+    banner.className = "nav-campaign";
+    banner.setAttribute("role", "region");
+    banner.setAttribute("aria-label", "Campaña Mundial 2026");
+    banner.innerHTML = `
+      <p class="nav-campaign-text">
+        🇨🇴 Este Mundial, tu empresa también juega en <b>primera</b> — lleva tu tecnología al siguiente nivel
+      </p>
+      <a href="/asesorias" class="nav-campaign-cta">Agenda tu asesoría ⚽</a>
+      <button class="nav-campaign-close" type="button" aria-label="Cerrar">&times;</button>
+    `;
+
+    this.appendChild(banner);
+
+    // Animación de entrada
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => banner.classList.add("show"));
+    });
+
+    // Cerrar (solo para esta vista; al recargar vuelve a salir)
+    banner.querySelector(".nav-campaign-close").addEventListener("click", () => {
+      banner.classList.remove("show");
+      setTimeout(() => banner.remove(), 550);
+    });
+  }
+
+  buildBall() {
+    const navbar = this.querySelector(".navbar-smed");
+    if (!navbar) return;
+
+    const ball = document.createElement("span");
+    ball.className = "nav-ball";
+    ball.textContent = "⚽";
+    ball.setAttribute("aria-hidden", "true");
+    navbar.appendChild(ball);
+  }
+
+  buildBunting() {
+    const navbar = this.querySelector(".navbar-smed");
+    if (!navbar) return;
+
+    // Banderas (aproximadas con degradados) de selecciones mundialistas
+    const flags = {
+      Colombia:   "linear-gradient(180deg,#fcd116 0 50%,#003893 50% 75%,#ce1126 75%)",
+      Argentina:  "linear-gradient(180deg,#75aadb 0 33%,#fff 33% 66%,#75aadb 66%)",
+      Brasil:     "radial-gradient(circle,#ffdf00 32%,#009b3a 33%)",
+      Alemania:   "linear-gradient(180deg,#000 0 33%,#dd0000 33% 66%,#ffce00 66%)",
+      Francia:    "linear-gradient(90deg,#0055a4 0 33%,#fff 33% 66%,#ef4135 66%)",
+      España:     "linear-gradient(180deg,#aa151b 0 25%,#f1bf00 25% 75%,#aa151b 75%)",
+      Italia:     "linear-gradient(90deg,#009246 0 33%,#fff 33% 66%,#ce2b37 66%)",
+      Holanda:    "linear-gradient(180deg,#ae1c28 0 33%,#fff 33% 66%,#21468b 66%)",
+      Portugal:   "linear-gradient(90deg,#006600 0 40%,#ff0000 40%)",
+      Mexico:     "linear-gradient(90deg,#006847 0 33%,#fff 33% 66%,#ce1126 66%)",
+      Belgica:    "linear-gradient(90deg,#000 0 33%,#fdda24 33% 66%,#ef3340 66%)",
+      Uruguay:    "linear-gradient(180deg,#fff 0 25%,#0038a8 25% 38%,#fff 38% 62%,#0038a8 62% 75%,#fff 75%)",
+    };
+
+    const names = Object.keys(flags);
+    const bunting = document.createElement("div");
+    bunting.className = "nav-bunting";
+    bunting.setAttribute("aria-hidden", "true");
+
+    // Una banderita cada ~46px de ancho de pantalla
+    const count = Math.max(8, Math.floor(window.innerWidth / 46));
+    for (let i = 0; i < count; i++) {
+      const name = names[i % names.length];
+      const flag = document.createElement("span");
+      flag.className = "nav-flag";
+      flag.title = name;
+      flag.style.background = flags[name];
+      flag.style.animationDelay = `${(i % 6) * 0.15}s`;
+      bunting.appendChild(flag);
+    }
+
+    navbar.appendChild(bunting);
   }
 }
 
