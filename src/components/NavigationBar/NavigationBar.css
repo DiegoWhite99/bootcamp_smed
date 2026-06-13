@@ -26,6 +26,185 @@
   box-sizing: border-box;
 }
 
+/* ── Guirnalda de banderitas del mundo 🎏 ── */
+.nav-bunting {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  pointer-events: none;
+  z-index: 3;
+  padding: 0 14px;
+  /* cuerda de la que cuelgan */
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-flag {
+  position: relative;
+  width: 20px;
+  height: 14px;
+  border-radius: 0 0 1px 1px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);
+  transform-origin: top center;
+  animation: navFlagWave 3.5s ease-in-out infinite;
+}
+
+/* hilito que une la bandera a la cuerda */
+.nav-flag::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 1px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+@keyframes navFlagWave {
+  0%, 100% { transform: rotate(-5deg); }
+  50%      { transform: rotate(5deg); }
+}
+
+/* Balón rodando bajo la guirnalda ⚽ */
+.nav-ball {
+  position: absolute;
+  bottom: 2px;
+  left: -40px;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+  animation: mundialBallRoll 16s linear infinite;
+}
+
+@keyframes mundialBallRoll {
+  0% { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(calc(100vw + 80px)) rotate(2880deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-ball { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-flag {
+    animation: none;
+  }
+  .navbar-smed::before {
+    display: none;
+  }
+}
+
+/* ── Banner de campaña mundialista con CTA 📣 ── */
+.nav-campaign {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 48px 10px 18px;
+  background: linear-gradient(90deg, rgba(8, 27, 59, 0.97) 0%, rgba(5, 5, 5, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+  font-family: "Poppins", sans-serif;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease;
+}
+.nav-campaign.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* acento tricolor superior */
+.nav-campaign::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #fcd116 0 33%, #003893 33% 66%, #ce1126 66%);
+}
+
+.nav-campaign-text {
+  color: #f5f5f5;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+.nav-campaign-text b {
+  color: #fcd116;
+  font-weight: 700;
+}
+
+.nav-campaign-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fcd116 0%, #f0a500 100%);
+  color: #0a1430;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.nav-campaign-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(252, 209, 22, 0.4);
+}
+
+.nav-campaign-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  color: rgba(245, 245, 245, 0.7);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: color 0.25s ease;
+}
+.nav-campaign-close:hover {
+  color: #fff;
+}
+
+[data-theme="light"] .nav-campaign {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.97) 0%, rgba(236, 246, 255, 0.98) 100%);
+  border-bottom-color: rgba(8, 155, 219, 0.15);
+}
+[data-theme="light"] .nav-campaign-text {
+  color: #0f172a;
+}
+[data-theme="light"] .nav-campaign-text b {
+  color: #0f52be;
+}
+[data-theme="light"] .nav-campaign-close {
+  color: rgba(15, 23, 42, 0.6);
+}
+[data-theme="light"] .nav-campaign-close:hover {
+  color: #0f172a;
+}
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -45,6 +224,28 @@
   flex-direction: column;
   justify-content: center;
   line-height: 1;
+}
+
+/* Banderita de Colombia ondeando junto a la marca 🇨🇴 */
+.nav-brand-flag {
+  width: 22px;
+  height: 15px;
+  align-self: center;
+  border-radius: 0 2px 2px 0;
+  background: linear-gradient(180deg, #fcd116 0 50%, #003893 50% 75%, #ce1126 75%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  transform-origin: left center;
+  animation: brandFlagWave 2.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes brandFlagWave {
+  0%, 100% { transform: rotate(-3deg) skewY(-2deg); }
+  50%      { transform: rotate(3deg) skewY(2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-brand-flag { animation: none; }
 }
 
 .nav-brand-text span {
@@ -180,7 +381,7 @@
   left: 30%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, rgba(8, 155, 219, 0.6), rgba(15, 82, 190, 1));
+  background: linear-gradient(90deg, #fcd116 0 33%, #003893 33% 66%, #ce1126 66%);
   transition: all 0.3s ease-out;
 }
 
@@ -444,6 +645,10 @@
     line-height: 80px;
   }
 
+  .nav-campaign {
+    top: 80px;
+  }
+
   .nav-logo p {
     font-size: 0.82rem;
   }
@@ -614,6 +819,17 @@
     line-height: 70px;
   }
 
+  .nav-campaign {
+    top: 70px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 40px 12px 14px;
+  }
+  .nav-campaign-text {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
   .nav-logo p {
     font-size: 0.76rem;
     padding-left: 0;
@@ -671,6 +887,13 @@
   .navbar-smed {
     height: 60px;
     line-height: 60px;
+  }
+
+  .nav-campaign {
+    top: 60px;
+  }
+  .nav-campaign-text {
+    font-size: 0.74rem;
   }
 
   .nav-logo p {
