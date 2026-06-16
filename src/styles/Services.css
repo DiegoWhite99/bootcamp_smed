@@ -683,6 +683,217 @@ body {
 /*Section 3*/
 
 /*proyectos futuros*/
+/* ====== Proyectos en Producción (live) ====== */
+.proyectos-live-section {
+  padding: 5rem 1.5rem 1rem;
+  background: transparent;
+}
+
+.live-kicker {
+  color: #22c55e;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.live-card {
+  background: linear-gradient(135deg, rgba(8, 27, 59, 0.65) 0%, rgba(5, 5, 5, 0.55) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  clip-path: polygon(0 14px, 14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+  border: 1px solid rgba(13, 202, 240, 0.13);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.live-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 14px; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13, 202, 240, 0.55), transparent);
+}
+
+.live-card { position: relative; }
+
+.live-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(13, 202, 240, 0.4);
+  box-shadow: 0 20px 50px rgba(13, 202, 240, 0.18), 0 0 30px rgba(13, 202, 240, 0.07) inset;
+}
+
+/* media / screenshot */
+.live-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(13, 202, 240, 0.12);
+}
+
+.live-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.live-card:hover .live-media img {
+  transform: scale(1.05);
+}
+
+.live-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(5, 5, 5, 0.45) 100%);
+  pointer-events: none;
+}
+
+/* badge EN VIVO */
+.live-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 2px;
+  padding: 5px 11px;
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  color: #22c55e;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  clip-path: polygon(0 4px, 4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%);
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
+  animation: livePulse 1.6s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.45; transform: scale(0.78); }
+}
+
+/* contenido */
+.live-content {
+  padding: 22px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.live-titulo {
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  color: #f5f5f5;
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+
+.live-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.live-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.56rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fb923c;
+  padding: 4px 10px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  border-radius: 999px;
+}
+
+.live-brand i {
+  font-size: 0.85rem;
+}
+
+.live-tag {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(13, 202, 240, 0.8);
+  padding: 3px 9px;
+  border: 1px solid rgba(13, 202, 240, 0.28);
+  border-radius: 4px;
+}
+
+.live-descripcion {
+  color: rgba(245, 245, 245, 0.62);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 20px;
+}
+
+.live-btn {
+  align-self: flex-start;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #0dcaf0;
+  padding: 9px 18px;
+  border: 1px solid rgba(13, 202, 240, 0.4);
+  background: rgba(13, 202, 240, 0.07);
+  clip-path: polygon(0 6px, 6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.live-btn i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.live-btn:hover {
+  background: rgba(13, 202, 240, 0.18);
+  color: #fff;
+  box-shadow: 0 0 22px rgba(13, 202, 240, 0.3);
+}
+
+.live-btn:hover i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 720px) {
+  .live-grid { grid-template-columns: 1fr; max-width: 460px; }
+}
+
 .futuros-proyectos-section {
   padding: 5rem 1.5rem;
   background: transparent;
@@ -2024,6 +2235,17 @@ body {
 [data-theme="light"] .proyecto-titulo    { color: #081b3b; }
 [data-theme="light"] .proyecto-descripcion { color: rgba(8,27,59,0.65); }
 [data-theme="light"] .proyecto-badge    { background: rgba(0,119,182,0.08); border-color: rgba(0,119,182,0.3); color: #0077b6; }
+
+/* Proyectos en producción (live) */
+[data-theme="light"] .live-card { background: white; border-color: rgba(8,27,59,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+[data-theme="light"] .live-card::before { background: linear-gradient(90deg, transparent, rgba(0,119,182,0.4), transparent); }
+[data-theme="light"] .live-media { border-bottom-color: rgba(8,27,59,0.08); }
+[data-theme="light"] .live-titulo      { color: #081b3b; }
+[data-theme="light"] .live-descripcion { color: rgba(8,27,59,0.65); }
+[data-theme="light"] .live-brand { color: #ea580c; background: rgba(234,88,12,0.08); border-color: rgba(234,88,12,0.35); }
+[data-theme="light"] .live-tag  { color: #0077b6; border-color: rgba(0,119,182,0.3); }
+[data-theme="light"] .live-btn  { color: #0077b6; border-color: rgba(0,119,182,0.4); background: rgba(0,119,182,0.06); }
+[data-theme="light"] .live-btn:hover { color: #fff; background: #0077b6; box-shadow: 0 0 22px rgba(0,119,182,0.3); }
 
 /* Cualidades */
 [data-theme="light"] .card--green  { background: white; }
