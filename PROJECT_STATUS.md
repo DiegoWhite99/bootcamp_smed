@@ -1,8 +1,9 @@
 # Estado actual del proyecto SMED Technology
 
-Fecha de revisión: 2026-06-12
+Fecha de revisión: 2026-06-21
 
 ## Historial de versiones
+- **v1.4.2** (2026-06-21): El loader (página de carga con tema mundialista) ahora aparece **solo al entrar al sitio**: se retiró de las páginas internas (Servicios, Cloud, Desarrollo, Redes, Soporte, Asesorías) y se mantiene únicamente en Nosotros (`/nosotros`, página de inicio). Además se añadió un guard con `sessionStorage` para que el loader se muestre **una sola vez por sesión** (no se repite al volver al inicio dentro de la misma pestaña). Favicon actualizado al logo oficial SMED (`SmedOfficial.ico`) en todas las páginas.
 - **v1.4.0** (2026-06-12): Tema mundialista en el navbar (Mundial 2026 🇨🇴). Cinta/guirnalda de banderitas del mundo colgando del borde superior del navbar, balón ⚽ rodando por el borde inferior, banderita de Colombia ondeando junto a la marca y subrayado tricolor (amarillo-azul-rojo) en el hover de los enlaces. Loader rediseñado con tema mundialista (logo SMED + balón rebotando + cinta tricolor + confeti) en todas las páginas. Banner de campaña con CTA a `/asesorias` que aparece **solo en Nosotros** (atributo `campaign` en `<nav-bar>`). Se añade `router.php` (servidor PHP local de desarrollo que imita las URLs limpias del `.htaccess`).
 - **v1.3.0** (2026-06-08): Integración del blog público (`https://blog.smedtech.com.co/`) enlazado desde el navbar y el footer. Se retira la página interna `/blog` (Blog.html, Blog.css, ruta en `.htaccess`, botón en Services) en favor del subdominio. URLs limpias en español y correcciones de rutas relativas.
 - **v1.2.0**: Versión previa de la web estática con formulario de contacto PHP.

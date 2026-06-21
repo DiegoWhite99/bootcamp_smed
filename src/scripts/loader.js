@@ -1,4 +1,9 @@
 (() => {
+  // Mostrar el loader solo una vez por sesión (al entrar al sitio).
+  // Si ya se mostró en esta pestaña/sesión, no se vuelve a inyectar.
+  if (sessionStorage.getItem('smedLoaderShown')) return;
+  sessionStorage.setItem('smedLoaderShown', '1');
+
   const css = `
     #smed-loader {
       position: fixed;
