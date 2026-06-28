@@ -1,0 +1,63 @@
+<section id="chatbot-container">
+  <!-- Ventana del chat -->
+  <div class="chatbot-window" data-chat-window hidden>
+    <div class="chatbot-header">
+      <div class="chatbot-header-info">
+        <span class="chatbot-avatar"><i class="bx bx-bot"></i></span>
+        <div>
+          <p class="chatbot-title">Asistente SMED</p>
+          <p class="chatbot-status"><span class="chatbot-dot"></span> En línea</p>
+        </div>
+      </div>
+      <button class="chatbot-close" data-chat-close aria-label="Cerrar chat">
+        <i class="bx bx-x"></i>
+      </button>
+    </div>
+
+    <!-- FORMULARIO INICIAL (gate): se completa antes de hablar con el agente -->
+    <form class="chatbot-gate" data-chat-gate>
+      <p class="chatbot-gate-intro">
+        ¡Hola! 👋 Soy <b>SMED Bot</b>. Para ayudarte mejor y que un asesor te dé seguimiento,
+        cuéntame quién eres:
+      </p>
+      <div class="chatbot-field">
+        <i class="bx bx-user"></i>
+        <input type="text" data-gate-nombre placeholder="Tu nombre" autocomplete="name" required />
+      </div>
+      <div class="chatbot-field">
+        <i class="bx bx-phone"></i>
+        <input type="text" data-gate-contacto placeholder="WhatsApp o correo" autocomplete="email" required />
+      </div>
+      <div class="chatbot-field chatbot-field--area">
+        <i class="bx bx-message-square-dots"></i>
+        <textarea data-gate-solicitud rows="2" placeholder="¿En qué te podemos ayudar? (opcional)"></textarea>
+      </div>
+
+      <label class="chatbot-terms">
+        <input type="checkbox" data-gate-terms />
+        <span>Acepto los <a href="/habeas-data" target="_blank" rel="noopener">Términos y la Política de Tratamiento de Datos</a>.</span>
+      </label>
+
+      <button type="submit" class="chatbot-gate-btn" data-gate-submit disabled>
+        Iniciar conversación <i class="bx bx-right-arrow-alt"></i>
+      </button>
+    </form>
+
+    <!-- CHAT (oculto hasta completar el formulario) -->
+    <div class="chatbot-messages" data-chat-messages hidden></div>
+
+    <form class="chatbot-input" data-chat-form hidden>
+      <input type="text" data-chat-text placeholder="Escribe tu mensaje..."
+             autocomplete="off" aria-label="Mensaje" />
+      <button type="submit" aria-label="Enviar">
+        <i class="bx bxs-send"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Botón flotante robot -->
+  <button class="chatbot-float" data-chat-toggle aria-label="Abrir asistente virtual">
+    <i class="bx bx-bot chatbot-icon-open"></i>
+    <i class="bx bx-x chatbot-icon-close"></i>
+  </button>
+</section>

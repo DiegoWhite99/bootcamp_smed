@@ -1,0 +1,339 @@
+{
+  "name": "SMED Bot - Chatbot Web",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "smed-chat",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "id": "n-webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -260,
+        0
+      ],
+      "webhookId": "smed-chat"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "c",
+              "leftValue": "={{ $json.body.action }}",
+              "rightValue": "lead",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "n-iflead",
+      "name": "IF Accion Lead",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "c",
+              "leftValue": "={{ $json.body.action }}",
+              "rightValue": "summary",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "n-ifsum",
+      "name": "IF Accion Resumen",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        160,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "SMED Bot <contacto@smedtech.com.co>",
+        "toEmail": "operaciones@smedtech.com.co, gerencia@smedtech.com.co, contacto@smedtech.com.co, admonempresarial@smedtech.com.co",
+        "subject": "=🚀 Nuevo lead SMED Bot: {{ $json.body.lead.nombre }}",
+        "emailFormat": "html",
+        "html": "=<h2>Nuevo lead desde el chat de la web</h2><p><b>Nombre:</b> {{ $json.body.lead.nombre }}</p><p><b>Contacto:</b> {{ $json.body.lead.contacto }}</p><p><b>Solicitud:</b> {{ $json.body.lead.solicitud }}</p><p><b>Página:</b> {{ $json.body.page }}</p><p><b>Aceptó términos:</b> {{ $json.body.lead.acepta }}</p><hr><p>Enviado automáticamente por SMED Bot 🤖</p>",
+        "options": {}
+      },
+      "id": "n-mailteam",
+      "name": "Email a Equipo",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        160,
+        -140
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "hfIVjKb6MwOlcekg",
+          "name": "SMTP SMED 2"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ ok: true }) }}",
+        "options": {}
+      },
+      "id": "n-resplead",
+      "name": "Responder Lead",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        380,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "SMED Bot <contacto@smedtech.com.co>",
+        "toEmail": "={{ $json.body.lead.email }}",
+        "subject": "Resumen de tu consulta con SMED Technology",
+        "emailFormat": "html",
+        "html": "=<p>¡Hola {{ $json.body.lead.nombre }}! 👋</p><p>Gracias por escribirnos. Este es el resumen de tu solicitud:</p><blockquote>{{ $json.body.lead.solicitud }}</blockquote><p>Un asesor te contactará muy pronto. Si prefieres, escríbenos por WhatsApp al <a href='https://wa.me/573024462007'>+57 302 4462007</a>.</p><p>— SMED Technology · <i>Forjamos el futuro</i> 🚀</p>",
+        "options": {}
+      },
+      "id": "n-mailcli",
+      "name": "Email Resumen Cliente",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        380,
+        40
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "hfIVjKb6MwOlcekg",
+          "name": "SMTP SMED 2"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ ok: true }) }}",
+        "options": {}
+      },
+      "id": "n-respsum",
+      "name": "Responder Resumen",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        600,
+        40
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "id-sys",
+              "name": "systemPrompt",
+              "type": "string",
+              "value": "Eres \"SMED Bot\", asesor virtual de SMED Technology (smedtech.com.co). Lema: \"Forjamos el futuro\".\n\nEl cliente YA dejó su NOMBRE y CONTACTO en un formulario y aceptó la política de datos. NO se los pidas de nuevo; salúdalo por su nombre.\n\nSERVICIOS:\n- SMED Software: páginas web, software a la medida, automatizaciones y agentes de IA.\n- SMED Support: soporte técnico, hardware, armado y mantenimiento de equipos (PC, gamer, etc.), recuperación de datos.\n- SMED Net: redes e infraestructura.\n\nESTILO: respuestas CORTAS (1-2 frases), UNA pregunta a la vez, sin repetirte, mantén el contexto, sin relleno.\n\nPROFUNDIZA ANTES DE DERIVAR (MUY IMPORTANTE):\n- Tu prioridad es ENTENDER bien lo que el cliente quiere. Haz VARIAS preguntas de seguimiento para conocer su proyecto/necesidad: qué quiere exactamente, para qué lo necesita, alcance, si ya tiene algo hecho, referencias o ejemplos, y plazos deseados.\n- NO derives a WhatsApp en los primeros mensajes ni a la primera. Primero conversa y recoge buen detalle (al menos 3-4 preguntas útiles).\n\nCUÁNDO DERIVAR A WHATSAPP:\n- SOLO cuando el cliente PIDA explícitamente una cotización/precio o hablar con una persona, O cuando YA tengas bastante detalle del proyecto.\n- En ese momento di: \"Para una cotización a tu medida y atención personalizada, lo mejor es que hables directo con un asesor 👇\" y comparte WhatsApp: +57 302 4462007.\n\nCONTACTO (escríbelo EXACTO para que sea clicable): WhatsApp: +57 302 4462007 · Correo: contacto@smedtech.com.co · Web: https://www.smedtech.com.co/\n\nREGLAS: no inventes precios ni plazos; español, cercano y profesional, pero BREVE."
+            },
+            {
+              "id": "id-msg",
+              "name": "userMessage",
+              "type": "string",
+              "value": "={{ $json.body.message || 'Hola' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "n-set",
+      "name": "Identidad SMED",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        380,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.groq.com/openai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.GROQ_API_KEY }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: 'llama-3.3-70b-versatile', temperature: 0.5, max_tokens: 350, messages: [ { role: 'system', content: $json.systemPrompt }, { role: 'system', content: 'Datos del cliente (formulario): ' + JSON.stringify($('Webhook').item.json.body.lead || {}) }, ...($('Webhook').item.json.body.history || []), { role: 'user', content: $json.userMessage } ] }) }}",
+        "options": {}
+      },
+      "id": "n-groq",
+      "name": "Groq - Llama 3.3 70B",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        600,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ reply: $json.choices[0].message.content }) }}",
+        "options": {}
+      },
+      "id": "n-respchat",
+      "name": "Responder Chat",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        820,
+        260
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "IF Accion Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Accion Lead": {
+      "main": [
+        [
+          {
+            "node": "Email a Equipo",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "IF Accion Resumen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email a Equipo": {
+      "main": [
+        [
+          {
+            "node": "Responder Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Accion Resumen": {
+      "main": [
+        [
+          {
+            "node": "Email Resumen Cliente",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Identidad SMED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Resumen Cliente": {
+      "main": [
+        [
+          {
+            "node": "Responder Resumen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Identidad SMED": {
+      "main": [
+        [
+          {
+            "node": "Groq - Llama 3.3 70B",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq - Llama 3.3 70B": {
+      "main": [
+        [
+          {
+            "node": "Responder Chat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

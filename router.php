@@ -27,6 +27,7 @@ $rutas = [
     '/tienda'       => '/src/pages/Store.html',
     '/experiencias' => '/src/pages/Experiences.html',
     '/login'        => '/src/pages/login.html',
+    '/habeas-data'  => '/src/pages/HabeasData.html',
 ];
 
 $clave = rtrim($uri, '/');
