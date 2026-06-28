@@ -1,8 +1,8 @@
 /* ===== Botón flotante robot (encima del de WhatsApp) ===== */
 .chatbot-float {
   position: fixed;
-  right: 28px;
-  bottom: 112px; /* WhatsApp: 28 + 70 alto + 14 gap */
+  right: 60px;
+  bottom: 145px; /* WhatsApp: 60 + 70 alto + 15 gap */
   width: 70px;
   height: 70px;
   border: none;
@@ -46,8 +46,8 @@
 /* ===== Ventana del chat ===== */
 .chatbot-window {
   position: fixed;
-  right: 28px;
-  bottom: 198px; /* encima del botón robot */
+  right: 60px;
+  bottom: 230px; /* encima del botón robot */
   width: 360px;
   max-width: calc(100vw - 40px);
   height: 480px;

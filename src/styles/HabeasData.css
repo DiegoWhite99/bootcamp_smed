@@ -1,4 +1,11 @@
 /* ===== Documento legal plano (Habeas Data) ===== */
+
+/* Reset global: esta página no carga ServiceLanding.css (donde vive el reset),
+   por eso el margen por defecto del body causaba scroll horizontal y el nav/footer
+   se salían del marco. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { overflow-x: hidden; max-width: 100%; }
+
 .doc {
   max-width: 820px;
   margin: 0 auto;
