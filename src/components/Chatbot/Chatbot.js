@@ -1,15 +1,14 @@
 /* =========================================================================
  *  Asistente virtual SMED — widget de chat conectado a n8n
  *
- *  >>> ÚNICA LÍNEA A CAMBIAR <<<
- *  webhookUrl: pega aquí la URL pública de tu webhook n8n.
- *    - PRUEBAS  -> URL de ngrok      (ej: https://abcd-1234.ngrok-free.app/webhook/smed-chat)
- *    - PRODUCC. -> Cloudflare Tunnel (ej: https://n8n.smedtech.com.co/webhook/smed-chat)
- *  Nota: http://192.168.1.20 SOLO funciona dentro de tu red local; el navegador
- *        de un cliente en internet NO puede alcanzar esa IP privada.
+ *  webhookUrl: Cloudflare Quick Tunnel hacia el n8n autoalojado (192.168.1.20:5678).
+ *  Corre como servicio systemd "cloudflared-n8n" en el servidor; si ese servicio
+ *  se reinicia, Cloudflare asigna una URL *.trycloudflare.com nueva y hay que
+ *  actualizarla aquí. Migrar a un named tunnel con dominio propio cuando se
+ *  pueda mover smedtech.com.co a los nameservers de Cloudflare.
  * ========================================================================= */
 const CHATBOT_CONFIG = {
-  webhookUrl: "http://192.168.1.20:5678/webhook/smed-chat", // TEMP: reemplazar por URL pública (ngrok / Cloudflare)
+  webhookUrl: "https://genre-confirmed-packaging-respond.trycloudflare.com/webhook/smed-chat",
   quickReplies: [
     { label: "💻 Web / Software", text: "Quiero una página web o un software a la medida" },
     { label: "🤖 Automatización e IA", text: "Me interesa automatización o agentes de IA para mi negocio" },
@@ -42,6 +41,10 @@ export default class Chatbot extends HTMLElement {
     this.gateTerms    = this.querySelector("[data-gate-terms]");
     this.gateSubmit   = this.querySelector("[data-gate-submit]");
 
+    // Horario de atención (9:00 am - 7:00 pm, hora Colombia)
+    this.statusEl   = this.querySelector("[data-chat-status]");
+    this.offhoursEl = this.querySelector("[data-chat-offhours]");
+
     this.sessionId = this.#getSessionId();
     this.history = [];          // memoria de la conversación: [{role, content}]
     this.lead = null;           // datos capturados en el formulario
@@ -69,6 +72,27 @@ export default class Chatbot extends HTMLElement {
 
     // Cualquier escritura reinicia el contador de inactividad
     this.input.addEventListener("input", () => this.#resetInactivity());
+
+    this.#updateHoursUI();
+  }
+
+  // 9:00 am - 7:00 pm, hora Colombia (America/Bogota), sin importar la zona del visitante
+  #isBusinessHours() {
+    const hour = Number(
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Bogota",
+        hour: "2-digit",
+        hourCycle: "h23",
+      }).format(new Date())
+    );
+    return hour >= 9 && hour < 19;
+  }
+
+  #updateHoursUI() {
+    const open = this.#isBusinessHours();
+    this.statusEl.classList.toggle("is-offline", !open);
+    this.statusEl.lastChild.textContent = open ? " En línea" : " Fuera de horario";
+    this.offhoursEl.hidden = open || !!this.lead;
   }
 
   // --- Inactividad: si pasan 30 s sin interacción, ofrecer el resumen ---
@@ -89,6 +113,7 @@ export default class Chatbot extends HTMLElement {
   #open() {
     this.window.hidden = false;
     this.container.classList.add("is-open");
+    this.#updateHoursUI();
     (this.lead ? this.input : this.gateNombre)?.focus();
   }
   #close() {
@@ -150,15 +175,25 @@ export default class Chatbot extends HTMLElement {
     this.form.hidden = false;
     this.input.focus();
 
-    this.#addMessage(
-      `¡Hola ${nombre}! 👋 Gracias por tus datos. ¿En qué te puedo ayudar hoy?`,
-      "bot"
-    );
+    if (this.#isBusinessHours()) {
+      this.#addMessage(
+        `¡Hola ${nombre}! 👋 Gracias por tus datos. ¿En qué te puedo ayudar hoy?`,
+        "bot"
+      );
+    } else {
+      this.#addMessage(
+        `¡Hola ${nombre}! 👋 Ya tenemos tus datos. Estamos fuera de horario (9:00 am – 7:00 pm), ` +
+          `pero un asesor te contactará apenas abramos. Si es urgente, escríbenos por WhatsApp al ` +
+          `+57 302 4462007.`,
+        "bot"
+      );
+    }
 
     // Si escribió una solicitud, la enviamos como primer mensaje al agente
-    if (solicitud) {
+    // (solo si estamos en horario: fuera de horario el webhook está desactivado)
+    if (solicitud && this.#isBusinessHours()) {
       this.#handleSend(solicitud);
-    } else {
+    } else if (this.#isBusinessHours()) {
       this.#renderQuickReplies();
     }
     this.#resetInactivity();

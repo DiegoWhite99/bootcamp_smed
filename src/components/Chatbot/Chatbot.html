@@ -3,10 +3,11 @@
   <div class="chatbot-window" data-chat-window hidden>
     <div class="chatbot-header">
       <div class="chatbot-header-info">
-        <span class="chatbot-avatar"><i class="bx bx-bot"></i></span>
+        <span class="chatbot-avatar"><img src="/src/assets/icons/iconoboot.webp" alt="" /></span>
         <div>
           <p class="chatbot-title">Asistente SMED</p>
-          <p class="chatbot-status"><span class="chatbot-dot"></span> En línea</p>
+          <p class="chatbot-status" data-chat-status><span class="chatbot-dot"></span> En línea</p>
+          <p class="chatbot-hours">🕐 Atención: 9:00 am – 7:00 pm</p>
         </div>
       </div>
       <button class="chatbot-close" data-chat-close aria-label="Cerrar chat">
@@ -16,6 +17,11 @@
 
     <!-- FORMULARIO INICIAL (gate): se completa antes de hablar con el agente -->
     <form class="chatbot-gate" data-chat-gate>
+      <p class="chatbot-offhours" data-chat-offhours hidden>
+        🕐 Estamos fuera de nuestro horario de atención (9:00 am – 7:00 pm). Escríbenos directo por
+        WhatsApp al <a href="https://wa.me/573024462007" target="_blank" rel="noopener">+57 302 4462007</a>
+        o dejamos tu mensaje aquí y te contactamos apenas abramos.
+      </p>
       <p class="chatbot-gate-intro">
         ¡Hola! 👋 Soy <b>SMED Bot</b>. Para ayudarte mejor y que un asesor te dé seguimiento,
         cuéntame quién eres:
@@ -55,9 +61,9 @@
     </form>
   </div>
 
-  <!-- Botón flotante robot -->
+  <!-- Botón flotante: isotipo SMED -->
   <button class="chatbot-float" data-chat-toggle aria-label="Abrir asistente virtual">
-    <i class="bx bx-bot chatbot-icon-open"></i>
+    <img src="/src/assets/icons/iconoboot.webp" alt="" class="chatbot-icon-open" />
     <i class="bx bx-x chatbot-icon-close"></i>
   </button>
 </section>
