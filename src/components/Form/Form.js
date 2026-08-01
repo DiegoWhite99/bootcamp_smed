@@ -2,7 +2,7 @@
 export default class Form extends HTMLElement {
     async connectedCallback() {
         // Cargar el HTML
-        const resp = await fetch("/src/components/Form/Form.html");
+        const resp = await fetch("/src/components/Form/Form.html?v=1.5.0");
         const html = await resp.text();
         this.innerHTML = html;
     }

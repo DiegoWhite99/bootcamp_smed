@@ -1,103 +1,44 @@
-# SMED TECHNOLOGY 
+# SMED Technology
 
-## Introducción
+Sitio web corporativo de SMED Technology: desarrollo de software, soporte técnico, redes e infraestructura, y servicios cloud. `smedtech.com.co`, alojado en Hostinger.
 
-SMED Technology es una empresa especializada en soluciones tecnológicas integrales, incluyendo:
-- Desarrollo de sitios web
-- Soporte técnico
-- Redes
-- Gestión en la nube
-- Infraestructura de CTV
+## Stack actual
 
-Este proyecto tiene como objetivo construir una plataforma web que conecte los servicios ofrecidos por la empresa con sus clientes de manera eficiente.
-
----
-
-## Tecnologías utilizadas
-
-- **Backend:** Node.js + Express
-- **Base de datos:** MySQL
-- **Librerías:**
-  - body-parser
-  - cors
-  - dotenv
-  - nodemon
-
----
+- **Frontend:** HTML/CSS/JS estático (sin build step), Web Components nativos (`customElements`) para navbar, footer, formulario de contacto, botón de WhatsApp y chatbot.
+- **Backend de contacto:** PHP (`backend/form`), guarda leads en MySQL (`contactos.sql`) y envía correo vía SMTP. `config.php` con credenciales vive solo en el servidor (gitignored).
+- **Chatbot (SMED Bot):** widget conectado a un flujo de **n8n autoalojado** que usa **Groq** (`llama-3.3-70b-versatile`) para responder y envía leads/resúmenes por correo (SMTP Hostinger). Ver `src/components/Chatbot/AGENTE-SMED.md` y `n8n-workflow.json`. n8n se expone a internet vía **Cloudflare Tunnel**; el chat solo atiende de 9:00 am a 7:00 pm (hora Colombia) porque el servidor activa/desactiva el workflow por cron a esas horas.
+- **Blog:** vive en el subdominio `blog.smedtech.com.co` (frontend en Hostinger, generación de contenido con un pipeline propio on-premem separado). No es una subcarpeta de este repo — se enlaza como link externo.
+- **URLs limpias:** `.htaccess` (producción/Apache-LiteSpeed) y `router.php` (equivalente para desarrollo local con el servidor integrado de PHP) mapean rutas como `/nosotros`, `/servicios`, `/habeas-data`, etc. a los archivos reales en `src/pages`.
 
 ## Estructura del proyecto
 
-### 1. Diseño de Interfaz
-- Creación de wireframes para definir la estructura.
-- Creación de mockups para representar el diseño visual.
+```
+src/
+  components/     Web Components reutilizables (NavigationBar, Footer, Chatbot, WhatsApp, Form)
+  pages/          Páginas del sitio (Nosotros, Servicios, Desarrollo, Redes, Cloud, Soporte, Asesorías, Habeas Data, login)
+  scripts/        Loader de entrada, i18n (ES/EN), utilidades
+  styles/         CSS por página/sección
+  assets/         Imágenes, iconos, video
+backend/
+  form/           Endpoint PHP de contacto (MySQL + SMTP)
+```
 
-### 2. Desarrollo Backend
-- Implementación de endpoints para:
-  - Consultas técnicas
-  - Registro de clientes
-  - Gestión de proyectos
+## Desarrollo local
 
-### 3. Integración con Base de Datos
-- Almacenamiento seguro de:
-  - Datos de usuarios
-  - Servicios solicitados
-  - Registros de soporte técnico
+```
+php -S localhost:3000 router.php
+```
 
----
+Luego abre `http://localhost:3000` (redirige a `/nosotros`). `router.php` imita las reglas del `.htaccess` para que las URLs limpias funcionen igual que en Hostinger sin Apache.
 
-## Diseño visual
+## Despliegue
 
-### Logo
-- Diseño circular con borde blanco sobre fondo negro.
-- Ícono central de obrero y herramientas, rodeado de circuitos blancos.
-- Tipografía:
-  - "SMED" (Hiperwave 80px)
-  - "TECHNOLOGY" (Sans-serif)
-
-### Paleta de colores
-- **Negro:** #000000 (fondo)
-- **Blanco:** #ffffff (elementos del logo y texto SMED)
-- **Azul tecnológico:** #2A5C99 (elementos interactivos)
-- **Gris oscuro:** #333333 (texto)
-
-### Tipografías
-- **Títulos:** Montserrat
-- **Texto cuerpo:** Open Sans
-- **Especial (SMED):** Hiperwave
-
----
-
-## Wireframes principales
-
-- **Inicio de Sesión:** Formulario de usuario y contraseña con recordatorio de sesión y recuperación de contraseña.
-- **Página de Inicio:** Secciones de servicios, proyectos destacados, fundadores y formulario de contacto.
-- **Servicios:** Tarjetas de servicios, futuros proyectos, cualidades diferenciales.
-- **Experiencias:** Sección de testimonios de clientes.
-- **¿Quiénes somos?:** Perfiles de los fundadores.
-
----
-
-## Requerimientos de desarrollo
-
-- **Estructura HTML/CSS:**
-  - Flexbox y/o Grid para layouts responsivos.
-  - Formularios centrados verticalmente.
-  - Sombreado sutil en campos de entrada.
-
-- **Interacciones:**
-  - Cambios de color y sombra al pasar el cursor (hover) sobre botones.
-  - Validaciones en tiempo real en formularios.
-
-- **Animaciones sugeridas:**
-  - Fondo animado en la sección principal (Hero).
-  - Efecto de escala en testimonios al pasar el cursor.
-
----
+El repo se despliega en Hostinger vía integración Git de hPanel (pull manual de `main` desde el panel — botón "Implementar"). Después de cada deploy conviene purgar el caché del CDN de Hostinger (hcdn), que cachea assets estáticos hasta por una semana y puede servir versiones viejas de archivos recién actualizados.
 
 ## Autores
 
-- Juan Sebastián Ospina Chávez ([Email](mailto:ospinajuan0409@gmail.com))
 - Diego Fernando Castelblanco Jiménez ([Email](mailto:diegofer.cas.99@gmail.com))
+- Juan Sebastián Ospina Chávez ([Email](mailto:ospinajuan0409@gmail.com))
 - Cristian Rocancio Villamil ([Email](mailto:crisstive2001@gmail.com))
 
 ## Colaboradores
@@ -105,13 +46,9 @@ Este proyecto tiene como objetivo construir una plataforma web que conecte los s
 - Sergio Alejandro Garzón Franco ([Email](mailto:sergiofranco2102@gmail.com))
 - Lainer Gonzalez Pacheco ([Email](mailto:lainergonzalez97@gmail.com))
 
----
-
 ## Ubicación
 
-Bogotá D.C - 2025
-
----
+Bogotá D.C.
 
 ## Redes Sociales
 
