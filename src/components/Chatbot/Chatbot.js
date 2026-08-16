@@ -8,7 +8,7 @@
  *  pueda mover smedtech.com.co a los nameservers de Cloudflare.
  * ========================================================================= */
 const CHATBOT_CONFIG = {
-  webhookUrl: "https://genre-confirmed-packaging-respond.trycloudflare.com/webhook/smed-chat",
+  webhookUrl: "https://neighbors-med-php-most.trycloudflare.com/webhook/smed-chat",
   quickReplies: [
     { label: "💻 Web / Software", text: "Quiero una página web o un software a la medida" },
     { label: "🤖 Automatización e IA", text: "Me interesa automatización o agentes de IA para mi negocio" },
