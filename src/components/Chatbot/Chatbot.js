@@ -22,7 +22,7 @@ const CHATBOT_CONFIG = {
 
 export default class Chatbot extends HTMLElement {
   async connectedCallback() {
-    const resp = await fetch("/src/components/Chatbot/Chatbot.html?v=1.5.0");
+    const resp = await fetch("/src/components/Chatbot/Chatbot.html?v=1.5.1");
     this.innerHTML = await resp.text();
 
     this.container  = this.querySelector("#chatbot-container");

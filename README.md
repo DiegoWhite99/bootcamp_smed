@@ -53,3 +53,17 @@ Bogotá D.C.
 ## Redes Sociales
 
 - [Instagram - SMED Technology](https://www.instagram.com/smed_technology/)
+
+---
+
+## Registro de cambios
+
+### v1.5.1 — 2026-08-16
+
+**Fix:** SMED Bot (chatbot web) no respondía en producción, mostrando el mensaje de fallback ("no pude conectarme, escríbenos por WhatsApp") en vez de conversar.
+
+- **Causa:** el chatbot se conecta a n8n a través de un Cloudflare Quick Tunnel (URL pública gratuita y temporal). El servicio `cloudflared-n8n` en el servidor se reinició y Cloudflare le asignó una URL nueva; el frontend seguía apuntando a la URL anterior, ya inactiva.
+- **Diagnóstico:** se confirmó por SSH al servidor que n8n nunca dejó de funcionar (`localhost:5678` respondía 200 en todo momento) — el fallo era solo de conectividad externa del túnel.
+- **Solución:** se actualizó `webhookUrl` en `src/components/Chatbot/Chatbot.js` con la URL vigente y se verificó extremo a extremo (webhook `/webhook/smed-chat` respondiendo 200).
+- **Cache-busting:** se incrementó la versión (`?v=1.5.1`) en todos los assets y fetch internos de componentes/páginas, y en el número de versión del footer, para evitar que el CDN de Hostinger (hcdn) siguiera sirviendo el archivo `Chatbot.js` desactualizado desde caché.
+- **Riesgo conocido:** la URL del Quick Tunnel es efímera por diseño y volverá a cambiar ante cualquier reinicio futuro del servicio o del servidor. Queda pendiente migrar a un *named tunnel* con dominio propio (`n8n.smedtech.com.co`) para eliminar esta clase de falla de forma definitiva.
