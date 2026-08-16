@@ -8,13 +8,13 @@
   <title>Cloud & Hosting | SMED Technology</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="icon" href="/src/assets/icons/SmedOfficial.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="/src/styles/ServiceLanding.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/styles/ServicePages.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/NavigationBar/NavigationBar.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/Footer/Footer.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/WhatsApp/WhatsApp.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/Chatbot/Chatbot.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/styles/Typography.css?v=1.5.1" />
+  <link rel="stylesheet" href="/src/styles/ServiceLanding.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/styles/ServicePages.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/NavigationBar/NavigationBar.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/Footer/Footer.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/WhatsApp/WhatsApp.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/Chatbot/Chatbot.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/styles/Typography.css?v=1.5.2" />
 </head>
 <body>
   <nav-bar></nav-bar>
@@ -24,12 +24,12 @@
     <section class="sl-hero">
       <div class="sl-hero-inner">
         <div class="sl-hero-copy">
-          <span class="sl-badge">CLOUD & HOSTING</span>
-          <h1 class="sl-hero-h1">Tu empresa en la nube,<br><span class="sp-accent sp-accent--purple">sin límites de escala.</span></h1>
-          <p class="sl-hero-p">Gestionamos tu infraestructura cloud para que escales sin fricción. Hosting, backups automáticos, servidores virtuales y migración guiada — todo con disponibilidad garantizada.</p>
+          <span class="sl-badge" data-i18n="cloud.hero.badge">CLOUD & HOSTING</span>
+          <h1 class="sl-hero-h1" data-i18n-html="cloud.hero.h1">Tu empresa en la nube,<br><span class="sp-accent sp-accent--purple">sin límites de escala.</span></h1>
+          <p class="sl-hero-p" data-i18n="cloud.hero.p">Gestionamos tu infraestructura cloud para que escales sin fricción. Hosting, backups automáticos, servidores virtuales y migración guiada — todo con disponibilidad garantizada.</p>
           <div class="sl-hero-ctas">
-            <a href="#sp-contacto" class="sl-btn-primary"><i class='bx bx-cloud-upload'></i> Hablar de mi proyecto</a>
-            <a href="/servicios" class="sl-btn-secondary"><i class='bx bx-arrow-back'></i> Ver todos los servicios</a>
+            <a href="#sp-contacto" class="sl-btn-primary"><i class='bx bx-cloud-upload'></i><span data-i18n="cloud.hero.cta1"> Hablar de mi proyecto</span></a>
+            <a href="/servicios" class="sl-btn-secondary"><i class='bx bx-arrow-back'></i><span data-i18n="cloud.hero.cta2"> Ver todos los servicios</span></a>
           </div>
         </div>
         <div class="sl-hero-visual">
@@ -42,34 +42,34 @@
             </div>
             <div class="sp-hud-body">
               <div class="sp-cloud-metric">
-                <div class="sp-cloud-left"><i class='bx bx-server' style="color:#8b5cf6"></i><span>Servidor principal</span></div>
+                <div class="sp-cloud-left"><i class='bx bx-server' style="color:#8b5cf6"></i><span data-i18n="cloud.metric1.label">Servidor principal</span></div>
                 <div class="sp-cloud-bar-wrap"><div class="sp-cloud-bar" style="--w:42%;--bc:#8b5cf6"></div></div>
                 <span class="sp-cloud-val" style="color:#8b5cf6">42%</span>
               </div>
               <div class="sp-cloud-metric">
-                <div class="sp-cloud-left"><i class='bx bx-data' style="color:#0dcaf0"></i><span>Almacenamiento</span></div>
+                <div class="sp-cloud-left"><i class='bx bx-data' style="color:#0dcaf0"></i><span data-i18n="cloud.metric2.label">Almacenamiento</span></div>
                 <div class="sp-cloud-bar-wrap"><div class="sp-cloud-bar" style="--w:68%;--bc:#0dcaf0"></div></div>
                 <span class="sp-cloud-val" style="color:#0dcaf0">68%</span>
               </div>
               <div class="sp-cloud-metric">
-                <div class="sp-cloud-left"><i class='bx bx-transfer' style="color:#22c55e"></i><span>Ancho de banda</span></div>
+                <div class="sp-cloud-left"><i class='bx bx-transfer' style="color:#22c55e"></i><span data-i18n="cloud.metric3.label">Ancho de banda</span></div>
                 <div class="sp-cloud-bar-wrap"><div class="sp-cloud-bar" style="--w:31%;--bc:#22c55e"></div></div>
                 <span class="sp-cloud-val" style="color:#22c55e">31%</span>
               </div>
               <div class="sp-cloud-metric">
-                <div class="sp-cloud-left"><i class='bx bx-shield-quarter' style="color:#FBBC04"></i><span>Backup automático</span></div>
+                <div class="sp-cloud-left"><i class='bx bx-shield-quarter' style="color:#FBBC04"></i><span data-i18n="cloud.metric4.label">Backup automático</span></div>
                 <div class="sp-cloud-bar-wrap"><div class="sp-cloud-bar" style="--w:100%;--bc:#FBBC04"></div></div>
                 <span class="sp-cloud-val" style="color:#FBBC04">✓</span>
               </div>
             </div>
             <div class="sp-hud-footer">
               <span><i class='bx bx-time-five'></i> Uptime <strong>99.95%</strong></span>
-              <span><i class='bx bx-globe'></i> 3 regiones activas</span>
+              <span><i class='bx bx-globe'></i><span data-i18n="cloud.hud.footer2"> 3 regiones activas</span></span>
             </div>
           </div>
           <div class="sl-hero-pills">
             <span class="sl-pill"><i class='bx bx-check-circle'></i> AWS / GCP / Azure</span>
-            <span class="sl-pill"><i class='bx bx-check-circle'></i> Backup automático</span>
+            <span class="sl-pill"><i class='bx bx-check-circle'></i><span data-i18n="cloud.hero.pill2"> Backup automático</span></span>
             <span class="sl-pill"><i class='bx bx-check-circle'></i> 99.95% uptime</span>
           </div>
         </div>
@@ -77,72 +77,72 @@
     </section>
 
     <section class="sp-stats-bar">
-      <div class="sp-stat"><strong>99.95%</strong><span>Uptime SLA</span></div>
+      <div class="sp-stat"><strong>99.95%</strong><span data-i18n="cloud.stats.label1">Uptime SLA</span></div>
       <div class="sp-stat-div"></div>
-      <div class="sp-stat"><strong>Diario</strong><span>Backup automático</span></div>
+      <div class="sp-stat"><strong data-i18n="cloud.stats.val2">Diario</strong><span data-i18n="cloud.stats.label2">Backup automático</span></div>
       <div class="sp-stat-div"></div>
-      <div class="sp-stat"><strong>3</strong><span>Regiones cloud</span></div>
+      <div class="sp-stat"><strong>3</strong><span data-i18n="cloud.stats.label3">Regiones cloud</span></div>
       <div class="sp-stat-div"></div>
-      <div class="sp-stat"><strong>24/7</strong><span>Monitoreo</span></div>
+      <div class="sp-stat"><strong>24/7</strong><span data-i18n="cloud.stats.label4">Monitoreo</span></div>
     </section>
 
     <section class="sl-section">
-      <p class="sl-kicker">ALCANCE</p>
-      <h2 class="sl-title">¿Qué incluye este servicio?</h2>
+      <p class="sl-kicker" data-i18n="cloud.scope.kicker">ALCANCE</p>
+      <h2 class="sl-title" data-i18n="cloud.scope.title">¿Qué incluye este servicio?</h2>
       <div class="sl-cards">
-        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-cloud-upload'></i></div><h3 class="sl-card-title">Hosting & servidores VPS</h3><p class="sl-card-text">Configuramos y gestionamos servidores virtuales optimizados para tu stack tecnológico.</p></article>
-        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-transfer-alt'></i></div><h3 class="sl-card-title">Migración cloud</h3><p class="sl-card-text">Migramos tu infraestructura existente a la nube sin downtime y con plan de rollback.</p></article>
-        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-revision'></i></div><h3 class="sl-card-title">Backups automáticos</h3><p class="sl-card-text">Copias de seguridad programadas, cifradas y verificadas con política de retención flexible.</p></article>
-        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-bar-chart-alt-2'></i></div><h3 class="sl-card-title">Monitoreo y escalado</h3><p class="sl-card-text">Alertas en tiempo real, auto-escalado y optimización de costos cloud continua.</p></article>
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-cloud-upload'></i></div><h3 class="sl-card-title" data-i18n="cloud.card1.title">Hosting & servidores VPS</h3><p class="sl-card-text" data-i18n="cloud.card1.text">Configuramos y gestionamos servidores virtuales optimizados para tu stack tecnológico.</p></article>
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-transfer-alt'></i></div><h3 class="sl-card-title" data-i18n="cloud.card2.title">Migración cloud</h3><p class="sl-card-text" data-i18n="cloud.card2.text">Migramos tu infraestructura existente a la nube sin downtime y con plan de rollback.</p></article>
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-revision'></i></div><h3 class="sl-card-title" data-i18n="cloud.card3.title">Backups automáticos</h3><p class="sl-card-text" data-i18n="cloud.card3.text">Copias de seguridad programadas, cifradas y verificadas con política de retención flexible.</p></article>
+        <article class="sl-card"><div class="sl-card-icon"><i class='bx bx-bar-chart-alt-2'></i></div><h3 class="sl-card-title" data-i18n="cloud.card4.title">Monitoreo y escalado</h3><p class="sl-card-text" data-i18n="cloud.card4.text">Alertas en tiempo real, auto-escalado y optimización de costos cloud continua.</p></article>
       </div>
     </section>
 
     <!-- PLATAFORMAS CLOUD -->
     <section class="sl-section sp-types-section">
-      <p class="sl-kicker">PLATAFORMAS</p>
-      <h2 class="sl-title">Trabajamos con los líderes del cloud</h2>
+      <p class="sl-kicker" data-i18n="cloud.platforms.kicker">PLATAFORMAS</p>
+      <h2 class="sl-title" data-i18n="cloud.platforms.title">Trabajamos con los líderes del cloud</h2>
       <div class="sp-types-grid">
-        <div class="sp-type-card" style="--tc:#f97316"><i class='bx bxl-aws'></i><h4>Amazon AWS</h4><p>EC2, S3, RDS, Lambda y más de 200 servicios administrados.</p></div>
-        <div class="sp-type-card" style="--tc:#4285F4"><i class='bx bxl-google-cloud'></i><h4>Google Cloud</h4><p>GCE, Cloud Storage, BigQuery y servicios de IA de Google.</p></div>
-        <div class="sp-type-card" style="--tc:#0dcaf0"><i class='bx bxl-microsoft'></i><h4>Microsoft Azure</h4><p>VMs, Azure SQL, Active Directory y servicios empresariales Microsoft.</p></div>
-        <div class="sp-type-card" style="--tc:#22c55e"><i class='bx bx-server'></i><h4>VPS / Dedicados</h4><p>Servidores propios con DigitalOcean, Hetzner, Linode y otros.</p></div>
-        <div class="sp-type-card" style="--tc:#8b5cf6"><i class='bx bxl-docker'></i><h4>Contenedores</h4><p>Docker, Kubernetes y orquestación para entornos escalables.</p></div>
-        <div class="sp-type-card" style="--tc:#FBBC04"><i class='bx bx-git-branch'></i><h4>CI/CD en la nube</h4><p>Pipelines de integración y despliegue continuo automatizados.</p></div>
+        <div class="sp-type-card" style="--tc:#f97316"><i class='bx bxl-aws'></i><h4 data-i18n="cloud.platform1.title">Amazon AWS</h4><p data-i18n="cloud.platform1.text">EC2, S3, RDS, Lambda y más de 200 servicios administrados.</p></div>
+        <div class="sp-type-card" style="--tc:#4285F4"><i class='bx bxl-google-cloud'></i><h4 data-i18n="cloud.platform2.title">Google Cloud</h4><p data-i18n="cloud.platform2.text">GCE, Cloud Storage, BigQuery y servicios de IA de Google.</p></div>
+        <div class="sp-type-card" style="--tc:#0dcaf0"><i class='bx bxl-microsoft'></i><h4 data-i18n="cloud.platform3.title">Microsoft Azure</h4><p data-i18n="cloud.platform3.text">VMs, Azure SQL, Active Directory y servicios empresariales Microsoft.</p></div>
+        <div class="sp-type-card" style="--tc:#22c55e"><i class='bx bx-server'></i><h4 data-i18n="cloud.platform4.title">VPS / Dedicados</h4><p data-i18n="cloud.platform4.text">Servidores propios con DigitalOcean, Hetzner, Linode y otros.</p></div>
+        <div class="sp-type-card" style="--tc:#8b5cf6"><i class='bx bxl-docker'></i><h4 data-i18n="cloud.platform5.title">Contenedores</h4><p data-i18n="cloud.platform5.text">Docker, Kubernetes y orquestación para entornos escalables.</p></div>
+        <div class="sp-type-card" style="--tc:#FBBC04"><i class='bx bx-git-branch'></i><h4 data-i18n="cloud.platform6.title">CI/CD en la nube</h4><p data-i18n="cloud.platform6.text">Pipelines de integración y despliegue continuo automatizados.</p></div>
       </div>
     </section>
 
     <section class="sl-section sl-section--process">
-      <p class="sl-kicker">METODOLOGÍA</p>
-      <h2 class="sl-title">Proceso de implementación</h2>
+      <p class="sl-kicker" data-i18n="cloud.proceso.kicker">METODOLOGÍA</p>
+      <h2 class="sl-title" data-i18n="cloud.proceso.title">Proceso de implementación</h2>
       <div class="sl-steps">
-        <div class="sl-step"><div class="sl-step-num">01</div><div class="sl-step-icon"><i class='bx bx-search-alt'></i></div><h3 class="sl-step-title">Auditoría actual</h3><p class="sl-step-desc">Evaluamos tu infraestructura, costos actuales y necesidades reales de escalado.</p></div>
+        <div class="sl-step"><div class="sl-step-num">01</div><div class="sl-step-icon"><i class='bx bx-search-alt'></i></div><h3 class="sl-step-title" data-i18n="cloud.step1.title">Auditoría actual</h3><p class="sl-step-desc" data-i18n="cloud.step1.desc">Evaluamos tu infraestructura, costos actuales y necesidades reales de escalado.</p></div>
         <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
-        <div class="sl-step"><div class="sl-step-num">02</div><div class="sl-step-icon"><i class='bx bx-cloud'></i></div><h3 class="sl-step-title">Arquitectura cloud</h3><p class="sl-step-desc">Diseñamos la arquitectura óptima con estimación de costos y plan de migración.</p></div>
+        <div class="sl-step"><div class="sl-step-num">02</div><div class="sl-step-icon"><i class='bx bx-cloud'></i></div><h3 class="sl-step-title" data-i18n="cloud.step2.title">Arquitectura cloud</h3><p class="sl-step-desc" data-i18n="cloud.step2.desc">Diseñamos la arquitectura óptima con estimación de costos y plan de migración.</p></div>
         <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
-        <div class="sl-step"><div class="sl-step-num">03</div><div class="sl-step-icon"><i class='bx bx-transfer-alt'></i></div><h3 class="sl-step-title">Migración</h3><p class="sl-step-desc">Migramos datos y servicios con downtime mínimo y pruebas en paralelo.</p></div>
+        <div class="sl-step"><div class="sl-step-num">03</div><div class="sl-step-icon"><i class='bx bx-transfer-alt'></i></div><h3 class="sl-step-title" data-i18n="cloud.step3.title">Migración</h3><p class="sl-step-desc" data-i18n="cloud.step3.desc">Migramos datos y servicios con downtime mínimo y pruebas en paralelo.</p></div>
         <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
-        <div class="sl-step"><div class="sl-step-num">04</div><div class="sl-step-icon"><i class='bx bx-bar-chart-alt-2'></i></div><h3 class="sl-step-title">Gestión continua</h3><p class="sl-step-desc">Monitoreo, optimización de costos y ajustes de escalado según el crecimiento.</p></div>
+        <div class="sl-step"><div class="sl-step-num">04</div><div class="sl-step-icon"><i class='bx bx-bar-chart-alt-2'></i></div><h3 class="sl-step-title" data-i18n="cloud.step4.title">Gestión continua</h3><p class="sl-step-desc" data-i18n="cloud.step4.desc">Monitoreo, optimización de costos y ajustes de escalado según el crecimiento.</p></div>
       </div>
     </section>
 
     <section class="sl-section sl-section--form" id="sp-contacto">
       <div class="sl-form-glow"></div>
-      <p class="sl-kicker">SOLICITAR SERVICIO</p>
-      <h2 class="sl-title">¿Listo para ir a la nube?</h2>
-      <p class="sl-subtitle">Cuéntanos dónde estás hoy y hacia dónde quieres escalar. Hacemos la auditoría sin costo.</p>
+      <p class="sl-kicker" data-i18n="cloud.form.kicker">SOLICITAR SERVICIO</p>
+      <h2 class="sl-title" data-i18n="cloud.form.title">¿Listo para ir a la nube?</h2>
+      <p class="sl-subtitle" data-i18n="cloud.form.subtitle">Cuéntanos dónde estás hoy y hacia dónde quieres escalar. Hacemos la auditoría sin costo.</p>
       <form class="sl-form" action="/backend/form/FormContact.php" method="POST">
         <div class="sl-form-row">
-          <div class="sl-form-group"><label>Nombre / Empresa</label><input type="text" name="nombre" placeholder="Tu nombre o razón social" required /></div>
-          <div class="sl-form-group"><label>Correo electrónico</label><input type="email" name="email" placeholder="tu@correo.com" required /></div>
+          <div class="sl-form-group"><label data-i18n="cloud.form.name">Nombre / Empresa</label><input type="text" name="nombre" placeholder="Tu nombre o razón social" required /></div>
+          <div class="sl-form-group"><label data-i18n="cloud.form.email">Correo electrónico</label><input type="email" name="email" placeholder="tu@correo.com" required /></div>
         </div>
         <div class="sl-form-row">
-          <div class="sl-form-group"><label>Teléfono</label><input type="tel" name="telefono" placeholder="+57 xxx xxx xxxx" /></div>
-          <div class="sl-form-group"><label>¿Qué necesitas?</label>
-            <select name="tipo" required><option value="" disabled selected>Selecciona</option><option>Hosting / VPS</option><option>Migración a la nube</option><option>Backups automáticos</option><option>Monitoreo cloud</option><option>CI/CD pipeline</option><option>Optimización de costos</option><option>Otro</option></select>
+          <div class="sl-form-group"><label data-i18n="cloud.form.phone">Teléfono</label><input type="tel" name="telefono" placeholder="+57 xxx xxx xxxx" /></div>
+          <div class="sl-form-group"><label data-i18n="cloud.form.type">¿Qué necesitas?</label>
+            <select name="tipo" required><option value="" disabled selected data-i18n="cloud.form.select">Selecciona</option><option data-i18n="cloud.form.opt1">Hosting / VPS</option><option data-i18n="cloud.form.opt2">Migración a la nube</option><option data-i18n="cloud.form.opt3">Backups automáticos</option><option data-i18n="cloud.form.opt4">Monitoreo cloud</option><option data-i18n="cloud.form.opt5">CI/CD pipeline</option><option data-i18n="cloud.form.opt6">Optimización de costos</option><option data-i18n="cloud.form.opt7">Otro</option></select>
           </div>
         </div>
-        <div class="sl-form-group"><label>Cuéntanos tu situación</label><textarea name="mensaje" rows="4" placeholder="¿Dónde está alojado tu sistema hoy? ¿Cuánto tráfico manejas? ¿Qué quieres mejorar?" required></textarea></div>
-        <button type="submit" class="sl-form-submit"><i class='bx bx-send'></i> Solicitar auditoría</button>
+        <div class="sl-form-group"><label data-i18n="cloud.form.message">Cuéntanos tu situación</label><textarea name="mensaje" rows="4" placeholder="¿Dónde está alojado tu sistema hoy? ¿Cuánto tráfico manejas? ¿Qué quieres mejorar?" required></textarea></div>
+        <button type="submit" class="sl-form-submit"><i class='bx bx-send'></i><span data-i18n="cloud.form.submit"> Solicitar auditoría</span></button>
       </form>
     </section>
 
@@ -150,11 +150,11 @@
   <footer-page></footer-page>
   <whatsapp-container></whatsapp-container>
   <chatbot-container></chatbot-container>
-  <script src="/src/scripts/i18n.js?v=1.5.1"></script>
+  <script src="/src/scripts/i18n.js?v=1.5.2"></script>
   <script> if (window.SMED_I18N) window.SMED_I18N.initLang(); </script>
-  <script src="/src/scripts/Particles.js?v=1.5.1"></script>
-  <script src="/src/scripts/ParticlesConfig.js?v=1.5.1"></script>
+  <script src="/src/scripts/Particles.js?v=1.5.2"></script>
+  <script src="/src/scripts/ParticlesConfig.js?v=1.5.2"></script>
   <script src="/backend/form/FormHandler.js"></script>
-  <script type="module" src="/src/components/BaseComponents.js?v=1.5.1" defer></script>
+  <script type="module" src="/src/components/BaseComponents.js?v=1.5.2" defer></script>
 </body>
 </html>

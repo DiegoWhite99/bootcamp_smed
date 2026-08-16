@@ -3,7 +3,7 @@ export default class NavigationBar extends HTMLElement {
   async connectedCallback() {
     // Cargar el HTML
     const resp = await fetch(
-      "/src/components/NavigationBar/NavigationBar.html?v=1.5.1"
+      "/src/components/NavigationBar/NavigationBar.html?v=1.5.2"
     );
     const html = await resp.text();
     this.innerHTML = html;
@@ -94,44 +94,29 @@ export default class NavigationBar extends HTMLElement {
     const langToggle = this.querySelector("#langToggle");
     const langLabel = this.querySelector("#langLabel");
 
-    const navKeys = {
-      about:   this.querySelector('a[href="/src/pages/AboutUs.html"].link'),
-      services: this.querySelector('a[href="/src/pages/Services.html"].link'),
-      dev:     this.querySelector('a[href="/src/pages/Desarrollo.html"]'),
-      networks: this.querySelector('a[href="/src/pages/Redes.html"].sublink:first-of-type'),
-      cloud:   this.querySelector('a[href="/src/pages/Cloud.html"]'),
-      support: this.querySelector('a[href="/src/pages/Soporte.html"]'),
-      advisory: this.querySelector('a[href="/src/pages/Asesorias.html"]'),
-    };
-
-    const applyNavLang = (lang) => {
-      if (!window.SMED_I18N) return;
-      const t = window.SMED_I18N.translations[lang];
-      if (!t) return;
-      if (navKeys.about)    navKeys.about.textContent    = t['nav.about'];
-      if (navKeys.services) navKeys.services.textContent = t['nav.services'];
-      if (navKeys.dev)      navKeys.dev.textContent      = t['nav.sub.dev'];
-      if (navKeys.cloud)    navKeys.cloud.textContent    = t['nav.sub.cloud'];
-      if (navKeys.support)  navKeys.support.textContent  = t['nav.sub.support'];
-      if (navKeys.advisory) navKeys.advisory.textContent = t['nav.sub.advisory'];
-      const redesLink = this.querySelector('a[href="/src/pages/Redes.html"].sublink');
-      if (redesLink) redesLink.textContent = t['nav.sub.networks'];
+    // La traduccion real de los [data-i18n] del nav la hace SMED_I18N.applyLang
+    // (aplica a todo el documento). Aqui solo sincronizamos la etiqueta EN/ES.
+    const updateLangLabel = (lang) => {
       if (langLabel) langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
     };
 
+    // El nav se inyecta de forma asincrona, asi que puede terminar de cargar
+    // despues de que initLang() ya corrio sobre el resto de la pagina: hay
+    // que reaplicar la traduccion aqui para que el nav no se quede en espanol.
     const savedLang = localStorage.getItem('smed-lang') || 'es';
-    applyNavLang(savedLang);
+    if (window.SMED_I18N) window.SMED_I18N.applyLang(savedLang);
+    updateLangLabel(savedLang);
 
     if (langToggle) {
       langToggle.addEventListener('click', () => {
         const current = localStorage.getItem('smed-lang') || 'es';
         const next = current === 'es' ? 'en' : 'es';
         if (window.SMED_I18N) window.SMED_I18N.applyLang(next);
-        applyNavLang(next);
+        updateLangLabel(next);
       });
     }
 
-    document.addEventListener('smed:langchange', (e) => applyNavLang(e.detail.lang));
+    document.addEventListener('smed:langchange', (e) => updateLangLabel(e.detail.lang));
 
     // ── Theme toggle ──
     const themeToggle = this.querySelector("#themeToggle");

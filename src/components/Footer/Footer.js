@@ -2,7 +2,7 @@
 export default class Footer extends HTMLElement {
   async connectedCallback() {
     // Cargar el HTML
-    const resp = await fetch("/src/components/Footer/Footer.html?v=1.5.1");
+    const resp = await fetch("/src/components/Footer/Footer.html?v=1.5.2");
     const html = await resp.text();
     this.innerHTML = html;
   }

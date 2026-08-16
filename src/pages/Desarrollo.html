@@ -12,13 +12,13 @@
 
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="icon" href="/src/assets/icons/SmedOfficial.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="/src/styles/ServiceLanding.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/styles/Dev.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/NavigationBar/NavigationBar.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/Footer/Footer.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/WhatsApp/WhatsApp.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/components/Chatbot/Chatbot.css?v=1.5.1" />
-  <link rel="stylesheet" href="/src/styles/Typography.css?v=1.5.1" />
+  <link rel="stylesheet" href="/src/styles/ServiceLanding.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/styles/Dev.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/NavigationBar/NavigationBar.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/Footer/Footer.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/WhatsApp/WhatsApp.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/components/Chatbot/Chatbot.css?v=1.5.2" />
+  <link rel="stylesheet" href="/src/styles/Typography.css?v=1.5.2" />
 </head>
 
 <body>
@@ -31,23 +31,23 @@
     <section class="sl-hero dev-hero">
       <div class="sl-hero-inner dev-hero-inner">
         <div class="sl-hero-copy">
-          <span class="sl-badge">SMED DEV · SOFTWARE · IA · AUTOMATIZACIÓN</span>
+          <span class="sl-badge" data-i18n="desarrollo.hero.badge">SMED DEV · SOFTWARE · IA · AUTOMATIZACIÓN</span>
           <h1 class="sl-hero-h1 dev-hero-h1">
-            Software que<br>
+            <span data-i18n="desarrollo.hero.h1">Software que</span><br>
             <span class="dev-typed-wrap">
               <span class="dev-typed" id="devTyped"></span><span class="dev-cursor">|</span>
             </span>
           </h1>
-          <p class="sl-hero-p">Desarrollamos aplicaciones web, sistemas de automatización e inteligencia artificial para empresas que quieren operar más inteligente y escalar sin límites.</p>
+          <p class="sl-hero-p" data-i18n="desarrollo.hero.p">Desarrollamos aplicaciones web, sistemas de automatización e inteligencia artificial para empresas que quieren operar más inteligente y escalar sin límites.</p>
           <div class="sl-hero-ctas">
-            <a href="#dev-contacto" class="sl-btn-primary"><i class='bx bx-rocket'></i> Iniciar proyecto</a>
-            <a href="#dev-caps" class="sl-btn-secondary"><i class='bx bx-code-block'></i> Ver capacidades</a>
+            <a href="#dev-contacto" class="sl-btn-primary"><i class='bx bx-rocket'></i><span data-i18n="desarrollo.hero.cta1"> Iniciar proyecto</span></a>
+            <a href="#dev-caps" class="sl-btn-secondary"><i class='bx bx-code-block'></i><span data-i18n="desarrollo.hero.cta2"> Ver capacidades</span></a>
           </div>
           <div class="dev-hero-tags">
-            <span><i class='bx bx-check-circle'></i> Web Apps</span>
-            <span><i class='bx bx-check-circle'></i> IA & ML</span>
-            <span><i class='bx bx-check-circle'></i> Agentes</span>
-            <span><i class='bx bx-check-circle'></i> Automatización</span>
+            <span><i class='bx bx-check-circle'></i><span data-i18n="desarrollo.hero.tag1"> Web Apps</span></span>
+            <span><i class='bx bx-check-circle'></i><span data-i18n="desarrollo.hero.tag2"> IA & ML</span></span>
+            <span><i class='bx bx-check-circle'></i><span data-i18n="desarrollo.hero.tag3"> Agentes</span></span>
+            <span><i class='bx bx-check-circle'></i><span data-i18n="desarrollo.hero.tag4"> Automatización</span></span>
           </div>
         </div>
 
@@ -63,10 +63,10 @@
             </div>
             <div class="dev-terminal-body">
               <div class="dev-t-line" style="--d:0.2s"><span class="dev-t-prompt">❯</span> <span class="dev-t-cmd">smed init <span class="dev-t-hl">--template=ai-agent</span></span></div>
-              <div class="dev-t-line dev-t-out" style="--d:0.6s">  ✦ Cargando plantilla de agente IA...</div>
-              <div class="dev-t-line dev-t-out" style="--d:1.0s">  ✦ Configurando modelos LLM...</div>
-              <div class="dev-t-line dev-t-out" style="--d:1.4s">  ✦ Conectando APIs externas...</div>
-              <div class="dev-t-line dev-t-ok" style="--d:1.8s">  ✓ Agente desplegado en 2.4s 🚀</div>
+              <div class="dev-t-line dev-t-out" style="--d:0.6s" data-i18n="desarrollo.terminal.line1">  ✦ Cargando plantilla de agente IA...</div>
+              <div class="dev-t-line dev-t-out" style="--d:1.0s" data-i18n="desarrollo.terminal.line2">  ✦ Configurando modelos LLM...</div>
+              <div class="dev-t-line dev-t-out" style="--d:1.4s" data-i18n="desarrollo.terminal.line3">  ✦ Conectando APIs externas...</div>
+              <div class="dev-t-line dev-t-ok" style="--d:1.8s" data-i18n="desarrollo.terminal.line4">  ✓ Agente desplegado en 2.4s 🚀</div>
               <div class="dev-t-line" style="--d:2.2s"><span class="dev-t-prompt">❯</span> <span class="dev-t-cursor">█</span></div>
             </div>
           </div>
@@ -85,16 +85,16 @@
 
     <!-- ══ ¿QUÉ CONSTRUIMOS? ══ -->
     <section class="sl-section dev-caps-section" id="dev-caps">
-      <p class="sl-kicker">CAPACIDADES</p>
-      <h2 class="sl-title">¿Qué construimos?</h2>
-      <p class="sl-subtitle">Desde una landing page hasta un sistema multiagente con IA. Construimos lo que tu negocio necesita para operar más inteligente.</p>
+      <p class="sl-kicker" data-i18n="desarrollo.caps.kicker">CAPACIDADES</p>
+      <h2 class="sl-title" data-i18n="desarrollo.caps.title">¿Qué construimos?</h2>
+      <p class="sl-subtitle" data-i18n="desarrollo.caps.subtitle">Desde una landing page hasta un sistema multiagente con IA. Construimos lo que tu negocio necesita para operar más inteligente.</p>
 
       <div class="dev-caps-grid">
 
         <div class="dev-cap-card" style="--cc:#0dcaf0">
           <div class="dev-cap-icon"><i class='bx bx-window-alt'></i></div>
-          <h3 class="dev-cap-title">Web Apps & SaaS</h3>
-          <p class="dev-cap-text">Plataformas web modernas, paneles de control, sistemas internos y productos SaaS escalables con arquitectura limpia.</p>
+          <h3 class="dev-cap-title" data-i18n="desarrollo.cap1.title">Web Apps & SaaS</h3>
+          <p class="dev-cap-text" data-i18n="desarrollo.cap1.text">Plataformas web modernas, paneles de control, sistemas internos y productos SaaS escalables con arquitectura limpia.</p>
           <div class="dev-cap-tags">
             <span>React</span><span>Next.js</span><span>Node</span>
           </div>
@@ -102,8 +102,8 @@
 
         <div class="dev-cap-card" style="--cc:#8b5cf6">
           <div class="dev-cap-icon"><i class='bx bx-brain'></i></div>
-          <h3 class="dev-cap-title">Inteligencia Artificial</h3>
-          <p class="dev-cap-text">Integración de modelos LLM, visión computacional, procesamiento de lenguaje natural y análisis predictivo en tus sistemas.</p>
+          <h3 class="dev-cap-title" data-i18n="desarrollo.cap2.title">Inteligencia Artificial</h3>
+          <p class="dev-cap-text" data-i18n="desarrollo.cap2.text">Integración de modelos LLM, visión computacional, procesamiento de lenguaje natural y análisis predictivo en tus sistemas.</p>
           <div class="dev-cap-tags">
             <span>OpenAI</span><span>LangChain</span><span>Python</span>
           </div>
@@ -111,8 +111,8 @@
 
         <div class="dev-cap-card" style="--cc:#f97316">
           <div class="dev-cap-icon"><i class='bx bx-cog'></i></div>
-          <h3 class="dev-cap-title">Automatización</h3>
-          <p class="dev-cap-text">Automatizamos procesos repetitivos, flujos de trabajo y tareas de negocio con bots, scripts y pipelines inteligentes.</p>
+          <h3 class="dev-cap-title" data-i18n="desarrollo.cap3.title">Automatización</h3>
+          <p class="dev-cap-text" data-i18n="desarrollo.cap3.text">Automatizamos procesos repetitivos, flujos de trabajo y tareas de negocio con bots, scripts y pipelines inteligentes.</p>
           <div class="dev-cap-tags">
             <span>n8n</span><span>Python</span><span>Zapier API</span>
           </div>
@@ -120,8 +120,8 @@
 
         <div class="dev-cap-card" style="--cc:#22c55e">
           <div class="dev-cap-icon"><i class='bx bx-bot'></i></div>
-          <h3 class="dev-cap-title">Agentes Inteligentes</h3>
-          <p class="dev-cap-text">Diseñamos agentes autónomos que razonan, planifican y actúan para resolver tareas complejas sin intervención humana.</p>
+          <h3 class="dev-cap-title" data-i18n="desarrollo.cap4.title">Agentes Inteligentes</h3>
+          <p class="dev-cap-text" data-i18n="desarrollo.cap4.text">Diseñamos agentes autónomos que razonan, planifican y actúan para resolver tareas complejas sin intervención humana.</p>
           <div class="dev-cap-tags">
             <span>LLM Agents</span><span>RAG</span><span>Tools</span>
           </div>
@@ -129,8 +129,8 @@
 
         <div class="dev-cap-card" style="--cc:#4285F4">
           <div class="dev-cap-icon"><i class='bx bx-transfer-alt'></i></div>
-          <h3 class="dev-cap-title">APIs & Integraciones</h3>
-          <p class="dev-cap-text">Construimos y conectamos APIs REST/GraphQL para integrar plataformas, ERPs, CRMs y servicios externos.</p>
+          <h3 class="dev-cap-title" data-i18n="desarrollo.cap5.title">APIs & Integraciones</h3>
+          <p class="dev-cap-text" data-i18n="desarrollo.cap5.text">Construimos y conectamos APIs REST/GraphQL para integrar plataformas, ERPs, CRMs y servicios externos.</p>
           <div class="dev-cap-tags">
             <span>REST</span><span>GraphQL</span><span>Webhooks</span>
           </div>
@@ -138,8 +138,8 @@
 
         <div class="dev-cap-card" style="--cc:#FBBC04">
           <div class="dev-cap-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
-          <h3 class="dev-cap-title">Dashboards & Analytics</h3>
-          <p class="dev-cap-text">Visualización de datos en tiempo real, métricas de negocio y reportes automáticos con paneles interactivos.</p>
+          <h3 class="dev-cap-title" data-i18n="desarrollo.cap6.title">Dashboards & Analytics</h3>
+          <p class="dev-cap-text" data-i18n="desarrollo.cap6.text">Visualización de datos en tiempo real, métricas de negocio y reportes automáticos con paneles interactivos.</p>
           <div class="dev-cap-tags">
             <span>Charts.js</span><span>PowerBI</span><span>SQL</span>
           </div>
@@ -153,37 +153,37 @@
       <div class="dev-ai-inner">
 
         <div class="dev-ai-copy">
-          <p class="sl-kicker">INTELIGENCIA ARTIFICIAL</p>
-          <h2 class="dev-ai-title">Llevamos la IA<br>a tu operación real</h2>
-          <p class="dev-ai-desc">No solo integramos IA — diseñamos sistemas que aprenden, razonan y actúan. Desde chatbots inteligentes hasta agentes autónomos que gestionan tareas complejas sin supervisión humana.</p>
+          <p class="sl-kicker" data-i18n="desarrollo.ai.kicker">INTELIGENCIA ARTIFICIAL</p>
+          <h2 class="dev-ai-title" data-i18n-html="desarrollo.ai.title">Llevamos la IA<br>a tu operación real</h2>
+          <p class="dev-ai-desc" data-i18n="desarrollo.ai.desc">No solo integramos IA — diseñamos sistemas que aprenden, razonan y actúan. Desde chatbots inteligentes hasta agentes autónomos que gestionan tareas complejas sin supervisión humana.</p>
 
           <div class="dev-ai-features">
             <div class="dev-ai-feat">
               <div class="dev-ai-feat-icon" style="--fc:#8b5cf6"><i class='bx bx-conversation'></i></div>
               <div>
-                <strong>Chatbots & Asistentes</strong>
-                <p>Con contexto de tu negocio, conectados a tus datos.</p>
+                <strong data-i18n="desarrollo.aifeat1.title">Chatbots & Asistentes</strong>
+                <p data-i18n="desarrollo.aifeat1.text">Con contexto de tu negocio, conectados a tus datos.</p>
               </div>
             </div>
             <div class="dev-ai-feat">
               <div class="dev-ai-feat-icon" style="--fc:#0dcaf0"><i class='bx bx-search-alt'></i></div>
               <div>
-                <strong>RAG & Búsqueda semántica</strong>
-                <p>Tus documentos y datos consultables en lenguaje natural.</p>
+                <strong data-i18n="desarrollo.aifeat2.title">RAG & Búsqueda semántica</strong>
+                <p data-i18n="desarrollo.aifeat2.text">Tus documentos y datos consultables en lenguaje natural.</p>
               </div>
             </div>
             <div class="dev-ai-feat">
               <div class="dev-ai-feat-icon" style="--fc:#22c55e"><i class='bx bx-bot'></i></div>
               <div>
-                <strong>Agentes autónomos</strong>
-                <p>Sistemas que razonan, usan herramientas y ejecutan tareas.</p>
+                <strong data-i18n="desarrollo.aifeat3.title">Agentes autónomos</strong>
+                <p data-i18n="desarrollo.aifeat3.text">Sistemas que razonan, usan herramientas y ejecutan tareas.</p>
               </div>
             </div>
             <div class="dev-ai-feat">
               <div class="dev-ai-feat-icon" style="--fc:#f97316"><i class='bx bx-data'></i></div>
               <div>
-                <strong>Pipelines de datos con IA</strong>
-                <p>Procesa, clasifica y enriquece datos automáticamente.</p>
+                <strong data-i18n="desarrollo.aifeat4.title">Pipelines de datos con IA</strong>
+                <p data-i18n="desarrollo.aifeat4.text">Procesa, clasifica y enriquece datos automáticamente.</p>
               </div>
             </div>
           </div>
@@ -250,7 +250,7 @@
           <!-- badge resultado -->
           <div class="dev-neural-badge">
             <i class='bx bx-check-circle'></i>
-            <span>Decisión en <strong>12ms</strong></span>
+            <span data-i18n-html="desarrollo.ai.badge">Decisión en <strong>12ms</strong></span>
           </div>
         </div>
 
@@ -259,13 +259,13 @@
 
     <!-- ══ TECH STACK ══ -->
     <section class="sl-section dev-stack-section" id="dev-stack">
-      <p class="sl-kicker">TECNOLOGÍAS</p>
-      <h2 class="sl-title">Nuestro stack tecnológico</h2>
+      <p class="sl-kicker" data-i18n="desarrollo.stack.kicker">TECNOLOGÍAS</p>
+      <h2 class="sl-title" data-i18n="desarrollo.stack.title">Nuestro stack tecnológico</h2>
 
       <div class="dev-stack-categories">
 
         <div class="dev-stack-cat">
-          <h4 class="dev-stack-cat-title"><i class='bx bx-desktop'></i> Frontend</h4>
+          <h4 class="dev-stack-cat-title"><i class='bx bx-desktop'></i><span data-i18n="desarrollo.stack.cat1"> Frontend</span></h4>
           <div class="dev-stack-items">
             <div class="dev-stack-item"><i class='bx bxl-html5'></i><span>HTML5</span></div>
             <div class="dev-stack-item"><i class='bx bxl-css3'></i><span>CSS3</span></div>
@@ -275,7 +275,7 @@
         </div>
 
         <div class="dev-stack-cat">
-          <h4 class="dev-stack-cat-title"><i class='bx bx-server'></i> Backend</h4>
+          <h4 class="dev-stack-cat-title"><i class='bx bx-server'></i><span data-i18n="desarrollo.stack.cat2"> Backend</span></h4>
           <div class="dev-stack-items">
             <div class="dev-stack-item"><i class='bx bxl-nodejs'></i><span>Node.js</span></div>
             <div class="dev-stack-item"><i class='bx bxl-python'></i><span>Python</span></div>
@@ -285,7 +285,7 @@
         </div>
 
         <div class="dev-stack-cat">
-          <h4 class="dev-stack-cat-title"><i class='bx bx-brain'></i> IA & Datos</h4>
+          <h4 class="dev-stack-cat-title"><i class='bx bx-brain'></i><span data-i18n="desarrollo.stack.cat3"> IA & Datos</span></h4>
           <div class="dev-stack-items">
             <div class="dev-stack-item"><i class='bx bx-bot'></i><span>OpenAI</span></div>
             <div class="dev-stack-item"><i class='bx bx-link-alt'></i><span>LangChain</span></div>
@@ -295,7 +295,7 @@
         </div>
 
         <div class="dev-stack-cat">
-          <h4 class="dev-stack-cat-title"><i class='bx bx-wrench'></i> Herramientas</h4>
+          <h4 class="dev-stack-cat-title"><i class='bx bx-wrench'></i><span data-i18n="desarrollo.stack.cat4"> Herramientas</span></h4>
           <div class="dev-stack-items">
             <div class="dev-stack-item"><i class='bx bxl-git'></i><span>Git</span></div>
             <div class="dev-stack-item"><i class='bx bxl-docker'></i><span>Docker</span></div>
@@ -309,65 +309,65 @@
 
     <!-- ══ MÉTRICAS DEV STUDIO ══ -->
     <section class="sl-section dev-metrics-section">
-      <p class="sl-kicker">DEV STUDIO</p>
-      <h2 class="sl-title">Cómo trabajamos</h2>
+      <p class="sl-kicker" data-i18n="desarrollo.metrics.kicker">DEV STUDIO</p>
+      <h2 class="sl-title" data-i18n="desarrollo.metrics.title">Cómo trabajamos</h2>
       <div class="dev-metrics-grid">
         <div class="dev-metric-card">
           <div class="dev-metric-icon"><i class='bx bx-git-branch'></i></div>
-          <strong class="dev-metric-val">2–3 sem</strong>
-          <span class="dev-metric-label">por sprint de entrega</span>
-          <p class="dev-metric-desc">Iteraciones cortas con hitos claros. Valor de negocio desde el primer ciclo.</p>
+          <strong class="dev-metric-val" data-i18n="desarrollo.metric1.val">2–3 sem</strong>
+          <span class="dev-metric-label" data-i18n="desarrollo.metric1.label">por sprint de entrega</span>
+          <p class="dev-metric-desc" data-i18n="desarrollo.metric1.desc">Iteraciones cortas con hitos claros. Valor de negocio desde el primer ciclo.</p>
         </div>
         <div class="dev-metric-card dev-metric-card--featured">
           <div class="dev-metric-icon"><i class='bx bx-expand-alt'></i></div>
-          <strong class="dev-metric-val">Escalable</strong>
-          <span class="dev-metric-label">arquitectura diseñada para crecer</span>
-          <p class="dev-metric-desc">Frontend + Backend + API + IA. Construcción limpia, mantenible y preparada para el futuro.</p>
+          <strong class="dev-metric-val" data-i18n="desarrollo.metric2.val">Escalable</strong>
+          <span class="dev-metric-label" data-i18n="desarrollo.metric2.label">arquitectura diseñada para crecer</span>
+          <p class="dev-metric-desc" data-i18n="desarrollo.metric2.desc">Frontend + Backend + API + IA. Construcción limpia, mantenible y preparada para el futuro.</p>
         </div>
         <div class="dev-metric-card">
           <div class="dev-metric-icon"><i class='bx bx-shield-quarter'></i></div>
           <strong class="dev-metric-val">100%</strong>
-          <span class="dev-metric-label">código propio y entregado</span>
-          <p class="dev-metric-desc">El código es tuyo desde el día uno. Sin dependencias ocultas ni licencias trampa.</p>
+          <span class="dev-metric-label" data-i18n="desarrollo.metric3.label">código propio y entregado</span>
+          <p class="dev-metric-desc" data-i18n="desarrollo.metric3.desc">El código es tuyo desde el día uno. Sin dependencias ocultas ni licencias trampa.</p>
         </div>
       </div>
     </section>
 
     <!-- ══ PROCESO ══ -->
     <section class="sl-section sl-section--process" id="dev-proceso">
-      <p class="sl-kicker">METODOLOGÍA</p>
-      <h2 class="sl-title">Proceso de desarrollo</h2>
+      <p class="sl-kicker" data-i18n="desarrollo.proceso.kicker">METODOLOGÍA</p>
+      <h2 class="sl-title" data-i18n="desarrollo.proceso.title">Proceso de desarrollo</h2>
       <div class="sl-steps">
 
         <div class="sl-step">
           <div class="sl-step-num">01</div>
           <div class="sl-step-icon"><i class='bx bx-bulb'></i></div>
-          <h3 class="sl-step-title">Discovery</h3>
-          <p class="sl-step-desc">Entendemos el problema real, definimos alcance y diseñamos la arquitectura adecuada.</p>
+          <h3 class="sl-step-title" data-i18n="desarrollo.step1.title">Discovery</h3>
+          <p class="sl-step-desc" data-i18n="desarrollo.step1.desc">Entendemos el problema real, definimos alcance y diseñamos la arquitectura adecuada.</p>
         </div>
         <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
 
         <div class="sl-step">
           <div class="sl-step-num">02</div>
           <div class="sl-step-icon"><i class='bx bxl-figma'></i></div>
-          <h3 class="sl-step-title">Diseño & Prototipo</h3>
-          <p class="sl-step-desc">Interfaces funcionales validadas contigo antes de escribir una sola línea de código.</p>
+          <h3 class="sl-step-title" data-i18n="desarrollo.step2.title">Diseño & Prototipo</h3>
+          <p class="sl-step-desc" data-i18n="desarrollo.step2.desc">Interfaces funcionales validadas contigo antes de escribir una sola línea de código.</p>
         </div>
         <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
 
         <div class="sl-step">
           <div class="sl-step-num">03</div>
           <div class="sl-step-icon"><i class='bx bx-code-alt'></i></div>
-          <h3 class="sl-step-title">Desarrollo por sprints</h3>
-          <p class="sl-step-desc">Construimos en ciclos cortos con demos reales. Puedes ver el avance desde el sprint 1.</p>
+          <h3 class="sl-step-title" data-i18n="desarrollo.step3.title">Desarrollo por sprints</h3>
+          <p class="sl-step-desc" data-i18n="desarrollo.step3.desc">Construimos en ciclos cortos con demos reales. Puedes ver el avance desde el sprint 1.</p>
         </div>
         <div class="sl-connector"><span></span><i class='bx bx-chevron-right'></i></div>
 
         <div class="sl-step">
           <div class="sl-step-num">04</div>
           <div class="sl-step-icon"><i class='bx bx-rocket'></i></div>
-          <h3 class="sl-step-title">Deploy & Evolución</h3>
-          <p class="sl-step-desc">Desplegamos, monitoreamos y seguimos mejorando. El producto evoluciona con tu negocio.</p>
+          <h3 class="sl-step-title" data-i18n="desarrollo.step4.title">Deploy & Evolución</h3>
+          <p class="sl-step-desc" data-i18n="desarrollo.step4.desc">Desplegamos, monitoreamos y seguimos mejorando. El producto evoluciona con tu negocio.</p>
         </div>
 
       </div>
@@ -376,47 +376,47 @@
     <!-- ══ FORMULARIO ══ -->
     <section class="sl-section sl-section--form" id="dev-contacto">
       <div class="sl-form-glow"></div>
-      <p class="sl-kicker">INICIAR PROYECTO</p>
-      <h2 class="sl-title">Cuéntanos tu idea</h2>
-      <p class="sl-subtitle">Desde una automatización simple hasta un agente IA complejo. Evaluamos tu proyecto sin costo y te decimos cómo lo haríamos.</p>
+      <p class="sl-kicker" data-i18n="desarrollo.form.kicker">INICIAR PROYECTO</p>
+      <h2 class="sl-title" data-i18n="desarrollo.form.title">Cuéntanos tu idea</h2>
+      <p class="sl-subtitle" data-i18n="desarrollo.form.subtitle">Desde una automatización simple hasta un agente IA complejo. Evaluamos tu proyecto sin costo y te decimos cómo lo haríamos.</p>
 
       <form class="sl-form" action="/backend/form/FormContact.php" method="POST">
         <div class="sl-form-row">
           <div class="sl-form-group">
-            <label for="dev-nombre">Nombre completo</label>
+            <label for="dev-nombre" data-i18n="desarrollo.form.name">Nombre completo</label>
             <input type="text" id="dev-nombre" name="nombre" placeholder="Tu nombre o empresa" required />
           </div>
           <div class="sl-form-group">
-            <label for="dev-email">Correo electrónico</label>
+            <label for="dev-email" data-i18n="desarrollo.form.email">Correo electrónico</label>
             <input type="email" id="dev-email" name="email" placeholder="tu@correo.com" required />
           </div>
         </div>
         <div class="sl-form-row">
           <div class="sl-form-group">
-            <label for="dev-telefono">Teléfono / WhatsApp</label>
+            <label for="dev-telefono" data-i18n="desarrollo.form.phone">Teléfono / WhatsApp</label>
             <input type="tel" id="dev-telefono" name="telefono" placeholder="+57 xxx xxx xxxx" />
           </div>
           <div class="sl-form-group">
-            <label for="dev-tipo">Tipo de proyecto</label>
+            <label for="dev-tipo" data-i18n="desarrollo.form.type">Tipo de proyecto</label>
             <select id="dev-tipo" name="tipo" required>
-              <option value="" disabled selected>¿Qué quieres construir?</option>
-              <option value="webapp">Aplicación web / SaaS</option>
-              <option value="ia">Sistema con Inteligencia Artificial</option>
-              <option value="agente">Agente autónomo</option>
-              <option value="automatizacion">Automatización de procesos</option>
-              <option value="api">API / Integraciones</option>
-              <option value="dashboard">Dashboard / Analytics</option>
-              <option value="otro">Otro / No sé exactamente</option>
+              <option value="" disabled selected data-i18n="desarrollo.form.select">¿Qué quieres construir?</option>
+              <option value="webapp" data-i18n="desarrollo.form.opt1">Aplicación web / SaaS</option>
+              <option value="ia" data-i18n="desarrollo.form.opt2">Sistema con Inteligencia Artificial</option>
+              <option value="agente" data-i18n="desarrollo.form.opt3">Agente autónomo</option>
+              <option value="automatizacion" data-i18n="desarrollo.form.opt4">Automatización de procesos</option>
+              <option value="api" data-i18n="desarrollo.form.opt5">API / Integraciones</option>
+              <option value="dashboard" data-i18n="desarrollo.form.opt6">Dashboard / Analytics</option>
+              <option value="otro" data-i18n="desarrollo.form.opt7">Otro / No sé exactamente</option>
             </select>
           </div>
         </div>
         <div class="sl-form-group">
-          <label for="dev-idea">Cuéntanos tu idea</label>
+          <label for="dev-idea" data-i18n="desarrollo.form.idea">Cuéntanos tu idea</label>
           <textarea id="dev-idea" name="mensaje" rows="4"
             placeholder="¿Qué quieres automatizar, construir o mejorar? No necesitas ser técnico — descríbelo como tú lo ves." required></textarea>
         </div>
         <button type="submit" class="sl-form-submit">
-          <i class='bx bx-send'></i> Enviar proyecto
+          <i class='bx bx-send'></i><span data-i18n="desarrollo.form.submit"> Enviar proyecto</span>
         </button>
       </form>
     </section>
@@ -427,19 +427,17 @@
   <whatsapp-container></whatsapp-container>
   <chatbot-container></chatbot-container>
 
-  <script src="/src/scripts/i18n.js?v=1.5.1"></script>
+  <script src="/src/scripts/i18n.js?v=1.5.2"></script>
   <script> if (window.SMED_I18N) window.SMED_I18N.initLang(); </script>
-  <script src="/src/scripts/Particles.js?v=1.5.1"></script>
-  <script src="/src/scripts/ParticlesConfig.js?v=1.5.1"></script>
+  <script src="/src/scripts/Particles.js?v=1.5.2"></script>
+  <script src="/src/scripts/ParticlesConfig.js?v=1.5.2"></script>
   <script>
     // Typing effect hero
-    const phrases = [
-      'trabaja para ti',
-      'automatiza procesos',
-      'aprende y evoluciona',
-      'conecta con IA',
-      'escala tu negocio',
-    ];
+    const phrasesByLang = {
+      es: ['trabaja para ti', 'automatiza procesos', 'aprende y evoluciona', 'conecta con IA', 'escala tu negocio'],
+      en: ['works for you', 'automates processes', 'learns and evolves', 'connects with AI', 'scales your business'],
+    };
+    let phrases = phrasesByLang[localStorage.getItem('smed-lang') === 'en' ? 'en' : 'es'];
     let pi = 0, ci = 0, deleting = false;
     const el = document.getElementById('devTyped');
     if (el) {
@@ -451,6 +449,10 @@
         setTimeout(type, deleting ? 45 : 85);
       };
       setTimeout(type, 800);
+      document.addEventListener('smed:langchange', (e) => {
+        phrases = phrasesByLang[e.detail.lang === 'en' ? 'en' : 'es'];
+        pi = 0; ci = 0; deleting = false;
+      });
     }
 
     // Animate terminal lines on scroll
@@ -469,7 +471,7 @@
     if (term) termObs.observe(term);
   </script>
   <script src="/backend/form/FormHandler.js"></script>
-  <script type="module" src="/src/components/BaseComponents.js?v=1.5.1" defer></script>
+  <script type="module" src="/src/components/BaseComponents.js?v=1.5.2" defer></script>
 </body>
 
 </html>

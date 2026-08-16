@@ -58,6 +58,16 @@ Bogotá D.C.
 
 ## Registro de cambios
 
+### v1.5.2 — 2026-08-16
+
+**Fix:** las páginas Asesorías, Soporte, Redes, Cloud y Desarrollo no se traducían al inglés (el botón EN/ES solo cambiaba el nav/footer, el resto del contenido quedaba en español); y el subrayado hover de los enlaces del nav usaba los colores de la bandera de Colombia (residuo del tema Mundial ya retirado), lo que además se veía inconsistente entre navegadores.
+
+- **Traducción:** se implementó el sistema `data-i18n` (ya usado en el home y en Services) en las 5 páginas — ~419 claves nuevas ES/EN agregadas a `src/scripts/i18n.js`.
+- **Bug de fondo encontrado:** `NavigationBar.js` tenía su propio mecanismo de traducción duplicado que buscaba enlaces por rutas antiguas (`/src/pages/AboutUs.html`) en vez de las URLs limpias actuales (`/nosotros`), por lo que "Nosotros" y "Servicios" a veces quedaban en español al cargar una página aunque el resto del sitio ya estuviera en inglés. Se simplificó para que reutilice el mecanismo global de traducción (`SMED_I18N.applyLang`), eliminando el código duplicado y roto.
+- **Nav:** se reemplazó el `linear-gradient` con los colores de la bandera de Colombia por un azul sólido de marca en el subrayado hover de los enlaces.
+- **Cache-busting:** versión subida a `?v=1.5.2` en todos los assets/fetch y en el footer.
+- Probado extremo a extremo en navegador: toggle EN/ES y recarga directa de página en las 5 secciones.
+
 ### v1.5.1 — 2026-08-16
 
 **Fix:** SMED Bot (chatbot web) no respondía en producción, mostrando el mensaje de fallback ("no pude conectarme, escríbenos por WhatsApp") en vez de conversar.

@@ -180,7 +180,7 @@
   left: 30%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #fcd116 0 33%, #003893 33% 66%, #ce1126 66%);
+  background: #089bdb;
   transition: all 0.3s ease-out;
 }
 
